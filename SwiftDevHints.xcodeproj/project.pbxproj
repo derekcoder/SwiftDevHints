@@ -11,6 +11,7 @@
 		654982581F19D1FB008EE146 /* SwiftDevHints.h in Headers */ = {isa = PBXBuildFile; fileRef = 6549824A1F19D1FA008EE146 /* SwiftDevHints.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		654982621F19D20E008EE146 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654982611F19D20E008EE146 /* Random.swift */; };
 		654982651F19D249008EE146 /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 654982641F19D249008EE146 /* RandomTests.swift */; };
+		658976F41F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658976F31F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +32,7 @@
 		654982571F19D1FB008EE146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654982611F19D20E008EE146 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
 		654982641F19D249008EE146 /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
+		658976F31F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				654982611F19D20E008EE146 /* Random.swift */,
 				6549824A1F19D1FA008EE146 /* SwiftDevHints.h */,
 				6549824B1F19D1FA008EE146 /* Info.plist */,
+				658976F31F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift */,
 			);
 			path = SwiftDevHints;
 			sourceTree = "<group>";
@@ -203,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				654982621F19D20E008EE146 /* Random.swift in Sources */,
+				658976F41F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +418,7 @@
 				6549825D1F19D1FB008EE146 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6549825E1F19D1FB008EE146 /* Build configuration list for PBXNativeTarget "SwiftDevHintsTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +427,7 @@
 				654982601F19D1FB008EE146 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
