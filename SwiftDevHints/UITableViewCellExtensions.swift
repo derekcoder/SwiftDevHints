@@ -6,7 +6,7 @@
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 protocol CellIdentifierProtocol: AnyObject {
     static var cellIdentifier: String { get }
