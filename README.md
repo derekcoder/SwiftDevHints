@@ -51,4 +51,4 @@ Follow and contact me on [Twitter](https://twitter.com/derekcoder_). If you find
 
 ## License
 
-SwiftDevHints is released under the MIT license. [See LICENSE](https://github.com/derekcoder/SwiftDevHints/edit/master/README.md) for details.
+SwiftDevHints is released under the MIT license. [See LICENSE](https://github.com/derekcoder/SwiftDevHints/blob/master/LICENSE) for details.
