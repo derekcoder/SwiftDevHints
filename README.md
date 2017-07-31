@@ -45,6 +45,22 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 }
 ```
 
+### PrintHelper
+
+- show which file you are logging
+- show line number your are logging
+- `printLog` only valid for DEBUG mode
+
+```swift
+import SwiftDevHints
+
+@IBAction func tapPrintLogButton() {
+	printLog("You just tap button.")
+}
+
+// PrintHelperViewController.swift:15  You just tap button.
+```
+
 ## Contact
 
 Follow and contact me on [Twitter](https://twitter.com/derekcoder_). If you find an issue, just [open a ticket](https://github.com/derekcoder/SwiftDevHints/issues/new). Pull requests are warmly welcome as well.
