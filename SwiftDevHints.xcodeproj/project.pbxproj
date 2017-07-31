@@ -20,6 +20,7 @@
 		658976F41F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658976F31F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift */; };
 		E3A2C85F1F2F31A1007B73CE /* PrintHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */; };
 		E3A2C8611F2F3331007B73CE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E3A2C8601F2F3330007B73CE /* README.md */; };
+		E3A2C8631F2F36A8007B73CE /* SwiftDevHints.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */; };
 		E3C116171F2F2D0400CAA098 /* PrintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C116161F2F2D0400CAA098 /* PrintHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,7 @@
 		658976F31F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
 		E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintHelperViewController.swift; sourceTree = "<group>"; };
 		E3A2C8601F2F3330007B73CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftDevHints.podspec; sourceTree = "<group>"; };
 		E3C116161F2F2D0400CAA098 /* PrintHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				E3A2C8601F2F3330007B73CE /* README.md */,
+				E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */,
 				654982491F19D1FA008EE146 /* SwiftDevHints */,
 				654982541F19D1FB008EE146 /* SwiftDevHintsTests */,
 				65248CC51F1D065700E00872 /* SwiftDevHints-Demo */,
@@ -269,6 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A2C8631F2F36A8007B73CE /* SwiftDevHints.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

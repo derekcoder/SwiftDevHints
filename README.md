@@ -55,7 +55,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 import SwiftDevHints
 
 @IBAction func tapPrintLogButton() {
-	printLog("You just tap button.")
+    printLog("You just tap button.")
 }
 
 // PrintHelperViewController.swift:15  You just tap button.
