@@ -1,0 +1,17 @@
+//
+//  PrintHelperViewController.swift
+//  SwiftDevHints-Demo
+//
+//  Created by Julie on 31/7/17.
+//  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
+//
+
+import UIKit
+import SwiftDevHints
+
+class PrintHelperViewController: UIViewController {
+    
+    @IBAction func tapPrintLogButton() {
+        printLog("You just tap button.")
+    }
+}

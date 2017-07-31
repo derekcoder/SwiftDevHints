@@ -18,6 +18,8 @@
 		654982511F19D1FB008EE146 /* SwiftDevHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; };
 		654982581F19D1FB008EE146 /* SwiftDevHints.h in Headers */ = {isa = PBXBuildFile; fileRef = 6549824A1F19D1FA008EE146 /* SwiftDevHints.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		658976F41F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658976F31F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift */; };
+		E3A2C85F1F2F31A1007B73CE /* PrintHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */; };
+		E3C116171F2F2D0400CAA098 /* PrintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C116161F2F2D0400CAA098 /* PrintHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		654982501F19D1FB008EE146 /* SwiftDevHintsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDevHintsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		654982571F19D1FB008EE146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		658976F31F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
+		E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintHelperViewController.swift; sourceTree = "<group>"; };
+		E3C116161F2F2D0400CAA098 /* PrintHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,7 @@
 			children = (
 				65248CC61F1D065700E00872 /* AppDelegate.swift */,
 				65248CC81F1D065700E00872 /* IntExtensionsViewController.swift */,
+				E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */,
 				65248CCA1F1D065700E00872 /* Main.storyboard */,
 				65248CCD1F1D065700E00872 /* Assets.xcassets */,
 				65248CCF1F1D065700E00872 /* LaunchScreen.storyboard */,
@@ -115,6 +120,7 @@
 				6549824B1F19D1FA008EE146 /* Info.plist */,
 				65248CBA1F1CEC8D00E00872 /* IntExtensions.swift */,
 				658976F31F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift */,
+				E3C116161F2F2D0400CAA098 /* PrintHelper.swift */,
 			);
 			path = SwiftDevHints;
 			sourceTree = "<group>";
@@ -276,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A2C85F1F2F31A1007B73CE /* PrintHelperViewController.swift in Sources */,
 				65248CC91F1D065700E00872 /* IntExtensionsViewController.swift in Sources */,
 				65248CC71F1D065700E00872 /* AppDelegate.swift in Sources */,
 			);
@@ -286,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65248CBB1F1CEC8D00E00872 /* IntExtensions.swift in Sources */,
+				E3C116171F2F2D0400CAA098 /* PrintHelper.swift in Sources */,
 				658976F41F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,6 +343,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 73DV6R4Q82;
 				INFOPLIST_FILE = "SwiftDevHints-Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.derekcoder.SwiftDevHints-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -348,6 +357,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 73DV6R4Q82;
 				INFOPLIST_FILE = "SwiftDevHints-Demo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.derekcoder.SwiftDevHints-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -535,6 +545,7 @@
 				65248CD51F1D065700E00872 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		654982411F19D1FA008EE146 /* Build configuration list for PBXProject "SwiftDevHints" */ = {
 			isa = XCConfigurationList;
