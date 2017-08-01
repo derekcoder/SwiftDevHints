@@ -40,7 +40,7 @@ let formatedInt2 = aInt.format("3") // "  3"
 ### DoubleExtensions
 
 Format Double
-```
+```swift
 import SwiftDevHints
 
 let aDouble = 3.14159265
@@ -49,12 +49,27 @@ let formatedDouble = aDouble.format(".3") // "3.142"
 ```
 
 Round Double
-```
+```swift
 import SwiftDevHints
 
 let aDouble = 3.14159265
 let roundedDouble1 = aDouble.roundTo(places: 2) // 3.14
 let roundedDouble2 = aDouble.roundTo(places: 3) // 3.142
+```
+
+### DictionaryExtensions
+
+```swift
+import SwiftDevHints
+
+let dictionary: [String: Any] = ["id": "1", "name": "Derek", "age": 29, "isOnline": true, "latitude": 1.290270, "longitude": 103.851959]
+
+let id = dictionary.intValue(forKey: "id") // Int: 1
+let name = dictionary.stringValue(forKey: "name") // String: "Derek"
+let age = dictionary.intValue(forKey: "age") // Int: 29
+let isOnline = dictionary.boolValue(forKey: "isOnline") // Bool: true
+let latitude = dictionary.doubleValue(forKey: "latitude") // Double: 1.290270
+let longitude = dictionary.doubleValue(forKey: "longitude") // Double: 103.851959
 ```
 
 ### UITableViewCellExtensions

@@ -21,6 +21,11 @@
 		E3649B5C1F302EAE00236794 /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5B1F302EAE00236794 /* DoubleExtensions.swift */; };
 		E3649B5E1F3032DC00236794 /* DoubleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */; };
 		E3649B601F30367D00236794 /* DoubleExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */; };
+		E3649B621F30521E00236794 /* DictionaryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B611F30521E00236794 /* DictionaryExtensions.swift */; };
+		E3649B661F30559100236794 /* NSNumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B651F30559100236794 /* NSNumberExtensions.swift */; };
+		E36536661F305E6400BF5021 /* NSNumberExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */; };
+		E36536681F30601900BF5021 /* DictionaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36536671F30601900BF5021 /* DictionaryExtensionsTests.swift */; };
+		E38085F71F306C7C007D4004 /* DictionaryExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */; };
 		E3A2C85F1F2F31A1007B73CE /* PrintHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */; };
 		E3A2C8611F2F3331007B73CE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E3A2C8601F2F3330007B73CE /* README.md */; };
 		E3A2C8631F2F36A8007B73CE /* SwiftDevHints.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */; };
@@ -57,6 +62,11 @@
 		E3649B5B1F302EAE00236794 /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsTests.swift; sourceTree = "<group>"; };
 		E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsViewController.swift; sourceTree = "<group>"; };
+		E3649B611F30521E00236794 /* DictionaryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensions.swift; sourceTree = "<group>"; };
+		E3649B651F30559100236794 /* NSNumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNumberExtensions.swift; sourceTree = "<group>"; };
+		E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNumberExtensionsTests.swift; sourceTree = "<group>"; };
+		E36536671F30601900BF5021 /* DictionaryExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsTests.swift; sourceTree = "<group>"; };
+		E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsViewController.swift; sourceTree = "<group>"; };
 		E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintHelperViewController.swift; sourceTree = "<group>"; };
 		E3A2C8601F2F3330007B73CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftDevHints.podspec; sourceTree = "<group>"; };
@@ -95,6 +105,7 @@
 				65248CC61F1D065700E00872 /* AppDelegate.swift */,
 				65248CC81F1D065700E00872 /* IntExtensionsViewController.swift */,
 				E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */,
+				E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */,
 				E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */,
 				65248CCA1F1D065700E00872 /* Main.storyboard */,
 				65248CCD1F1D065700E00872 /* Assets.xcassets */,
@@ -135,6 +146,8 @@
 				658976F31F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift */,
 				E3C116161F2F2D0400CAA098 /* PrintHelper.swift */,
 				E3649B5B1F302EAE00236794 /* DoubleExtensions.swift */,
+				E3649B651F30559100236794 /* NSNumberExtensions.swift */,
+				E3649B611F30521E00236794 /* DictionaryExtensions.swift */,
 			);
 			path = SwiftDevHints;
 			sourceTree = "<group>";
@@ -146,6 +159,8 @@
 				65248CBC1F1D02B200E00872 /* IntExtensionsTests.swift */,
 				E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */,
 				65248CBE1F1D031500E00872 /* UITableViewCellExtensionsTests.swift */,
+				E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */,
+				E36536671F30601900BF5021 /* DictionaryExtensionsTests.swift */,
 			);
 			path = SwiftDevHintsTests;
 			sourceTree = "<group>";
@@ -300,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A2C85F1F2F31A1007B73CE /* PrintHelperViewController.swift in Sources */,
+				E38085F71F306C7C007D4004 /* DictionaryExtensionsViewController.swift in Sources */,
 				E3649B601F30367D00236794 /* DoubleExtensionsViewController.swift in Sources */,
 				65248CC91F1D065700E00872 /* IntExtensionsViewController.swift in Sources */,
 				65248CC71F1D065700E00872 /* AppDelegate.swift in Sources */,
@@ -310,10 +326,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3649B621F30521E00236794 /* DictionaryExtensions.swift in Sources */,
 				E3649B5C1F302EAE00236794 /* DoubleExtensions.swift in Sources */,
 				65248CBB1F1CEC8D00E00872 /* IntExtensions.swift in Sources */,
 				E3C116171F2F2D0400CAA098 /* PrintHelper.swift in Sources */,
 				658976F41F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift in Sources */,
+				E3649B661F30559100236794 /* NSNumberExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +340,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				65248CBD1F1D02B200E00872 /* IntExtensionsTests.swift in Sources */,
+				E36536661F305E6400BF5021 /* NSNumberExtensionsTests.swift in Sources */,
+				E36536681F30601900BF5021 /* DictionaryExtensionsTests.swift in Sources */,
 				65248CBF1F1D031500E00872 /* UITableViewCellExtensionsTests.swift in Sources */,
 				E3649B5E1F3032DC00236794 /* DoubleExtensionsTests.swift in Sources */,
 			);
