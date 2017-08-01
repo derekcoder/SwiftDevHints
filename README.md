@@ -18,13 +18,43 @@ pod 'SwiftDevHints'
 
 ## Usage
 
-### Random Int
+### IntExtensions
 
+Random Int
 ```swift
 import SwiftDevHints
 
 let range = Range<Int>(0...10)
 let randomNum = Int.random(range) // randomNum is Int number between 0 ~ 10
+```
+
+Format Int
+```
+import SwiftDevHints
+
+let aInt = 8
+let formatedInt1 = aInt.format("03") // "003"
+let formatedInt2 = aInt.format("3") // "  3"
+```
+
+### DoubleExtensions
+
+Format Double
+```
+import SwiftDevHints
+
+let aDouble = 3.14159265
+let formatedDouble = aDouble.format(".2") // "3.14"
+let formatedDouble = aDouble.format(".3") // "3.142"
+```
+
+Round Double
+```
+import SwiftDevHints
+
+let aDouble = 3.14159265
+let roundedDouble1 = aDouble.roundTo(places: 2) // 3.14
+let roundedDouble2 = aDouble.roundTo(places: 3) // 3.142
 ```
 
 ### UITableViewCellExtensions

@@ -37,11 +37,31 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="601-xb-dsK" kind="show" id="Rnd-HR-vDv"/>
+                                            <segue destination="ZWV-mI-5sc" kind="show" id="9pi-Ke-6yf"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="5EN-Fr-Ror" style="IBUITableViewCellStyleDefault" id="qZ4-Jk-2MH">
+                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qZ4-Jk-2MH" id="BBX-UN-MMk">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="DoubleExtensions.swift" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5EN-Fr-Ror">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="5dP-7l-ED5" kind="show" id="jgE-yK-Frl"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="Ehd-D5-sKf" style="IBUITableViewCellStyleDefault" id="aod-z5-NkE">
-                                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="88" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aod-z5-NkE" id="0E1-2b-1l6">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
@@ -74,49 +94,45 @@
             </objects>
             <point key="canvasLocation" x="401" y="281"/>
         </scene>
-        <!--IntExtensions.swift-->
-        <scene sceneID="87z-zw-1zo">
+        <!--Int Extensions View Controller-->
+        <scene sceneID="85L-LI-66F">
             <objects>
-                <tableViewController id="601-xb-dsK" customClass="IntExtensionsViewController" customModule="SwiftDevHints_Demo" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="wXv-AW-eZO">
+                <viewController id="ZWV-mI-5sc" customClass="IntExtensionsViewController" customModule="SwiftDevHints_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0aE-eM-Zoq"/>
+                        <viewControllerLayoutGuide type="bottom" id="2VJ-dQ-EbX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LrW-yl-kRS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KcB-hE-aha">
+                                <rect key="frame" x="101" y="109" width="173" height="30"/>
+                                <state key="normal" title="Generate 10 Random Ints"/>
+                                <connections>
+                                    <action selector="generateRandomInt" destination="ZWV-mI-5sc" eventType="touchUpInside" id="x5C-3R-mk3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OT9-du-91R">
+                                <rect key="frame" x="152" y="168" width="71" height="30"/>
+                                <state key="normal" title="Format Int"/>
+                                <connections>
+                                    <action selector="formatInt" destination="ZWV-mI-5sc" eventType="touchUpInside" id="aQU-qb-cjA"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="q2F-2z-Zfn" style="IBUITableViewCellStyleDefault" id="3Zh-pm-KGp">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Zh-pm-KGp" id="EJC-IK-zae">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="q2F-2z-Zfn">
-                                            <rect key="frame" x="16" y="0.0" width="344" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="601-xb-dsK" id="tdL-iF-Cdl"/>
-                            <outlet property="delegate" destination="601-xb-dsK" id="XDz-Y9-3Ll"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="IntExtensions.swift" id="ui4-e5-J36">
-                        <barButtonItem key="rightBarButtonItem" title="Random" id="XBh-GT-Fcg">
-                            <connections>
-                                <action selector="generateRandomInt" destination="601-xb-dsK" id="siN-MF-Bud"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Dy0-TR-B7D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstItem="OT9-du-91R" firstAttribute="centerX" secondItem="LrW-yl-kRS" secondAttribute="centerX" id="bgH-dP-Y5e"/>
+                            <constraint firstItem="KcB-hE-aha" firstAttribute="centerX" secondItem="LrW-yl-kRS" secondAttribute="centerX" id="f3S-jT-ffz"/>
+                            <constraint firstItem="KcB-hE-aha" firstAttribute="top" secondItem="0aE-eM-Zoq" secondAttribute="bottom" constant="45" id="fhe-wP-zM7"/>
+                            <constraint firstItem="OT9-du-91R" firstAttribute="top" secondItem="KcB-hE-aha" secondAttribute="bottom" constant="29" id="lJh-Sl-lXe"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L0d-PH-eYd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1287" y="-83"/>
+            <point key="canvasLocation" x="1285.5999999999999" y="-102.09895052473765"/>
         </scene>
         <!--Print Helper View Controller-->
         <scene sceneID="IAf-LR-Rxz">
@@ -147,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41c-ed-cLF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1286" y="576"/>
+            <point key="canvasLocation" x="2599" y="457"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yOk-gT-s1O">
@@ -164,6 +180,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZi-Ct-tpm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-551" y="281"/>
+        </scene>
+        <!--Double Extensions View Controller-->
+        <scene sceneID="4Bk-sS-ODN">
+            <objects>
+                <viewController id="5dP-7l-ED5" customClass="DoubleExtensionsViewController" customModule="SwiftDevHints_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ftn-RS-6Kz"/>
+                        <viewControllerLayoutGuide type="bottom" id="vQS-rD-jMl"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7GB-uy-Zsa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5q-MR-3Qa">
+                                <rect key="frame" x="136.5" y="109" width="102" height="30"/>
+                                <state key="normal" title="Format Double"/>
+                                <connections>
+                                    <action selector="formatDouble" destination="5dP-7l-ED5" eventType="touchUpInside" id="has-BL-7Cj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vw6-wO-5lk">
+                                <rect key="frame" x="139" y="168" width="97" height="30"/>
+                                <state key="normal" title="Round Double"/>
+                                <connections>
+                                    <action selector="roundDouble" destination="5dP-7l-ED5" eventType="touchUpInside" id="9Q2-jZ-QnM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="n5q-MR-3Qa" firstAttribute="top" secondItem="ftn-RS-6Kz" secondAttribute="bottom" constant="45" id="AOh-Tp-O1W"/>
+                            <constraint firstItem="n5q-MR-3Qa" firstAttribute="centerX" secondItem="7GB-uy-Zsa" secondAttribute="centerX" id="PZS-2j-pY4"/>
+                            <constraint firstItem="Vw6-wO-5lk" firstAttribute="top" secondItem="n5q-MR-3Qa" secondAttribute="bottom" constant="29" id="VcO-gM-Agy"/>
+                            <constraint firstItem="Vw6-wO-5lk" firstAttribute="centerX" secondItem="7GB-uy-Zsa" secondAttribute="centerX" id="pMs-bb-4Up"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v9w-zy-A7U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1946" y="146"/>
         </scene>
     </scenes>
 </document>

@@ -9,37 +9,26 @@
 import UIKit
 import SwiftDevHints
 
-class IntExtensionsViewController: UITableViewController {
+class IntExtensionsViewController: UIViewController {
     
-    private var randomInts = [Int]()
-
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func generateRandomInt() {
-        randomInts.removeAll()
         for _ in 0 ..< 20 {
             let range = Range<Int>(1...100)
-            randomInts.append(Int.random(range))
+            let randomInt = Int.random(range)
+            printLog(randomInt)
         }
-        tableView.reloadData()
     }
     
-    // MARK: - UITableViewDataSource
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return randomInts.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
-        
-        let randomInt = randomInts[indexPath.row]
-        
-        cell.textLabel?.text = "\(randomInt)"
-        
-        return cell
+    @IBAction func formatInt() {
+        let aInt = 8
+        let formatedInt1 = aInt.format("03") // "003"
+        let formatedInt2 = aInt.format("3") // "  3"
+        printLog(formatedInt1)
+        printLog(formatedInt2)
     }
 }
 

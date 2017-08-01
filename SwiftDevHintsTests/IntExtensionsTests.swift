@@ -11,11 +11,6 @@ import XCTest
 
 class IntExtensionsTests: XCTestCase {
     
-    func testHello() {
-        XCTAssert(1 < 2)
-    }
-    
-    /*
     func testRandom() {
         for _ in 0...100 {
             let range = Range<Int>(0...10)
@@ -30,5 +25,11 @@ class IntExtensionsTests: XCTestCase {
             XCTAssert(num >= 1)
             XCTAssert(num <= 9)
         }
-    }*/
+    }
+    
+    func testFormat() {
+        let aInt = 8
+        XCTAssertEqual(aInt.format("03"), "008")
+        XCTAssertEqual(aInt.format("3"), "  8")
+    }
 }
