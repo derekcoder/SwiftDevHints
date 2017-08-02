@@ -72,6 +72,24 @@ let latitude = dictionary.doubleValue(forKey: "latitude") // Double: 1.290270
 let longitude = dictionary.doubleValue(forKey: "longitude") // Double: 103.851959
 ```
 
+### UserDefaultsExtensions
+
+New usage methods for `UserDefaults` like `NotificationCenter`
+```swift
+import SwiftDevHints
+
+extension UserDefaults.Name {
+    static let Username: UserDefaults.Name = UserDefaults.Name("SwiftDevHints-Demo.Username")
+    static let Password: UserDefaults.Name = UserDefaults.Name("SwiftDevHints-Demo.Password")
+}
+
+UserDefaults.standard.set("Derek", forName: .Username)
+UserDefaults.standard.set("Password", forName: .Password)
+
+let username = UserDefaults.standard.string(forName: .Username)
+let password = UserDefaults.standard.string(forName: .Password)
+```
+
 ### UITableViewCellExtensions
 
 ```swift

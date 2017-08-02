@@ -2,7 +2,7 @@
 //  DictionaryExtensionsTests.swift
 //  SwiftDevHintsTests
 //
-//  Created by Julie on 1/8/17.
+//  Created by ZHOU DENGFENG on 1/8/17.
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 
