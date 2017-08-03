@@ -33,6 +33,8 @@
 		E3A2C8611F2F3331007B73CE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E3A2C8601F2F3330007B73CE /* README.md */; };
 		E3A2C8631F2F36A8007B73CE /* SwiftDevHints.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */; };
 		E3C116171F2F2D0400CAA098 /* PrintHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C116161F2F2D0400CAA098 /* PrintHelper.swift */; };
+		E3E586F81F32C883003855EE /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E586F71F32C883003855EE /* ItemsViewController.swift */; };
+		E3E586FA1F32CBDA003855EE /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E586F91F32CBDA003855EE /* DemoTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +79,8 @@
 		E3A2C8601F2F3330007B73CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftDevHints.podspec; sourceTree = "<group>"; };
 		E3C116161F2F2D0400CAA098 /* PrintHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintHelper.swift; sourceTree = "<group>"; };
+		E3E586F71F32C883003855EE /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		E3E586F91F32CBDA003855EE /* DemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				65248CC61F1D065700E00872 /* AppDelegate.swift */,
+				E3E586F91F32CBDA003855EE /* DemoTableViewController.swift */,
 				65248CC81F1D065700E00872 /* IntExtensionsViewController.swift */,
 				E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */,
 				E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */,
@@ -156,6 +161,7 @@
 				E3649B651F30559100236794 /* NSNumberExtensions.swift */,
 				E3649B611F30521E00236794 /* DictionaryExtensions.swift */,
 				E39BC4521F3084F8006AB7D1 /* UserDefaultsExtensions.swift */,
+				E3E586F71F32C883003855EE /* ItemsViewController.swift */,
 			);
 			path = SwiftDevHints;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 				E392194B1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift in Sources */,
 				65248CC91F1D065700E00872 /* IntExtensionsViewController.swift in Sources */,
 				65248CC71F1D065700E00872 /* AppDelegate.swift in Sources */,
+				E3E586FA1F32CBDA003855EE /* DemoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +348,7 @@
 				65248CBB1F1CEC8D00E00872 /* IntExtensions.swift in Sources */,
 				E3C116171F2F2D0400CAA098 /* PrintHelper.swift in Sources */,
 				E39BC4531F3084F8006AB7D1 /* UserDefaultsExtensions.swift in Sources */,
+				E3E586F81F32C883003855EE /* ItemsViewController.swift in Sources */,
 				658976F41F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift in Sources */,
 				E3649B661F30559100236794 /* NSNumberExtensions.swift in Sources */,
 			);
