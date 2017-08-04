@@ -8,7 +8,7 @@
 
 import Foundation
 
-typealias JSONDictionary = [String: Any]
+public typealias JSONDictionary = [String: Any]
 
 public protocol URLConvertible {
     var asURL: URL { get }
@@ -48,12 +48,20 @@ extension HttpMethod {
 }
 
 public struct Resource<A> {
-    let url: URL
-    let method: HttpMethod<Data>
-    let parse: (Data) -> Result<A>
+    public let url: URL
+    public let method: HttpMethod<Data>
+    public let parse: (Data) -> Result<A>
 }
 
 extension Resource {
+    public init(url: URL, method: HttpMethod<Any> = .get, parse: @escaping (Data) -> Result<A>) {
+        self.url = url
+        self.method = method.map { json in
+            try! JSONSerialization.data(withJSONObject: json, options: []) // TODO: handle failure for json encoding
+        }
+        self.parse = parse
+    }
+
     public init(url: URL, method: HttpMethod<Any> = .get, parseJSON: @escaping (Any) -> Result<A>) {
         self.url = url
         self.method = method.map { json in

@@ -194,7 +194,7 @@
 				E3E27DE01F347E2D00032DF3 /* Networking.swift */,
 				E3E27DDE1F347E2D00032DF3 /* Result.swift */,
 			);
-			path = Networking;
+			name = Networking;
 			sourceTree = "<group>";
 		};
 		E3B7016E1F34466F00271EA6 /* View */ = {
@@ -205,7 +205,7 @@
 				E3E27DCB1F347DF100032DF3 /* UITableViewCellExtensions.swift */,
 				E3E27DCA1F347DF100032DF3 /* UIViewExtensions.swift */,
 			);
-			path = View;
+			name = View;
 			sourceTree = "<group>";
 		};
 		E3B7016F1F34468400271EA6 /* Model */ = {
@@ -218,7 +218,7 @@
 				E3E27DD51F347E1200032DF3 /* PrintHelper.swift */,
 				E3E27DD21F347E1200032DF3 /* UserDefaultsExtensions.swift */,
 			);
-			path = Model;
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

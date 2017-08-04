@@ -27,7 +27,7 @@ public final class CallbackButton: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func tapped(_ sender: Any) {
+    @objc func tapped(_ sender: Any) {
         onTap()
     }
 }
