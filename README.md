@@ -124,6 +124,22 @@ import SwiftDevHints
 // PrintHelperViewController.swift:15  You just tap button.
 ```
 
+### Generic Table View Controllers
+
+```swift
+import SwiftDevHints
+
+struct Category {
+    var title: String
+}
+let categories = [Category(title: "Computers"), Category(title: "Electronics")]
+
+let categoriesVC = ItemsViewController(items: categories, configure: { (cell, category) in
+    cell.textLabel?.text = category.title
+})
+nc.pushViewController(categoriesVC, animated: true)
+```
+
 ## Contact
 
 Follow and contact me on [Twitter](https://twitter.com/derekcoder_). If you find an issue, just [open a ticket](https://github.com/derekcoder/SwiftDevHints/issues/new). Pull requests are warmly welcome as well.

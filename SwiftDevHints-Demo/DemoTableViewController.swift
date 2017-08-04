@@ -9,16 +9,16 @@
 import UIKit
 import SwiftDevHints
 
-struct Season {
-    var number: Int
+struct Category {
     var title: String
 }
 
-struct Episode {
+struct Product {
     var title: String
+    var serialNumber: String
 }
 
-final class SeasonCell: UITableViewCell {
+final class ProductCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: .value1, reuseIdentifier: reuseIdentifier)
     }
@@ -32,25 +32,25 @@ class DemoTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 && indexPath.row == 0 {
-            let seasons = [Season(number: 1, title: "Season One"), Season(number: 2, title: "Season Two")]
-            let episodes = [Episode(title: "First Episode"), Episode(title: "Second Episode"), Episode(title: "Third Episode")]
+            let categories = [Category(title: "Computers"), Category(title: "Electronics")]
+            let products = [Product(title: "iMac", serialNumber: "P-0001"), Product(title: "iPad", serialNumber: "P-0002"), Product(title: "iPhone", serialNumber: "P-0003")]
             
             let nc = navigationController!
             
-            let seasonsVC = ItemsViewController(items: seasons, configure: { (cell: SeasonCell, season) in
-                cell.textLabel?.text = season.title
-                cell.detailTextLabel?.text = "\(season.number)"
+            let categoriesVC = ItemsViewController(items: categories, configure: { (cell, category) in
+                cell.textLabel?.text = category.title
             })
-            seasonsVC.title = "Seasons"
-            seasonsVC.didSelect = { season in
-                let episodesVC = ItemsViewController(items: episodes, configure: { (cell, episode) in
-                    cell.textLabel?.text = episode.title
+            categoriesVC.title = "Categories"
+            categoriesVC.didSelect = { category in
+                let productsVC = ItemsViewController(items: products, configure: { (cell: ProductCell, product) in
+                    cell.textLabel?.text = product.title
+                    cell.detailTextLabel?.text = product.serialNumber
                 })
-                episodesVC.title = season.title
-                nc.pushViewController(episodesVC, animated: true)
+                productsVC.title = category.title
+                nc.pushViewController(productsVC, animated: true)
             }
     
-            nc.pushViewController(seasonsVC, animated: true)
+            nc.pushViewController(categoriesVC, animated: true)
         }
     }
 }
