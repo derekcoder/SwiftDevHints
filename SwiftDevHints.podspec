@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftDevHints'
-  s.version          = '0.0.9'
+  s.version          = '0.1'
   s.summary          = 'A very useful set of development tools.'
  
   s.description      = <<-DESC
@@ -12,7 +12,7 @@ Pod::Spec.new do |s|
   s.author           = { 'derekcoder' => 'derekcoder@gmail.com' }
   s.source           = { :git => 'https://github.com/derekcoder/SwiftDevHints.git', :tag => s.version.to_s }
  
-  s.ios.deployment_target = '10.0'
+  s.ios.deployment_target = '9.0'
   s.source_files = ['SwiftDevHints/Sources/*.swift', 'SwiftDevHints/SwiftDevHints.h']
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
   

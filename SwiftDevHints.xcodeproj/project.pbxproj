@@ -16,6 +16,7 @@
 		65248CD11F1D065700E00872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65248CCF1F1D065700E00872 /* LaunchScreen.storyboard */; };
 		654982511F19D1FB008EE146 /* SwiftDevHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; };
 		654982581F19D1FB008EE146 /* SwiftDevHints.h in Headers */ = {isa = PBXBuildFile; fileRef = 6549824A1F19D1FA008EE146 /* SwiftDevHints.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65FD45151F34C9BD0020B6ED /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65FD45141F34C9BD0020B6ED /* CoreDataStack.swift */; };
 		E3649B5E1F3032DC00236794 /* DoubleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */; };
 		E3649B601F30367D00236794 /* DoubleExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */; };
 		E36536661F305E6400BF5021 /* NSNumberExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */; };
@@ -68,6 +69,7 @@
 		6549824B1F19D1FA008EE146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654982501F19D1FB008EE146 /* SwiftDevHintsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDevHintsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		654982571F19D1FB008EE146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65FD45141F34C9BD0020B6ED /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataStack.swift; path = Sources/CoreDataStack.swift; sourceTree = "<group>"; };
 		E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsTests.swift; sourceTree = "<group>"; };
 		E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsViewController.swift; sourceTree = "<group>"; };
 		E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNumberExtensionsTests.swift; sourceTree = "<group>"; };
@@ -164,6 +166,7 @@
 		654982491F19D1FA008EE146 /* SwiftDevHints */ = {
 			isa = PBXGroup;
 			children = (
+				65FD45111F34C98A0020B6ED /* CoreData */,
 				E3B7016F1F34468400271EA6 /* Model */,
 				E3B7016E1F34466F00271EA6 /* View */,
 				E3B7016D1F34466100271EA6 /* Networking */,
@@ -185,6 +188,14 @@
 				E39BC4541F30909F006AB7D1 /* UserDefaultsExtensionsTests.swift */,
 			);
 			path = SwiftDevHintsTests;
+			sourceTree = "<group>";
+		};
+		65FD45111F34C98A0020B6ED /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				65FD45141F34C9BD0020B6ED /* CoreDataStack.swift */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		E3B7016D1F34466100271EA6 /* Networking */ = {
@@ -391,6 +402,7 @@
 				E3E27DCE1F347DF100032DF3 /* UIViewExtensions.swift in Sources */,
 				E3E27DE21F347E2D00032DF3 /* Error.swift in Sources */,
 				E3E27DDA1F347E1200032DF3 /* DictionaryExtensions.swift in Sources */,
+				65FD45151F34C9BD0020B6ED /* CoreDataStack.swift in Sources */,
 				E3E27DD91F347E1200032DF3 /* NSNumberExtensions.swift in Sources */,
 				E3E27DD01F347DF100032DF3 /* StackViewController.swift in Sources */,
 				E3E27DDD1F347E1200032DF3 /* DoubleExtensions.swift in Sources */,
