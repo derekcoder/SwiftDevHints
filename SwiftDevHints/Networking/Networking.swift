@@ -10,6 +10,10 @@ import Foundation
 
 typealias JSONDictionary = [String: Any]
 
+public protocol URLConvertible {
+    var asURL: URL { get }
+}
+
 extension Sequence {
     public func failingFlatMap<T>(transform: (Self.Iterator.Element) throws -> T?) rethrows -> [T]? {
         var result: [T] = []
