@@ -66,7 +66,7 @@ class DemoTableViewController: UITableViewController {
         let vc = StackViewController(elements: elements)
         nc.pushViewController(vc, animated: true)
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 1 && indexPath.row == 0 {
             showItemsViewControllerDemo()
