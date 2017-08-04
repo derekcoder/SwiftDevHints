@@ -143,6 +143,27 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="StackViewController" id="hG0-K9-O7M">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="MVX-Jf-Ih3" style="IBUITableViewCellStyleDefault" id="SMn-dv-7Kh">
+                                        <rect key="frame" x="0.0" y="411" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SMn-dv-7Kh" id="Tep-Cx-3TX">
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="StackViewController" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MVX-Jf-Ih3">
+                                                    <rect key="frame" x="16" y="0.0" width="324" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="nKe-TL-zJO" id="oMp-gR-gdV"/>
@@ -255,14 +276,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n5q-MR-3Qa">
-                                <rect key="frame" x="136.5" y="109" width="102" height="30"/>
+                                <rect key="frame" x="136.5" y="129" width="102" height="30"/>
                                 <state key="normal" title="Format Double"/>
                                 <connections>
                                     <action selector="formatDouble" destination="5dP-7l-ED5" eventType="touchUpInside" id="has-BL-7Cj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vw6-wO-5lk">
-                                <rect key="frame" x="139" y="168" width="97" height="30"/>
+                                <rect key="frame" x="139" y="188" width="97" height="30"/>
                                 <state key="normal" title="Round Double"/>
                                 <connections>
                                     <action selector="roundDouble" destination="5dP-7l-ED5" eventType="touchUpInside" id="9Q2-jZ-QnM"/>

@@ -25,6 +25,9 @@
 		E3649B661F30559100236794 /* NSNumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B651F30559100236794 /* NSNumberExtensions.swift */; };
 		E36536661F305E6400BF5021 /* NSNumberExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */; };
 		E36536681F30601900BF5021 /* DictionaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36536671F30601900BF5021 /* DictionaryExtensionsTests.swift */; };
+		E36A76E61F3416FF00812ED4 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A76E51F3416FF00812ED4 /* UIViewExtensions.swift */; };
+		E36A76E81F341B8E00812ED4 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36A76E71F341B8E00812ED4 /* StackViewController.swift */; };
+		E36A76E91F34216600812ED4 /* SwiftDevHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; };
 		E38085F71F306C7C007D4004 /* DictionaryExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */; };
 		E392194B1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E392194A1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift */; };
 		E39BC4531F3084F8006AB7D1 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BC4521F3084F8006AB7D1 /* UserDefaultsExtensions.swift */; };
@@ -71,6 +74,8 @@
 		E3649B651F30559100236794 /* NSNumberExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNumberExtensions.swift; sourceTree = "<group>"; };
 		E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNumberExtensionsTests.swift; sourceTree = "<group>"; };
 		E36536671F30601900BF5021 /* DictionaryExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsTests.swift; sourceTree = "<group>"; };
+		E36A76E51F3416FF00812ED4 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		E36A76E71F341B8E00812ED4 /* StackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsViewController.swift; sourceTree = "<group>"; };
 		E392194A1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensionsViewController.swift; sourceTree = "<group>"; };
 		E39BC4521F3084F8006AB7D1 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
@@ -88,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E36A76E91F34216600812ED4 /* SwiftDevHints.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -162,6 +168,8 @@
 				E3649B611F30521E00236794 /* DictionaryExtensions.swift */,
 				E39BC4521F3084F8006AB7D1 /* UserDefaultsExtensions.swift */,
 				E3E586F71F32C883003855EE /* ItemsViewController.swift */,
+				E36A76E51F3416FF00812ED4 /* UIViewExtensions.swift */,
+				E36A76E71F341B8E00812ED4 /* StackViewController.swift */,
 			);
 			path = SwiftDevHints;
 			sourceTree = "<group>";
@@ -350,6 +358,8 @@
 				E39BC4531F3084F8006AB7D1 /* UserDefaultsExtensions.swift in Sources */,
 				E3E586F81F32C883003855EE /* ItemsViewController.swift in Sources */,
 				658976F41F1A4E9F00A8DC21 /* UITableViewCellExtensions.swift in Sources */,
+				E36A76E81F341B8E00812ED4 /* StackViewController.swift in Sources */,
+				E36A76E61F3416FF00812ED4 /* UIViewExtensions.swift in Sources */,
 				E3649B661F30559100236794 /* NSNumberExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
