@@ -9,8 +9,8 @@
 import UIKit
 
 extension UIViewController {
-    public func performCustomSegue(_ segue: CustomSegue) {
-        performSegue(withIdentifier: segue.rawValue, sender: self)
+    public func performCustomSegue(_ segue: CustomSegue, sender: Any? = self) {
+        performSegue(withIdentifier: segue.rawValue, sender: sender)
     }
 }
 
