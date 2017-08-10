@@ -26,6 +26,8 @@
 		E36536661F305E6400BF5021 /* NSNumberExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */; };
 		E36536681F30601900BF5021 /* DictionaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36536671F30601900BF5021 /* DictionaryExtensionsTests.swift */; };
 		E36A76E91F34216600812ED4 /* SwiftDevHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; };
+		E37F02AF1F3C730600C33165 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F02AD1F3C730600C33165 /* StringExtensions.swift */; };
+		E37F02B01F3C730600C33165 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F02AE1F3C730600C33165 /* String+MD5.swift */; };
 		E38085F71F306C7C007D4004 /* DictionaryExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */; };
 		E392194B1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E392194A1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift */; };
 		E39BC4551F30909F006AB7D1 /* UserDefaultsExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BC4541F30909F006AB7D1 /* UserDefaultsExtensionsTests.swift */; };
@@ -82,6 +84,8 @@
 		E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsViewController.swift; sourceTree = "<group>"; };
 		E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNumberExtensionsTests.swift; sourceTree = "<group>"; };
 		E36536671F30601900BF5021 /* DictionaryExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsTests.swift; sourceTree = "<group>"; };
+		E37F02AD1F3C730600C33165 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Sources/StringExtensions.swift; sourceTree = "<group>"; };
+		E37F02AE1F3C730600C33165 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
 		E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsViewController.swift; sourceTree = "<group>"; };
 		E392194A1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensionsViewController.swift; sourceTree = "<group>"; };
 		E39BC4541F30909F006AB7D1 /* UserDefaultsExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensionsTests.swift; sourceTree = "<group>"; };
@@ -234,6 +238,8 @@
 		E3B7016F1F34468400271EA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E37F02AE1F3C730600C33165 /* String+MD5.swift */,
+				E37F02AD1F3C730600C33165 /* StringExtensions.swift */,
 				E3E27DD41F347E1200032DF3 /* DictionaryExtensions.swift */,
 				E3E27DD71F347E1200032DF3 /* DoubleExtensions.swift */,
 				E3E27DD61F347E1200032DF3 /* IntExtensions.swift */,
@@ -414,6 +420,7 @@
 				E340F2921F3820EA006F872D /* UIViewControllerExtensions.swift in Sources */,
 				E3E27DD11F347DF100032DF3 /* ItemsViewController.swift in Sources */,
 				E3E27DDB1F347E1200032DF3 /* PrintHelper.swift in Sources */,
+				E37F02B01F3C730600C33165 /* String+MD5.swift in Sources */,
 				E3E27DE31F347E2D00032DF3 /* Networking.swift in Sources */,
 				E3E27DCE1F347DF100032DF3 /* UIViewExtensions.swift in Sources */,
 				E3E27DE21F347E2D00032DF3 /* Error.swift in Sources */,
@@ -425,6 +432,7 @@
 				E3E27DD81F347E1200032DF3 /* UserDefaultsExtensions.swift in Sources */,
 				E3E27DE11F347E2D00032DF3 /* Result.swift in Sources */,
 				E340F2911F3820EA006F872D /* UIStoryboardSegue.swift in Sources */,
+				E37F02AF1F3C730600C33165 /* StringExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
