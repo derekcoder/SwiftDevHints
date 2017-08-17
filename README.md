@@ -1,23 +1,17 @@
 # SwiftDevHints
 A very useful set of development tools.
 
-==
-
-Content
-
-==
-
-- [Features](##Features)
-- [Requirements](##Requirements)
-- [Installation](##Installation)
-- [Usage](##Usage)
-    + [Random Int](###Random Int)
-    + [Format Int and Double](###Format Int and Double)
-    + [Round Double](###Round Double)
-    + [Safe Get Value from Dictionary](###Safe Get Value from Dictionary)
-    + [New Method using UserDefaults](###New Method using UserDefaults)
-- [Contact](##Contact)
-- [License](##License)
+- [Features](##features)
+- [Requirements](##requirements)
+- [Installation](##installation)
+- [Usage](##usage)
+    + [Random Int](###random-Int)
+    + [Format Int and Double](###format-int-and-double)
+    + [Round Double](###round-double)
+    + [Safe Get Value from Dictionary](###safe-get-value-from-dictionary)
+    + [New Method using UserDefaults](###new-method-using-userDefaults)
+- [Contact](##contact)
+- [License](##license)
 
 ## Features
 
