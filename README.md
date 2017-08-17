@@ -1,6 +1,24 @@
 # SwiftDevHints
 A very useful set of development tools.
 
+==
+
+Content
+
+==
+
+- [Features](##Features)
+- [Requirements](##Requirements)
+- [Installation](##Installation)
+- [Usage](##Usage)
+    + [Random Int](###Random Int)
+    + [Format Int and Double](###Format Int and Double)
+    + [Round Double](###Round Double)
+    + [Safe Get Value from Dictionary](###Safe Get Value from Dictionary)
+    + [New Method using UserDefaults](###New Method using UserDefaults)
+- [Contact](##Contact)
+- [License](##License)
+
 ## Features
 
 ## Requirements
@@ -18,28 +36,25 @@ pod 'SwiftDevHints'
 
 ## Usage
 
-### IntExtensions
+### Random Int
 
-Random Int
 ```swift
 import SwiftDevHints
 
-let range = Range<Int>(0...10)
-let randomNum = Int.random(range) // randomNum is Int number between 0 ~ 10
+let randomInt = (0...10).randomInt // randomInt is Int number between 0 ~ 10 (include 10)
+let randomInt = (0..<10).randomInt // randomInt is Int number between 0 ~ 10 (not include 10)
 ```
 
-Format Int
+### Format Int and Double
+
 ```
 import SwiftDevHints
 
 let aInt = 8
-let formatedInt1 = aInt.format("03") // "003"
-let formatedInt2 = aInt.format("3") // "  3"
+let formatedInt1 = aInt.format("03") // "008"
+let formatedInt2 = aInt.format("3") // "  8"
 ```
 
-### DoubleExtensions
-
-Format Double
 ```swift
 import SwiftDevHints
 
@@ -48,7 +63,8 @@ let formatedDouble = aDouble.format(".2") // "3.14"
 let formatedDouble = aDouble.format(".3") // "3.142"
 ```
 
-Round Double
+### Round Double
+
 ```swift
 import SwiftDevHints
 
@@ -57,7 +73,7 @@ let roundedDouble1 = aDouble.roundTo(places: 2) // 3.14
 let roundedDouble2 = aDouble.roundTo(places: 3) // 3.142
 ```
 
-### DictionaryExtensions
+### Safe Get Value from Dictionary
 
 ```swift
 import SwiftDevHints
@@ -72,7 +88,7 @@ let latitude = dictionary.doubleValue(forKey: "latitude") // Double: 1.290270
 let longitude = dictionary.doubleValue(forKey: "longitude") // Double: 103.851959
 ```
 
-### UserDefaultsExtensions
+### New Method using UserDefaults
 
 New usage methods for `UserDefaults` like `NotificationCenter`
 ```swift

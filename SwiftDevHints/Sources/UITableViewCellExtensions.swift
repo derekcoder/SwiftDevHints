@@ -17,6 +17,12 @@ extension UITableViewCell: CellIdentifierProtocol {
         let className = String(describing: self)
         return className
     }
+    
+    public func nibRegister(tableView: UITableView) {
+        let identifier = type(of: self).cellIdentifier
+        let nib = UINib(nibName: identifier, bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: identifier)
+    }
 }
 
 public func registerNibForCellWithIdentifier(_ identifier: String, tableView: UITableView) {

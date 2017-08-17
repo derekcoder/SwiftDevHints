@@ -17,16 +17,15 @@ class IntExtensionsViewController: UIViewController {
     
     @IBAction func generateRandomInt() {
         for _ in 0 ..< 20 {
-            let range = Range<Int>(1...100)
-            let randomInt = Int.random(range)
+            let randomInt = (1...100).randomInt
             printLog(randomInt)
         }
     }
     
     @IBAction func formatInt() {
         let aInt = 8
-        let formatedInt1 = aInt.format("03") // "003"
-        let formatedInt2 = aInt.format("3") // "  3"
+        let formatedInt1 = aInt.format("03") // "008"
+        let formatedInt2 = aInt.format("3") // "  8"
         printLog(formatedInt1)
         printLog(formatedInt2)
     }
