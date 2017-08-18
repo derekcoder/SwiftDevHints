@@ -9,6 +9,18 @@
 import Foundation
 
 extension Double {
+    /// Return a formated string of the value.
+    ///
+    ///     let positiveDouble = 3.14159265
+    ///     let aString1 = positiveDouble.format(".2")  // "3.14"
+    ///     let aString2 = positiveDouble.format(".3")  // "3.142"
+    ///
+    ///     let negativeDouble = -3.14159265
+    ///     let aString3 = negativeDouble.format(".2")  // "-3.14"
+    ///     let aString4 = negativeDouble.format(".3")  // "-3.142"
+    ///
+    /// - Parameter f: format string
+    /// - Returns: formated string
     public func format(_ f: String) -> String {
         return String(format: "%\(f)f", self)
     }

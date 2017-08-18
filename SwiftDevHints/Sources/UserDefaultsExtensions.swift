@@ -94,3 +94,17 @@ extension UserDefaults {
         set(url, forKey: name.rawValue)
     }
 }
+
+extension UserDefaults.Name: ExpressibleByStringLiteral {
+    public init(stringLiteral value: String) {
+        self.rawValue = value
+    }
+    
+    public init(unicodeScalarLiteralType value: String) {
+        self.init(stringLiteral: value)
+    }
+    
+    public init(extendedGraphemeClusterLiteralType value: String) {
+        self.init(stringLiteral: value)
+    }
+}

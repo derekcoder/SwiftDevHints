@@ -1,19 +1,39 @@
 # SwiftDevHints
 A very useful set of development tools.
 
-- [Features](##features)
-- [Requirements](##requirements)
-- [Installation](##installation)
-- [Usage](##usage)
-    + [Random Int](###random-Int)
-    + [Format Int and Double](###format-int-and-double)
-    + [Round Double](###round-double)
-    + [Safe Get Value from Dictionary](###safe-get-value-from-dictionary)
-    + [New Method using UserDefaults](###new-method-using-userDefaults)
-- [Contact](##contact)
-- [License](##license)
+- [Features](#features)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+    + [Random Int](#random-int)
+    + [Format Int and Double](#format-int-and-double)
+    + [Round Double](#round-double)
+    + [Safe Get Value from Dictionary](#safe-get-value-from-dictionary)
+    + [New Method using UserDefaults](#new-method-using-userDefaults)
+    + [Debug Print Log](#debug-print-log)
+    + [UIColor Extensions](#uicolor-extensions)
+    + [Custom Segue](#custom-segue)
+    + [Generic Table View Controller](#generic-table-view-controller)
+    + [Nib Register for UITableViewCell](#nib-register-for-uitableviewcell)
+    + [Convenient Methods for Adding Constraints](#convenient-methods-for-adding-constraints)
+    + [Networking](#networking)
+- [Contact](#contact)
+- [License](#license)
 
 ## Features
+
+- [x] Random Int
+- [x] Format Int and Double
+- [ ] Round Double
+- [ ] Safe Get Value from Dictionary
+- [ ] New Method using UserDefaults
+- [ ] Debug Print Log
+- [ ] UIColor Init with RGBA(Int) and get RGBA(Int)
+- [ ] Custom Segue
+- [ ] Generic Table View Controller
+- [ ] Nib Register for UITableViewCell
+- [ ] Convenient Methods for Adding Constraints
+- [ ] Networking
 
 ## Requirements
 
@@ -89,8 +109,8 @@ New usage methods for `UserDefaults` like `NotificationCenter`
 import SwiftDevHints
 
 extension UserDefaults.Name {
-    static let Username: UserDefaults.Name = UserDefaults.Name("SwiftDevHints-Demo.Username")
-    static let Password: UserDefaults.Name = UserDefaults.Name("SwiftDevHints-Demo.Password")
+    static let Username = UserDefaults.Name("SwiftDevHints-Demo.Username")
+    static let Password = UserDefaults.Name("SwiftDevHints-Demo.Password")
 }
 
 UserDefaults.standard.set("Derek", forName: .Username)
@@ -100,7 +120,46 @@ let username = UserDefaults.standard.string(forName: .Username)
 let password = UserDefaults.standard.string(forName: .Password)
 ```
 
-### UITableViewCellExtensions
+### Debug Print Log
+
+- show which file you are logging
+- show line number your are logging
+- `debugPrintLog` only valid for DEBUG mode
+
+```swift
+import SwiftDevHints
+
+@IBAction func tapPrintLogButton() {
+    debugPrintLog("You just tap button.")
+}
+
+// PrintHelperViewController.swift:15  You just tap button.
+```
+
+### UIColor Extensions
+
+```swift
+```
+
+### Custom Segue
+
+### Generic Table View Controllers
+
+```swift
+import SwiftDevHints
+
+struct Category {
+    var title: String
+}
+let categories = [Category(title: "Computers"), Category(title: "Electronics")]
+
+let categoriesVC = ItemsViewController(items: categories, configure: { (cell, category) in
+    cell.textLabel?.text = category.title
+})
+nc.pushViewController(categoriesVC, animated: true)
+```
+
+### Nib Register for UITableViewCell
 
 ```swift
 import SwiftDevHints
@@ -118,36 +177,14 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 }
 ```
 
-### PrintHelper
+### Convenient Methods for Adding Constraints
 
-- show which file you are logging
-- show line number your are logging
-- `printLog` only valid for DEBUG mode
-
-```swift
-import SwiftDevHints
-
-@IBAction func tapPrintLogButton() {
-    printLog("You just tap button.")
-}
-
-// PrintHelperViewController.swift:15  You just tap button.
+```
 ```
 
-### Generic Table View Controllers
+### Networking
 
 ```swift
-import SwiftDevHints
-
-struct Category {
-    var title: String
-}
-let categories = [Category(title: "Computers"), Category(title: "Electronics")]
-
-let categoriesVC = ItemsViewController(items: categories, configure: { (cell, category) in
-    cell.textLabel?.text = category.title
-})
-nc.pushViewController(categoriesVC, animated: true)
 ```
 
 ## Contact

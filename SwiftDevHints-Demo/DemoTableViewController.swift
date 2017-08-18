@@ -59,7 +59,7 @@ class DemoTableViewController: UITableViewController {
             .image(#imageLiteral(resourceName: "objc-logo-white")),
             .label("To use the Swift Talk app please login as a subscriber"),
             .button("Login with GitHub", {
-                printLog("Tapped")
+                debugPrintLog("Tapped")
             }),
             .label("If you're not registered yet, please visit http://objc.io for more information")
         ]

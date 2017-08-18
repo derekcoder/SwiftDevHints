@@ -10,14 +10,14 @@ import XCTest
 @testable import SwiftDevHints
 
 extension UserDefaults.Name {
-    public static let Username: UserDefaults.Name = UserDefaults.Name("SwiftDevHints.Username")
-    public static let Password: UserDefaults.Name = UserDefaults.Name("SwiftDevHints.Password")
-    public static let Age: UserDefaults.Name = UserDefaults.Name("SwiftDevHints.Age")
-    public static let Latitude: UserDefaults.Name = UserDefaults.Name("SwiftDevHints.Latitude")
-    public static let Longitude: UserDefaults.Name = UserDefaults.Name("SwiftDevHints.Longitude")
-    public static let ProfilePhotoURL: UserDefaults.Name = UserDefaults.Name("SwiftDevHints.ProfilePhotoURL")
-    public static let IsOnline: UserDefaults.Name = UserDefaults.Name("SwiftDevHints.IsOnline")
-    public static let Height: UserDefaults.Name = UserDefaults.Name("SwiftDevHints.Height")
+    public static let Username: UserDefaults.Name = "SwiftDevHints.Username"
+    public static let Password: UserDefaults.Name = "SwiftDevHints.Password"
+    public static let Age: UserDefaults.Name = "SwiftDevHints.Age"
+    public static let Latitude: UserDefaults.Name = "SwiftDevHints.Latitude"
+    public static let Longitude: UserDefaults.Name = "SwiftDevHints.Longitude"
+    public static let ProfilePhotoURL: UserDefaults.Name = "SwiftDevHints.ProfilePhotoURL"
+    public static let IsOnline: UserDefaults.Name = "SwiftDevHints.IsOnline"
+    public static let Height: UserDefaults.Name = "SwiftDevHints.Height"
 }
 
 class UserDefaultsExtensionsTests: XCTestCase {

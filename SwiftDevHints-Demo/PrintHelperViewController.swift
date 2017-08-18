@@ -12,6 +12,6 @@ import SwiftDevHints
 class PrintHelperViewController: UIViewController {
     
     @IBAction func tapPrintLogButton() {
-        printLog("You just tap button.")
-    }
+        debugPrintLog("You just tap button.")
+    }    
 }

@@ -9,6 +9,11 @@
 import Foundation
 
 extension CountableRange {
+    /// The random Int Number in half-open range.
+	///
+    ///     let randomInt = (0..<10).randomInt
+    ///     // randomInt is Int number between 0 ~ 10 (not include 10)
+    ///
     public var randomInt: Int {
         let start = lowerBound as! Int
         let end = (upperBound as! Int) - 1
@@ -18,6 +23,11 @@ extension CountableRange {
 }
 
 extension CountableClosedRange {
+    /// The random Int Number in closed range.
+    ///
+    ///     let randomInt = (0...10).randomInt
+    ///     // randomInt is Int number between 0 ~ 10 (include 10)
+    ///
     public var randomInt: Int {
         let start = lowerBound as! Int
         let end = upperBound as! Int

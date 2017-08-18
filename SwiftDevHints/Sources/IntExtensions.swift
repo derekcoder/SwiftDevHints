@@ -9,7 +9,165 @@
 import Foundation
 
 extension Int {
+    /// Return a formated string of the value.
+    ///
+    ///     let positiveInt = 8
+    ///     let aString1 = positiveInt.format("03") // "008"
+    ///     let aString2 = positiveInt.format("3")  // "  8"
+    ///
+    ///     let negativeInt = -8
+    ///     let aString3 = negativeInt.format("03") // "-08"
+    ///     let aString4 = negativeInt.format("3")  // " -8"
+    ///
+    /// - Parameter f: format string
+    /// - Returns: formated string
     public func format(_ f: String) -> String {
         return String(format: "%\(f)d", self)
     }
 }
+
+extension Int8 {
+    /// Return a formated string of the value.
+    ///
+    ///     let positiveInt: Int8 = 8
+    ///     let aString1 = positiveInt.format("03") // "008"
+    ///     let aString2 = positiveInt.format("3")  // "  8"
+    ///
+    ///     let negativeInt: Int8 = -8
+    ///     let aString3 = negativeInt.format("03") // "-08"
+    ///     let aString4 = negativeInt.format("3")  // " -8"
+    ///
+    /// - Parameter f: format string
+    /// - Returns: formated string
+    public func format(_ f: String) -> String {
+        return String(format: "%\(f)d", self)
+    }
+}
+
+extension Int16 {
+    /// Return a formated string of the value.
+    ///
+    ///     let positiveInt: Int16 = 8
+    ///     let aString1 = positiveInt.format("03") // "008"
+    ///     let aString2 = positiveInt.format("3")  // "  8"
+    ///
+    ///     let negativeInt: Int16 = -8
+    ///     let aString3 = negativeInt.format("03") // "-08"
+    ///     let aString4 = negativeInt.format("3")  // " -8"
+    ///
+    /// - Parameter f: format string
+    /// - Returns: formated string
+    public func format(_ f: String) -> String {
+        return String(format: "%\(f)d", self)
+    }
+}
+
+extension Int32 {
+    /// Return a formated string of the value.
+    ///
+    ///     let positiveInt: Int32 = 8
+    ///     let aString1 = positiveInt.format("03") // "008"
+    ///     let aString2 = positiveInt.format("3")  // "  8"
+    ///
+    ///     let negativeInt: Int32 = -8
+    ///     let aString3 = negativeInt.format("03") // "-08"
+    ///     let aString4 = negativeInt.format("3")  // " -8"
+    ///
+    /// - Parameter f: format string
+    /// - Returns: formated string
+    public func format(_ f: String) -> String {
+        return String(format: "%\(f)d", self)
+    }
+}
+
+extension Int64 {
+    /// Return a formated string of the value.
+    ///
+    ///     let positiveInt: Int64 = 8
+    ///     let aString1 = positiveInt.format("03") // "008"
+    ///     let aString2 = positiveInt.format("3")  // "  8"
+    ///
+    ///     let negativeInt: Int64 = -8
+    ///     let aString3 = negativeInt.format("03") // "-08"
+    ///     let aString4 = negativeInt.format("3")  // " -8"
+    ///
+    /// - Parameter f: format string
+    /// - Returns: formated string
+    public func format(_ f: String) -> String {
+        return String(format: "%\(f)d", self)
+    }
+}
+
+extension UInt {
+    /// Return a formated string of the value.
+    ///
+    ///     let positiveInt: UInt = 8
+    ///     let aString1 = positiveInt.format("03") // "008"
+    ///     let aString2 = positiveInt.format("3")  // "  8"
+    ///
+    /// - Parameter f: format string
+    /// - Returns: formated string
+    public func format(_ f: String) -> String {
+        return String(format: "%\(f)d", self)
+    }
+}
+
+extension UInt8 {
+    /// Return a formated string of the value.
+    ///
+    ///     let positiveInt: UInt8 = 8
+    ///     let aString1 = positiveInt.format("03") // "008"
+    ///     let aString2 = positiveInt.format("3")  // "  8"
+    ///
+    /// - Parameter f: format string
+    /// - Returns: formated string
+    public func format(_ f: String) -> String {
+        return String(format: "%\(f)d", self)
+    }
+}
+
+extension UInt16 {
+    /// Return a formated string of the value.
+    ///
+    ///     let positiveInt: UInt16 = 8
+    ///     let aString1 = positiveInt.format("03") // "008"
+    ///     let aString2 = positiveInt.format("3")  // "  8"
+    ///
+    /// - Parameter f: format string
+    /// - Returns: formated string
+    public func format(_ f: String) -> String {
+        return String(format: "%\(f)d", self)
+    }
+}
+
+extension UInt32 {
+    /// Return a formated string of the value.
+    ///
+    ///     let positiveInt: UInt32 = 8
+    ///     let aString1 = positiveInt.format("03") // "008"
+    ///     let aString2 = positiveInt.format("3")  // "  8"
+    ///
+    /// - Parameter f: format string
+    /// - Returns: formated string
+    public func format(_ f: String) -> String {
+        return String(format: "%\(f)d", self)
+    }
+}
+
+extension UInt64 {
+    /// Return a formated string of the value.
+    ///
+    ///     let positiveInt: UInt64 = 8
+    ///     let aString1 = positiveInt.format("03") // "008"
+    ///     let aString2 = positiveInt.format("3")  // "  8"
+    ///
+    /// - Parameter f: format string
+    /// - Returns: formated string
+    public func format(_ f: String) -> String {
+        return String(format: "%\(f)d", self)
+    }
+}
+
+
+
+
