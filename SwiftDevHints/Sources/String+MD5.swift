@@ -2,7 +2,7 @@
 //  String+MD5.swift
 //  SwiftDevHints
 //
-//  Created by Julie on 10/8/17.
+//  Created by ZHOU DENGFENG on 10/8/17.
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 

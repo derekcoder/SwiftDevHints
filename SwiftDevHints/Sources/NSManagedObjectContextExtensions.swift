@@ -2,7 +2,7 @@
 //  NSManagedObjectContextExtensions.swift
 //  Photos
 //
-//  Created by Julie on 7/8/17.
+//  Created by ZHOU DENGFENG on 7/8/17.
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 
