@@ -19,8 +19,8 @@ extension Int {
     ///     let aString3 = negativeInt.format("03") // "-08"
     ///     let aString4 = negativeInt.format("3")  // " -8"
     ///
-    /// - Parameter f: format string
-    /// - Returns: formated string
+    /// - Parameter f: Format string
+    /// - Returns: Formated string
     public func format(_ f: String) -> String {
         return String(format: "%\(f)d", self)
     }
@@ -37,8 +37,8 @@ extension Int8 {
     ///     let aString3 = negativeInt.format("03") // "-08"
     ///     let aString4 = negativeInt.format("3")  // " -8"
     ///
-    /// - Parameter f: format string
-    /// - Returns: formated string
+    /// - Parameter f: Format string
+    /// - Returns: Formated string
     public func format(_ f: String) -> String {
         return String(format: "%\(f)d", self)
     }
@@ -55,8 +55,8 @@ extension Int16 {
     ///     let aString3 = negativeInt.format("03") // "-08"
     ///     let aString4 = negativeInt.format("3")  // " -8"
     ///
-    /// - Parameter f: format string
-    /// - Returns: formated string
+    /// - Parameter f: Format string
+    /// - Returns: Formated string
     public func format(_ f: String) -> String {
         return String(format: "%\(f)d", self)
     }
@@ -73,8 +73,8 @@ extension Int32 {
     ///     let aString3 = negativeInt.format("03") // "-08"
     ///     let aString4 = negativeInt.format("3")  // " -8"
     ///
-    /// - Parameter f: format string
-    /// - Returns: formated string
+    /// - Parameter f: Format string
+    /// - Returns: Formated string
     public func format(_ f: String) -> String {
         return String(format: "%\(f)d", self)
     }
@@ -91,8 +91,8 @@ extension Int64 {
     ///     let aString3 = negativeInt.format("03") // "-08"
     ///     let aString4 = negativeInt.format("3")  // " -8"
     ///
-    /// - Parameter f: format string
-    /// - Returns: formated string
+    /// - Parameter f: Format string
+    /// - Returns: Formated string
     public func format(_ f: String) -> String {
         return String(format: "%\(f)d", self)
     }
@@ -105,8 +105,8 @@ extension UInt {
     ///     let aString1 = positiveInt.format("03") // "008"
     ///     let aString2 = positiveInt.format("3")  // "  8"
     ///
-    /// - Parameter f: format string
-    /// - Returns: formated string
+    /// - Parameter f: Format string
+    /// - Returns: Formated string
     public func format(_ f: String) -> String {
         return String(format: "%\(f)d", self)
     }
@@ -119,8 +119,8 @@ extension UInt8 {
     ///     let aString1 = positiveInt.format("03") // "008"
     ///     let aString2 = positiveInt.format("3")  // "  8"
     ///
-    /// - Parameter f: format string
-    /// - Returns: formated string
+    /// - Parameter f: Format string
+    /// - Returns: Formated string
     public func format(_ f: String) -> String {
         return String(format: "%\(f)d", self)
     }
@@ -133,8 +133,8 @@ extension UInt16 {
     ///     let aString1 = positiveInt.format("03") // "008"
     ///     let aString2 = positiveInt.format("3")  // "  8"
     ///
-    /// - Parameter f: format string
-    /// - Returns: formated string
+    /// - Parameter f: Format string
+    /// - Returns: Formated string
     public func format(_ f: String) -> String {
         return String(format: "%\(f)d", self)
     }
@@ -147,8 +147,8 @@ extension UInt32 {
     ///     let aString1 = positiveInt.format("03") // "008"
     ///     let aString2 = positiveInt.format("3")  // "  8"
     ///
-    /// - Parameter f: format string
-    /// - Returns: formated string
+    /// - Parameter f: Format string
+    /// - Returns: Formated string
     public func format(_ f: String) -> String {
         return String(format: "%\(f)d", self)
     }
@@ -161,8 +161,8 @@ extension UInt64 {
     ///     let aString1 = positiveInt.format("03") // "008"
     ///     let aString2 = positiveInt.format("3")  // "  8"
     ///
-    /// - Parameter f: format string
-    /// - Returns: formated string
+    /// - Parameter f: Format string
+    /// - Returns: Formated string
     public func format(_ f: String) -> String {
         return String(format: "%\(f)d", self)
     }

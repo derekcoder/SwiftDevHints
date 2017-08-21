@@ -24,7 +24,7 @@ A very useful set of development tools.
 
 - [x] Random Int
 - [x] Format Int and Double
-- [ ] Round Double
+- [x] Round Double
 - [ ] Safe Get Value from Dictionary
 - [ ] Get Value from Dictionary with Default Value using Subscript
 - [ ] New Method using UserDefaults
@@ -88,6 +88,7 @@ let roundedDouble1 = aDouble.roundTo(places: 2) // 3.14
 let roundedDouble2 = aDouble.roundTo(places: 3) // 3.142
 ```
 
+<!---
 ### Safe Get Value from Dictionary
 
 ```swift
@@ -187,6 +188,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 
 ```swift
 ```
+-->
 
 ## Contact
 
