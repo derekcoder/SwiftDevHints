@@ -36,6 +36,10 @@ public enum Type: Int {
 
 extension Dictionary where Key: CustomStringConvertible {
     
+    /// Returns the NSNumber value for the given key.
+	///
+    /// - Parameter key: The key to find in the dictionary
+    /// - Returns: The NSNumber value for `key` if `key` in the dictionary, otherwise, `0`.
     public func numberValue(forKey key: Key) -> NSNumber {
         guard let value = self[key] else { return NSNumber(value: 0.0) }
         
@@ -54,6 +58,10 @@ extension Dictionary where Key: CustomStringConvertible {
         }
     }
 
+    /// Returns the String value for the given key.
+    ///
+    /// - Parameter key: The key to find in the dictionary.
+    /// - Returns: The String value for key if key in the dictionary, otherwise, "".
     public func stringValue(forKey key: Key) -> String {
         guard let value = self[key] else { return "" }
         
@@ -67,6 +75,12 @@ extension Dictionary where Key: CustomStringConvertible {
         }
     }
     
+    /// Returns the Bool value for the given key.
+    ///
+    /// If type of the object for the given key is String and its value is "true" or "yes" or "1", this method will return `true`.
+    ///
+    /// - Parameter key: The key to find in the dictionary.
+    /// - Returns: The Bool value for `key` if `key` in the dictionary, otherwise, `false`.
     public func boolValue(forKey key: Key) -> Bool {
         guard let value = self[key] else { return false }
         
@@ -83,54 +97,98 @@ extension Dictionary where Key: CustomStringConvertible {
         }
     }
     
+    /// Return the Int value for the given key.
+    ///
+    /// - Parameter key: The key to find in the dictionary.
+    /// - Returns: The Int value for `key`.
     public func intValue(forKey key: Key) -> Int {
 		return numberValue(forKey: key).intValue
     }
     
+    /// Return the UInt value for the given key.
+    ///
+    /// - Parameter key: The key to find in the dictionary.
+    /// - Returns: The UInt value for `key`.
     public func uIntValue(forKey key: Key) -> UInt {
         return numberValue(forKey: key).uintValue
     }
     
+    /// Return the Int8 value for the given key.
+    ///
+    /// - Parameter key: The key to find in the dictionary.
+    /// - Returns: The Int8 value for `key`.
     public func int8Value(forKey key: Key) -> Int8 {
         return numberValue(forKey: key).int8Value
     }
 
+    /// Return the UInt8 value for the given key.
+    ///
+    /// - Parameter key: The key to find in the dictionary.
+    /// - Returns: The UInt8 value for `key`.
     public func uInt8Value(forKey key: Key) -> UInt8 {
         return numberValue(forKey: key).uint8Value
     }
     
+    /// Return the Int16 value for the given key.
+    ///
+    /// - Parameter key: The key to find in the dictionary.
+    /// - Returns: The Int16 value for `key`.
     public func int16Value(forKey key: Key) -> Int16 {
         return numberValue(forKey: key).int16Value
     }
     
+    /// Return the UInt16 value for the given key.
+    ///
+    /// - Parameter key: The key to find in the dictionary.
+    /// - Returns: The UInt16 value for `key`.
     public func uInt16Value(forKey key: Key) -> UInt16 {
         return numberValue(forKey: key).uint16Value
     }
     
+    /// Return the Int32 value for the given key.
+    ///
+    /// - Parameter key: The key to find in the dictionary.
+    /// - Returns: The Int32 value for `key`.
     public func int32Value(forKey key: Key) -> Int32 {
         return numberValue(forKey: key).int32Value
     }
     
+    /// Return the UInt32 value for the given key.
+    ///
+    /// - Parameter key: The key to find in the dictionary.
+    /// - Returns: The UInt32 value for `key`.
     public func uInt32Value(forKey key: Key) -> UInt32 {
         return numberValue(forKey: key).uint32Value
     }
     
+    /// Return the Int64 value for the given key.
+    ///
+    /// - Parameter key: The key to find in the dictionary.
+    /// - Returns: The Int64 value for `key`.
     public func int64Value(forKey key: Key) -> Int64 {
         return numberValue(forKey: key).int64Value
     }
     
+    /// Return the UInt64 value for the given key.
+    ///
+    /// - Parameter key: The key to find in the dictionary.
+    /// - Returns: The UInt64 value for `key`.
     public func uInt64Value(forKey key: Key) -> UInt64 {
         return numberValue(forKey: key).uint64Value
     }
     
-    public func uInt8Value(forKey key: Key) -> Int {
-        return numberValue(forKey: key).intValue
-    }
-
+    /// Return the Double value for the given key.
+    ///
+    /// - Parameter key: The key to find in the dictionary.
+    /// - Returns: The Double value for `key`.
     public func doubleValue(forKey key: Key) -> Double {
         return numberValue(forKey: key).doubleValue
     }
     
+    /// Return the Float value for the given key.
+    ///
+    /// - Parameter key: The key to find in the dictionary.
+    /// - Returns: The Float value for `key`.
     public func floatValue(forKey key: Key) -> Float {
         return numberValue(forKey: key).floatValue
     }

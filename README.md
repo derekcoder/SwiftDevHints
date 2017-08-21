@@ -88,7 +88,7 @@ let roundedDouble1 = aDouble.roundTo(places: 2) // 3.14
 let roundedDouble2 = aDouble.roundTo(places: 3) // 3.142
 ```
 
-<!---
+
 ### Safe Get Value from Dictionary
 
 ```swift
@@ -104,6 +104,7 @@ let latitude = dictionary.doubleValue(forKey: "latitude") // Double: 1.290270
 let longitude = dictionary.doubleValue(forKey: "longitude") // Double: 103.851959
 ```
 
+<!---
 ### New Method using UserDefaults
 
 New usage methods for `UserDefaults` like `NotificationCenter`
