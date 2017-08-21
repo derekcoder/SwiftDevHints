@@ -26,6 +26,7 @@ A very useful set of development tools.
 - [x] Format Int and Double
 - [ ] Round Double
 - [ ] Safe Get Value from Dictionary
+- [ ] Get Value from Dictionary with Default Value using Subscript
 - [ ] New Method using UserDefaults
 - [ ] Debug Print Log
 - [ ] UIColor Init with RGBA(Int) and get RGBA(Int)

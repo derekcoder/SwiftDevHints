@@ -13,5 +13,5 @@ class PrintHelperViewController: UIViewController {
     
     @IBAction func tapPrintLogButton() {
         debugPrintLog("You just tap button.")
-    }    
+    }
 }
