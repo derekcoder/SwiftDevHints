@@ -29,6 +29,6 @@ class DictionaryExtensionsViewController: UIViewController {
         debugPrintLog("age = \(age)")
         debugPrintLog("isOnline = \(isOnline)")
         debugPrintLog("latitude = \(latitude)")
-        debugPrintLog("longitude = \(longitude)")
+        debugPrintLog("longitude = \(longitude)")        
     }
 }

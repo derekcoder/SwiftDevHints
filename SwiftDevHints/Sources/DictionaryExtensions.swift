@@ -194,13 +194,3 @@ extension Dictionary where Key: CustomStringConvertible {
     }
 }
 
-extension Dictionary {
-    subscript(key: Key, or value: Value) -> Value {
-        get {
-            return self[key] ?? value
-        }
-        set {
-            self[key] = newValue
-        }
-    }
-}

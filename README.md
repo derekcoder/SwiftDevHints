@@ -25,10 +25,9 @@ A very useful set of development tools.
 - [x] Random Int
 - [x] Format Int and Double
 - [x] Round Double
-- [ ] Safe Get Value from Dictionary
-- [ ] Get Value from Dictionary with Default Value using Subscript
-- [ ] New Method using UserDefaults
-- [ ] Debug Print Log
+- [x] Safe Get Value from Dictionary
+- [x] New Method using UserDefaults
+- [x] Debug Print Log
 - [ ] UIColor Init with RGBA(Int) and get RGBA(Int)
 - [ ] Custom Segue
 - [ ] Generic Table View Controller
@@ -104,7 +103,7 @@ let latitude = dictionary.doubleValue(forKey: "latitude") // Double: 1.290270
 let longitude = dictionary.doubleValue(forKey: "longitude") // Double: 103.851959
 ```
 
-<!---
+
 ### New Method using UserDefaults
 
 New usage methods for `UserDefaults` like `NotificationCenter`
@@ -112,8 +111,8 @@ New usage methods for `UserDefaults` like `NotificationCenter`
 import SwiftDevHints
 
 extension UserDefaults.Name {
-    static let Username = UserDefaults.Name("SwiftDevHints-Demo.Username")
-    static let Password = UserDefaults.Name("SwiftDevHints-Demo.Password")
+    static let Username: UserDefaults.Name = "SwiftDevHints-Demo.Username"
+    static let Password: UserDefaults.Name = "SwiftDevHints-Demo.Password"
 }
 
 UserDefaults.standard.set("Derek", forName: .Username)
@@ -122,6 +121,7 @@ UserDefaults.standard.set("Password", forName: .Password)
 let username = UserDefaults.standard.string(forName: .Username)
 let password = UserDefaults.standard.string(forName: .Password)
 ```
+
 
 ### Debug Print Log
 
@@ -139,6 +139,7 @@ import SwiftDevHints
 // PrintHelperViewController.swift:15  You just tap button.
 ```
 
+<!---
 ### UIColor Extensions
 
 ```swift
