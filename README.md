@@ -34,6 +34,7 @@ A very useful set of development tools.
 - [ ] Nib Register for UITableViewCell
 - [ ] Convenient Methods for Adding Constraints
 - [ ] Networking
+- [ ] Base64 Encoding and Decoding
 
 ## Requirements
 

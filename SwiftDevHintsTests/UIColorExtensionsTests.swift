@@ -15,16 +15,16 @@ class UIColorExtensionsTests: XCTestCase {
         let color = UIColor(redIn255: 255, greenIn255: 0, blueIn255: 255, alphaIn100: 100)
         let color2 = UIColor(red: 1, green: 0, blue: 1, alpha: 1)
 
-        XCTAssertEqual(color.intRGBAComponents.red, color2.intRGBAComponents.red)
-        XCTAssertEqual(color.intRGBAComponents.green, color2.intRGBAComponents.green)
-        XCTAssertEqual(color.intRGBAComponents.blue, color2.intRGBAComponents.blue)
-        XCTAssertEqual(color.intRGBAComponents.alpha, color2.intRGBAComponents.alpha)
+        XCTAssertEqual(color.intRGBA.red, color2.intRGBA.red)
+        XCTAssertEqual(color.intRGBA.green, color2.intRGBA.green)
+        XCTAssertEqual(color.intRGBA.blue, color2.intRGBA.blue)
+        XCTAssertEqual(color.intRGBA.alpha, color2.intRGBA.alpha)
     }
     
     func testIntRGBAComponents() {
         // 255 0 255
         let color = UIColor(redIn255: 255, greenIn255: 0, blueIn255: 255, alphaIn100: 100)
-		let comps = color.intRGBAComponents
+		let comps = color.intRGBA
         
         XCTAssertEqual(comps.red, 255)
         XCTAssertEqual(comps.green, 0)
@@ -35,7 +35,7 @@ class UIColorExtensionsTests: XCTestCase {
     func testGRBAComponents() {
         // 255 0 255
         let color = UIColor(redIn255: 255, greenIn255: 0, blueIn255: 255, alphaIn100: 100)
-        let comps = color.rgbaComponents
+        let comps = color.rgba
         
         XCTAssertEqual(comps.red, 1.0)
         XCTAssertEqual(comps.green, 0.0)
