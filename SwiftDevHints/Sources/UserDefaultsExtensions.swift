@@ -95,7 +95,7 @@ extension UserDefaults {
     }
 }
 
-extension UserDefaults.Name: ExpressibleByStringLiteral {
+extension UserDefaults.Name: ExpressibleByStringLiteral, ExpressibleByUnicodeScalarLiteral, ExpressibleByExtendedGraphemeClusterLiteral {
     public init(stringLiteral value: String) {
         self.rawValue = value
     }
