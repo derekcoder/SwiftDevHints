@@ -13,9 +13,6 @@ extension UserDefaults {
     public struct Name: RawRepresentable, Equatable {
         public var rawValue: String
         
-        public init(_ rawValue: String) {
-            self.rawValue = rawValue
-        }
         
         public init(rawValue: String) {
             self.rawValue = rawValue
@@ -95,16 +92,19 @@ extension UserDefaults {
     }
 }
 
-extension UserDefaults.Name: ExpressibleByStringLiteral, ExpressibleByUnicodeScalarLiteral, ExpressibleByExtendedGraphemeClusterLiteral {
+extension UserDefaults.Name: ExpressibleByStringLiteral {
+    public typealias UnicodeScalarLiteralType = String
+    public typealias ExtendedGraphemeClusterLiteralType = String
+
     public init(stringLiteral value: String) {
         self.rawValue = value
     }
     
-    public init(unicodeScalarLiteralType value: String) {
+    public init(unicodeScalarLiteral value: String) {
         self.init(stringLiteral: value)
     }
     
-    public init(extendedGraphemeClusterLiteralType value: String) {
+    public init(extendedGraphemeClusterLiteral value: String) {
         self.init(stringLiteral: value)
     }
 }

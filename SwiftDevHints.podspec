@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftDevHints'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'A very useful set of development tools.'
  
   s.description      = <<-DESC

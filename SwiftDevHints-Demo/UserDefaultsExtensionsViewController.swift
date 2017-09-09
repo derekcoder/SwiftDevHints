@@ -10,8 +10,8 @@ import UIKit
 import SwiftDevHints
 
 extension UserDefaults.Name {
- 	static let Username: UserDefaults.Name = UserDefaults.Name("SwiftDevHints-Demo.Username")
-    static let Password: UserDefaults.Name = UserDefaults.Name("SwiftDevHints-Demo.Password")
+ 	static let Username: UserDefaults.Name = "SwiftDevHints-Demo.Username"
+    static let Password: UserDefaults.Name = "SwiftDevHints-Demo.Password"
 }
 
 class UserDefaultsExtensionsViewController: UIViewController {
