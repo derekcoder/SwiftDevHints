@@ -21,6 +21,7 @@
 		E340F2901F3820EA006F872D /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340F28D1F3820EA006F872D /* CustomSegue.swift */; };
 		E340F2911F3820EA006F872D /* UIStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340F28E1F3820EA006F872D /* UIStoryboardSegue.swift */; };
 		E340F2921F3820EA006F872D /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340F28F1F3820EA006F872D /* UIViewControllerExtensions.swift */; };
+		E34DA5621F66A020009B30E0 /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DA5611F66A020009B30E0 /* OptionalExtensions.swift */; };
 		E3649B5E1F3032DC00236794 /* DoubleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */; };
 		E3649B601F30367D00236794 /* DoubleExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */; };
 		E36536661F305E6400BF5021 /* NSNumberExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */; };
@@ -85,6 +86,7 @@
 		E340F28D1F3820EA006F872D /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSegue.swift; path = Sources/CustomSegue.swift; sourceTree = "<group>"; };
 		E340F28E1F3820EA006F872D /* UIStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboardSegue.swift; path = Sources/UIStoryboardSegue.swift; sourceTree = "<group>"; };
 		E340F28F1F3820EA006F872D /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtensions.swift; path = Sources/UIViewControllerExtensions.swift; sourceTree = "<group>"; };
+		E34DA5611F66A020009B30E0 /* OptionalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionalExtensions.swift; path = Sources/OptionalExtensions.swift; sourceTree = "<group>"; };
 		E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsTests.swift; sourceTree = "<group>"; };
 		E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsViewController.swift; sourceTree = "<group>"; };
 		E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNumberExtensionsTests.swift; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 				E3E27DD51F347E1200032DF3 /* PrintHelper.swift */,
 				E3E27DD21F347E1200032DF3 /* UserDefaultsExtensions.swift */,
 				E3C83EFE1F46849800A68940 /* UIColorExtensions.swift */,
+				E34DA5611F66A020009B30E0 /* OptionalExtensions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -441,6 +444,7 @@
 				E3E27DE21F347E2D00032DF3 /* Error.swift in Sources */,
 				E3E27DDA1F347E1200032DF3 /* DictionaryExtensions.swift in Sources */,
 				E3E27DD91F347E1200032DF3 /* NSNumberExtensions.swift in Sources */,
+				E34DA5621F66A020009B30E0 /* OptionalExtensions.swift in Sources */,
 				E3D01EDB1F45A5050036FDCA /* CountableRangeExtensions.swift in Sources */,
 				E3E27DD01F347DF100032DF3 /* StackViewController.swift in Sources */,
 				E3E27DDD1F347E1200032DF3 /* DoubleExtensions.swift in Sources */,
