@@ -16,12 +16,15 @@
 		65248CD11F1D065700E00872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65248CCF1F1D065700E00872 /* LaunchScreen.storyboard */; };
 		654982511F19D1FB008EE146 /* SwiftDevHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; };
 		654982581F19D1FB008EE146 /* SwiftDevHints.h in Headers */ = {isa = PBXBuildFile; fileRef = 6549824A1F19D1FA008EE146 /* SwiftDevHints.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		659A6D121F63F22E006B2F8B /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A6D101F63F22E006B2F8B /* UIColorExtensions.swift */; };
 		E340F28B1F3820DE006F872D /* NSManagedObjectContextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340F2891F3820DE006F872D /* NSManagedObjectContextExtensions.swift */; };
 		E340F28C1F3820DE006F872D /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340F28A1F3820DE006F872D /* CoreDataHelper.swift */; };
 		E340F2901F3820EA006F872D /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340F28D1F3820EA006F872D /* CustomSegue.swift */; };
 		E340F2911F3820EA006F872D /* UIStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340F28E1F3820EA006F872D /* UIStoryboardSegue.swift */; };
 		E340F2921F3820EA006F872D /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340F28F1F3820EA006F872D /* UIViewControllerExtensions.swift */; };
 		E34DA5621F66A020009B30E0 /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DA5611F66A020009B30E0 /* OptionalExtensions.swift */; };
+		E34DA5651F66A341009B30E0 /* CountableRangeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A6D0F1F63F22E006B2F8B /* CountableRangeExtensions.swift */; };
+		E34DA5671F66A3F5009B30E0 /* OptionalExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */; };
 		E3649B5E1F3032DC00236794 /* DoubleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */; };
 		E3649B601F30367D00236794 /* DoubleExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */; };
 		E36536661F305E6400BF5021 /* NSNumberExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */; };
@@ -36,9 +39,7 @@
 		E3A2C85F1F2F31A1007B73CE /* PrintHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */; };
 		E3A2C8611F2F3331007B73CE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E3A2C8601F2F3330007B73CE /* README.md */; };
 		E3A2C8631F2F36A8007B73CE /* SwiftDevHints.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */; };
-		E3C83EFF1F46849800A68940 /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C83EFE1F46849800A68940 /* UIColorExtensions.swift */; };
 		E3D01ED91F459F6D0036FDCA /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D01ED81F459F6D0036FDCA /* StringExtensionsTests.swift */; };
-		E3D01EDB1F45A5050036FDCA /* CountableRangeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D01EDA1F45A5050036FDCA /* CountableRangeExtensions.swift */; };
 		E3D01EDD1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D01EDC1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift */; };
 		E3E27DCE1F347DF100032DF3 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E27DCA1F347DF100032DF3 /* UIViewExtensions.swift */; };
 		E3E27DCF1F347DF100032DF3 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E27DCB1F347DF100032DF3 /* UITableViewCellExtensions.swift */; };
@@ -81,12 +82,15 @@
 		6549824B1F19D1FA008EE146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654982501F19D1FB008EE146 /* SwiftDevHintsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDevHintsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		654982571F19D1FB008EE146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		659A6D0F1F63F22E006B2F8B /* CountableRangeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountableRangeExtensions.swift; path = Sources/CountableRangeExtensions.swift; sourceTree = "<group>"; };
+		659A6D101F63F22E006B2F8B /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtensions.swift; path = Sources/UIColorExtensions.swift; sourceTree = "<group>"; };
 		E340F2891F3820DE006F872D /* NSManagedObjectContextExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSManagedObjectContextExtensions.swift; path = Sources/NSManagedObjectContextExtensions.swift; sourceTree = "<group>"; };
 		E340F28A1F3820DE006F872D /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Sources/CoreDataHelper.swift; sourceTree = "<group>"; };
 		E340F28D1F3820EA006F872D /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSegue.swift; path = Sources/CustomSegue.swift; sourceTree = "<group>"; };
 		E340F28E1F3820EA006F872D /* UIStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboardSegue.swift; path = Sources/UIStoryboardSegue.swift; sourceTree = "<group>"; };
 		E340F28F1F3820EA006F872D /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtensions.swift; path = Sources/UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		E34DA5611F66A020009B30E0 /* OptionalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionalExtensions.swift; path = Sources/OptionalExtensions.swift; sourceTree = "<group>"; };
+		E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensionsTests.swift; sourceTree = "<group>"; };
 		E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsTests.swift; sourceTree = "<group>"; };
 		E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsViewController.swift; sourceTree = "<group>"; };
 		E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNumberExtensionsTests.swift; sourceTree = "<group>"; };
@@ -100,9 +104,7 @@
 		E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintHelperViewController.swift; sourceTree = "<group>"; };
 		E3A2C8601F2F3330007B73CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftDevHints.podspec; sourceTree = "<group>"; };
-		E3C83EFE1F46849800A68940 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		E3D01ED81F459F6D0036FDCA /* StringExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsTests.swift; sourceTree = "<group>"; };
-		E3D01EDA1F45A5050036FDCA /* CountableRangeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableRangeExtensions.swift; sourceTree = "<group>"; };
 		E3D01EDC1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableRangeExtensionsTests.swift; sourceTree = "<group>"; };
 		E3E27DCA1F347DF100032DF3 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = SwiftDevHints/Sources/UIViewExtensions.swift; sourceTree = SOURCE_ROOT; };
 		E3E27DCB1F347DF100032DF3 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewCellExtensions.swift; path = SwiftDevHints/Sources/UITableViewCellExtensions.swift; sourceTree = SOURCE_ROOT; };
@@ -213,6 +215,7 @@
 				E39BC4541F30909F006AB7D1 /* UserDefaultsExtensionsTests.swift */,
 				65248CBE1F1D031500E00872 /* UITableViewCellExtensionsTests.swift */,
 				E3A0BEEE1F469A4400BB8570 /* UIColorExtensionsTests.swift */,
+				E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */,
 			);
 			path = SwiftDevHintsTests;
 			sourceTree = "<group>";
@@ -253,16 +256,16 @@
 		E3B7016F1F34468400271EA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				659A6D0F1F63F22E006B2F8B /* CountableRangeExtensions.swift */,
+				659A6D101F63F22E006B2F8B /* UIColorExtensions.swift */,
 				E37F02AE1F3C730600C33165 /* String+MD5.swift */,
 				E37F02AD1F3C730600C33165 /* StringExtensions.swift */,
 				E3E27DD41F347E1200032DF3 /* DictionaryExtensions.swift */,
 				E3E27DD71F347E1200032DF3 /* DoubleExtensions.swift */,
 				E3E27DD61F347E1200032DF3 /* IntExtensions.swift */,
-				E3D01EDA1F45A5050036FDCA /* CountableRangeExtensions.swift */,
 				E3E27DD31F347E1200032DF3 /* NSNumberExtensions.swift */,
 				E3E27DD51F347E1200032DF3 /* PrintHelper.swift */,
 				E3E27DD21F347E1200032DF3 /* UserDefaultsExtensions.swift */,
-				E3C83EFE1F46849800A68940 /* UIColorExtensions.swift */,
 				E34DA5611F66A020009B30E0 /* OptionalExtensions.swift */,
 			);
 			name = Model;
@@ -442,14 +445,14 @@
 				E3E27DE31F347E2D00032DF3 /* Networking.swift in Sources */,
 				E3E27DCE1F347DF100032DF3 /* UIViewExtensions.swift in Sources */,
 				E3E27DE21F347E2D00032DF3 /* Error.swift in Sources */,
+				E34DA5651F66A341009B30E0 /* CountableRangeExtensions.swift in Sources */,
 				E3E27DDA1F347E1200032DF3 /* DictionaryExtensions.swift in Sources */,
 				E3E27DD91F347E1200032DF3 /* NSNumberExtensions.swift in Sources */,
 				E34DA5621F66A020009B30E0 /* OptionalExtensions.swift in Sources */,
-				E3D01EDB1F45A5050036FDCA /* CountableRangeExtensions.swift in Sources */,
 				E3E27DD01F347DF100032DF3 /* StackViewController.swift in Sources */,
 				E3E27DDD1F347E1200032DF3 /* DoubleExtensions.swift in Sources */,
 				E3E27DDC1F347E1200032DF3 /* IntExtensions.swift in Sources */,
-				E3C83EFF1F46849800A68940 /* UIColorExtensions.swift in Sources */,
+				659A6D121F63F22E006B2F8B /* UIColorExtensions.swift in Sources */,
 				E3E27DD81F347E1200032DF3 /* UserDefaultsExtensions.swift in Sources */,
 				E3E27DE11F347E2D00032DF3 /* Result.swift in Sources */,
 				E340F2911F3820EA006F872D /* UIStoryboardSegue.swift in Sources */,
@@ -464,6 +467,7 @@
 				E39BC4551F30909F006AB7D1 /* UserDefaultsExtensionsTests.swift in Sources */,
 				65248CBD1F1D02B200E00872 /* IntExtensionsTests.swift in Sources */,
 				E36536661F305E6400BF5021 /* NSNumberExtensionsTests.swift in Sources */,
+				E34DA5671F66A3F5009B30E0 /* OptionalExtensionsTests.swift in Sources */,
 				E3D01EDD1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift in Sources */,
 				E3D01ED91F459F6D0036FDCA /* StringExtensionsTests.swift in Sources */,
 				E3A0BEEF1F469A4400BB8570 /* UIColorExtensionsTests.swift in Sources */,
