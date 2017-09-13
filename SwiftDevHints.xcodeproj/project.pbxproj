@@ -206,11 +206,11 @@
 			isa = PBXGroup;
 			children = (
 				654982571F19D1FB008EE146 /* Info.plist */,
+				E3D01EDC1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift */,
 				E3D01ED81F459F6D0036FDCA /* StringExtensionsTests.swift */,
 				E36536671F30601900BF5021 /* DictionaryExtensionsTests.swift */,
 				E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */,
 				65248CBC1F1D02B200E00872 /* IntExtensionsTests.swift */,
-				E3D01EDC1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift */,
 				E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */,
 				E39BC4541F30909F006AB7D1 /* UserDefaultsExtensionsTests.swift */,
 				65248CBE1F1D031500E00872 /* UITableViewCellExtensionsTests.swift */,

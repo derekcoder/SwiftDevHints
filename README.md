@@ -13,11 +13,7 @@ A very useful set of development tools.
     + [Debug Print Log](#debug-print-log)
     + [UIColor Extensions](#uicolor-extensions)
     + [Custom Segue](#custom-segue)
-    + [Generic Table View Controller](#generic-table-view-controller)
-    + [Nib Register for UITableViewCell](#nib-register-for-uitableviewcell)
-    + [Convenient Methods for Adding Constraints](#convenient-methods-for-adding-constraints)
-    + [Networking](#networking)
-- [Contact](#contact)
+ - [Contact](#contact)
 - [License](#license)
 
 ## Features
@@ -140,14 +136,44 @@ import SwiftDevHints
 // PrintHelperViewController.swift:15  You just tap button.
 ```
 
-<!---
+
 ### UIColor Extensions
 
 ```swift
+// Initialize UIColor with RGB based 255
+let color = UIColor(redIn255: 255, greenIn255: 0, blueIn255: 0, alphaIn100: 100)
+
+// Get RGBA based 1.0 from a color
+let rgba = color.rgba  // rgba: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) 
+
+// Get RGB based 255 and A base 100 from a color
+let rgbaInt = color.intRGBA // rgbaInt: (red: Int, green: Int, blue: Int, alpha: Int)
 ```
 
 ### Custom Segue
+```swift
+extension CustomSegue {
+    static let ShowCustomSegue: CustomSegue = "ShowCustomSegue"
+}
 
+class ViewController: UIViewController {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performCustomSegue(.ShowCustomSegue)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.customSegue {
+        case CustomSegue.ShowCustomSegue:
+            // configuration
+        default: break
+        }
+    }   
+}
+
+
+```
+
+<!---
 ### Generic Table View Controllers
 
 ```swift
@@ -163,6 +189,7 @@ let categoriesVC = ItemsViewController(items: categories, configure: { (cell, ca
 })
 nc.pushViewController(categoriesVC, animated: true)
 ```
+
 
 ### Nib Register for UITableViewCell
 
@@ -200,3 +227,5 @@ Follow and contact me on [Twitter](https://twitter.com/derekcoder_). If you find
 ## License
 
 SwiftDevHints is released under the MIT license. [See LICENSE](https://github.com/derekcoder/SwiftDevHints/blob/master/LICENSE) for details.
+
+

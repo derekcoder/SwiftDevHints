@@ -20,3 +20,25 @@ public struct CustomSegue: RawRepresentable {
     }
 }
 
+extension CustomSegue: ExpressibleByStringLiteral {
+    public typealias UnicodeScalarLiteralType = String
+    public typealias ExtendedGraphemeClusterLiteralType = String
+    
+    public init(stringLiteral value: String) {
+        self.rawValue = value
+    }
+    
+    public init(unicodeScalarLiteral value: String) {
+        self.init(stringLiteral: value)
+    }
+    
+    public init(extendedGraphemeClusterLiteral value: String) {
+        self.init(stringLiteral: value)
+    }
+}
+
+extension CustomSegue: Equatable {
+    static public func ==(lhs: CustomSegue, rhs: CustomSegue) -> Bool {
+        return lhs.rawValue == rhs.rawValue
+    }
+}
