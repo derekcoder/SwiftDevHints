@@ -24,13 +24,14 @@ A very useful set of development tools.
 - [x] Safe Get Value from Dictionary
 - [x] New Method using UserDefaults
 - [x] Debug Print Log
-- [ ] UIColor Init with RGBA(Int) and get RGBA(Int)
-- [ ] Custom Segue
+- [x] UIColor Init with RGBA(Int) and get RGBA(Int)
+- [x] Custom Segue
+- [ ] Base64 Encoding and Decoding
+- [ ] Handling empty and nil for optional strings
 - [ ] Generic Table View Controller
 - [ ] Nib Register for UITableViewCell
 - [ ] Convenient Methods for Adding Constraints
 - [ ] Networking
-- [ ] Base64 Encoding and Decoding
 
 ## Requirements
 
@@ -169,8 +170,6 @@ class ViewController: UIViewController {
         }
     }   
 }
-
-
 ```
 
 <!---
