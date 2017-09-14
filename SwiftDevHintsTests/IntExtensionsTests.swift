@@ -29,7 +29,7 @@ class IntExtensionsTests: XCTestCase {
         XCTAssertEqual(aInt64.format("03"), "008")
         XCTAssertEqual(aInt64.format("3"), "  8")
     }
-    
+        
     func testUIntFormat() {
         // 8
         let aInt: UInt = 8

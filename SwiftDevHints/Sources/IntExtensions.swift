@@ -22,7 +22,7 @@ extension Int {
     /// - Parameter f: Format string
     /// - Returns: Formated string
     public func format(_ f: String) -> String {
-        return String(format: "%\(f)d", self)
+        return String(format: "%\(f)ld", self)
     }
 }
 
@@ -94,7 +94,7 @@ extension Int64 {
     /// - Parameter f: Format string
     /// - Returns: Formated string
     public func format(_ f: String) -> String {
-        return String(format: "%\(f)d", self)
+        return String(format: "%\(f)ld", self)
     }
 }
 
@@ -108,7 +108,7 @@ extension UInt {
     /// - Parameter f: Format string
     /// - Returns: Formated string
     public func format(_ f: String) -> String {
-        return String(format: "%\(f)d", self)
+        return String(format: "%\(f)lu", self)
     }
 }
 
@@ -122,7 +122,7 @@ extension UInt8 {
     /// - Parameter f: Format string
     /// - Returns: Formated string
     public func format(_ f: String) -> String {
-        return String(format: "%\(f)d", self)
+        return String(format: "%\(f)u", self)
     }
 }
 
@@ -136,7 +136,7 @@ extension UInt16 {
     /// - Parameter f: Format string
     /// - Returns: Formated string
     public func format(_ f: String) -> String {
-        return String(format: "%\(f)d", self)
+        return String(format: "%\(f)u", self)
     }
 }
 
@@ -150,7 +150,7 @@ extension UInt32 {
     /// - Parameter f: Format string
     /// - Returns: Formated string
     public func format(_ f: String) -> String {
-        return String(format: "%\(f)d", self)
+        return String(format: "%\(f)u", self)
     }
 }
 
@@ -164,7 +164,7 @@ extension UInt64 {
     /// - Parameter f: Format string
     /// - Returns: Formated string
     public func format(_ f: String) -> String {
-        return String(format: "%\(f)d", self)
+        return String(format: "%\(f)u", self)
     }
 }
 
