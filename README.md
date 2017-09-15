@@ -9,11 +9,11 @@ A very useful set of development tools.
     + [Format Int and Double](#format-int-and-double)
     + [Round Double](#round-double)
     + [Safe Get Value from Dictionary](#safe-get-value-from-dictionary)
-    + [New Method using UserDefaults](#new-method-using-userDefaults)
+    + [New Method using UserDefaults](#new-method-using-userdefaults)
     + [Debug Print Log](#debug-print-log)
     + [UIColor Extensions](#uicolor-extensions)
     + [Custom Segue](#custom-segue)
-    + [CircularImageView](#circularImageView)
+    + [CircularImageView](#circularimageview)
  - [Contact](#contact)
 - [License](#license)
 
