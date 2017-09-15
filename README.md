@@ -13,6 +13,7 @@ A very useful set of development tools.
     + [Debug Print Log](#debug-print-log)
     + [UIColor Extensions](#uicolor-extensions)
     + [Custom Segue](#custom-segue)
+    + [CircularImageView](#circularImageView)
  - [Contact](#contact)
 - [License](#license)
 
@@ -26,6 +27,7 @@ A very useful set of development tools.
 - [x] Debug Print Log
 - [x] UIColor Init with RGBA(Int) and get RGBA(Int)
 - [x] Custom Segue
+- [x] CircularImageView
 - [ ] Base64 Encoding and Decoding
 - [ ] Handling empty and nil for optional strings
 - [ ] Generic Table View Controller
@@ -174,6 +176,16 @@ class ViewController: UIViewController {
         }
     }   
 }
+```
+
+### CircularImageView
+Using in Storyboard
+* Marked your UIView as `CircularImageView` in Xcode
+* You can change `image` and `saturation` properties directly in Xcode
+
+Using programmatically
+```swift
+let circularImageView = CircularImageView(frame: frame)
 ```
 
 <!---

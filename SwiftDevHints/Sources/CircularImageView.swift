@@ -25,7 +25,7 @@ public class CircularImageView: UIView {
         }
     }
     
-    private var imageView: UIImageView
+    private var imageView: UIImageView = UIImageView(frame: .zero)
     
     public override func prepareForInterfaceBuilder() {
         if image == nil {
@@ -34,16 +34,16 @@ public class CircularImageView: UIView {
     }
     
     override public init(frame: CGRect) {
-        imageView = UIImageView(frame: .zero)
         super.init(frame: frame)
-        addSubview(imageView)
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.constraint(edgesTo: self)
+		setUp()
     }
     
     required public init?(coder aDecoder: NSCoder) {
-        imageView = UIImageView(frame: .zero)
         super.init(coder: aDecoder)
+        setUp()
+    }
+    
+    private func setUp() {
         addSubview(imageView)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.constraint(edgesTo: self)
