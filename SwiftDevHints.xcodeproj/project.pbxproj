@@ -25,6 +25,7 @@
 		E34DA5621F66A020009B30E0 /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DA5611F66A020009B30E0 /* OptionalExtensions.swift */; };
 		E34DA5651F66A341009B30E0 /* CountableRangeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A6D0F1F63F22E006B2F8B /* CountableRangeExtensions.swift */; };
 		E34DA5671F66A3F5009B30E0 /* OptionalExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */; };
+		E36119231F6B8A3700106DA7 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36119221F6B8A3700106DA7 /* CircularImageView.swift */; };
 		E3649B5E1F3032DC00236794 /* DoubleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */; };
 		E3649B601F30367D00236794 /* DoubleExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */; };
 		E36536661F305E6400BF5021 /* NSNumberExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */; };
@@ -41,6 +42,11 @@
 		E3A2C8631F2F36A8007B73CE /* SwiftDevHints.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */; };
 		E3D01ED91F459F6D0036FDCA /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D01ED81F459F6D0036FDCA /* StringExtensionsTests.swift */; };
 		E3D01EDD1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D01EDC1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift */; };
+		E3D43E1D1F6BA5F500275992 /* SwiftDevHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; };
+		E3D43E1E1F6BA5F500275992 /* SwiftDevHints.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E3D43E231F6BB12800275992 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43E221F6BB12800275992 /* UIImageExtensions.swift */; };
+		E3D43E251F6BB4A200275992 /* UIImageFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43E241F6BB4A200275992 /* UIImageFilterViewController.swift */; };
+		E3D43E271F6BB70200275992 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D43E261F6BB70200275992 /* Images.xcassets */; };
 		E3E27DCE1F347DF100032DF3 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E27DCA1F347DF100032DF3 /* UIViewExtensions.swift */; };
 		E3E27DCF1F347DF100032DF3 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E27DCB1F347DF100032DF3 /* UITableViewCellExtensions.swift */; };
 		E3E27DD01F347DF100032DF3 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E27DCC1F347DF100032DF3 /* StackViewController.swift */; };
@@ -65,7 +71,28 @@
 			remoteGlobalIDString = 654982461F19D1FA008EE146;
 			remoteInfo = SwiftDevHints;
 		};
+		E3D43E1F1F6BA5F500275992 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6549823E1F19D1FA008EE146 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 654982461F19D1FA008EE146;
+			remoteInfo = SwiftDevHints;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E3D43E211F6BA5F600275992 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E3D43E1E1F6BA5F500275992 /* SwiftDevHints.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		65248CBC1F1D02B200E00872 /* IntExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensionsTests.swift; sourceTree = "<group>"; };
@@ -91,6 +118,7 @@
 		E340F28F1F3820EA006F872D /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtensions.swift; path = Sources/UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		E34DA5611F66A020009B30E0 /* OptionalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionalExtensions.swift; path = Sources/OptionalExtensions.swift; sourceTree = "<group>"; };
 		E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensionsTests.swift; sourceTree = "<group>"; };
+		E36119221F6B8A3700106DA7 /* CircularImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CircularImageView.swift; path = Sources/CircularImageView.swift; sourceTree = "<group>"; };
 		E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsTests.swift; sourceTree = "<group>"; };
 		E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsViewController.swift; sourceTree = "<group>"; };
 		E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNumberExtensionsTests.swift; sourceTree = "<group>"; };
@@ -106,6 +134,9 @@
 		E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftDevHints.podspec; sourceTree = "<group>"; };
 		E3D01ED81F459F6D0036FDCA /* StringExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsTests.swift; sourceTree = "<group>"; };
 		E3D01EDC1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableRangeExtensionsTests.swift; sourceTree = "<group>"; };
+		E3D43E221F6BB12800275992 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImageExtensions.swift; path = Sources/UIImageExtensions.swift; sourceTree = "<group>"; };
+		E3D43E241F6BB4A200275992 /* UIImageFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageFilterViewController.swift; sourceTree = "<group>"; };
+		E3D43E261F6BB70200275992 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Sources/Images.xcassets; sourceTree = "<group>"; };
 		E3E27DCA1F347DF100032DF3 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = SwiftDevHints/Sources/UIViewExtensions.swift; sourceTree = SOURCE_ROOT; };
 		E3E27DCB1F347DF100032DF3 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewCellExtensions.swift; path = SwiftDevHints/Sources/UITableViewCellExtensions.swift; sourceTree = SOURCE_ROOT; };
 		E3E27DCC1F347DF100032DF3 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StackViewController.swift; path = SwiftDevHints/Sources/StackViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -128,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E36A76E91F34216600812ED4 /* SwiftDevHints.framework in Frameworks */,
+				E3D43E1D1F6BA5F500275992 /* SwiftDevHints.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +191,7 @@
 				E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */,
 				E392194A1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift */,
 				E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */,
+				E3D43E241F6BB4A200275992 /* UIImageFilterViewController.swift */,
 				65248CCA1F1D065700E00872 /* Main.storyboard */,
 				65248CCD1F1D065700E00872 /* Assets.xcassets */,
 				65248CCF1F1D065700E00872 /* LaunchScreen.storyboard */,
@@ -198,6 +231,7 @@
 				E3B7016D1F34466100271EA6 /* Networking */,
 				6549824A1F19D1FA008EE146 /* SwiftDevHints.h */,
 				6549824B1F19D1FA008EE146 /* Info.plist */,
+				E3D43E261F6BB70200275992 /* Images.xcassets */,
 			);
 			path = SwiftDevHints;
 			sourceTree = "<group>";
@@ -249,6 +283,8 @@
 				E3E27DCC1F347DF100032DF3 /* StackViewController.swift */,
 				E3E27DCB1F347DF100032DF3 /* UITableViewCellExtensions.swift */,
 				E3E27DCA1F347DF100032DF3 /* UIViewExtensions.swift */,
+				E36119221F6B8A3700106DA7 /* CircularImageView.swift */,
+				E3D43E221F6BB12800275992 /* UIImageExtensions.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -292,10 +328,12 @@
 				65248CC01F1D065700E00872 /* Sources */,
 				65248CC11F1D065700E00872 /* Frameworks */,
 				65248CC21F1D065700E00872 /* Resources */,
+				E3D43E211F6BA5F600275992 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				E3D43E201F6BA5F500275992 /* PBXTargetDependency */,
 			);
 			name = "SwiftDevHints-Demo";
 			productName = "SwiftDevHints-Demo";
@@ -403,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3A2C8631F2F36A8007B73CE /* SwiftDevHints.podspec in Resources */,
+				E3D43E271F6BB70200275992 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +465,7 @@
 				E392194B1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift in Sources */,
 				65248CC91F1D065700E00872 /* IntExtensionsViewController.swift in Sources */,
 				65248CC71F1D065700E00872 /* AppDelegate.swift in Sources */,
+				E3D43E251F6BB4A200275992 /* UIImageFilterViewController.swift in Sources */,
 				E3E586FA1F32CBDA003855EE /* DemoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,9 +487,11 @@
 				E3E27DE21F347E2D00032DF3 /* Error.swift in Sources */,
 				E34DA5651F66A341009B30E0 /* CountableRangeExtensions.swift in Sources */,
 				E3E27DDA1F347E1200032DF3 /* DictionaryExtensions.swift in Sources */,
+				E36119231F6B8A3700106DA7 /* CircularImageView.swift in Sources */,
 				E3E27DD91F347E1200032DF3 /* NSNumberExtensions.swift in Sources */,
 				E34DA5621F66A020009B30E0 /* OptionalExtensions.swift in Sources */,
 				E3E27DD01F347DF100032DF3 /* StackViewController.swift in Sources */,
+				E3D43E231F6BB12800275992 /* UIImageExtensions.swift in Sources */,
 				E3E27DDD1F347E1200032DF3 /* DoubleExtensions.swift in Sources */,
 				E3E27DDC1F347E1200032DF3 /* IntExtensions.swift in Sources */,
 				659A6D121F63F22E006B2F8B /* UIColorExtensions.swift in Sources */,
@@ -485,6 +527,11 @@
 			target = 654982461F19D1FA008EE146 /* SwiftDevHints */;
 			targetProxy = 654982521F19D1FB008EE146 /* PBXContainerItemProxy */;
 		};
+		E3D43E201F6BA5F500275992 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 654982461F19D1FA008EE146 /* SwiftDevHints */;
+			targetProxy = E3D43E1F1F6BA5F500275992 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -510,6 +557,7 @@
 		65248CD41F1D065700E00872 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 73DV6R4Q82;
 				INFOPLIST_FILE = "SwiftDevHints-Demo/Info.plist";
@@ -524,6 +572,7 @@
 		65248CD51F1D065700E00872 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 73DV6R4Q82;
 				INFOPLIST_FILE = "SwiftDevHints-Demo/Info.plist";

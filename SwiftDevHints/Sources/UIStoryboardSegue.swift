@@ -10,6 +10,6 @@ import UIKit
 
 extension UIStoryboardSegue {
     public var customSegue: CustomSegue {
-        return CustomSegue(identifier!)
+        return CustomSegue(identifier ?? "")
     }
 }
