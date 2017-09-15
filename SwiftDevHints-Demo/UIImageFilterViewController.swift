@@ -2,7 +2,7 @@
 //  UIImageFilterViewController.swift
 //  SwiftDevHints-Demo
 //
-//  Created by Julie on 15/9/17.
+//  Created by ZHOU DENGFENG on 15/9/17.
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 

@@ -47,6 +47,7 @@
 		E3D43E231F6BB12800275992 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43E221F6BB12800275992 /* UIImageExtensions.swift */; };
 		E3D43E251F6BB4A200275992 /* UIImageFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43E241F6BB4A200275992 /* UIImageFilterViewController.swift */; };
 		E3D43E271F6BB70200275992 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D43E261F6BB70200275992 /* Images.xcassets */; };
+		E3D43E291F6BCC5C00275992 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43E281F6BCC5C00275992 /* FloatExtensions.swift */; };
 		E3E27DCE1F347DF100032DF3 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E27DCA1F347DF100032DF3 /* UIViewExtensions.swift */; };
 		E3E27DCF1F347DF100032DF3 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E27DCB1F347DF100032DF3 /* UITableViewCellExtensions.swift */; };
 		E3E27DD01F347DF100032DF3 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E27DCC1F347DF100032DF3 /* StackViewController.swift */; };
@@ -137,6 +138,7 @@
 		E3D43E221F6BB12800275992 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImageExtensions.swift; path = Sources/UIImageExtensions.swift; sourceTree = "<group>"; };
 		E3D43E241F6BB4A200275992 /* UIImageFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageFilterViewController.swift; sourceTree = "<group>"; };
 		E3D43E261F6BB70200275992 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Sources/Images.xcassets; sourceTree = "<group>"; };
+		E3D43E281F6BCC5C00275992 /* FloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FloatExtensions.swift; path = Sources/FloatExtensions.swift; sourceTree = "<group>"; };
 		E3E27DCA1F347DF100032DF3 /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensions.swift; path = SwiftDevHints/Sources/UIViewExtensions.swift; sourceTree = SOURCE_ROOT; };
 		E3E27DCB1F347DF100032DF3 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableViewCellExtensions.swift; path = SwiftDevHints/Sources/UITableViewCellExtensions.swift; sourceTree = SOURCE_ROOT; };
 		E3E27DCC1F347DF100032DF3 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StackViewController.swift; path = SwiftDevHints/Sources/StackViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -298,6 +300,7 @@
 				E37F02AD1F3C730600C33165 /* StringExtensions.swift */,
 				E3E27DD41F347E1200032DF3 /* DictionaryExtensions.swift */,
 				E3E27DD71F347E1200032DF3 /* DoubleExtensions.swift */,
+				E3D43E281F6BCC5C00275992 /* FloatExtensions.swift */,
 				E3E27DD61F347E1200032DF3 /* IntExtensions.swift */,
 				E3E27DD31F347E1200032DF3 /* NSNumberExtensions.swift */,
 				E3E27DD51F347E1200032DF3 /* PrintHelper.swift */,
@@ -482,6 +485,7 @@
 				E3E27DD11F347DF100032DF3 /* ItemsViewController.swift in Sources */,
 				E3E27DDB1F347E1200032DF3 /* PrintHelper.swift in Sources */,
 				E37F02B01F3C730600C33165 /* String+MD5.swift in Sources */,
+				E3D43E291F6BCC5C00275992 /* FloatExtensions.swift in Sources */,
 				E3E27DE31F347E2D00032DF3 /* Networking.swift in Sources */,
 				E3E27DCE1F347DF100032DF3 /* UIViewExtensions.swift in Sources */,
 				E3E27DE21F347E2D00032DF3 /* Error.swift in Sources */,
