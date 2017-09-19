@@ -33,9 +33,7 @@ class UserDefaultsExtensionsTests: XCTestCase {
     let isOnline = true
     let height: Float = 1.83
     
-    override func setUp() {
-        super.setUp()
-        
+    func testGet() {
         defaults.set(username, forName: .Username)
         defaults.set(password, forName: .Password)
         defaults.set(age, forName: .Age)
@@ -44,10 +42,15 @@ class UserDefaultsExtensionsTests: XCTestCase {
         defaults.set(profilePhotoURL, forName: .ProfilePhotoURL)
         defaults.set(isOnline, forName: .IsOnline)
         defaults.set(height, forName: .Height)
-    }
-    
-    override func tearDown() {
-        super.tearDown()
+
+        XCTAssert(defaults.string(forName: .Username) == username)
+        XCTAssert((defaults.object(forName: .Password) as! String) == password)
+        XCTAssert(defaults.integer(forName: .Age) == age)
+        XCTAssert(defaults.double(forName: .Latitude) == latitude)
+        XCTAssert((defaults.object(forName: .Longitude) as! Double) == longitude)
+        XCTAssert(defaults.url(forName: .ProfilePhotoURL) == profilePhotoURL)
+        XCTAssertTrue(defaults.bool(forName: .IsOnline))
+        XCTAssert(defaults.float(forName: .Height) == height)
         
         defaults.set(nil, forName: .Username)
         defaults.set(nil, forName: .Password)
@@ -59,14 +62,9 @@ class UserDefaultsExtensionsTests: XCTestCase {
         defaults.set(nil, forName: .Height)
     }
     
-    func testGet() {
-        XCTAssert(defaults.string(forName: .Username) == username)
-        XCTAssert((defaults.object(forName: .Password) as! String) == password)
-        XCTAssert(defaults.integer(forName: .Age) == age)
-        XCTAssert(defaults.double(forName: .Latitude) == latitude)
-        XCTAssert((defaults.object(forName: .Longitude) as! Double) == longitude)
-        XCTAssert(defaults.url(forName: .ProfilePhotoURL) == profilePhotoURL)
-        XCTAssertTrue(defaults.bool(forName: .IsOnline))
-        XCTAssert(defaults.float(forName: .Height) == height)
+    func testStringDefaultValue() {
+        XCTAssertEqual(defaults.string(forName: .Username, defaultValue: "Unknown"), "Unknown")
+        defaults.set(username, forName: .Username)
+        XCTAssertEqual(defaults.string(forName: .Username, defaultValue: "Unknown"), username)
     }
 }
