@@ -8,7 +8,6 @@ A very useful set of development tools.
     + [Random Int](#random-int)
     + [Format Int and Double](#format-int-and-double)
     + [Round Double](#round-double)
-    + [Safe Get Value from Dictionary](#safe-get-value-from-dictionary)
     + [New Method using UserDefaults](#new-method-using-userdefaults)
     + [Debug Print Log](#debug-print-log)
     + [UIColor Extensions](#uicolor-extensions)
@@ -22,7 +21,6 @@ A very useful set of development tools.
 - [x] Random Int
 - [x] Format Int and Double
 - [x] Round Double
-- [x] Safe Get Value from Dictionary
 - [x] New Method using UserDefaults
 - [x] Debug Print Log
 - [x] UIColor Init with RGBA(Int) and get RGBA(Int)
@@ -90,23 +88,6 @@ let aFloat: Float = 3.14159265
 let roundedFloat1 = aFloat.roundTo(places: 2) // 3.14
 let roundedFloat2 = aFloat.roundTo(places: 3) // 3.142
 ```
-
-
-### Safe Get Value from Dictionary
-
-```swift
-import SwiftDevHints
-
-let dictionary: [String: Any] = ["id": "1", "name": "Derek", "age": 29, "isOnline": true, "latitude": 1.290270, "longitude": 103.851959]
-
-let id = dictionary.intValue(forKey: "id") // Int: 1
-let name = dictionary.stringValue(forKey: "name") // String: "Derek"
-let age = dictionary.intValue(forKey: "age") // Int: 29
-let isOnline = dictionary.boolValue(forKey: "isOnline") // Bool: true
-let latitude = dictionary.doubleValue(forKey: "latitude") // Double: 1.290270
-let longitude = dictionary.doubleValue(forKey: "longitude") // Double: 103.851959
-```
-
 
 ### New Method using UserDefaults
 
