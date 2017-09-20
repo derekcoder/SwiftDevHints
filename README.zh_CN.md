@@ -1,29 +1,29 @@
-# [简体中文](README.zh_CN.md)
+# [English](README.md)
 # SwiftDevHints
-A very useful set of development tools.
+Swift日常开发工具集
 
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-    + [Random Int](#random-int)
-    + [Format Int and Double](#format-int-and-double)
-    + [Round Double](#round-double)
-    + [New Method using UserDefaults](#new-method-using-userdefaults)
-    + [Debug Print Log](#debug-print-log)
+- [功能](#features)
+- [环境要求](#requirements)
+- [安装](#installation)
+- [使用说明](#usage)
+    + [随机数生成](#random-int)
+    + [格式化输出](#format-int-and-double)
+    + [浮点型数据的四舍五入](#round-double)
+    + [改造UserDefaults](#new-method-using-userdefaults)
+    + [改造print函数](#debug-print-log)
     + [UIColor Extensions](#uicolor-extensions)
     + [Custom Segue](#custom-segue)
     + [CircularImageView](#circularimageview)
- - [Contact](#contact)
-- [License](#license)
+ - [联系方式](#contact)
+- [版权](#license)
 
-## Features
+## 功能
 
-- [x] Random Int
-- [x] Format Int and Double
-- [x] Round Double
-- [x] New Method using UserDefaults
-- [x] Debug Print Log
+- [x] 随机数生成
+- [x] 格式化输出
+- [x] 浮点型数据的四舍五入
+- [x] 改造UserDefaults
+- [x] 改造print函数
 - [x] UIColor Init with RGBA(Int) and get RGBA(Int)
 - [x] Custom Segue
 - [x] CircularImageView
@@ -34,12 +34,12 @@ A very useful set of development tools.
 - [ ] Convenient Methods for Adding Constraints
 - [ ] Networking
 
-## Requirements
+## 环境要求
 
 - iOS 9.0+
 - Swift 3
 
-## Installation
+## 安装
 
 ### CocoaPods
 
@@ -47,9 +47,9 @@ A very useful set of development tools.
 pod 'SwiftDevHints'
 ```
 
-## Usage
+## 使用说明
 
-### Random Int
+### 随机数生成
 
 ```swift
 import SwiftDevHints
@@ -58,7 +58,7 @@ let randomInt = (0...10).randomInt // randomInt is Int number between 0 ~ 10 (in
 let randomInt = (0..<10).randomInt // randomInt is Int number between 0 ~ 10 (not include 10)
 ```
 
-### Format Int and Double
+### 格式化输出
 
 ```
 import SwiftDevHints
@@ -76,7 +76,7 @@ let formatedDouble = aDouble.format(".2") // "3.14"
 let formatedDouble = aDouble.format(".3") // "3.142"
 ```
 
-### Round Double
+### 浮点型数据的四舍五入
 
 ```swift
 import SwiftDevHints
@@ -90,9 +90,8 @@ let roundedFloat1 = aFloat.roundTo(places: 2) // 3.14
 let roundedFloat2 = aFloat.roundTo(places: 3) // 3.142
 ```
 
-### New Method using UserDefaults
+### 改造UserDefaults
 
-New usage methods for `UserDefaults` like `NotificationCenter`
 ```swift
 import SwiftDevHints
 
@@ -109,10 +108,11 @@ let password = UserDefaults.standard.string(forName: .Password)
 ```
 
 
-### Debug Print Log
+### 改造print函数
 
-- Support display file name, function name and line number
-- `debugPrintLog` only valid for DEBUG mode
+- 支持显示输出语句的所在的文件，函数和行数
+- 支持不输出任何信息
+- 支持release模式，自动失效。
 
 ```swift
 import SwiftDevHints
@@ -131,7 +131,6 @@ func testPrintLog() {
 }
 // 输出结果： PrintHelperViewController.swift:testPrintLog():20
 ```
-
 
 ### UIColor Extensions
 
@@ -224,11 +223,10 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 ```
 -->
 
-## Contact
+## 联系方式
 
-Follow and contact me on [Twitter](https://twitter.com/derekcoder_). If you find an issue, just [open a ticket](https://github.com/derekcoder/SwiftDevHints/issues/new). Pull requests are warmly welcome as well.
-
-## License
+你可以在 [Twitter](https://twitter.com/derekcoder_)关注和联系我. 如果你有任何问题和建议，也非常欢迎 [open a ticket](https://github.com/derekcoder/SwiftDevHints/issues/new)。
+## 版权
 
 SwiftDevHints is released under the MIT license. [See LICENSE](https://github.com/derekcoder/SwiftDevHints/blob/master/LICENSE) for details.
 
