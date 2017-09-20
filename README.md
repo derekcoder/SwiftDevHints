@@ -111,6 +111,7 @@ let password = UserDefaults.standard.string(forName: .Password)
 ### Debug Print Log
 
 - show which file you are logging
+- show which function you are logging
 - show line number your are logging
 - `debugPrintLog` only valid for DEBUG mode
 
@@ -121,7 +122,7 @@ import SwiftDevHints
     debugPrintLog("You just tap button.")
 }
 
-// PrintHelperViewController.swift:15  You just tap button.
+// PrintHelperViewController.swift:tapPrintLogButton():15 -> You just tap button.
 ```
 
 
