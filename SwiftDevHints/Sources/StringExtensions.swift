@@ -19,3 +19,12 @@ extension String {
         return NSLocalizedString(self, comment: comment)
     }
 }
+
+extension String {
+    public var hexInt: Int? {
+        let scanner = Scanner(string: self)
+        var value: UInt64 = 0
+        guard scanner.scanHexInt64(&value) else { return nil }
+        return Int(value)
+    }
+}

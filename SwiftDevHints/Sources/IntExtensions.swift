@@ -168,6 +168,11 @@ extension UInt64 {
     }
 }
 
+extension Int {
+    public var hexString: String {
+        return String(self, radix: 16, uppercase: true)
+    }
+}
 
 
 

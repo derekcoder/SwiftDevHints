@@ -22,8 +22,6 @@ extension UserDefaults.Name {
 
 class UserDefaultsExtensionsTests: XCTestCase {
     
-    let defaults = UserDefaults.standard
-
     let username = "Derek"
     let password = "Password"
     let age = 29
@@ -33,7 +31,25 @@ class UserDefaultsExtensionsTests: XCTestCase {
     let isOnline = true
     let height: Float = 1.83
     
+    override func setUp() {
+        super.setUp()
+        
+        let defaults = UserDefaults.standard
+        
+        defaults.removeObject(forName: .Username)
+        defaults.removeObject(forName: .Password)
+        defaults.removeObject(forName: .Age)
+        defaults.removeObject(forName: .Latitude)
+        defaults.removeObject(forName: .Longitude)
+        defaults.removeObject(forName: .ProfilePhotoURL)
+        defaults.removeObject(forName: .IsOnline)
+        defaults.removeObject(forName: .Height)
+        defaults.synchronize()
+    }
+    
     func testGet() {
+        let defaults = UserDefaults.standard
+
         defaults.set(username, forName: .Username)
         defaults.set(password, forName: .Password)
         defaults.set(age, forName: .Age)
@@ -42,6 +58,7 @@ class UserDefaultsExtensionsTests: XCTestCase {
         defaults.set(profilePhotoURL, forName: .ProfilePhotoURL)
         defaults.set(isOnline, forName: .IsOnline)
         defaults.set(height, forName: .Height)
+        defaults.synchronize()
 
         XCTAssert(defaults.string(forName: .Username) == username)
         XCTAssert((defaults.object(forName: .Password) as! String) == password)
@@ -51,20 +68,21 @@ class UserDefaultsExtensionsTests: XCTestCase {
         XCTAssert(defaults.url(forName: .ProfilePhotoURL) == profilePhotoURL)
         XCTAssertTrue(defaults.bool(forName: .IsOnline))
         XCTAssert(defaults.float(forName: .Height) == height)
-        
-        defaults.set(nil, forName: .Username)
-        defaults.set(nil, forName: .Password)
-        defaults.set(nil, forName: .Age)
-        defaults.set(nil, forName: .Latitude)
-        defaults.set(nil, forName: .Longitude)
-        defaults.set(nil, forName: .ProfilePhotoURL)
-        defaults.set(nil, forName: .IsOnline)
-        defaults.set(nil, forName: .Height)
     }
     
     func testStringDefaultValue() {
-        XCTAssertEqual(defaults.string(forName: .Username, defaultValue: "Unknown"), "Unknown")
+        let defaults = UserDefaults.standard
+        
+        let testName: UserDefaults.Name = "testName"
+        let value = defaults.string(forName: testName, defaultValue: "Unknown")
+        XCTAssertEqual(value, "Unknown")
+    }
+    
+    func testStringDefaultValueWithValue() {
+        let defaults = UserDefaults.standard
+
         defaults.set(username, forName: .Username)
+        defaults.synchronize()
         XCTAssertEqual(defaults.string(forName: .Username, defaultValue: "Unknown"), username)
     }
 }
