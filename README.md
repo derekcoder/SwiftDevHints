@@ -11,7 +11,7 @@ Swift日常开发工具集
     + [浮点型数据的四舍五入](#round-double)
     + [改造UserDefaults](#new-method-using-userdefaults)
     + [改造print函数](#debug-print-log)
-    + [UIColor Extensions](#uicolor-extensions)
+    + [改造UIColor](#uicolor-extensions)
     + [Custom Segue](#custom-segue)
     + [CircularImageView](#circularimageview)
  - [联系方式](#contact)
@@ -24,7 +24,7 @@ Swift日常开发工具集
 - [x] 浮点型数据的四舍五入
 - [x] 改造UserDefaults
 - [x] 改造print函数
-- [x] UIColor Init with RGBA(Int) and get RGBA(Int)
+- [x] 改造UIColor
 - [x] Custom Segue
 - [x] CircularImageView
 - [ ] Base64 Encoding and Decoding
@@ -138,16 +138,30 @@ func testPrintLog() {
 ```
 
 ### UIColor Extensions
+[Swift开发小技巧系列 - 改造UIColor](http://blog.derekcoder.com/2017/09/22/swiftdevhints-uicolor-extensions/)
+
+- 支持直接以0 ~ 255 之间的RGB值来初始化UIColor
+- 支持直接以十六进制长度RGB值初始化UIColor
+- 可以直接根据UIColor对象得到各种格式的RGB值
 
 ```swift
-// Initialize UIColor with RGB based 255
-let color = UIColor(redIn255: 255, greenIn255: 0, blueIn255: 0, alphaIn100: 100)
+// Initialize UIColor with RGB based 255 (255 32 171)
+let color = UIColor(red: 255/255, green: 32/255, blue: 171/255, alpha: 1)
+
+// Initialize UIColor with RGB Hex String
+let color = UIColor(hex: "FF20AB") 
+// let color = UIColor(hex: "ff20ab") 
+// let color = UIColor(hex: "#FF20AB") 
+// let color = UIColor(hex: "#ff20ab")
 
 // Get RGBA based 1.0 from a color
-let rgba = color.rgba  // rgba: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) 
+let rgba = color.rgba // (red 1.0, green 0.125490196078431, blue 0.670588235294118, alpha 1.0)
 
 // Get RGB based 255 and A base 100 from a color
-let rgbaInt = color.intRGBA // rgbaInt: (red: Int, green: Int, blue: Int, alpha: Int)
+let intRGBA = color.intRGBA // (red 255, green 32, blue 171, alpha 100)
+
+let rgbHexString = color.rgbHexString(prefix: "#") // "#FF20AB"
+// let rgbHexString = color.rgbHexString() // "FF20AB"
 ```
 
 ### Custom Segue

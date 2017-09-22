@@ -136,14 +136,23 @@ func testPrintLog() {
 ### UIColor Extensions
 
 ```swift
-// Initialize UIColor with RGB based 255
-let color = UIColor(redIn255: 255, greenIn255: 0, blueIn255: 0, alphaIn100: 100)
+// Initialize UIColor with RGB based 255 (255 32 171)
+let color = UIColor(red: 255/255, green: 32/255, blue: 171/255, alpha: 1)
+
+// Initialize UIColor with RGB Hex String
+let color = UIColor(hex: "FF20AB") 
+// let color = UIColor(hex: "ff20ab") 
+// let color = UIColor(hex: "#FF20AB") 
+// let color = UIColor(hex: "#ff20ab")
 
 // Get RGBA based 1.0 from a color
-let rgba = color.rgba  // rgba: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) 
+let rgba = color.rgba // (red 1.0, green 0.125490196078431, blue 0.670588235294118, alpha 1.0)
 
 // Get RGB based 255 and A base 100 from a color
-let rgbaInt = color.intRGBA // rgbaInt: (red: Int, green: Int, blue: Int, alpha: Int)
+let intRGBA = color.intRGBA // (red 255, green 32, blue 171, alpha 100)
+
+let rgbHexString = color.rgbHexString(prefix: "#") // "#FF20AB"
+// let rgbHexString = color.rgbHexString() // "FF20AB"
 ```
 
 ### Custom Segue

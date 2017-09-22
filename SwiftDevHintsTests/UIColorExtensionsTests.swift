@@ -56,6 +56,7 @@ class UIColorExtensionsTests: XCTestCase {
     func testRGBHexString() {
         // 255 32 171 FF20AB
         let color = UIColor(redIn255: 255, greenIn255: 32, blueIn255: 171, alphaIn100: 100)
-        XCTAssertEqual(color.rgbHexString(), "#FF20AB")
+        XCTAssertEqual(color.rgbHexString(), "FF20AB")
+        XCTAssertEqual(color.rgbHexString(prefix: "#"), "#FF20AB")
     }
 }
