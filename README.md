@@ -146,7 +146,7 @@ func testPrintLog() {
 
 ```swift
 // Initialize UIColor with RGB based 255 (255 32 171)
-let color = UIColor(red: 255/255, green: 32/255, blue: 171/255, alpha: 1)
+let color = UIColor(redIn255: 255, greenIn255: 32, blueIn255: 171)
 
 // Initialize UIColor with RGB Hex String
 let color = UIColor(hex: "FF20AB") 
