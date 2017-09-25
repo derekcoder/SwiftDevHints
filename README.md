@@ -6,13 +6,13 @@ Swift日常开发工具集
 - [环境要求](#requirements)
 - [安装](#installation)
 - [使用说明](#usage)
-    + [随机数生成](#random-int)
-    + [格式化输出](#format-int-and-double)
-    + [浮点型数据的四舍五入](#round-double)
-    + [改造UserDefaults](#new-method-using-userdefaults)
-    + [改造print函数](#debug-print-log)
-    + [改造UIColor](#uicolor-extensions)
-    + [Custom Segue](#custom-segue)
+    + [随机数生成](#随机数生成)
+    + [格式化输出](#格式化输出)
+    + [浮点型数据的四舍五入](#浮点型数据的四舍五入)
+    + [改造UserDefaults](#改造UserDefaults)
+    + [改造print函数](#改造print函数)
+    + [改造UIColor](#改造UIColor)
+    + [更优雅的实现Segue](#更优雅的实现Segue)
     + [CircularImageView](#circularimageview)
  - [联系方式](#contact)
 - [版权](#license)
@@ -25,7 +25,7 @@ Swift日常开发工具集
 - [x] 改造UserDefaults
 - [x] 改造print函数
 - [x] 改造UIColor
-- [x] Custom Segue
+- [x] 更优雅的实现Segue
 - [x] CircularImageView
 - [ ] Base64 Encoding and Decoding
 - [ ] Handling empty and nil for optional strings
@@ -137,7 +137,7 @@ func testPrintLog() {
 // 输出结果： PrintHelperViewController.swift:testPrintLog():20
 ```
 
-### UIColor Extensions
+### 改造UIColor
 [Swift开发小技巧系列 - 改造UIColor](http://blog.derekcoder.com/2017/09/22/swiftdevhints-uicolor-extensions/)
 
 - 支持直接以0 ~ 255 之间的RGB值来初始化UIColor
@@ -164,24 +164,23 @@ let rgbHexString = color.rgbHexString(prefix: "#") // "#FF20AB"
 // let rgbHexString = color.rgbHexString() // "FF20AB"
 ```
 
-### Custom Segue
+### 更优雅的实现Segue
 ```swift
-extension CustomSegue {
-    static let ShowCustomSegue: CustomSegue = "ShowCustomSegue"
-}
+class TestCustomSegueViewController: UITableViewController, CustomSegueProtocol {
+    enum CustomSegueIdentifier: String {
+        case showNext
+    }
 
-class ViewController: UIViewController {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performCustomSegue(.ShowCustomSegue)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performCustomSegue(.showNext, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.customSegue {
-        case CustomSegue.ShowCustomSegue:
-            // configuration
-        default: break
+        switch customSegueIdentifier(forSegue: segue) {
+        case .showNext:
+            // Configuration for next page
         }
-    }   
+    }
 }
 ```
 

@@ -242,7 +242,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="SwiftDevHintsDemo" id="e1H-k3-rBX"/>
                     <connections>
-                        <segue destination="sOM-ER-B7u" kind="show" identifier="ShowCustomSegue" id="OI2-WX-wdE"/>
+                        <segue destination="sOM-ER-B7u" kind="show" identifier="showCustomSegue" id="OI2-WX-wdE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z64-T3-dEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -332,7 +332,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zYQ-f4-xEc" customClass="CircularImageView" customModule="SwiftDevHints">
-                                <rect key="frame" x="87.5" y="165" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="185" width="200" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="C6g-5Z-BSM"/>

@@ -157,22 +157,21 @@ let rgbHexString = color.rgbHexString(prefix: "#") // "#FF20AB"
 
 ### Custom Segue
 ```swift
-extension CustomSegue {
-    static let ShowCustomSegue: CustomSegue = "ShowCustomSegue"
-}
+class TestCustomSegueViewController: UITableViewController, CustomSegueProtocol {
+    enum CustomSegueIdentifier: String {
+        case showNext
+    }
 
-class ViewController: UIViewController {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performCustomSegue(.ShowCustomSegue)
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performCustomSegue(.showNext, sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.customSegue {
-        case CustomSegue.ShowCustomSegue:
-            // configuration
-        default: break
+        switch customSegueIdentifier(forSegue: segue) {
+        case .showNext:
+            // Configuration for next page
         }
-    }   
+    }
 }
 ```
 

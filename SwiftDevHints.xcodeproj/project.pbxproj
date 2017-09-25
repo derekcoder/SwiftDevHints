@@ -19,8 +19,6 @@
 		659A6D121F63F22E006B2F8B /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659A6D101F63F22E006B2F8B /* UIColorExtensions.swift */; };
 		E340F28B1F3820DE006F872D /* NSManagedObjectContextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340F2891F3820DE006F872D /* NSManagedObjectContextExtensions.swift */; };
 		E340F28C1F3820DE006F872D /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340F28A1F3820DE006F872D /* CoreDataHelper.swift */; };
-		E340F2901F3820EA006F872D /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340F28D1F3820EA006F872D /* CustomSegue.swift */; };
-		E340F2911F3820EA006F872D /* UIStoryboardSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340F28E1F3820EA006F872D /* UIStoryboardSegue.swift */; };
 		E340F2921F3820EA006F872D /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E340F28F1F3820EA006F872D /* UIViewControllerExtensions.swift */; };
 		E342F67F1F724FA800E8ECCC /* README.en.md in Resources */ = {isa = PBXBuildFile; fileRef = E342F67E1F724FA800E8ECCC /* README.en.md */; };
 		E34DA5621F66A020009B30E0 /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DA5611F66A020009B30E0 /* OptionalExtensions.swift */; };
@@ -41,6 +39,7 @@
 		E3A2C85F1F2F31A1007B73CE /* PrintHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */; };
 		E3A2C8611F2F3331007B73CE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E3A2C8601F2F3330007B73CE /* README.md */; };
 		E3A2C8631F2F36A8007B73CE /* SwiftDevHints.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */; };
+		E3CBCEC01F78D22A00AB9604 /* CustomSegueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CBCEBF1F78D22A00AB9604 /* CustomSegueProtocol.swift */; };
 		E3D01ED91F459F6D0036FDCA /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D01ED81F459F6D0036FDCA /* StringExtensionsTests.swift */; };
 		E3D01EDD1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D01EDC1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift */; };
 		E3D43E1D1F6BA5F500275992 /* SwiftDevHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; };
@@ -115,8 +114,6 @@
 		659A6D101F63F22E006B2F8B /* UIColorExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIColorExtensions.swift; path = Sources/UIColorExtensions.swift; sourceTree = "<group>"; };
 		E340F2891F3820DE006F872D /* NSManagedObjectContextExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NSManagedObjectContextExtensions.swift; path = Sources/NSManagedObjectContextExtensions.swift; sourceTree = "<group>"; };
 		E340F28A1F3820DE006F872D /* CoreDataHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CoreDataHelper.swift; path = Sources/CoreDataHelper.swift; sourceTree = "<group>"; };
-		E340F28D1F3820EA006F872D /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomSegue.swift; path = Sources/CustomSegue.swift; sourceTree = "<group>"; };
-		E340F28E1F3820EA006F872D /* UIStoryboardSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboardSegue.swift; path = Sources/UIStoryboardSegue.swift; sourceTree = "<group>"; };
 		E340F28F1F3820EA006F872D /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtensions.swift; path = Sources/UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		E342F67E1F724FA800E8ECCC /* README.en.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.en.md; sourceTree = "<group>"; };
 		E34DA5611F66A020009B30E0 /* OptionalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OptionalExtensions.swift; path = Sources/OptionalExtensions.swift; sourceTree = "<group>"; };
@@ -135,6 +132,7 @@
 		E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintHelperViewController.swift; sourceTree = "<group>"; };
 		E3A2C8601F2F3330007B73CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftDevHints.podspec; sourceTree = "<group>"; };
+		E3CBCEBF1F78D22A00AB9604 /* CustomSegueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CustomSegueProtocol.swift; path = Sources/CustomSegueProtocol.swift; sourceTree = "<group>"; };
 		E3D01ED81F459F6D0036FDCA /* StringExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsTests.swift; sourceTree = "<group>"; };
 		E3D01EDC1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableRangeExtensionsTests.swift; sourceTree = "<group>"; };
 		E3D43E221F6BB12800275992 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIImageExtensions.swift; path = Sources/UIImageExtensions.swift; sourceTree = "<group>"; };
@@ -281,8 +279,6 @@
 		E3B7016E1F34466F00271EA6 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				E340F28D1F3820EA006F872D /* CustomSegue.swift */,
-				E340F28E1F3820EA006F872D /* UIStoryboardSegue.swift */,
 				E340F28F1F3820EA006F872D /* UIViewControllerExtensions.swift */,
 				E3E27DCD1F347DF100032DF3 /* ItemsViewController.swift */,
 				E3E27DCC1F347DF100032DF3 /* StackViewController.swift */,
@@ -309,6 +305,7 @@
 				E3E27DD51F347E1200032DF3 /* PrintHelper.swift */,
 				E3E27DD21F347E1200032DF3 /* UserDefaultsExtensions.swift */,
 				E34DA5611F66A020009B30E0 /* OptionalExtensions.swift */,
+				E3CBCEBF1F78D22A00AB9604 /* CustomSegueProtocol.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -481,7 +478,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E340F2901F3820EA006F872D /* CustomSegue.swift in Sources */,
 				E340F28C1F3820DE006F872D /* CoreDataHelper.swift in Sources */,
 				E3E27DCF1F347DF100032DF3 /* UITableViewCellExtensions.swift in Sources */,
 				E340F28B1F3820DE006F872D /* NSManagedObjectContextExtensions.swift in Sources */,
@@ -498,6 +494,7 @@
 				E36119231F6B8A3700106DA7 /* CircularImageView.swift in Sources */,
 				E3E27DD91F347E1200032DF3 /* NSNumberExtensions.swift in Sources */,
 				E34DA5621F66A020009B30E0 /* OptionalExtensions.swift in Sources */,
+				E3CBCEC01F78D22A00AB9604 /* CustomSegueProtocol.swift in Sources */,
 				E3E27DD01F347DF100032DF3 /* StackViewController.swift in Sources */,
 				E3D43E231F6BB12800275992 /* UIImageExtensions.swift in Sources */,
 				E3E27DDD1F347E1200032DF3 /* DoubleExtensions.swift in Sources */,
@@ -505,7 +502,6 @@
 				659A6D121F63F22E006B2F8B /* UIColorExtensions.swift in Sources */,
 				E3E27DD81F347E1200032DF3 /* UserDefaultsExtensions.swift in Sources */,
 				E3E27DE11F347E2D00032DF3 /* Result.swift in Sources */,
-				E340F2911F3820EA006F872D /* UIStoryboardSegue.swift in Sources */,
 				E37F02AF1F3C730600C33165 /* StringExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
