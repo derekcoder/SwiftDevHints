@@ -9,10 +9,10 @@ Swift日常开发工具集
     + [随机数生成](#随机数生成)
     + [格式化输出](#格式化输出)
     + [浮点型数据的四舍五入](#浮点型数据的四舍五入)
-    + [改造UserDefaults](#改造UserDefaults)
+    + [改造UserDefaults](#改造userdefaults)
     + [改造print函数](#改造print函数)
-    + [改造UIColor](#改造UIColor)
-    + [更优雅的实现Segue](#更优雅的实现Segue)
+    + [改造UIColor](#改造uicolor)
+    + [更优雅的实现Segue](#更优雅的实现segue)
     + [CircularImageView](#circularimageview)
  - [联系方式](#contact)
 - [版权](#license)
@@ -165,6 +165,8 @@ let rgbHexString = color.rgbHexString(prefix: "#") // "#FF20AB"
 ```
 
 ### 更优雅的实现Segue
+[Swift开发小技巧系列 - 更优雅的实现Segue](http://blog.derekcoder.com/2017/09/25/swiftdevhints-custom-segue/)
+
 ```swift
 class TestCustomSegueViewController: UITableViewController, CustomSegueProtocol {
     enum CustomSegueIdentifier: String {
