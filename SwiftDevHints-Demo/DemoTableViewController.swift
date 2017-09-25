@@ -28,11 +28,10 @@ final class ProductCell: UITableViewCell {
     }
 }
 
-extension CustomSegue {
-    static let ShowCustomSegue: CustomSegue = "ShowCustomSegue"
-}
-
-class DemoTableViewController: UITableViewController {
+class DemoTableViewController: UITableViewController, CustomSegueProtocol {
+    enum CustomSegueIdentifier: String {
+        case showCustomSegue
+    }
     
     private func showItemsViewControllerDemo() {
         let categories = [Category(title: "Computers"), Category(title: "Electronics")]
@@ -77,15 +76,14 @@ class DemoTableViewController: UITableViewController {
         } else if indexPath.section == 2 && indexPath.row == 0 {
             showStackViewControllerDemo()
         } else if indexPath.section == 3 && indexPath.row == 0 {
-            performCustomSegue(.ShowCustomSegue)
+            performCustomSegue(.showCustomSegue, sender: self)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch segue.customSegue {
-        case CustomSegue.ShowCustomSegue:
+        switch customSegueIdentifier(forSegue: segue) {
+        case .showCustomSegue:
             segue.destination.title = "Custom Segue"
-        default: break
         }
     }
 }
