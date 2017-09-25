@@ -28,3 +28,10 @@ extension String {
         return Int(value)
     }
 }
+
+extension Substring {
+    public var hexInt: Int? {
+        let str = String(self)
+        return str.hexInt
+    }
+}

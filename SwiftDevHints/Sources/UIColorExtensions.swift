@@ -34,8 +34,8 @@ extension UIColor {
         let blue = str[indexOffsetBy4..<endIndex]
         
         guard let redIn255 = red.hexInt else { return nil }
-        guard let greenIn255: Int = green.hexInt else { return nil }
-        guard let blueIn255: Int = blue.hexInt else { return nil }
+        guard let greenIn255 = green.hexInt else { return nil }
+        guard let blueIn255 = blue.hexInt else { return nil }
         
         self.init(redIn255: redIn255, greenIn255: greenIn255, blueIn255: blueIn255)
     }
