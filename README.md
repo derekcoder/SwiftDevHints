@@ -44,7 +44,7 @@ Swift日常开发工具集
 ### CocoaPods
 
 ```ruby
-pod 'SwiftDevHints'
+pod 'SwiftDevHints', '~> 0.3.0'
 ```
 
 ## 使用说明

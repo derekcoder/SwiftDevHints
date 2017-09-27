@@ -44,7 +44,7 @@ A very useful set of development tools.
 ### CocoaPods
 
 ```ruby
-pod 'SwiftDevHints'
+pod 'SwiftDevHints', '~> 0.3.0'
 ```
 
 ## Usage
