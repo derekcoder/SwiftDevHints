@@ -37,7 +37,7 @@ Swift日常开发工具集
 ## 环境要求
 
 - iOS 9.0+
-- Swift 3
+- Swift 4 (SwiftDevHints 0.4.x), Swift 3 (SwiftDevHints 0.3.x)
 
 ## 安装
 
@@ -45,6 +45,11 @@ Swift日常开发工具集
 
 ```ruby
 pod 'SwiftDevHints'
+```
+
+Swift 3
+```ruby
+pod 'SwiftDevHints', '~> 0.3.0'
 ```
 
 ## 使用说明
