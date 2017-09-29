@@ -10,7 +10,12 @@ import Foundation
 
 extension Optional where Wrapped == String {
     public var nilIfEmpty: String? {
-        guard let unwrappedValue = self else { return nil }
-        return unwrappedValue.isEmpty ? nil : unwrappedValue
+        guard let value = self else { return nil }
+        return value.isEmpty ? nil : value
+    }
+    
+    public var emptyIfNil: String {
+        guard let value = self else { return "" }
+        return value
     }
 }

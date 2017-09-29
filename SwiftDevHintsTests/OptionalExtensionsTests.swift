@@ -24,4 +24,14 @@ class OptionalExtensionsTests: XCTestCase {
         XCTAssertNotNil(string.nilIfEmpty)
     }
     
+    func testEmptyIfNil() {
+        var string: String?
+        
+        string = nil
+        XCTAssertEqual(string.emptyIfNil, "")
+        
+        string = "Hello"
+        XCTAssertEqual(string.emptyIfNil, "Hello")
+    }
+    
 }

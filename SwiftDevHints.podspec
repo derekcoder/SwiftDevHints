@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SwiftDevHints'
-  s.version          = '0.4.1'
+  s.version          = '0.4.2'
   s.summary          = 'A very useful set of development tools.'
  
   s.description      = <<-DESC
@@ -14,6 +14,6 @@ Pod::Spec.new do |s|
  
   s.ios.deployment_target = '10.0'
   s.source_files = ['SwiftDevHints/Sources/*.swift', 'SwiftDevHints/SwiftDevHints.h']
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '3.0' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
   
 end
