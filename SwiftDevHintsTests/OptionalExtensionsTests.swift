@@ -30,8 +30,17 @@ class OptionalExtensionsTests: XCTestCase {
         string = nil
         XCTAssertEqual(string.emptyIfNil, "")
         
-        string = "Hello"
-        XCTAssertEqual(string.emptyIfNil, "Hello")
+        string = "hello"
+        XCTAssertEqual(string.emptyIfNil, "hello")
     }
     
+    func testValueWithDefaultForString() {
+        var string: String?
+        
+        string = nil
+        XCTAssertEqual(string.value(withDefault: "default"), "default")
+        
+        string = "hello"
+        XCTAssertEqual(string.value(withDefault: "default"), "hello")
+    }
 }
