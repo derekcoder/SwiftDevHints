@@ -18,6 +18,7 @@ A very useful set of development tools.
     + [Debug Print Log](#debug-print-log)
     + [UIColor Extensions](#uicolor-extensions)
     + [Custom Segue](#custom-segue)
+    + [Optional Extension](#optional-extension)
     + [CircularImageView](#circularimageview)
  - [Contact](#contact)
 - [License](#license)
@@ -31,9 +32,9 @@ A very useful set of development tools.
 - [x] Debug Print Log
 - [x] UIColor Init with RGBA(Int) and get RGBA(Int)
 - [x] Custom Segue
+- [x] Optional Extension
 - [x] CircularImageView
 - [ ] Base64 Encoding and Decoding
-- [ ] Handling empty and nil for optional strings
 - [ ] Generic Table View Controller
 - [ ] Nib Register for UITableViewCell
 - [ ] Convenient Methods for Adding Constraints
@@ -178,6 +179,21 @@ class TestCustomSegueViewController: UITableViewController, CustomSegueProtocol 
         }
     }
 }
+```
+### Optional Extension
+
+```swift
+guard let text = textField.text.nilIfEmpty else {
+// handle for nil or empty
+return
+}
+// Do something with text
+
+let names = ["Derek", "", "John", "", "Tony", nil]   // [String?]
+let validNames1 = names.map { $0.nilIfEmpty }  // [String?]
+print(validNames1) // [Optional("Derek"), nil, Optional("John"), nil, Optional("Tony"), nil]
+let validNames2 = names.flatMap { $0.nilIfEmpty } // [String]
+print(validNames2)  // ["Derek", "John", "Tony"]
 ```
 
 ### CircularImageView

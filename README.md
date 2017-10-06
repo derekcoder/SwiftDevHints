@@ -18,6 +18,7 @@ Swift日常开发工具集
     + [改造print函数](#改造print函数)
     + [改造UIColor](#改造uicolor)
     + [更优雅的实现Segue](#更优雅的实现segue)
+    + [改造Optional](#改造optional)
     + [CircularImageView](#circularimageview)
  - [联系方式](#contact)
 - [版权](#license)
@@ -31,9 +32,9 @@ Swift日常开发工具集
 - [x] 改造print函数
 - [x] 改造UIColor
 - [x] 更优雅的实现Segue
+- [x] 改造Optional
 - [x] CircularImageView
 - [ ] Base64 Encoding and Decoding
-- [ ] Handling empty and nil for optional strings
 - [ ] Generic Table View Controller
 - [ ] Nib Register for UITableViewCell
 - [ ] Convenient Methods for Adding Constraints
@@ -194,6 +195,22 @@ class TestCustomSegueViewController: UITableViewController, CustomSegueProtocol 
         }
     }
 }
+```
+### 改造Optional
+[Swift开发小技巧系列 - 改造Optional](http://blog.derekcoder.com/2017/10/05/swiftdevhints-emptyandnil-for-optional/)
+
+```swift
+guard let text = textField.text.nilIfEmpty else {
+// handle for nil or empty
+return
+}
+// Do something with text
+
+let names = ["Derek", "", "John", "", "Tony", nil]   // [String?]
+let validNames1 = names.map { $0.nilIfEmpty }  // [String?]
+print(validNames1) // [Optional("Derek"), nil, Optional("John"), nil, Optional("Tony"), nil]
+let validNames2 = names.flatMap { $0.nilIfEmpty } // [String]
+print(validNames2)  // ["Derek", "John", "Tony"]
 ```
 
 ### CircularImageView
