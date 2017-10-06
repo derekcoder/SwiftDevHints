@@ -205,10 +205,14 @@ guard let text = textField.text.nilIfEmpty else {
 return
 }
 // Do something with text
+```
 
+```swift
 let names = ["Derek", "", "John", "", "Tony", nil]   // [String?]
+
 let validNames1 = names.map { $0.nilIfEmpty }  // [String?]
 print(validNames1) // [Optional("Derek"), nil, Optional("John"), nil, Optional("Tony"), nil]
+
 let validNames2 = names.flatMap { $0.nilIfEmpty } // [String]
 print(validNames2)  // ["Derek", "John", "Tony"]
 ```
