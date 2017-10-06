@@ -8,21 +8,10 @@
 
 import Foundation
 
-extension Optional {
-    public func value(withDefault defaultValue: Wrapped) -> Wrapped {
-        guard let value = self else { return defaultValue }
-        return value
-    }
-}
-
 extension Optional where Wrapped == String {
     public var nilIfEmpty: String? {
         guard let value = self else { return nil }
         return value.isEmpty ? nil : value
-    }
-    
-    public var emptyIfNil: String {
-        return value(withDefault: "")
     }
 }
 
