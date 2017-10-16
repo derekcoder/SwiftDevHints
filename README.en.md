@@ -20,7 +20,7 @@ A very useful set of development tools.
     + [Custom Segue](#custom-segue)
     + [Optional Extension](#optional-extension)
     + [CircularImageView](#circularimageview)
-    + [Convenient methods to access Info.plist](#convenient-methods-to-access-info.plist)
+    + [Convenient methods to access Info.plist](#convenient-methods-to-access-infoplist)
  - [Contact](#contact)
 - [License](#license)
 

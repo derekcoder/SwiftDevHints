@@ -20,7 +20,7 @@ Swift日常开发工具集
     + [更优雅的实现Segue](#更优雅的实现segue)
     + [改造Optional](#改造optional)
     + [CircularImageView](#circularimageview)
-    + [快速读取Info.plist](#快速读取info.plist)
+    + [快速读取Info.plist](#快速读取infoplist)
  - [联系方式](#contact)
 - [版权](#license)
 
