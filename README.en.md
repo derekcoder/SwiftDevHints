@@ -20,6 +20,7 @@ A very useful set of development tools.
     + [Custom Segue](#custom-segue)
     + [Optional Extension](#optional-extension)
     + [CircularImageView](#circularimageview)
+    + [Convenient methods to access Info.plist](#convenient-methods-to-access-info.plist)
  - [Contact](#contact)
 - [License](#license)
 
@@ -34,6 +35,7 @@ A very useful set of development tools.
 - [x] Custom Segue
 - [x] Optional Extension
 - [x] CircularImageView
+- [x] Convenient methods to access Info.plist
 - [ ] Base64 Encoding and Decoding
 - [ ] Generic Table View Controller
 - [ ] Nib Register for UITableViewCell
@@ -208,6 +210,28 @@ Using in Storyboard
 Using programmatically
 ```swift
 let circularImageView = CircularImageView(frame: frame)
+```
+
+### Convenient methods to access Info.plist
+
+```swift
+let bundle = Bundle.main
+
+let displayName = bundle.displayName  // String?
+let identifier = bundle.identifier    // String?
+let version = bundle.version          // String?
+let build = bundle.build              // String?
+
+// All keys
+private enum InfoPlistKey: String {
+case name = "CFBundleName"
+case displayName = "CFBundleDisplayName"
+case developmentRegion = "CFBundleDevelopmentRegion"
+case identifier = "CFBundleIdentifier"
+case version = "CFBundleShortVersionString"
+case build = "CFBundleVersion"
+case packageType = "CFBundlePackageType"
+}
 ```
 
 <!---

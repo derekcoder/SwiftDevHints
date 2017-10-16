@@ -20,6 +20,7 @@ Swift日常开发工具集
     + [更优雅的实现Segue](#更优雅的实现segue)
     + [改造Optional](#改造optional)
     + [CircularImageView](#circularimageview)
+    + [快速读取Info.plist](#快速读取info.plist)
  - [联系方式](#contact)
 - [版权](#license)
 
@@ -34,6 +35,7 @@ Swift日常开发工具集
 - [x] 更优雅的实现Segue
 - [x] 改造Optional
 - [x] CircularImageView
+- [x] 快速读取Info.plist
 - [ ] Base64 Encoding and Decoding
 - [ ] Generic Table View Controller
 - [ ] Nib Register for UITableViewCell
@@ -225,6 +227,28 @@ Using in Storyboard
 Using programmatically
 ```swift
 let circularImageView = CircularImageView(frame: frame)
+```
+
+### 快速读取Info.plist
+
+```swift
+let bundle = Bundle.main
+
+let displayName = bundle.displayName  // String?
+let identifier = bundle.identifier    // String?
+let version = bundle.version          // String?
+let build = bundle.build              // String?
+
+// 所有已经定义的可以快速访问的Key
+private enum InfoPlistKey: String {
+case name = "CFBundleName"
+case displayName = "CFBundleDisplayName"
+case developmentRegion = "CFBundleDevelopmentRegion"
+case identifier = "CFBundleIdentifier"
+case version = "CFBundleShortVersionString"
+case build = "CFBundleVersion"
+case packageType = "CFBundlePackageType"
+}
 ```
 
 <!---
