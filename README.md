@@ -36,6 +36,10 @@ Swift日常开发工具集
 - [x] 改造Optional
 - [x] CircularImageView
 - [x] 快速读取Info.plist
+- [ ] 自定义一些常用函数
+    - [x] accumulate
+    - [ ] last
+    - [ ] all
 - [ ] Base64 Encoding and Decoding
 - [ ] Generic Table View Controller
 - [ ] Nib Register for UITableViewCell
