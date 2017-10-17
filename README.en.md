@@ -21,6 +21,7 @@ A very useful set of development tools.
     + [Optional Extension](#optional-extension)
     + [CircularImageView](#circularimageview)
     + [Convenient methods to access Info.plist](#convenient-methods-to-access-infoplist)
+    + [Custom Some Functions](#custom-some-functions)
  - [Contact](#contact)
 - [License](#license)
 
@@ -36,6 +37,10 @@ A very useful set of development tools.
 - [x] Optional Extension
 - [x] CircularImageView
 - [x] Convenient methods to access Info.plist
+- [ ] Custom Some Functions
+	- [x] accumulate
+	- [x] last
+	- [x] all
 - [ ] Base64 Encoding and Decoding
 - [ ] Generic Table View Controller
 - [ ] Nib Register for UITableViewCell
@@ -233,53 +238,21 @@ case build = "CFBundleVersion"
 case packageType = "CFBundlePackageType"
 }
 ```
-
-<!---
-### Generic Table View Controllers
+### Custom Some Functions
 
 ```swift
-import SwiftDevHints
+// accumulate
+let nums = [1, 2, 3, 4]
+nums.accumulate(0, +)  // [1, 3, 6, 10]
 
-struct Category {
-    var title: String
-}
-let categories = [Category(title: "Computers"), Category(title: "Electronics")]
+// last
+let names = ["Derek", "Tony", "Jogn"]
+names.last { $0.hasPrefix("De") }  // Optional("Derek")
 
-let categoriesVC = ItemsViewController(items: categories, configure: { (cell, category) in
-    cell.textLabel?.text = category.title
-})
-nc.pushViewController(categoriesVC, animated: true)
+// all
+let evenNums = [2, 4, 6, 8, 10]
+evenNums.all { $0 % 2 == 0 }  // true
 ```
-
-
-### Nib Register for UITableViewCell
-
-```swift
-import SwiftDevHints
-
-override func viewDidLoad() {
-    super.viewDidLoad()
-    
-    registerNibForCellWithIdentifier(ItemCell.cellIdentifier, tableView: tableView)
-}
-
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: ItemCell.cellIdentifier, for: indexPath) as! ItemCell
-    // configure cell
-    return cell
-}
-```
-
-### Convenient Methods for Adding Constraints
-
-```
-```
-
-### Networking
-
-```swift
-```
--->
 
 ## Contact
 

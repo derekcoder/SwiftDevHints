@@ -21,6 +21,7 @@ Swift日常开发工具集
     + [改造Optional](#改造optional)
     + [CircularImageView](#circularimageview)
     + [快速读取Info.plist](#快速读取infoplist)
+    + [自定义一些常用函数](#自定义一些常用函数)
  - [联系方式](#contact)
 - [版权](#license)
 
@@ -38,8 +39,8 @@ Swift日常开发工具集
 - [x] 快速读取Info.plist
 - [ ] 自定义一些常用函数
     - [x] accumulate
-    - [ ] last
-    - [ ] all
+    - [x] last
+    - [x] all
 - [ ] Base64 Encoding and Decoding
 - [ ] Generic Table View Controller
 - [ ] Nib Register for UITableViewCell
@@ -253,6 +254,22 @@ case version = "CFBundleShortVersionString"
 case build = "CFBundleVersion"
 case packageType = "CFBundlePackageType"
 }
+```
+
+### 自定义一些常用函数
+
+```swift
+// accumulate
+let nums = [1, 2, 3, 4]
+nums.accumulate(0, +)  // [1, 3, 6, 10]
+
+// last
+let names = ["Derek", "Tony", "Jogn"]
+names.last { $0.hasPrefix("De") }  // Optional("Derek")
+
+// all
+let evenNums = [2, 4, 6, 8, 10]
+evenNums.all { $0 % 2 == 0 }  // true
 ```
 
 <!---

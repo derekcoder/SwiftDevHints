@@ -32,6 +32,8 @@
 		E36A76E91F34216600812ED4 /* SwiftDevHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; };
 		E37808C41F95BAC000E4DB1F /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37808C31F95BABF00E4DB1F /* ArrayExtensions.swift */; };
 		E37808C61F95BB6C00E4DB1F /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37808C51F95BB6C00E4DB1F /* ArrayExtensionsTests.swift */; };
+		E37808CA1F95D29100E4DB1F /* SequenceExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37808C91F95D29000E4DB1F /* SequenceExtensions.swift */; };
+		E37808CC1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37808CB1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift */; };
 		E37F02AF1F3C730600C33165 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F02AD1F3C730600C33165 /* StringExtensions.swift */; };
 		E37F02B01F3C730600C33165 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37F02AE1F3C730600C33165 /* String+MD5.swift */; };
 		E38085F71F306C7C007D4004 /* DictionaryExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */; };
@@ -129,6 +131,8 @@
 		E36536671F30601900BF5021 /* DictionaryExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsTests.swift; sourceTree = "<group>"; };
 		E37808C31F95BABF00E4DB1F /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExtensions.swift; path = Sources/ArrayExtensions.swift; sourceTree = "<group>"; };
 		E37808C51F95BB6C00E4DB1F /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTests.swift; sourceTree = "<group>"; };
+		E37808C91F95D29000E4DB1F /* SequenceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SequenceExtensions.swift; path = Sources/SequenceExtensions.swift; sourceTree = "<group>"; };
+		E37808CB1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensionsTests.swift; sourceTree = "<group>"; };
 		E37F02AD1F3C730600C33165 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Sources/StringExtensions.swift; sourceTree = "<group>"; };
 		E37F02AE1F3C730600C33165 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+MD5.swift"; path = "Sources/String+MD5.swift"; sourceTree = "<group>"; };
 		E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsViewController.swift; sourceTree = "<group>"; };
@@ -263,6 +267,7 @@
 				E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */,
 				E3FAACC11F94BDD600507E53 /* BundleExtensionsTests.swift */,
 				E37808C51F95BB6C00E4DB1F /* ArrayExtensionsTests.swift */,
+				E37808CB1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift */,
 			);
 			path = SwiftDevHintsTests;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 		E3B7016F1F34468400271EA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E37808C91F95D29000E4DB1F /* SequenceExtensions.swift */,
 				E37808C31F95BABF00E4DB1F /* ArrayExtensions.swift */,
 				659A6D0F1F63F22E006B2F8B /* CountableRangeExtensions.swift */,
 				659A6D101F63F22E006B2F8B /* UIColorExtensions.swift */,
@@ -506,6 +512,7 @@
 				E3E27DDA1F347E1200032DF3 /* DictionaryExtensions.swift in Sources */,
 				E36119231F6B8A3700106DA7 /* CircularImageView.swift in Sources */,
 				E3E27DD91F347E1200032DF3 /* NSNumberExtensions.swift in Sources */,
+				E37808CA1F95D29100E4DB1F /* SequenceExtensions.swift in Sources */,
 				E34DA5621F66A020009B30E0 /* OptionalExtensions.swift in Sources */,
 				E3CBCEC01F78D22A00AB9604 /* CustomSegueProtocol.swift in Sources */,
 				E3E27DD01F347DF100032DF3 /* StackViewController.swift in Sources */,
@@ -524,6 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E37808CC1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift in Sources */,
 				E39BC4551F30909F006AB7D1 /* UserDefaultsExtensionsTests.swift in Sources */,
 				65248CBD1F1D02B200E00872 /* IntExtensionsTests.swift in Sources */,
 				E36536661F305E6400BF5021 /* NSNumberExtensionsTests.swift in Sources */,
