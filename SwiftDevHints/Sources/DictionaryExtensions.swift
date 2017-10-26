@@ -194,3 +194,16 @@ extension Dictionary where Key: CustomStringConvertible {
     }
 }
 
+////////////////////////////////////////////
+// Dictionary Map Function
+////////////////////////////////////////////
+extension Dictionary {
+    public func map<T>(_ transform: ((Key) throws -> T)) rethrows -> [T: Value] {
+        var newDict: [T: Value] = [:]
+        for (key, value) in self {
+            let newKey = try transform(key)
+            newDict[newKey] = value
+        }
+        return newDict
+    }
+}

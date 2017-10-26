@@ -41,6 +41,7 @@ A very useful set of development tools.
 	- [x] accumulate
 	- [x] last
 	- [x] all
+	- [x] map function of Dictionary: replace all keys with new keys
 - [ ] Base64 Encoding and Decoding
 - [ ] Generic Table View Controller
 - [ ] Nib Register for UITableViewCell
@@ -114,9 +115,14 @@ extension UserDefaults.Name {
     static let Password: UserDefaults.Name = "SwiftDevHints-Demo.Password"
 }
 
+// Register Initial Value
+UserDefaults.standard.register(defaults: [.Username: "Unknown"])
+
+// Set Value
 UserDefaults.standard.set("Derek", forName: .Username)
 UserDefaults.standard.set("Password", forName: .Password)
 
+// Get Value
 let username = UserDefaults.standard.string(forName: .Username)
 let password = UserDefaults.standard.string(forName: .Password)
 ```
@@ -252,6 +258,10 @@ names.last { $0.hasPrefix("De") }  // Optional("Derek")
 // all
 let evenNums = [2, 4, 6, 8, 10]
 evenNums.all { $0 % 2 == 0 }  // true
+
+// map
+let dict: [Int: String] = [1: "Apple", 2: "Google", 3: "Amazon"]
+let newDict: [String: String] = dict.map { "Index \($0)" } // ["Index 1": "Apple", "Index 2": "Google", "Index 3": "Amazon"]
 ```
 
 ## Contact

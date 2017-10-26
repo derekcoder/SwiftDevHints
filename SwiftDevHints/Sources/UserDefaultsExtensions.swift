@@ -10,12 +10,19 @@ import Foundation
 
 extension UserDefaults {
     
-    public struct Name: RawRepresentable, Equatable {
+    public struct Name: RawRepresentable, Hashable {
         public var rawValue: String
-        
         
         public init(rawValue: String) {
             self.rawValue = rawValue
+        }
+        
+        public var hashValue: Int {
+            return rawValue.hashValue
+        }
+
+        public static func ==(lhs: Name, rhs: Name) -> Bool {
+            return lhs.rawValue == rhs.rawValue
         }
     }
     
@@ -113,6 +120,11 @@ extension UserDefaults {
 
     public func set(_ value: Bool, forName name: UserDefaults.Name) {
         set(value, forKey: name.rawValue)
+    }
+    
+    public func register(defaults registrationDictionary: [UserDefaults.Name : Any]) {
+        let dict = registrationDictionary.map { $0.rawValue }
+        register(defaults: dict)
     }
 }
 

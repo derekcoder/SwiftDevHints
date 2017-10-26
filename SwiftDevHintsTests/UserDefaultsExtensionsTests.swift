@@ -16,6 +16,7 @@ extension UserDefaults.Name {
     public static let ProfilePhotoURL: UserDefaults.Name = "SwiftDevHints.ProfilePhotoURL"
     public static let IsOnline: UserDefaults.Name = "SwiftDevHints.IsOnline"
     public static let Height: UserDefaults.Name = "SwiftDevHints.Height"
+    public static let Password: UserDefaults.Name = "SwiftDevHints.Password"
 }
 
 class UserDefaultsExtensionsTests: XCTestCase {
@@ -83,6 +84,13 @@ class UserDefaultsExtensionsTests: XCTestCase {
         defaults.set(username, forName: .Username)
         defaults.synchronize()
         XCTAssertEqual(defaults.string(forName: .Username, defaultValue: "Unknown"), username)
+    }
+    
+    func testRegisterDefaults() {
+        let defaults = UserDefaults.standard
+        
+        defaults.register(defaults: [.Password: "1234"])
+        XCTAssertEqual(defaults.string(forName: .Password), "1234")
     }
     
     struct Product: Codable {
