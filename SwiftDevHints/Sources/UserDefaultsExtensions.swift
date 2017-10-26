@@ -149,13 +149,13 @@ extension UserDefaults.Name: ExpressibleByStringLiteral {
 // Support Codable
 ////////////////////////////////////////////
 extension UserDefaults {
-    func set<T>(encodable object: T, forKey key: String) where T: Codable {
+    public func set<T>(encodable object: T, forKey key: String) where T: Codable {
         let encoder = JSONEncoder()
         let data = try? encoder.encode(object)
         set(data as Any?, forKey: key)
     }
     
-    func decodableObject<T>(type: T.Type, forKey key: String) -> T? where T: Codable {
+    public func decodableObject<T>(type: T.Type, forKey key: String) -> T? where T: Codable {
         guard let data = data(forKey: key) else {
             return nil
         }
@@ -164,11 +164,11 @@ extension UserDefaults {
         return try? decoder.decode(type, from: data)
     }
     
-    func set<T>(encodable object: T, forName name: UserDefaults.Name) where T: Codable {
+    public func set<T>(encodable object: T, forName name: UserDefaults.Name) where T: Codable {
         set(encodable: object, forKey: name.rawValue)
     }
     
-    func decodableObject<T>(type: T.Type, forName name: UserDefaults.Name) -> T? where T: Codable {
+    public func decodableObject<T>(type: T.Type, forName name: UserDefaults.Name) -> T? where T: Codable {
         return decodableObject(type: type, forKey: name.rawValue)
     }
 }
