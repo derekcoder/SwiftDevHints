@@ -214,8 +214,8 @@ class TestCustomSegueViewController: UITableViewController, CustomSegueProtocol 
 
 ```swift
 guard let text = textField.text.nilIfEmpty else {
-// handle for nil or empty
-return
+    // handle for nil or empty
+    return
 }
 // Do something with text
 ```

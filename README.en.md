@@ -51,7 +51,7 @@ A very useful set of development tools.
 ## Requirements
 
 - iOS 9.0+
-- Swift 3
+- Swift 4 (SwiftDevHints 0.4.x), Swift 3 (SwiftDevHints 0.3.x)
 
 ## Installation
 
@@ -59,6 +59,11 @@ A very useful set of development tools.
 
 ```ruby
 pod 'SwiftDevHints'
+```
+
+Swift 3
+```ruby
+pod 'SwiftDevHints', '~> 0.3.0'
 ```
 
 ## Usage
@@ -197,8 +202,8 @@ class TestCustomSegueViewController: UITableViewController, CustomSegueProtocol 
 
 ```swift
 guard let text = textField.text.nilIfEmpty else {
-// handle for nil or empty
-return
+    // handle for nil or empty
+    return
 }
 // Do something with text
 ```
