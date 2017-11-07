@@ -271,7 +271,10 @@ let newDict: [String: String] = dict.map { "Index \($0)" } // ["Index 1": "Apple
 
 ## Contact
 
-Follow and contact me on [Twitter](https://twitter.com/derekcoder_). If you find an issue, just [open a ticket](https://github.com/derekcoder/SwiftDevHints/issues/new). Pull requests are warmly welcome as well.
+- [Blog](http://blog.derekcoder.com)
+- [Twitter](https://twitter.com/derekcoder_)
+- [Weibo](https://weibo.com/u/6155322764)
+- Email: derekcoder@gmail.com
 
 ## License
 

@@ -331,7 +331,10 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
 
 ## 联系方式
 
-你可以在 [Twitter](https://twitter.com/derekcoder_)关注和联系我. 如果你有任何问题和建议，也非常欢迎 [open a ticket](https://github.com/derekcoder/SwiftDevHints/issues/new)。
+- [博客](http://blog.derekcoder.com)
+- [Twitter](https://twitter.com/derekcoder_)
+- [微博](https://weibo.com/u/6155322764)
+- 邮件: derekcoder@gmail.com
 ## 版权
 
 SwiftDevHints is released under the MIT license. [See LICENSE](https://github.com/derekcoder/SwiftDevHints/blob/master/LICENSE) for details.
