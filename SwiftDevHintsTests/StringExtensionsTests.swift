@@ -13,7 +13,7 @@ class StringExtensionsTests: XCTestCase {
         
     func testMd5() {
         // hello
-        XCTAssertEqual("hello".md5.characters.count, 32)
+        XCTAssertEqual("hello".md5.count, 32)
         
         XCTAssertEqual("hello".md5, "hello".md5)
     }

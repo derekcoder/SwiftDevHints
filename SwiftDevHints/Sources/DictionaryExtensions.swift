@@ -207,3 +207,22 @@ extension Dictionary {
         return newDict
     }
 }
+
+extension Dictionary {
+    public mutating func value(for key: Key, orAdd closure: @autoclosure () -> Value) -> Value {
+        if let value = self[key] {
+         	return value
+        }
+        
+        let value = closure()
+        self[key] = value
+        return value
+    }
+}
+
+
+
+
+
+
+
