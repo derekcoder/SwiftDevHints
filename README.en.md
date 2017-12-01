@@ -43,7 +43,6 @@ A very useful set of development tools.
 	- [x] all
 	- [x] map function of Dictionary: replace all keys with new keys
 - [ ] Base64 Encoding and Decoding
-- [ ] Generic Table View Controller
 - [ ] Nib Register for UITableViewCell
 - [ ] Convenient Methods for Adding Constraints
 - [ ] Networking

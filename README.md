@@ -43,7 +43,6 @@ Swift日常开发工具集
     - [x] all
     - [x] 字典的map函数：用来替换所有的key
 - [ ] Base64 Encoding and Decoding
-- [ ] Generic Table View Controller
 - [ ] Nib Register for UITableViewCell
 - [ ] Convenient Methods for Adding Constraints
 - [ ] Networking
@@ -57,6 +56,7 @@ Swift日常开发工具集
 
 ### CocoaPods
 
+Swift4
 ```ruby
 pod 'SwiftDevHints'
 ```
