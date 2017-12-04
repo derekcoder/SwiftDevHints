@@ -20,77 +20,73 @@ extension UserDefaults.Name {
 }
 
 class UserDefaultsExtensionsTests: XCTestCase {
+    private var userDefaults: UserDefaults!
     
-    let username = "Derek"
-    let age = 29
-    let latitude = 1.290270
-    let profilePhotoURL = URL(string: "http://www.derekcoder.com/photos/1")!
-    let isOnline = true
-    let height: Float = 1.83
+    override func setUp() {
+        super.setUp()
+        
+        userDefaults = UserDefaults(suiteName: "test")
+        userDefaults.removePersistentDomain(forName: "test")
+    }
     
     func testString() {
-        let defaults = UserDefaults.standard
-        defaults.set(username, forName: .Username)
-		defaults.synchronize()
-        XCTAssertEqual(defaults.string(forName: .Username), username)
+        let username = "Derek"
+        userDefaults.set(username, forName: .Username)
+        userDefaults.synchronize()
+        XCTAssertEqual(userDefaults.string(forName: .Username), username)
     }
     
     func testInt() {
-        let defaults = UserDefaults.standard
-        defaults.set(age, forName: .Age)
-        defaults.synchronize()
-        XCTAssertEqual(defaults.integer(forName: .Age), age)
+        let age = 29
+        userDefaults.set(age, forName: .Age)
+        userDefaults.synchronize()
+        XCTAssertEqual(userDefaults.integer(forName: .Age), age)
     }
     
     func testDouble() {
-        let defaults = UserDefaults.standard
-        defaults.set(latitude, forName: .Latitude)
-        defaults.synchronize()
-        XCTAssertEqual(defaults.double(forName: .Latitude), latitude)
+        let latitude = 1.290270
+        userDefaults.set(latitude, forName: .Latitude)
+        userDefaults.synchronize()
+        XCTAssertEqual(userDefaults.double(forName: .Latitude), latitude)
     }
 
     func testURL() {
-        let defaults = UserDefaults.standard
-        defaults.set(profilePhotoURL, forName: .ProfilePhotoURL)
-        defaults.synchronize()
-        XCTAssertEqual(defaults.url(forName: .ProfilePhotoURL), profilePhotoURL)
+        let profilePhotoURL = URL(string: "http://www.derekcoder.com/photos/1")!
+        userDefaults.set(profilePhotoURL, forName: .ProfilePhotoURL)
+        userDefaults.synchronize()
+        XCTAssertEqual(userDefaults.url(forName: .ProfilePhotoURL), profilePhotoURL)
     }
 
     func testBool() {
-        let defaults = UserDefaults.standard
-        defaults.set(isOnline, forName: .IsOnline)
-        defaults.synchronize()
-        XCTAssertEqual(defaults.bool(forName: .IsOnline), true)
+        let isOnline = true
+        userDefaults.set(isOnline, forName: .IsOnline)
+        userDefaults.synchronize()
+        XCTAssertEqual(userDefaults.bool(forName: .IsOnline), true)
     }
     
     func testFloat() {
-        let defaults = UserDefaults.standard
-        defaults.set(height, forName: .Height)
-        defaults.synchronize()
-        XCTAssertEqual(defaults.float(forName: .Height), height)
+        let height: Float = 1.83
+        userDefaults.set(height, forName: .Height)
+        userDefaults.synchronize()
+        XCTAssertEqual(userDefaults.float(forName: .Height), height)
     }
     
     func testStringDefaultValue() {
-        let defaults = UserDefaults.standard
-        
         let testName: UserDefaults.Name = "testName"
-        let value = defaults.string(forName: testName, defaultValue: "Unknown")
+        let value = userDefaults.string(forName: testName, defaultValue: "Unknown")
         XCTAssertEqual(value, "Unknown")
     }
     
     func testStringDefaultValueWithValue() {
-        let defaults = UserDefaults.standard
-
-        defaults.set(username, forName: .Username)
-        defaults.synchronize()
-        XCTAssertEqual(defaults.string(forName: .Username, defaultValue: "Unknown"), username)
+        let testName: UserDefaults.Name = "testName"
+        userDefaults.set("test", forName: testName)
+        userDefaults.synchronize()
+        XCTAssertEqual(userDefaults.string(forName: testName, defaultValue: "Unknown"), "test")
     }
     
     func testRegisterDefaults() {
-        let defaults = UserDefaults.standard
-        
-        defaults.register(defaults: [.Password: "1234"])
-        XCTAssertEqual(defaults.string(forName: .Password), "1234")
+        userDefaults.register(defaults: [.Password: "1234"])
+        XCTAssertEqual(userDefaults.string(forName: .Password), "1234")
     }
     
     struct Product: Codable {
@@ -99,14 +95,12 @@ class UserDefaultsExtensionsTests: XCTestCase {
     }
     
     func testCodable() {
-        let defaults = UserDefaults.standard
-        
         let iPhone = Product(id: "u-xxxx-xxxx", name: "iPhone X")
-        defaults.set(encodable: iPhone, forKey: "iPhoneX")
-        defaults.synchronize()
+        userDefaults.set(encodable: iPhone, forKey: "iPhoneX")
+        userDefaults.synchronize()
         
-        XCTAssertEqual(defaults.decodableObject(type: Product.self, forKey: "iPhoneX")!.id, "u-xxxx-xxxx")
-        XCTAssertEqual(defaults.decodableObject(type: Product.self, forKey: "iPhoneX")!.name, "iPhone X")
+        XCTAssertEqual(userDefaults.decodableObject(type: Product.self, forKey: "iPhoneX")!.id, "u-xxxx-xxxx")
+        XCTAssertEqual(userDefaults.decodableObject(type: Product.self, forKey: "iPhoneX")!.name, "iPhone X")
     }
 }
 
