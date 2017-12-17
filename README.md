@@ -22,6 +22,7 @@ Swift日常开发工具集
     + [CircularImageView](#circularimageview)
     + [快速读取Info.plist](#快速读取infoplist)
     + [自定义一些常用函数](#自定义一些常用函数)
+    + [Date类的帮助方法](#date类的帮助方法)
  - [联系方式](#contact)
 - [版权](#license)
 
@@ -42,6 +43,7 @@ Swift日常开发工具集
     - [x] last
     - [x] all
     - [x] 字典的map函数：用来替换所有的key
+- [x] Date类的帮助方法
 - [ ] Base64 Encoding and Decoding
 - [ ] Nib Register for UITableViewCell
 - [ ] Convenient Methods for Adding Constraints
@@ -280,6 +282,26 @@ evenNums.all { $0 % 2 == 0 }  // true
 // map
 let dict: [Int: String] = [1: "Apple", 2: "Google", 3: "Amazon"]
 let newDict: [String: String] = dict.map { "Index \($0)" } // ["Index 1": "Apple", "Index 2": "Google", "Index 3": "Amazon"]
+```
+
+### Date类的帮助方法
+
+```swift
+let today = Date()                   // December 17, 2017 at 5:54:46 PM GMT+8
+let startOfToday = today.startOfDay  // December 17, 2017 at 12:00:00 AM GMT+8
+let endOfToday = today.endOfDay      // December 17, 2017 at 11:59:59 PM GMT+8
+let previousDay = today.previousDay  // December 16, 2017 at 12:00:00 AM GMT+8
+let nextDay = today.nextDay          // December 18, 2017 at 12:00:00 AM GMT+8
+
+// December 14, 2017 at 12:00:00 AM GMT+8
+// December 15, 2017 at 12:00:00 AM GMT+8
+// December 16, 2017 at 12:00:00 AM GMT+8
+let last3Days = today.lastDays(withCount: 3, includingToday: false)
+
+// December 17, 2017 at 12:00:00 AM GMT+8
+// December 18, 2017 at 12:00:00 AM GMT+8
+// December 19, 2017 at 12:00:00 AM GMT+8
+let next3Days = today.nextDays(withCount: 3, includingToday: true)
 ```
 
 <!---

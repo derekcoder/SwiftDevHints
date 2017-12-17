@@ -22,6 +22,7 @@ A very useful set of development tools.
     + [CircularImageView](#circularimageview)
     + [Convenient methods to access Info.plist](#convenient-methods-to-access-infoplist)
     + [Custom Some Functions](#custom-some-functions)
+    + [Date Helper Methods](#date-helper-methods)
  - [Contact](#contact)
 - [License](#license)
 
@@ -42,6 +43,7 @@ A very useful set of development tools.
 	- [x] last
 	- [x] all
 	- [x] map function of Dictionary: replace all keys with new keys
+- [x] Date Helper Methods
 - [ ] Base64 Encoding and Decoding
 - [ ] Nib Register for UITableViewCell
 - [ ] Convenient Methods for Adding Constraints
@@ -266,6 +268,26 @@ evenNums.all { $0 % 2 == 0 }  // true
 // map
 let dict: [Int: String] = [1: "Apple", 2: "Google", 3: "Amazon"]
 let newDict: [String: String] = dict.map { "Index \($0)" } // ["Index 1": "Apple", "Index 2": "Google", "Index 3": "Amazon"]
+```
+
+### Date Helper Methods
+
+```swift
+let today = Date()                   // December 17, 2017 at 5:54:46 PM GMT+8
+let startOfToday = today.startOfDay  // December 17, 2017 at 12:00:00 AM GMT+8
+let endOfToday = today.endOfDay      // December 17, 2017 at 11:59:59 PM GMT+8
+let previousDay = today.previousDay  // December 16, 2017 at 12:00:00 AM GMT+8
+let nextDay = today.nextDay          // December 18, 2017 at 12:00:00 AM GMT+8
+
+// December 14, 2017 at 12:00:00 AM GMT+8
+// December 15, 2017 at 12:00:00 AM GMT+8
+// December 16, 2017 at 12:00:00 AM GMT+8
+let last3Days = today.lastDays(withCount: 3, includingToday: false)
+
+// December 17, 2017 at 12:00:00 AM GMT+8
+// December 18, 2017 at 12:00:00 AM GMT+8
+// December 19, 2017 at 12:00:00 AM GMT+8
+let next3Days = today.nextDays(withCount: 3, includingToday: true)
 ```
 
 ## Contact
