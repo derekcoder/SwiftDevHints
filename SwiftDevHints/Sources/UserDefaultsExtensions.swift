@@ -145,6 +145,15 @@ extension UserDefaults.Name: ExpressibleByStringLiteral {
     }
 }
 
+extension UserDefaults {
+    public func register(defaults plistURL: URL) throws {
+        let data = try Data(contentsOf: plistURL)
+        guard data.count > 0 else { return }
+        guard let dict = try PropertyListSerialization.propertyList(from: data, format: nil) as? [String: Any] else { return }
+        register(defaults: dict)
+    }
+}
+
 ////////////////////////////////////////////
 // Support Codable
 ////////////////////////////////////////////
