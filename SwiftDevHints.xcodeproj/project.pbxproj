@@ -43,6 +43,7 @@
 		65248CD11F1D065700E00872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65248CCF1F1D065700E00872 /* LaunchScreen.storyboard */; };
 		654982511F19D1FB008EE146 /* SwiftDevHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; };
 		654982581F19D1FB008EE146 /* SwiftDevHints.h in Headers */ = {isa = PBXBuildFile; fileRef = 6549824A1F19D1FA008EE146 /* SwiftDevHints.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65D2B5681FF4F9BA009B56E9 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D2B5671FF4F9BA009B56E9 /* EpisodesViewController.swift */; };
 		E342F67F1F724FA800E8ECCC /* README.en.md in Resources */ = {isa = PBXBuildFile; fileRef = E342F67E1F724FA800E8ECCC /* README.en.md */; };
 		E34DA5671F66A3F5009B30E0 /* OptionalExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */; };
 		E3649B5E1F3032DC00236794 /* DoubleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */; };
@@ -142,6 +143,7 @@
 		6549824B1F19D1FA008EE146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654982501F19D1FB008EE146 /* SwiftDevHintsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDevHintsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		654982571F19D1FB008EE146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65D2B5671FF4F9BA009B56E9 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		E342F67E1F724FA800E8ECCC /* README.en.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.en.md; sourceTree = "<group>"; };
 		E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensionsTests.swift; sourceTree = "<group>"; };
 		E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsTests.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 				E392194A1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift */,
 				E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */,
 				E3D43E241F6BB4A200275992 /* UIImageFilterViewController.swift */,
+				65D2B5671FF4F9BA009B56E9 /* EpisodesViewController.swift */,
 				65248CCA1F1D065700E00872 /* Main.storyboard */,
 				65248CCD1F1D065700E00872 /* Assets.xcassets */,
 				65248CCF1F1D065700E00872 /* LaunchScreen.storyboard */,
@@ -481,6 +484,7 @@
 				E3A2C85F1F2F31A1007B73CE /* PrintHelperViewController.swift in Sources */,
 				E38085F71F306C7C007D4004 /* DictionaryExtensionsViewController.swift in Sources */,
 				E3649B601F30367D00236794 /* DoubleExtensionsViewController.swift in Sources */,
+				65D2B5681FF4F9BA009B56E9 /* EpisodesViewController.swift in Sources */,
 				E392194B1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift in Sources */,
 				65248CC91F1D065700E00872 /* IntExtensionsViewController.swift in Sources */,
 				65248CC71F1D065700E00872 /* AppDelegate.swift in Sources */,

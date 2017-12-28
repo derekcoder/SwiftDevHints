@@ -14,6 +14,14 @@ public enum Result<A> {
 }
 
 extension Result {
+    public init(_ value: A?, or error: Error) {
+        if let value = value {
+            self = .success(value)
+        } else {
+            self = .failure(error)
+        }
+    }
+    
     public init(value: () throws -> A) {
         do {
             self = try .success(value())

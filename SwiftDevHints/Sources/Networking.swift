@@ -71,12 +71,10 @@ extension Resource {
         }
         self.authorization = authorization
         self.parse = { data in
-            do {
-                let json = try JSONSerialization.jsonObject(with: data, options: [])
-                return parseJSON(json)
-            } catch {
-                return .failure(NetworkingError.jsonDecodingFailed)
+            guard let json = try? JSONSerialization.jsonObject(with: data) else {
+                return Result(nil, or: NetworkingError.jsonDecodingFailed)
             }
+            return parseJSON(json)
         }
     }
 }

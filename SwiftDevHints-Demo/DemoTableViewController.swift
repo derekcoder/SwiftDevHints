@@ -78,12 +78,5 @@ class DemoTableViewController: UITableViewController, CustomSegueProtocol {
         } else if indexPath.section == 3 && indexPath.row == 0 {
             performCustomSegue(.showCustomSegue, sender: self)
         }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        switch customSegueIdentifier(forSegue: segue) {
-        case .showCustomSegue:
-            segue.destination.title = "Custom Segue"
-        }
-    }
+    }    
 }
