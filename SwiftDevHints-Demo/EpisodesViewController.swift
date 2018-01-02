@@ -26,11 +26,7 @@ extension Episode {
 let url = URL(string: "https://talk.objc.io/episodes.json")!
 
 extension Episode {
-    static let all = Resource<[Episode]>(url: url) { json in
-        guard let dictionaries = json as? [JSONDictionary] else { return .failure(NetworkingError.jsonDecodingFailed) }
-        let episodes = dictionaries.flatMap(Episode.init)
-        return Result.success(episodes)
-    }
+    static let all = try! Resource<[Episode]>(url: url, parseElement: Episode.init)
 }
 
 class EpisodesViewController: UITableViewController {
@@ -40,7 +36,7 @@ class EpisodesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        webservice.load(resource: Episode.all) { [weak self] result in
+        webservice.load(Episode.all) { [weak self] result in
             if let value = result.value {
                 self?.episodes = value
             }
