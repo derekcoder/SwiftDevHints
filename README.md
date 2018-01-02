@@ -11,7 +11,7 @@ Swift日常开发工具集
 - [环境要求](#requirements)
 - [安装](#installation)
 - [使用说明](#usage)
-    + [使用CountableRange/CountableClosedRange来生成随机数](#使用countablerange/countableclosedrange来生成随机数)
+    + [使用CountableRange/CountableClosedRange来生成随机数](#使用countablerangecountableclosedrange来生成随机数)
     + [格式化输出](#格式化输出)
     + [浮点型数据的四舍五入](#浮点型数据的四舍五入)
     + [改造UserDefaults](#改造userdefaults)

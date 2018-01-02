@@ -11,7 +11,7 @@ A very useful set of development tools.
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-    + [Get Random Int with CountableRange/CountableClosedRange](#get-random-int-with-countablerange/countableclosedrange)
+    + [Get Random Int with CountableRange/CountableClosedRange](#get-random-int-with-countablerangecountableclosedrange)
     + [Format Int and Double](#format-int-and-double)
     + [Round Double](#round-double)
     + [New Method using UserDefaults](#new-method-using-userdefaults)
