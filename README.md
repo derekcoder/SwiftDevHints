@@ -11,7 +11,7 @@ Swift日常开发工具集
 - [环境要求](#requirements)
 - [安装](#installation)
 - [使用说明](#usage)
-    + [随机数生成](#随机数生成)
+    + [使用CountableRange/CountableClosedRange来生成随机数](#使用countablerange/countableclosedrange来生成随机数)
     + [格式化输出](#格式化输出)
     + [浮点型数据的四舍五入](#浮点型数据的四舍五入)
     + [改造UserDefaults](#改造userdefaults)
@@ -28,7 +28,7 @@ Swift日常开发工具集
 
 ## 功能
 
-- [x] 随机数生成
+- [x] 使用CountableRange/CountableClosedRange来生成随机数
 - [x] 格式化输出
 - [x] 浮点型数据的四舍五入
 - [x] 改造UserDefaults
@@ -44,10 +44,7 @@ Swift日常开发工具集
     - [x] all
     - [x] 字典的map函数：用来替换所有的key
 - [x] Date类的帮助方法
-- [ ] Base64 Encoding and Decoding
-- [ ] Nib Register for UITableViewCell
-- [ ] Convenient Methods for Adding Constraints
-- [ ] Networking
+- [x] Networking
 
 ## 环境要求
 
@@ -70,8 +67,9 @@ pod 'SwiftDevHints', '~> 0.3.0'
 
 ## 使用说明
 
-### 随机数生成
-[Swift开发小技巧系列 - 随机数生成](http://blog.derekcoder.com/2017/09/13/swiftdevhints-random-int/)
+### 使用CountableRange/CountableClosedRange来生成随机数
+
+博客文章：[Swift开发小技巧系列 - 随机数生成](http://blog.derekcoder.com/2017/09/13/swiftdevhints-random-int/)
 
 ```swift
 import SwiftDevHints

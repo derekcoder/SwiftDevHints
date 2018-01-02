@@ -11,7 +11,7 @@ A very useful set of development tools.
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-    + [Random Int](#random-int)
+    + [Get Random Int with CountableRange/CountableClosedRange](#get-random-int-with-countablerange/countableclosedrange)
     + [Format Int and Double](#format-int-and-double)
     + [Round Double](#round-double)
     + [New Method using UserDefaults](#new-method-using-userdefaults)
@@ -28,7 +28,7 @@ A very useful set of development tools.
 
 ## Features
 
-- [x] Random Int
+- [x] Get Random Int with CountableRange/CountableClosedRange
 - [x] Format Int and Double
 - [x] Round Double
 - [x] New Method using UserDefaults
@@ -44,10 +44,7 @@ A very useful set of development tools.
 	- [x] all
 	- [x] map function of Dictionary: replace all keys with new keys
 - [x] Date Helper Methods
-- [ ] Base64 Encoding and Decoding
-- [ ] Nib Register for UITableViewCell
-- [ ] Convenient Methods for Adding Constraints
-- [ ] Networking
+- [x] Networking
 
 ## Requirements
 
@@ -69,7 +66,7 @@ pod 'SwiftDevHints', '~> 0.3.0'
 
 ## Usage
 
-### Random Int
+### Get Random Int with CountableRange/CountableClosedRange
 
 ```swift
 import SwiftDevHints
