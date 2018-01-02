@@ -1,5 +1,5 @@
 //
-//  WebserviceTests.swift
+//  NetworkingTests.swift
 //  SwiftDevHintsTests
 //
 //  Created by Derek on 2/1/18.
@@ -37,7 +37,7 @@ enum TestError: Error {
     case other
 }
 
-class WebserviceTests: XCTestCase {
+class NetworkingTests: XCTestCase {
 
     func testHttpMethod() {
         let json = ["name": "derek"]
@@ -93,6 +93,19 @@ class WebserviceTests: XCTestCase {
 
         let webservice = Webservice()
         webservice.load(Episode.all) { result in
+            XCTAssertNotNil(result.value, "No episodes was loaded.")
+            expectation.fulfill()
+        }
+        
+        wait(for: [expectation], timeout: 10.0)
+    }
+    
+    func testCachedLoad() {
+        let expectation = XCTestExpectation(description: "Testing cached load episodes")
+        
+        let webservice = Webservice()
+        let cachedWebservice = CachedWebservice(webservice)
+        cachedWebservice.load(Episode.all) { result in
             XCTAssertNotNil(result.value, "No episodes was loaded.")
             expectation.fulfill()
         }

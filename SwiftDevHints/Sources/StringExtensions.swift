@@ -11,7 +11,7 @@ import Foundation
 extension String {
     public var md5: String {
         return StringProxy(proxy: self).md5
-    }
+    }    
 }
 
 extension String {
