@@ -36,11 +36,14 @@ public enum WebserviceError: Error {
 }
 
 extension URLRequest {
-    public init<A>(resource: Resource<A>) {
+    public init<A>(resource: Resource<A>, authenticationToken: String? = nil) {
         self.init(url: resource.url)
         httpMethod = resource.method.method
         if case let .post(data) = resource.method {
             httpBody = data
+        }
+        if let token = authenticationToken {
+            setValue(token, forHTTPHeaderField: "Authorization")
         }
     }
 }
@@ -56,8 +59,7 @@ public final class Webservice {
     public init() { }
     
     public func load<A>(_ resource: Resource<A>, completion: @escaping (Result<A>) -> ()) {
-        var request = URLRequest(resource: resource)
-        request.setValue(authenticationToken, forHTTPHeaderField: "Authorization")
+        let request = URLRequest(resource: resource, authenticationToken: authenticationToken)
         session.dataTask(with: request, completionHandler: { data, response, _ in
             let result: Result<A>
             if let httpResponse = response as? HTTPURLResponse , httpResponse.statusCode == 401 {

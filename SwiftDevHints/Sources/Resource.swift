@@ -15,7 +15,7 @@ public enum HttpMethod<A> {
     public var method: String {
         switch self {
         case .get: return "GET"
-        case .post: return "POSt"
+        case .post: return "POST"
         }
     }
     
@@ -29,10 +29,10 @@ public enum HttpMethod<A> {
 
 public struct Resource<A> {
     public var url: URL
-    public var parse: (Data) -> A?
     public var method: HttpMethod<Data> = .get
-    
-    public init(url: URL, parse: @escaping (Data) -> A?, method: HttpMethod<Data> = .get) {
+    public var parse: (Data) -> A?
+
+    public init(url: URL, method: HttpMethod<Data> = .get, parse: @escaping (Data) -> A?) {
         self.url = url
         self.parse = parse
         self.method = method

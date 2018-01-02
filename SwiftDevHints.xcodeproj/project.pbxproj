@@ -42,6 +42,7 @@
 		654982581F19D1FB008EE146 /* SwiftDevHints.h in Headers */ = {isa = PBXBuildFile; fileRef = 6549824A1F19D1FA008EE146 /* SwiftDevHints.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		659095BE1FFB3ED3004CDEF9 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095BD1FFB3ED3004CDEF9 /* Resource.swift */; };
 		659095C01FFB3EF3004CDEF9 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095BF1FFB3EF3004CDEF9 /* Webservice.swift */; };
+		659095C41FFB7242004CDEF9 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095C31FFB7242004CDEF9 /* NetworkingTests.swift */; };
 		65D2B5681FF4F9BA009B56E9 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D2B5671FF4F9BA009B56E9 /* EpisodesViewController.swift */; };
 		E342F67F1F724FA800E8ECCC /* README.en.md in Resources */ = {isa = PBXBuildFile; fileRef = E342F67E1F724FA800E8ECCC /* README.en.md */; };
 		E34DA5671F66A3F5009B30E0 /* OptionalExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */; };
@@ -141,6 +142,7 @@
 		654982571F19D1FB008EE146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		659095BD1FFB3ED3004CDEF9 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		659095BF1FFB3EF3004CDEF9 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		659095C31FFB7242004CDEF9 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		65D2B5671FF4F9BA009B56E9 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		E342F67E1F724FA800E8ECCC /* README.en.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.en.md; sourceTree = "<group>"; };
 		E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensionsTests.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 				E3FAACC11F94BDD600507E53 /* BundleExtensionsTests.swift */,
 				E37808C51F95BB6C00E4DB1F /* ArrayExtensionsTests.swift */,
 				E37808CB1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift */,
+				659095C31FFB7242004CDEF9 /* NetworkingTests.swift */,
 			);
 			path = SwiftDevHintsTests;
 			sourceTree = "<group>";
@@ -527,6 +530,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				659095C41FFB7242004CDEF9 /* NetworkingTests.swift in Sources */,
 				E37808CC1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift in Sources */,
 				E39BC4551F30909F006AB7D1 /* UserDefaultsExtensionsTests.swift in Sources */,
 				65248CBD1F1D02B200E00872 /* IntExtensionsTests.swift in Sources */,
