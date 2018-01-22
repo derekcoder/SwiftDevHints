@@ -23,7 +23,7 @@ A very useful set of development tools.
     + [Convenient methods to access Info.plist](#convenient-methods-to-access-infoplist)
     + [Custom Some Functions](#custom-some-functions)
     + [Date Helper Methods](#date-helper-methods)
-    + [SortDescriptor](sortdescriptor)
+    + [SortDescriptor](#sortdescriptor)
  - [Contact](#contact)
 - [License](#license)
 
@@ -294,6 +294,18 @@ let next3Days = today.nextDays(withCount: 3, includingToday: true)
 Idea and Implementation come from [Swift Talk: From Runtime Programming to Functions](https://talk.objc.io/episodes/S01E19-from-runtime-programming-to-functions)
 
 ```swift
+final class Person {
+    var first: String
+    var last: String
+    var yearOfBirth: Int
+
+    init(first: String, last: String, yearOfBirth: Int) {
+        self.first = first
+        self.last = last
+        self.yearOfBirth = yearOfBirth
+    }
+}
+
 let person1 = Person(first: "Jo", last: "Smith", yearOfBirth: 1970)
 let person2 = Person(first: "Joanne", last: "Williams", yearOfBirth: 1985)
 let person3 = Person(first: "Annie", last: "Williams", yearOfBirth: 1985)
@@ -301,8 +313,8 @@ let person4 = Person(first: "Robert", last: "Jones", yearOfBirth: 1990)
 
 let people = [person1, person2, person3, person4]
 let yearOfBirth: SortDescriptor<Person> = sortDescriptor { $0.yearOfBirth }
-let lastName: SortDescriptor<Person> = sortDescriptor(property: {$0.last }, comparator: String.localizedCaseInsensitiveCompare)
-let firstName: SortDescriptor<Person> = sortDescriptor(property: {$0.first }, comparator: String.localizedCaseInsensitiveCompare)
+let lastName: SortDescriptor<Person> = sortDescriptor(property: { $0.last }, comparator: String.localizedCaseInsensitiveCompare)
+let firstName: SortDescriptor<Person> = sortDescriptor(property: { $0.first }, comparator: String.localizedCaseInsensitiveCompare)
 let sortedPeople = people.sorted(by: combine(sortDescriptors: [yearOfBirth, lastName, firstName]))
 /*
 person1: { first "Jo", last "Smith", yearOfBirth 1970 },

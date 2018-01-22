@@ -45,16 +45,16 @@ class SortDescriptorTests: XCTestCase {
     
     func testLastNameAndFirstName() {
         let people = [person1, person2, person3, person4]
-        let lastName: SortDescriptor<Person> = sortDescriptor(property: {$0.last }, comparator: String.localizedCaseInsensitiveCompare)
-        let firstName: SortDescriptor<Person> = sortDescriptor(property: {$0.first }, comparator: String.localizedCaseInsensitiveCompare)
+        let lastName: SortDescriptor<Person> = sortDescriptor(property: { $0.last }, comparator: String.localizedCaseInsensitiveCompare)
+        let firstName: SortDescriptor<Person> = sortDescriptor(property: { $0.first }, comparator: String.localizedCaseInsensitiveCompare)
         XCTAssertEqual(people.sorted(by: combine(sortDescriptors: [lastName, firstName])), [person4, person1, person3, person2])
     }
     
     func testYearOfBirthAndLastNameAndFirstName() {
         let people = [person1, person2, person3, person4]
         let yearOfBirth: SortDescriptor<Person> = sortDescriptor { $0.yearOfBirth }
-        let lastName: SortDescriptor<Person> = sortDescriptor(property: {$0.last }, comparator: String.localizedCaseInsensitiveCompare)
-        let firstName: SortDescriptor<Person> = sortDescriptor(property: {$0.first }, comparator: String.localizedCaseInsensitiveCompare)
+        let lastName: SortDescriptor<Person> = sortDescriptor(property: { $0.last }, comparator: String.localizedCaseInsensitiveCompare)
+        let firstName: SortDescriptor<Person> = sortDescriptor(property: { $0.first }, comparator: String.localizedCaseInsensitiveCompare)
         XCTAssertEqual(people.sorted(by: combine(sortDescriptors: [yearOfBirth, lastName, firstName])), [person1, person3, person2, person4])
     }
 }
