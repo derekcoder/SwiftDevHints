@@ -23,6 +23,7 @@ Swift日常开发工具集
     + [快速读取Info.plist](#快速读取infoplist)
     + [自定义一些常用函数](#自定义一些常用函数)
     + [Date类的帮助方法](#date类的帮助方法)
+    + [SortDescriptor](sortdescriptor)
  - [联系方式](#contact)
 - [版权](#license)
 
@@ -44,6 +45,7 @@ Swift日常开发工具集
     - [x] all
     - [x] 字典的map函数：用来替换所有的key
 - [x] Date类的帮助方法
+- [x] SortDescriptor
 - [x] Networking
 
 ## 环境要求
@@ -301,6 +303,30 @@ let last3Days = today.lastDays(withCount: 3, includingToday: false)
 // December 19, 2017 at 5:54:46 PM GMT+8
 let next3Days = today.nextDays(withCount: 3, includingToday: true)
 ```
+
+### SortDescriptor
+
+想法和实现都来自[Swift Talk: From Runtime Programming to Functions](https://talk.objc.io/episodes/S01E19-from-runtime-programming-to-functions)
+
+```swift
+let person1 = Person(first: "Jo", last: "Smith", yearOfBirth: 1970)
+let person2 = Person(first: "Joanne", last: "Williams", yearOfBirth: 1985)
+let person3 = Person(first: "Annie", last: "Williams", yearOfBirth: 1985)
+let person4 = Person(first: "Robert", last: "Jones", yearOfBirth: 1990)
+
+let people = [person1, person2, person3, person4]
+let yearOfBirth: SortDescriptor<Person> = sortDescriptor { $0.yearOfBirth }
+let lastName: SortDescriptor<Person> = sortDescriptor(property: {$0.last }, comparator: String.localizedCaseInsensitiveCompare)
+let firstName: SortDescriptor<Person> = sortDescriptor(property: {$0.first }, comparator: String.localizedCaseInsensitiveCompare)
+let sortedPeople = people.sorted(by: combine(sortDescriptors: [yearOfBirth, lastName, firstName]))
+/*
+person1: { first "Jo", last "Smith", yearOfBirth 1970 },
+person3: { first "Annie", last "Williams", yearOfBirth 1985 },
+person2: { first "Joanne", last "Williams", yearOfBirth 1985 },
+person4: { first "Robert", last "Jones", yearOfBirth 1990 }
+*/
+```
+
 
 <!---
 ### Generic Table View Controllers
