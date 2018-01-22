@@ -2,7 +2,7 @@
 //  SequenceExtensions.swift
 //  SwiftDevHints
 //
-//  Created by Julie on 17/10/17.
+//  Created by Derek on 17/10/17.
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  BundleExtensions.swift
 //  SwiftDevHints
 //
-//  Created by Julie on 16/10/17.
+//  Created by Derek on 16/10/17.
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 

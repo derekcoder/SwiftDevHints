@@ -47,6 +47,8 @@
 		659095C81FFB87D5004CDEF9 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095C71FFB87D5004CDEF9 /* SHA1.swift */; };
 		659095CA1FFB882D004CDEF9 /* SHA1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095C91FFB882D004CDEF9 /* SHA1Tests.swift */; };
 		659095CC1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */; };
+		65AE02BA20158B0A003D367B /* SortDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AE02B920158B0A003D367B /* SortDescriptor.swift */; };
+		65AE02BC20158C3C003D367B /* SortDescriptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AE02BB20158C3C003D367B /* SortDescriptorTests.swift */; };
 		65D2B5681FF4F9BA009B56E9 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D2B5671FF4F9BA009B56E9 /* EpisodesViewController.swift */; };
 		E342F67F1F724FA800E8ECCC /* README.en.md in Resources */ = {isa = PBXBuildFile; fileRef = E342F67E1F724FA800E8ECCC /* README.en.md */; };
 		E34DA5671F66A3F5009B30E0 /* OptionalExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */; };
@@ -151,6 +153,8 @@
 		659095C71FFB87D5004CDEF9 /* SHA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
 		659095C91FFB882D004CDEF9 /* SHA1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1Tests.swift; sourceTree = "<group>"; };
 		659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableClosedRangeExtension.swift; sourceTree = "<group>"; };
+		65AE02B920158B0A003D367B /* SortDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDescriptor.swift; sourceTree = "<group>"; };
+		65AE02BB20158C3C003D367B /* SortDescriptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDescriptorTests.swift; sourceTree = "<group>"; };
 		65D2B5671FF4F9BA009B56E9 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		E342F67E1F724FA800E8ECCC /* README.en.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.en.md; sourceTree = "<group>"; };
 		E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensionsTests.swift; sourceTree = "<group>"; };
@@ -233,6 +237,7 @@
 				65073C741FE8EB1000DD01B7 /* String+MD5.swift */,
 				65073C751FE8EB1000DD01B7 /* StringExtensions.swift */,
 				659095C71FFB87D5004CDEF9 /* SHA1.swift */,
+				65AE02B920158B0A003D367B /* SortDescriptor.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -336,6 +341,7 @@
 				E37808CB1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift */,
 				659095C31FFB7242004CDEF9 /* NetworkingTests.swift */,
 				659095C91FFB882D004CDEF9 /* SHA1Tests.swift */,
+				65AE02BB20158C3C003D367B /* SortDescriptorTests.swift */,
 			);
 			path = SwiftDevHintsTests;
 			sourceTree = "<group>";
@@ -523,6 +529,7 @@
 				65073C861FE8EB1000DD01B7 /* SequenceExtensions.swift in Sources */,
 				659095BE1FFB3ED3004CDEF9 /* Resource.swift in Sources */,
 				65073C881FE8EB1000DD01B7 /* DoubleExtensions.swift in Sources */,
+				65AE02BA20158B0A003D367B /* SortDescriptor.swift in Sources */,
 				65073C981FE8EB2300DD01B7 /* StackViewController.swift in Sources */,
 				65073C8B1FE8EB1000DD01B7 /* CountableRangeExtension.swift in Sources */,
 				65073C9A1FE8EB2300DD01B7 /* UITableViewCellExtensions.swift in Sources */,
@@ -559,6 +566,7 @@
 				E3A0BEEF1F469A4400BB8570 /* UIColorExtensionsTests.swift in Sources */,
 				E36536681F30601900BF5021 /* DictionaryExtensionsTests.swift in Sources */,
 				65248CBF1F1D031500E00872 /* UITableViewCellExtensionsTests.swift in Sources */,
+				65AE02BC20158C3C003D367B /* SortDescriptorTests.swift in Sources */,
 				E3649B5E1F3032DC00236794 /* DoubleExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
