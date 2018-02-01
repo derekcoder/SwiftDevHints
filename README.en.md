@@ -24,6 +24,7 @@ A very useful set of development tools.
     + [Custom Some Functions](#custom-some-functions)
     + [Date Helper Methods](#date-helper-methods)
     + [SortDescriptor](#sortdescriptor)
+    + [Typed Notifications](#typednotifications)
  - [Contact](#contact)
 - [License](#license)
 
@@ -46,6 +47,7 @@ A very useful set of development tools.
 	- [x] map function of Dictionary: replace all keys with new keys
 - [x] Date Helper Methods
 - [x] SortDescriptor
+- [x] Typed Notifications
 - [x] Networking
 
 ## Requirements
@@ -323,6 +325,32 @@ person2: { first "Joanne", last "Williams", yearOfBirth 1985 },
 person4: { first "Robert", last "Jones", yearOfBirth 1990 }
 */
 ```
+
+### Typed Notifications
+
+Idea and Implementation come from [Swift Talk: Typed Notifications (Part 2)](https://talk.objc.io/episodes/S01E28-typed-notifications-part-2)
+
+```swift
+struct KeyboardWillShowNotification: NotificationDescriptor {
+    let beginFrame: CGRect
+    let endFrame: CGRect
+    let animationDuration: Double
+    let animationCurve: UIViewAnimationCurve
+
+    static let name = Notification.Name.UIKeyboardWillShow
+    init(notification: Notification) {
+        beginFrame = notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! CGRect
+        endFrame = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! CGRect
+        animationDuration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
+        animationCurve = UIViewAnimationCurve(rawValue: notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! Int)!
+    }
+}
+
+let token = NotificationCenter.default.addObserver { (note: KeyboardWillShowNotification) in
+    print(note)
+}
+```
+
 ## Contact
 
 - [Blog](http://blog.derekcoder.com)

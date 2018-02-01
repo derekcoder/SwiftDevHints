@@ -24,6 +24,7 @@ Swift日常开发工具集
     + [自定义一些常用函数](#自定义一些常用函数)
     + [Date类的帮助方法](#date类的帮助方法)
     + [SortDescriptor](#sortdescriptor)
+    + [Typed Notifications](#typednotifications)
  - [联系方式](#contact)
 - [版权](#license)
 
@@ -46,6 +47,7 @@ Swift日常开发工具集
     - [x] 字典的map函数：用来替换所有的key
 - [x] Date类的帮助方法
 - [x] SortDescriptor
+- [x] Typed Notifications
 - [x] Networking
 
 ## 环境要求
@@ -338,7 +340,30 @@ person2: { first "Joanne", last "Williams", yearOfBirth 1985 },
 person4: { first "Robert", last "Jones", yearOfBirth 1990 }
 */
 ```
+### Typed Notifications
 
+想法和实现都来自[Swift Talk: Typed Notifications (Part 2)](https://talk.objc.io/episodes/S01E28-typed-notifications-part-2)
+
+```swift
+struct KeyboardWillShowNotification: NotificationDescriptor {
+    let beginFrame: CGRect
+    let endFrame: CGRect
+    let animationDuration: Double
+    let animationCurve: UIViewAnimationCurve
+
+    static let name = Notification.Name.UIKeyboardWillShow
+    init(notification: Notification) {
+        beginFrame = notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! CGRect
+        endFrame = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! CGRect
+        animationDuration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
+        animationCurve = UIViewAnimationCurve(rawValue: notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! Int)!
+    }
+}
+
+let token = NotificationCenter.default.addObserver { (note: KeyboardWillShowNotification) in
+    print(note)
+}
+```
 
 <!---
 ### Generic Table View Controllers
