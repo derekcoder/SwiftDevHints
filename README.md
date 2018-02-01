@@ -24,7 +24,7 @@ Swift日常开发工具集
     + [自定义一些常用函数](#自定义一些常用函数)
     + [Date类的帮助方法](#date类的帮助方法)
     + [SortDescriptor](#sortdescriptor)
-    + [Typed Notifications](#typednotifications)
+    + [Typed Notifications](#typed-notifications)
  - [联系方式](#contact)
 - [版权](#license)
 

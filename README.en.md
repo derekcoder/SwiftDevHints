@@ -24,7 +24,7 @@ A very useful set of development tools.
     + [Custom Some Functions](#custom-some-functions)
     + [Date Helper Methods](#date-helper-methods)
     + [SortDescriptor](#sortdescriptor)
-    + [Typed Notifications](#typednotifications)
+    + [Typed Notifications](#typed-notifications)
  - [Contact](#contact)
 - [License](#license)
 
