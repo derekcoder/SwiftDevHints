@@ -209,18 +209,29 @@ extension Dictionary {
 }
 
 extension Dictionary {
+    @available(*, deprecated, message: "Please use subscript(_:orAdd:) instead.")
     public mutating func value(for key: Key, orAdd closure: @autoclosure () -> Value) -> Value {
         if let value = self[key] {
-         	return value
+             return value
         }
-        
+
         let value = closure()
         self[key] = value
         return value
     }
+    
+    public subscript(key: Key, orAdd closure: @autoclosure () -> Value) -> Value {
+        mutating get {
+            if let value = self[key] {
+                return value
+            }
+            
+            let value = closure()
+            self[key] = value
+            return value
+        }
+    }
 }
-
-
 
 
 

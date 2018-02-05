@@ -117,7 +117,7 @@ class DictionaryExtensionsTests: XCTestCase {
     
     func testValueOrAdd() {
         var colors = ["red": UIColor.red]
-        let blue = colors.value(for: "blue", orAdd: UIColor.blue)
+        let blue = colors["blue", orAdd: UIColor.blue]
         XCTAssertEqual(blue, UIColor.blue)
         XCTAssertTrue(colors.count == 2)
     }
