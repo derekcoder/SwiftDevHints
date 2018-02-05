@@ -233,6 +233,26 @@ extension Dictionary {
     }
 }
 
+extension Dictionary {
+    public subscript(jsonDict key: Key) -> JSONDictionary? {
+        get {
+            return self[key] as? JSONDictionary
+        }
+        set {
+            self[key] = newValue as? Value
+        }
+    }
+    
+    public subscript(string key: Key) -> String? {
+        get {
+            return self[key] as? String
+        }
+        set {
+            self[key] = newValue as? Value
+        }
+    }
+}
+
 
 
 

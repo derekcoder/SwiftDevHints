@@ -121,4 +121,31 @@ class DictionaryExtensionsTests: XCTestCase {
         XCTAssertEqual(blue, UIColor.blue)
         XCTAssertTrue(colors.count == 2)
     }
+    
+    func testJSONDictAndStringSubscript() {
+        var dict: [String: Any] = [
+            "countries": [
+                "japan": [
+                    "capital": "tokyo"
+                ]
+            ]
+        ]
+        
+        dict[jsonDict: "countries"]?[jsonDict: "japan"]?["capital"] = "berlin"
+        XCTAssertEqual(dict[jsonDict: "countries"]?[jsonDict: "japan"]?["capital"] as? String, "berlin")
+    }
+    
+    func testStringSubscript() {
+        var dict: [String: Any] = [
+            "countries": [
+                "japan": [
+                    "capital": "tokyo"
+                ]
+            ]
+        ]
+
+        dict[jsonDict: "countries"]?[jsonDict: "japan"]?[string: "capital"] = "berlin"
+        dict[jsonDict: "countries"]?[jsonDict: "japan"]?[string: "capital"]?.append("!")
+        XCTAssertEqual(dict[jsonDict: "countries"]?[jsonDict: "japan"]?[string: "capital"], "berlin!")
+    }
 }
