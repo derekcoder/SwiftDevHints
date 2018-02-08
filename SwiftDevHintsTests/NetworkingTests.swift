@@ -64,6 +64,13 @@ class NetworkingTests: XCTestCase {
         XCTAssertEqual(result.value!, person)
     }
     
+    func testResultMap() {
+        let person = Episode(id: "id", title: "title")
+        let result = Result<Episode>(person, or: TestError.other)
+        let transformed = result.map { "\($0.id)" }
+        XCTAssertEqual(transformed.value!, "id")
+    }
+
     func testURLRequestInitForGet() {
         let resource = try! Resource<[Episode]>(url: url, method: .get, parseJSON: { json in
             guard let dictionaries = json as? [JSONDictionary] else { return nil }

@@ -28,6 +28,15 @@ extension Result {
         guard case .success(let v) = self else { return nil }
         return v
     }
+    
+    public func map<B>(_ transform: (A) throws -> B) rethrows -> Result<B> {
+        switch self {
+        case .success(let value):
+            return .success(try transform(value))
+        case .error(let error):
+            return .error(error)
+        }
+    }
 }
 
 public enum WebserviceError: Error {
