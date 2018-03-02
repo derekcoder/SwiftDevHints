@@ -6,6 +6,8 @@
 //  Copyright © 2018 ZHOU DENGFENG DEREK. All rights reserved.
 //
 
+// Referenced from https://talk.objc.io/
+
 import Foundation
 
 struct FileStorage {
@@ -56,11 +58,12 @@ public final class CachedWebservice {
         self.webservice = webservice
     }
     
-    public func load<A>(_ resource: Resource<A>, update: @escaping (Result<A>) -> ()) {
-        if let result = cache.load(resource: resource) {
+    public func load<A>(_ resource: Resource<A>, skipCache: Bool, update: @escaping (Result<A>) -> ()) {
+        let dataResource = Resource(url: resource.url, method: resource.method, parse: { $0 })
+
+        if skipCache == false, let result = cache.load(resource: resource) {
             update(.success(result))
         }
-        let dataResource = Resource(url: resource.url, method: resource.method, parse: { $0 })
         webservice.load(dataResource) { result in
             switch result {
             case .error(let error):

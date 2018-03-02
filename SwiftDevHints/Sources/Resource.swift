@@ -6,6 +6,8 @@
 //  Copyright © 2018 ZHOU DENGFENG DEREK. All rights reserved.
 //
 
+// Referenced from https://talk.objc.io/
+
 import Foundation
 
 public enum HttpMethod<A> {
