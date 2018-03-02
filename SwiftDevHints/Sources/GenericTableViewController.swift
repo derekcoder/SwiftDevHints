@@ -6,19 +6,26 @@
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 
+// Referenced from https://talk.objc.io/
+
 import UIKit
 
-public class ItemsViewController<Item, Cell: UITableViewCell>: UITableViewController {
+public class GenericTableViewController<Item, Cell: UITableViewCell>: UITableViewController {
 
-    private var items: [Item] = []
-    private let reuseIdentifier = "ItemCell"
-    private var configure: (Cell, Item) -> ()
+    public var items: [Item] {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     public var didSelect: (Item) -> () = { _ in }
+
+    private let cellIdentifier = "CellIdentifier"
+    private var configure: (Cell, Item) -> ()
     
-    public init(items: [Item], configure: @escaping (Cell, Item) -> ()) {
-        self.configure = configure
-        super.init(style: .plain)
+    public init(style: UITableViewStyle = .plain, items: [Item], configure: @escaping (Cell, Item) -> ()) {
         self.items = items
+        self.configure = configure
+        super.init(style: style)
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -27,7 +34,7 @@ public class ItemsViewController<Item, Cell: UITableViewCell>: UITableViewContro
     
     override public func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(Cell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.register(Cell.self, forCellReuseIdentifier: cellIdentifier)
     }
     
     override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,11 +42,8 @@ public class ItemsViewController<Item, Cell: UITableViewCell>: UITableViewContro
     }
     
     override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as! Cell
-        
-        let item = items[indexPath.row]
-        configure(cell, item)
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! Cell
+        configure(cell, items[indexPath.row])
         return cell
     }
     

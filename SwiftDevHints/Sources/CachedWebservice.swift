@@ -58,7 +58,7 @@ public final class CachedWebservice {
         self.webservice = webservice
     }
     
-    public func load<A>(_ resource: Resource<A>, skipCache: Bool, update: @escaping (Result<A>) -> ()) {
+    public func load<A>(_ resource: Resource<A>, skipCache: Bool = false, update: @escaping (Result<A>) -> ()) {
         let dataResource = Resource(url: resource.url, method: resource.method, parse: { $0 })
 
         if skipCache == false, let result = cache.load(resource: resource) {

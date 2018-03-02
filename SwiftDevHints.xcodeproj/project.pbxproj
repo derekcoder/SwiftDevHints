@@ -25,7 +25,7 @@
 		65073C981FE8EB2300DD01B7 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C8F1FE8EB2200DD01B7 /* StackViewController.swift */; };
 		65073C991FE8EB2300DD01B7 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C901FE8EB2200DD01B7 /* UIImageExtensions.swift */; };
 		65073C9A1FE8EB2300DD01B7 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C911FE8EB2200DD01B7 /* UITableViewCellExtensions.swift */; };
-		65073C9B1FE8EB2300DD01B7 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C921FE8EB2300DD01B7 /* ItemsViewController.swift */; };
+		65073C9B1FE8EB2300DD01B7 /* GenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C921FE8EB2300DD01B7 /* GenericTableViewController.swift */; };
 		65073C9C1FE8EB2300DD01B7 /* CustomSegueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C931FE8EB2300DD01B7 /* CustomSegueProtocol.swift */; };
 		65073C9D1FE8EB2300DD01B7 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C941FE8EB2300DD01B7 /* UIViewControllerExtensions.swift */; };
 		65073CA71FE8EB3900DD01B7 /* NSNumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073CA41FE8EB3900DD01B7 /* NSNumberExtensions.swift */; };
@@ -128,7 +128,7 @@
 		65073C8F1FE8EB2200DD01B7 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		65073C901FE8EB2200DD01B7 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		65073C911FE8EB2200DD01B7 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
-		65073C921FE8EB2300DD01B7 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		65073C921FE8EB2300DD01B7 /* GenericTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableViewController.swift; sourceTree = "<group>"; };
 		65073C931FE8EB2300DD01B7 /* CustomSegueProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegueProtocol.swift; sourceTree = "<group>"; };
 		65073C941FE8EB2300DD01B7 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		65073CA41FE8EB3900DD01B7 /* NSNumberExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberExtensions.swift; sourceTree = "<group>"; };
@@ -252,7 +252,7 @@
 			children = (
 				65073C8E1FE8EB2200DD01B7 /* CircularImageView.swift */,
 				65073C931FE8EB2300DD01B7 /* CustomSegueProtocol.swift */,
-				65073C921FE8EB2300DD01B7 /* ItemsViewController.swift */,
+				65073C921FE8EB2300DD01B7 /* GenericTableViewController.swift */,
 				65073C8F1FE8EB2200DD01B7 /* StackViewController.swift */,
 				65073C8D1FE8EB2200DD01B7 /* UIColorExtensions.swift */,
 				65073C901FE8EB2200DD01B7 /* UIImageExtensions.swift */,
@@ -548,7 +548,7 @@
 				65073CA91FE8EB3900DD01B7 /* UserDefaultsExtensions.swift in Sources */,
 				65073C851FE8EB1000DD01B7 /* IntExtensions.swift in Sources */,
 				65073C801FE8EB1000DD01B7 /* String+MD5.swift in Sources */,
-				65073C9B1FE8EB2300DD01B7 /* ItemsViewController.swift in Sources */,
+				65073C9B1FE8EB2300DD01B7 /* GenericTableViewController.swift in Sources */,
 				659095CC1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift in Sources */,
 				65073C821FE8EB1000DD01B7 /* FloatExtensions.swift in Sources */,
 				65073C9C1FE8EB2300DD01B7 /* CustomSegueProtocol.swift in Sources */,

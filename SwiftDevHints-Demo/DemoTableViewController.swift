@@ -39,12 +39,12 @@ class DemoTableViewController: UITableViewController, CustomSegueProtocol {
         
         let nc = navigationController!
         
-        let categoriesVC = ItemsViewController(items: categories, configure: { (cell, category) in
+        let categoriesVC = GenericTableViewController(items: categories, configure: { (cell, category) in
             cell.textLabel?.text = category.title
         })
         categoriesVC.title = "Categories"
         categoriesVC.didSelect = { category in
-            let productsVC = ItemsViewController(items: products, configure: { (cell: ProductCell, product) in
+            let productsVC = GenericTableViewController(items: products, configure: { (cell: ProductCell, product) in
                 cell.textLabel?.text = product.title
                 cell.detailTextLabel?.text = product.serialNumber
             })
