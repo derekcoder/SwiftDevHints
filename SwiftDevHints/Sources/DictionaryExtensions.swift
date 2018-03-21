@@ -234,9 +234,9 @@ extension Dictionary {
 }
 
 extension Dictionary {
-    public subscript(jsonDict key: Key) -> JSONDictionary? {
+    public subscript(jsonDict key: Key) -> [String: Any]? {
         get {
-            return self[key] as? JSONDictionary
+            return self[key] as? [String: Any]
         }
         set {
             self[key] = newValue as? Value

@@ -90,5 +90,49 @@ public extension Date {
         
         return days
     }
+    
+    public func isInSameYear(date: Date) -> Bool {
+        return Calendar.current.isDate(self, equalTo: date, toGranularity: .year)
+    }
+    
+    public func isInSameMonth(date: Date) -> Bool {
+        return Calendar.current.isDate(self, equalTo: date, toGranularity: .month)
+    }
+    
+    public func isInSameWeek(date: Date) -> Bool {
+        return Calendar.current.isDate(self, equalTo: date, toGranularity: .weekOfYear)
+    }
+    
+    public func isInSameDay(date: Date) -> Bool {
+        return Calendar.current.isDate(self, inSameDayAs: date)
+    }
+    
+    public var isToday: Bool {
+        return Calendar.current.isDateInToday(self)
+    }
+    
+    public var isTomorrow: Bool {
+        return Calendar.current.isDateInTomorrow(self)
+    }
+    
+    public var isYesterday: Bool {
+        return Calendar.current.isDateInYesterday(self)
+    }
+    
+    public var isWeekend: Bool {
+        return Calendar.current.isDateInWeekend(self)
+    }
+    
+    public var isThisWeek: Bool {
+        return self.isInSameWeek(date: Date())
+    }
+    
+    public var isFuture: Bool {
+        return Date() < self
+    }
+    
+    public var isPast: Bool {
+        return self < Date()
+    }
 }
 

@@ -40,18 +40,12 @@
 		65248CD11F1D065700E00872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65248CCF1F1D065700E00872 /* LaunchScreen.storyboard */; };
 		654982511F19D1FB008EE146 /* SwiftDevHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; };
 		654982581F19D1FB008EE146 /* SwiftDevHints.h in Headers */ = {isa = PBXBuildFile; fileRef = 6549824A1F19D1FA008EE146 /* SwiftDevHints.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		659095BE1FFB3ED3004CDEF9 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095BD1FFB3ED3004CDEF9 /* Resource.swift */; };
-		659095C01FFB3EF3004CDEF9 /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095BF1FFB3EF3004CDEF9 /* Webservice.swift */; };
-		659095C41FFB7242004CDEF9 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095C31FFB7242004CDEF9 /* NetworkingTests.swift */; };
-		659095C61FFB8296004CDEF9 /* CachedWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095C51FFB8296004CDEF9 /* CachedWebservice.swift */; };
-		659095C81FFB87D5004CDEF9 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095C71FFB87D5004CDEF9 /* SHA1.swift */; };
-		659095CA1FFB882D004CDEF9 /* SHA1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095C91FFB882D004CDEF9 /* SHA1Tests.swift */; };
+		656D51052061FE6700EE0B73 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D51042061FE6700EE0B73 /* DateExtensionTests.swift */; };
 		659095CC1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */; };
 		65AE02BA20158B0A003D367B /* SortDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AE02B920158B0A003D367B /* SortDescriptor.swift */; };
 		65AE02BC20158C3C003D367B /* SortDescriptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AE02BB20158C3C003D367B /* SortDescriptorTests.swift */; };
 		65CB5DB52022B5950020C0B8 /* NotificationDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB5DB42022B5950020C0B8 /* NotificationDescriptor.swift */; };
 		65CB5DB72022BB3C0020C0B8 /* NotificationDescriptorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB5DB62022BB3C0020C0B8 /* NotificationDescriptorViewController.swift */; };
-		65D2B5681FF4F9BA009B56E9 /* EpisodesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65D2B5671FF4F9BA009B56E9 /* EpisodesViewController.swift */; };
 		E342F67F1F724FA800E8ECCC /* README.en.md in Resources */ = {isa = PBXBuildFile; fileRef = E342F67E1F724FA800E8ECCC /* README.en.md */; };
 		E34DA5671F66A3F5009B30E0 /* OptionalExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */; };
 		E3649B5E1F3032DC00236794 /* DoubleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */; };
@@ -148,18 +142,12 @@
 		6549824B1F19D1FA008EE146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654982501F19D1FB008EE146 /* SwiftDevHintsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDevHintsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		654982571F19D1FB008EE146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		659095BD1FFB3ED3004CDEF9 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
-		659095BF1FFB3EF3004CDEF9 /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
-		659095C31FFB7242004CDEF9 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
-		659095C51FFB8296004CDEF9 /* CachedWebservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedWebservice.swift; sourceTree = "<group>"; };
-		659095C71FFB87D5004CDEF9 /* SHA1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
-		659095C91FFB882D004CDEF9 /* SHA1Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SHA1Tests.swift; sourceTree = "<group>"; };
+		656D51042061FE6700EE0B73 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 		659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableClosedRangeExtension.swift; sourceTree = "<group>"; };
 		65AE02B920158B0A003D367B /* SortDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDescriptor.swift; sourceTree = "<group>"; };
 		65AE02BB20158C3C003D367B /* SortDescriptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDescriptorTests.swift; sourceTree = "<group>"; };
 		65CB5DB42022B5950020C0B8 /* NotificationDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDescriptor.swift; sourceTree = "<group>"; };
 		65CB5DB62022BB3C0020C0B8 /* NotificationDescriptorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDescriptorViewController.swift; sourceTree = "<group>"; };
-		65D2B5671FF4F9BA009B56E9 /* EpisodesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesViewController.swift; sourceTree = "<group>"; };
 		E342F67E1F724FA800E8ECCC /* README.en.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.en.md; sourceTree = "<group>"; };
 		E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensionsTests.swift; sourceTree = "<group>"; };
 		E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsTests.swift; sourceTree = "<group>"; };
@@ -214,7 +202,6 @@
 		65073C701FE8E9E300DD01B7 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				65073C731FE8EADE00DD01B7 /* Networking */,
 				65073C711FE8EAC000DD01B7 /* Model */,
 				65073C721FE8EAD800DD01B7 /* View */,
 			);
@@ -240,7 +227,6 @@
 				65073C7A1FE8EB1000DD01B7 /* SequenceExtensions.swift */,
 				65073C741FE8EB1000DD01B7 /* String+MD5.swift */,
 				65073C751FE8EB1000DD01B7 /* StringExtensions.swift */,
-				659095C71FFB87D5004CDEF9 /* SHA1.swift */,
 				65AE02B920158B0A003D367B /* SortDescriptor.swift */,
 				65CB5DB42022B5950020C0B8 /* NotificationDescriptor.swift */,
 			);
@@ -263,16 +249,6 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		65073C731FE8EADE00DD01B7 /* Networking */ = {
-			isa = PBXGroup;
-			children = (
-				659095BD1FFB3ED3004CDEF9 /* Resource.swift */,
-				659095BF1FFB3EF3004CDEF9 /* Webservice.swift */,
-				659095C51FFB8296004CDEF9 /* CachedWebservice.swift */,
-			);
-			name = Networking;
-			sourceTree = "<group>";
-		};
 		65248CC51F1D065700E00872 /* SwiftDevHints-Demo */ = {
 			isa = PBXGroup;
 			children = (
@@ -284,7 +260,6 @@
 				E392194A1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift */,
 				E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */,
 				E3D43E241F6BB4A200275992 /* UIImageFilterViewController.swift */,
-				65D2B5671FF4F9BA009B56E9 /* EpisodesViewController.swift */,
 				65CB5DB62022BB3C0020C0B8 /* NotificationDescriptorViewController.swift */,
 				65248CCA1F1D065700E00872 /* Main.storyboard */,
 				65248CCD1F1D065700E00872 /* Assets.xcassets */,
@@ -345,9 +320,8 @@
 				E3FAACC11F94BDD600507E53 /* BundleExtensionsTests.swift */,
 				E37808C51F95BB6C00E4DB1F /* ArrayExtensionsTests.swift */,
 				E37808CB1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift */,
-				659095C31FFB7242004CDEF9 /* NetworkingTests.swift */,
-				659095C91FFB882D004CDEF9 /* SHA1Tests.swift */,
 				65AE02BB20158C3C003D367B /* SortDescriptorTests.swift */,
+				656D51042061FE6700EE0B73 /* DateExtensionTests.swift */,
 			);
 			path = SwiftDevHintsTests;
 			sourceTree = "<group>";
@@ -509,7 +483,6 @@
 				E38085F71F306C7C007D4004 /* DictionaryExtensionsViewController.swift in Sources */,
 				65CB5DB72022BB3C0020C0B8 /* NotificationDescriptorViewController.swift in Sources */,
 				E3649B601F30367D00236794 /* DoubleExtensionsViewController.swift in Sources */,
-				65D2B5681FF4F9BA009B56E9 /* EpisodesViewController.swift in Sources */,
 				E392194B1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift in Sources */,
 				65248CC91F1D065700E00872 /* IntExtensionsViewController.swift in Sources */,
 				65248CC71F1D065700E00872 /* AppDelegate.swift in Sources */,
@@ -523,26 +496,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				65073C841FE8EB1000DD01B7 /* DictionaryExtensions.swift in Sources */,
-				659095C61FFB8296004CDEF9 /* CachedWebservice.swift in Sources */,
 				65073CA81FE8EB3900DD01B7 /* OptionalExtensions.swift in Sources */,
 				65073C961FE8EB2300DD01B7 /* UIColorExtensions.swift in Sources */,
 				65073C891FE8EB1000DD01B7 /* ArrayExtensions.swift in Sources */,
 				65073C871FE8EB1000DD01B7 /* PrintHelper.swift in Sources */,
-				659095C01FFB3EF3004CDEF9 /* Webservice.swift in Sources */,
 				65073C951FE8EB2300DD01B7 /* UIViewExtensions.swift in Sources */,
 				65CB5DB52022B5950020C0B8 /* NotificationDescriptor.swift in Sources */,
 				65073CA71FE8EB3900DD01B7 /* NSNumberExtensions.swift in Sources */,
 				65073C8A1FE8EB1000DD01B7 /* BundleExtensions.swift in Sources */,
 				65073C811FE8EB1000DD01B7 /* StringExtensions.swift in Sources */,
 				65073C861FE8EB1000DD01B7 /* SequenceExtensions.swift in Sources */,
-				659095BE1FFB3ED3004CDEF9 /* Resource.swift in Sources */,
 				65073C881FE8EB1000DD01B7 /* DoubleExtensions.swift in Sources */,
 				65AE02BA20158B0A003D367B /* SortDescriptor.swift in Sources */,
 				65073C981FE8EB2300DD01B7 /* StackViewController.swift in Sources */,
 				65073C8B1FE8EB1000DD01B7 /* CountableRangeExtension.swift in Sources */,
 				65073C9A1FE8EB2300DD01B7 /* UITableViewCellExtensions.swift in Sources */,
 				65073C971FE8EB2300DD01B7 /* CircularImageView.swift in Sources */,
-				659095C81FFB87D5004CDEF9 /* SHA1.swift in Sources */,
 				65073C9D1FE8EB2300DD01B7 /* UIViewControllerExtensions.swift in Sources */,
 				65073C831FE8EB1000DD01B7 /* DateExtensions.swift in Sources */,
 				65073CA91FE8EB3900DD01B7 /* UserDefaultsExtensions.swift in Sources */,
@@ -560,7 +529,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				659095C41FFB7242004CDEF9 /* NetworkingTests.swift in Sources */,
 				E37808CC1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift in Sources */,
 				E39BC4551F30909F006AB7D1 /* UserDefaultsExtensionsTests.swift in Sources */,
 				65248CBD1F1D02B200E00872 /* IntExtensionsTests.swift in Sources */,
@@ -568,13 +536,13 @@
 				E3FAACC21F94BDD600507E53 /* BundleExtensionsTests.swift in Sources */,
 				E34DA5671F66A3F5009B30E0 /* OptionalExtensionsTests.swift in Sources */,
 				E3D01EDD1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift in Sources */,
-				659095CA1FFB882D004CDEF9 /* SHA1Tests.swift in Sources */,
 				E3D01ED91F459F6D0036FDCA /* StringExtensionsTests.swift in Sources */,
 				E37808C61F95BB6C00E4DB1F /* ArrayExtensionsTests.swift in Sources */,
 				E3A0BEEF1F469A4400BB8570 /* UIColorExtensionsTests.swift in Sources */,
 				E36536681F30601900BF5021 /* DictionaryExtensionsTests.swift in Sources */,
 				65248CBF1F1D031500E00872 /* UITableViewCellExtensionsTests.swift in Sources */,
 				65AE02BC20158C3C003D367B /* SortDescriptorTests.swift in Sources */,
+				656D51052061FE6700EE0B73 /* DateExtensionTests.swift in Sources */,
 				E3649B5E1F3032DC00236794 /* DoubleExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
