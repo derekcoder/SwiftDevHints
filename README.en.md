@@ -11,9 +11,10 @@ A very useful set of development tools.
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-    + [Get Random Int with CountableRange/CountableClosedRange](#get-random-int-with-countablerangecountableclosedrange)
+    + [Quickly generate a random number in the specified range](#quickly-generate-a-random-number-in-the-specified-range)
     + [Format Int and Double](#format-int-and-double)
     + [Round Double](#round-double)
+    + [Safe way to access element using subscript in collection](#safe-way-to-access-element-using-subscript-in-collection)
     + [New Method using UserDefaults](#new-method-using-userdefaults)
     + [Debug Print Log](#debug-print-log)
     + [UIColor Extensions](#uicolor-extensions)
@@ -27,28 +28,6 @@ A very useful set of development tools.
     + [Typed Notifications](#typed-notifications)
  - [Contact](#contact)
 - [License](#license)
-
-## Features
-
-- [x] Get Random Int with CountableRange/CountableClosedRange
-- [x] Format Int and Double
-- [x] Round Double
-- [x] New Method using UserDefaults
-- [x] Debug Print Log
-- [x] UIColor Init with RGBA(Int) and get RGBA(Int)
-- [x] Custom Segue
-- [x] Optional Extension
-- [x] CircularImageView
-- [x] Convenient methods to access Info.plist
-- [ ] Custom Some Functions
-	- [x] accumulate
-	- [x] last
-	- [x] all
-	- [x] map function of Dictionary: replace all keys with new keys
-- [x] Date Helper Methods
-- [x] SortDescriptor
-- [x] Typed Notifications
-- [x] Networking
 
 ## Requirements
 
@@ -70,11 +49,9 @@ pod 'SwiftDevHints', '~> 0.3.0'
 
 ## Usage
 
-### Get Random Int with CountableRange/CountableClosedRange
+### Quickly generate a random number in the specified range
 
 ```swift
-import SwiftDevHints
-
 let randomInt = (0...10).randomInt // randomInt is Int number between 0 ~ 10 (include 10)
 let randomInt = (0..<10).randomInt // randomInt is Int number between 0 ~ 10 (not include 10)
 ```
@@ -109,6 +86,15 @@ let roundedDouble2 = aDouble.roundTo(places: 3) // 3.142
 let aFloat: Float = 3.14159265
 let roundedFloat1 = aFloat.roundTo(places: 2) // 3.14
 let roundedFloat2 = aFloat.roundTo(places: 3) // 3.142
+```
+### Safe way to access element using subscript in collection
+
+Referenced from https://github.com/Luur/SwiftTips#1-safe-way-to-return-element-at-specified-index
+
+```swift
+let animals = ["Zebra", "Giraffe", "Tiger"]
+let zebra = animals[safe: 0] // "Zebra"
+let lion = animals[safe: 3] // nil
 ```
 
 ### New Method using UserDefaults

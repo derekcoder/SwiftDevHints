@@ -11,9 +11,10 @@ Swift日常开发工具集
 - [环境要求](#requirements)
 - [安装](#installation)
 - [使用说明](#usage)
-    + [使用CountableRange/CountableClosedRange来生成随机数](#使用countablerangecountableclosedrange来生成随机数)
+    + [快速生成指定范围的随机数](#快速生成指定范围的随机数)
     + [格式化输出](#格式化输出)
     + [浮点型数据的四舍五入](#浮点型数据的四舍五入)
+    + [安全地使用下标访问集合中指定位置的元素](#安全地使用下标访问集合中指定位置的元素)
     + [改造UserDefaults](#改造userdefaults)
     + [改造print函数](#改造print函数)
     + [改造UIColor](#改造uicolor)
@@ -27,28 +28,6 @@ Swift日常开发工具集
     + [Typed Notifications](#typed-notifications)
  - [联系方式](#contact)
 - [版权](#license)
-
-## 功能
-
-- [x] 使用CountableRange/CountableClosedRange来生成随机数
-- [x] 格式化输出
-- [x] 浮点型数据的四舍五入
-- [x] 改造UserDefaults
-- [x] 改造print函数
-- [x] 改造UIColor
-- [x] 更优雅的实现Segue
-- [x] 改造Optional
-- [x] CircularImageView
-- [x] 快速读取Info.plist
-- [ ] 自定义一些常用函数
-    - [x] accumulate
-    - [x] last
-    - [x] all
-    - [x] 字典的map函数：用来替换所有的key
-- [x] Date类的帮助方法
-- [x] SortDescriptor
-- [x] Typed Notifications
-- [x] Networking
 
 ## 环境要求
 
@@ -71,15 +50,13 @@ pod 'SwiftDevHints', '~> 0.3.0'
 
 ## 使用说明
 
-### 使用CountableRange/CountableClosedRange来生成随机数
+### 快速生成指定范围的随机数
 
-博客文章：[Swift开发小技巧系列 - 随机数生成](http://blog.derekcoder.com/2017/09/13/swiftdevhints-random-int/)
+讲解参考[Swift开发小技巧系列 - 随机数生成](http://blog.derekcoder.com/2017/09/13/swiftdevhints-random-int/)
 
 ```swift
-import SwiftDevHints
-
-let randomInt = (0...10).randomInt // randomInt is Int number between 0 ~ 10 (include 10)
-let randomInt = (0..<10).randomInt // randomInt is Int number between 0 ~ 10 (not include 10)
+let randomInt = (0...10).randomInt // 0 ~ 10 (包括10)之间的随机数
+let randomInt = (0..<10).randomInt // 0 ~ 10 (不包括10)之间的随机数
 ```
 
 ### 格式化输出
@@ -114,6 +91,16 @@ let roundedDouble2 = aDouble.roundTo(places: 3) // 3.142
 let aFloat: Float = 3.14159265
 let roundedFloat1 = aFloat.roundTo(places: 2) // 3.14
 let roundedFloat2 = aFloat.roundTo(places: 3) // 3.142
+```
+
+### 安全地使用下标访问集合中指定位置的元素
+
+实现引用了：https://github.com/Luur/SwiftTips#1-safe-way-to-return-element-at-specified-index
+
+```swift
+let animals = ["Zebra", "Giraffe", "Tiger"]
+let zebra = animals[safe: 0] // "Zebra"
+let lion = animals[safe: 3] // nil
 ```
 
 ### 改造UserDefaults
