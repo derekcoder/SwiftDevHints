@@ -52,7 +52,7 @@ pod 'SwiftDevHints', '~> 0.3.0'
 
 ### 快速生成指定范围的随机数
 
-讲解参考[Swift开发小技巧系列 - 随机数生成](http://blog.derekcoder.com/2017/09/13/swiftdevhints-random-int/)
+ 详细讲解：[Swift开发小技巧系列 - 随机数生成](http://blog.derekcoder.com/2017/09/13/swiftdevhints-random-int/)
 
 ```swift
 let randomInt = (0...10).randomInt // 0 ~ 10 (包括10)之间的随机数
@@ -60,18 +60,12 @@ let randomInt = (0..<10).randomInt // 0 ~ 10 (不包括10)之间的随机数
 ```
 
 ### 格式化输出
-[Swift开发小技巧系列 - 格式化输出](http://blog.derekcoder.com/2017/09/14/swiftdevhints-format-int-double/)
+详细讲解：[Swift开发小技巧系列 - 格式化输出](http://blog.derekcoder.com/2017/09/14/swiftdevhints-format-int-double/)
 
-```
-import SwiftDevHints
-
+```swift
 let aInt = 8
 let formatedInt1 = aInt.format("03") // "008"
 let formatedInt2 = aInt.format("3") // "  8"
-```
-
-```swift
-import SwiftDevHints
 
 let aDouble = 3.14159265
 let formatedDouble = aDouble.format(".2") // "3.14"
@@ -79,11 +73,9 @@ let formatedDouble = aDouble.format(".3") // "3.142"
 ```
 
 ### 浮点型数据的四舍五入
-[Swift开发小技巧系列 - 浮点型数据的四舍五入](http://blog.derekcoder.com/2017/09/15/swiftdevhints-round-double/)
+详细讲解：[Swift开发小技巧系列 - 浮点型数据的四舍五入](http://blog.derekcoder.com/2017/09/15/swiftdevhints-round-double/)
 
 ```swift
-import SwiftDevHints
-
 let aDouble = 3.14159265
 let roundedDouble1 = aDouble.roundTo(places: 2) // 3.14
 let roundedDouble2 = aDouble.roundTo(places: 3) // 3.142

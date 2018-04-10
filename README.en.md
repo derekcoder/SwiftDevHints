@@ -58,27 +58,18 @@ let randomInt = (0..<10).randomInt // randomInt is Int number between 0 ~ 10 (no
 
 ### Format Int and Double
 
-```
-import SwiftDevHints
-
+```swift
 let aInt = 8
 let formatedInt1 = aInt.format("03") // "008"
 let formatedInt2 = aInt.format("3") // "  8"
-```
-
-```swift
-import SwiftDevHints
 
 let aDouble = 3.14159265
 let formatedDouble = aDouble.format(".2") // "3.14"
 let formatedDouble = aDouble.format(".3") // "3.142"
 ```
-
 ### Round Double
 
 ```swift
-import SwiftDevHints
-
 let aDouble = 3.14159265
 let roundedDouble1 = aDouble.roundTo(places: 2) // 3.14
 let roundedDouble2 = aDouble.roundTo(places: 3) // 3.142
