@@ -40,6 +40,8 @@
 		65248CD11F1D065700E00872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65248CCF1F1D065700E00872 /* LaunchScreen.storyboard */; };
 		654982511F19D1FB008EE146 /* SwiftDevHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; };
 		654982581F19D1FB008EE146 /* SwiftDevHints.h in Headers */ = {isa = PBXBuildFile; fileRef = 6549824A1F19D1FA008EE146 /* SwiftDevHints.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65503A8F207C5FC900FF0955 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65503A8E207C5FC900FF0955 /* CollectionExtensions.swift */; };
+		65503A91207C629400FF0955 /* CollectionExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65503A90207C629400FF0955 /* CollectionExtensionsTests.swift */; };
 		656D51052061FE6700EE0B73 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D51042061FE6700EE0B73 /* DateExtensionTests.swift */; };
 		659095CC1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */; };
 		65AE02BA20158B0A003D367B /* SortDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AE02B920158B0A003D367B /* SortDescriptor.swift */; };
@@ -142,6 +144,8 @@
 		6549824B1F19D1FA008EE146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		654982501F19D1FB008EE146 /* SwiftDevHintsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDevHintsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		654982571F19D1FB008EE146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65503A8E207C5FC900FF0955 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
+		65503A90207C629400FF0955 /* CollectionExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensionsTests.swift; sourceTree = "<group>"; };
 		656D51042061FE6700EE0B73 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 		659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableClosedRangeExtension.swift; sourceTree = "<group>"; };
 		65AE02B920158B0A003D367B /* SortDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDescriptor.swift; sourceTree = "<group>"; };
@@ -229,6 +233,7 @@
 				65073C751FE8EB1000DD01B7 /* StringExtensions.swift */,
 				65AE02B920158B0A003D367B /* SortDescriptor.swift */,
 				65CB5DB42022B5950020C0B8 /* NotificationDescriptor.swift */,
+				65503A8E207C5FC900FF0955 /* CollectionExtensions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -322,6 +327,7 @@
 				E37808CB1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift */,
 				65AE02BB20158C3C003D367B /* SortDescriptorTests.swift */,
 				656D51042061FE6700EE0B73 /* DateExtensionTests.swift */,
+				65503A90207C629400FF0955 /* CollectionExtensionsTests.swift */,
 			);
 			path = SwiftDevHintsTests;
 			sourceTree = "<group>";
@@ -496,6 +502,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				65073C841FE8EB1000DD01B7 /* DictionaryExtensions.swift in Sources */,
+				65503A8F207C5FC900FF0955 /* CollectionExtensions.swift in Sources */,
 				65073CA81FE8EB3900DD01B7 /* OptionalExtensions.swift in Sources */,
 				65073C961FE8EB2300DD01B7 /* UIColorExtensions.swift in Sources */,
 				65073C891FE8EB1000DD01B7 /* ArrayExtensions.swift in Sources */,
@@ -538,6 +545,7 @@
 				E3D01EDD1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift in Sources */,
 				E3D01ED91F459F6D0036FDCA /* StringExtensionsTests.swift in Sources */,
 				E37808C61F95BB6C00E4DB1F /* ArrayExtensionsTests.swift in Sources */,
+				65503A91207C629400FF0955 /* CollectionExtensionsTests.swift in Sources */,
 				E3A0BEEF1F469A4400BB8570 /* UIColorExtensionsTests.swift in Sources */,
 				E36536681F30601900BF5021 /* DictionaryExtensionsTests.swift in Sources */,
 				65248CBF1F1D031500E00872 /* UITableViewCellExtensionsTests.swift in Sources */,
