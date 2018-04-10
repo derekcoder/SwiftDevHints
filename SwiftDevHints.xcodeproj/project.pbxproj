@@ -66,7 +66,6 @@
 		E3A2C8631F2F36A8007B73CE /* SwiftDevHints.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */; };
 		E3D01ED91F459F6D0036FDCA /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D01ED81F459F6D0036FDCA /* StringExtensionsTests.swift */; };
 		E3D01EDD1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D01EDC1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift */; };
-		E3D43E1D1F6BA5F500275992 /* SwiftDevHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; };
 		E3D43E1E1F6BA5F500275992 /* SwiftDevHints.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E3D43E251F6BB4A200275992 /* UIImageFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43E241F6BB4A200275992 /* UIImageFilterViewController.swift */; };
 		E3D43E271F6BB70200275992 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D43E261F6BB70200275992 /* Images.xcassets */; };
@@ -181,7 +180,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E36A76E91F34216600812ED4 /* SwiftDevHints.framework in Frameworks */,
-				E3D43E1D1F6BA5F500275992 /* SwiftDevHints.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,7 +406,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "ZHOU DENGFENG DEREK";
 				TargetAttributes = {
 					65248CC31F1D065700E00872 = {
@@ -634,6 +632,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -641,6 +640,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -694,6 +694,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -701,6 +702,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
