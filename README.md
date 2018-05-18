@@ -26,6 +26,7 @@ Swift日常开发工具集
     + [Date类的帮助方法](#date类的帮助方法)
     + [SortDescriptor](#sortdescriptor)
     + [Typed Notifications](#typed-notifications)
+    + [Auto Layout with Key Paths](#auto-layout-with-key-paths)
  - [联系方式](#contact)
 - [版权](#license)
 
@@ -342,6 +343,19 @@ struct KeyboardWillShowNotification: NotificationDescriptor {
 let token = NotificationCenter.default.addObserver { (note: KeyboardWillShowNotification) in
     print(note)
 }
+```
+
+### Auto Layout with Key Paths
+
+想法和实现都来自[Swift Talk: Auto Layout with Key Paths)](https://talk.objc.io/episodes/S01E75-auto-layout-with-key-paths)
+
+```swift
+parentView.addSubview(subview, constraints: [
+    equal(\.topAnchor),
+    equal(\.leadingAnchor),
+    equal(\.trailingAnchor),
+    equal(\.heightAnchor, to: 200),
+])
 ```
 
 <!---
