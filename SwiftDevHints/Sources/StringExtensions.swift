@@ -29,6 +29,13 @@ extension String {
     }
 }
 
+extension String {
+    public var nilIfEmpty: String? {
+        guard !isEmpty else { return nil }
+        return self
+    }
+}
+
 extension Substring {
     public var hexInt: Int? {
         let str = String(self)
