@@ -91,4 +91,129 @@ class DateExtensionTests: XCTestCase {
         XCTAssertTrue(d1.isPast)
         XCTAssertFalse(d2.isPast)
     }
+    
+    func testEra() {
+        let date = Date(timeIntervalSince1970: 123456.789)
+        XCTAssertEqual(date.era, 1)
+    }
+    
+    func testYear() {
+        var date = Date(timeIntervalSince1970: 123456.789)
+        XCTAssertEqual(date.year, 1970)
+        
+        date.year = -1
+        XCTAssertEqual(date.year, 1970)
+        
+        date.year = 1988
+        XCTAssertEqual(date.year, 1988)
+        
+        date.year = 2018
+        XCTAssertEqual(date.year, 2018)
+    }
+    
+    func testWeekOfYear() {
+        let date = Date(timeIntervalSince1970: 123456.789)
+        XCTAssertEqual(date.weekOfYear, 1)
+        
+        let newDate = Calendar.current.date(byAdding: .day, value: 7, to: date)!
+        XCTAssertEqual(newDate.weekOfMonth, 2)
+    }
+    
+    func testMonth() {
+        var date = Date(timeIntervalSince1970: 123456.789)
+        XCTAssertEqual(date.month, 1)
+        
+        date.month = -1
+        XCTAssertEqual(date.month, 1)
+        
+        date.month = 13
+        XCTAssertEqual(date.month, 1)
+        
+        date.month = 2
+        XCTAssertEqual(date.month, 2)
+        
+        date.month = 11
+        XCTAssertEqual(date.month, 11)
+    }
+    
+    func testWeekday() {
+        let date = Date(timeIntervalSince1970: 123456.789)
+        XCTAssertEqual(date.weekday, 6)
+    }
+    
+    func testWeekOfMonth() {
+        let date = Date(timeIntervalSince1970: 123456.789)
+        XCTAssertEqual(date.weekOfMonth, 1)
+        
+        let newDate = Calendar.current.date(byAdding: .day, value: 7, to: date)!
+        XCTAssertEqual(newDate.weekOfMonth, 2)
+    }
+    
+    func testDay() {
+        var date = Date(timeIntervalSince1970: 123456.789)
+        XCTAssertEqual(date.day, 2)
+        
+        date.day = -1
+        XCTAssertEqual(date.day, 2)
+
+        date.day = 32
+        XCTAssertEqual(date.day, 2)
+
+        date.day = 1
+        XCTAssertEqual(date.day, 1)
+
+        date.day = 13
+        XCTAssertEqual(date.day, 13)
+    }
+    
+    func testHour() {
+        var date = Date(timeIntervalSince1970: 123456.789)
+        XCTAssertEqual(date.hour, 17)
+        
+        date.hour = -1
+        XCTAssertEqual(date.hour, 17)
+        
+        date.hour = 25
+        XCTAssertEqual(date.hour, 17)
+        
+        date.hour = 1
+        XCTAssertEqual(date.hour, 1)
+        
+        date.hour = 13
+        XCTAssertEqual(date.hour, 13)
+    }
+    
+    func testMinute() {
+        var date = Date(timeIntervalSince1970: 123456.789)
+        XCTAssertEqual(date.minute, 47)
+        
+        date.minute = -1
+        XCTAssertEqual(date.minute, 47)
+        
+        date.minute = 61
+        XCTAssertEqual(date.minute, 47)
+        
+        date.minute = 1
+        XCTAssertEqual(date.minute, 1)
+
+        date.minute = 13
+        XCTAssertEqual(date.minute, 13)
+    }
+    
+    func testSecond() {
+        var date = Date(timeIntervalSince1970: 123456.789)
+        XCTAssertEqual(date.second, 36)
+        
+        date.second = -1
+        XCTAssertEqual(date.second, 36)
+        
+        date.second = 61
+        XCTAssertEqual(date.second, 36)
+
+        date.second = 1
+        XCTAssertEqual(date.second, 1)
+        
+        date.second = 13
+        XCTAssertEqual(date.second, 13)
+    }
 }
