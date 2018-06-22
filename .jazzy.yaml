@@ -1,0 +1,6 @@
+author: DerekCoder
+github_url: https://github.com/derekcoder/SwiftDevHints
+root_url: https://derekcoder.github.io/SwiftDevHints/
+module: SwiftDevHints
+output: docs
+theme: fullwidth
