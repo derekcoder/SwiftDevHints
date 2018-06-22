@@ -43,6 +43,8 @@
 		65503A8F207C5FC900FF0955 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65503A8E207C5FC900FF0955 /* CollectionExtensions.swift */; };
 		65503A91207C629400FF0955 /* CollectionExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65503A90207C629400FF0955 /* CollectionExtensionsTests.swift */; };
 		656D51052061FE6700EE0B73 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D51042061FE6700EE0B73 /* DateExtensionTests.swift */; };
+		6574740C20DCCF9700007578 /* NSPredicateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6574740B20DCCF9700007578 /* NSPredicateExtension.swift */; };
+		6574741020DCD00400007578 /* NSPredicateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6574740F20DCD00400007578 /* NSPredicateExtensionTests.swift */; };
 		659095CC1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */; };
 		65AE02BA20158B0A003D367B /* SortDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AE02B920158B0A003D367B /* SortDescriptor.swift */; };
 		65AE02BC20158C3C003D367B /* SortDescriptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AE02BB20158C3C003D367B /* SortDescriptorTests.swift */; };
@@ -146,6 +148,8 @@
 		65503A8E207C5FC900FF0955 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
 		65503A90207C629400FF0955 /* CollectionExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensionsTests.swift; sourceTree = "<group>"; };
 		656D51042061FE6700EE0B73 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
+		6574740B20DCCF9700007578 /* NSPredicateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPredicateExtension.swift; sourceTree = "<group>"; };
+		6574740F20DCD00400007578 /* NSPredicateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPredicateExtensionTests.swift; sourceTree = "<group>"; };
 		659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableClosedRangeExtension.swift; sourceTree = "<group>"; };
 		65AE02B920158B0A003D367B /* SortDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDescriptor.swift; sourceTree = "<group>"; };
 		65AE02BB20158C3C003D367B /* SortDescriptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDescriptorTests.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 				65AE02B920158B0A003D367B /* SortDescriptor.swift */,
 				65CB5DB42022B5950020C0B8 /* NotificationDescriptor.swift */,
 				65503A8E207C5FC900FF0955 /* CollectionExtensions.swift */,
+				6574740B20DCCF9700007578 /* NSPredicateExtension.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 				65AE02BB20158C3C003D367B /* SortDescriptorTests.swift */,
 				656D51042061FE6700EE0B73 /* DateExtensionTests.swift */,
 				65503A90207C629400FF0955 /* CollectionExtensionsTests.swift */,
+				6574740F20DCD00400007578 /* NSPredicateExtensionTests.swift */,
 			);
 			path = SwiftDevHintsTests;
 			sourceTree = "<group>";
@@ -499,6 +505,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6574740C20DCCF9700007578 /* NSPredicateExtension.swift in Sources */,
 				65073C841FE8EB1000DD01B7 /* DictionaryExtensions.swift in Sources */,
 				65503A8F207C5FC900FF0955 /* CollectionExtensions.swift in Sources */,
 				65073CA81FE8EB3900DD01B7 /* OptionalExtensions.swift in Sources */,
@@ -539,6 +546,7 @@
 				65248CBD1F1D02B200E00872 /* IntExtensionsTests.swift in Sources */,
 				E36536661F305E6400BF5021 /* NSNumberExtensionsTests.swift in Sources */,
 				E3FAACC21F94BDD600507E53 /* BundleExtensionsTests.swift in Sources */,
+				6574741020DCD00400007578 /* NSPredicateExtensionTests.swift in Sources */,
 				E34DA5671F66A3F5009B30E0 /* OptionalExtensionsTests.swift in Sources */,
 				E3D01EDD1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift in Sources */,
 				E3D01ED91F459F6D0036FDCA /* StringExtensionsTests.swift in Sources */,
