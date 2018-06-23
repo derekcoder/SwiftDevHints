@@ -12,4 +12,12 @@ public extension NSPredicate {
     public func andPredicate(_ p: NSPredicate) -> NSPredicate {
         return NSCompoundPredicate(andPredicateWithSubpredicates: [self, p])
     }
+    
+    public func orPredicate(_ p: NSPredicate) -> NSPredicate {
+        return NSCompoundPredicate(orPredicateWithSubpredicates: [self, p])
+    }
+    
+    public var notPredicate: NSPredicate {
+        return NSCompoundPredicate(notPredicateWithSubpredicate: self)
+    }
 }
