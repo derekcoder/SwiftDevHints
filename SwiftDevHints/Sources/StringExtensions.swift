@@ -8,10 +8,19 @@
 
 import Foundation
 
-extension String {
+public extension String {
     public var md5: String {
         return StringProxy(proxy: self).md5
-    }    
+    }
+    
+    public func capitalizingFirstLetter() -> String {
+        guard !isEmpty else { return "" }
+        return prefix(1).uppercased() + dropFirst()
+    }
+    
+    public mutating func capitalizeFirstLetter() {
+        self = capitalizingFirstLetter()
+    }
 }
 
 extension String {
@@ -42,3 +51,4 @@ extension Substring {
         return str.hexInt
     }
 }
+

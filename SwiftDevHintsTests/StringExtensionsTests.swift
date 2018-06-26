@@ -18,6 +18,26 @@ class StringExtensionsTests: XCTestCase {
         XCTAssertEqual("hello".md5, "hello".md5)
     }
     
+    func testCapitalizingFirstLetter() {
+        XCTAssertEqual("".capitalizingFirstLetter(), "")
+        XCTAssertEqual(" ".capitalizingFirstLetter(), " ")
+        XCTAssertEqual("hello".capitalizingFirstLetter(), "Hello")
+    }
+    
+    func testCapitalizeFirstLetter() {
+        var string = ""
+        string.capitalizeFirstLetter()
+        XCTAssertEqual(string, "")
+        
+        string = " "
+        string.capitalizeFirstLetter()
+        XCTAssertEqual(string, " ")
+
+        string = "hello"
+        string.capitalizeFirstLetter()
+        XCTAssertEqual(string, "Hello")
+    }
+    
     func testLocalized() {
         // hello
         XCTAssertEqual("hello".localized(), "hello")
