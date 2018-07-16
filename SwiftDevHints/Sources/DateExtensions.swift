@@ -9,6 +9,54 @@
 import Foundation
 
 public extension Date {
+    public func next(of component: Calendar.Component) -> Date? {
+        let calendar = Calendar.current
+        switch component {
+        case .year, .month, .day, .hour, .minute, .second:
+            return calendar.date(byAdding: component, value: 1, to: self)
+        case .weekOfYear, .weekOfMonth:
+            return calendar.date(byAdding: .day, value: 7, to: self)
+        default: return nil
+        }
+    }
+    
+    public func previous(of component: Calendar.Component) -> Date? {
+        let calendar = Calendar.current
+        switch component {
+        case .year, .month, .day, .hour, .minute, .second:
+            return calendar.date(byAdding: component, value: -1, to: self)
+        case .weekOfYear, .weekOfMonth:
+            return calendar.date(byAdding: .day, value: -7, to: self)
+        default: return nil
+        }
+    }
+
+    public func beginning(of component: Calendar.Component) -> Date? {
+        let components: Set<Calendar.Component>
+        switch component {
+        case .year: components = [.year]
+        case .month: components = [.year, .month]
+        case .day: components = [.year, .month, .day]
+        case .weekOfYear, .weekOfMonth: components = [.yearForWeekOfYear, .weekOfYear]
+        case .hour: components = [.year, .month, .day, .hour]
+        case .minute: components = [.year, .month, .day, .hour, .minute]
+        case .second: components = [.year, .month, .day, .hour, .minute, .second]
+        default: components = []
+        }
+        
+        guard !components.isEmpty else { return nil }
+        return Calendar.current.date(from: Calendar.current.dateComponents(components, from: self))
+    }
+    
+    public func end(of component: Calendar.Component) -> Date? {
+        switch component {
+        case .year, .month, .day, .weekOfYear, .weekOfMonth, .hour, .minute, .second:
+            let beginningOfNext = self.next(of: component)!.beginning(of: component)!
+            return beginningOfNext.previous(of: .second)
+        default: return nil
+        }
+    }
+    
     /// The start time of day for current date.
     ///
     ///     let today = Date() // December 17, 2017 at 5:54:46 PM GMT+8
@@ -89,6 +137,14 @@ public extension Date {
         }
         
         return days
+    }
+    
+    public func adding(_ comp: Calendar.Component, value: Int) -> Date {
+        return Calendar.current.date(byAdding: comp, value: value, to: self)!
+    }
+    
+    public mutating func add(_ comp: Calendar.Component, value: Int) {
+        self = adding(comp, value: value)
     }
     
     public func isInSameYear(date: Date) -> Bool {
@@ -250,6 +306,32 @@ public extension Date {
             guard let newDate = calendar.date(byAdding: .second, value: newValue - currentNanosecond, to: self) else { return }
             self = newDate
         }
+    }
+    
+    public init?(calendar: Calendar? = Calendar.current,
+                 timeZone: TimeZone = TimeZone.current,
+                 era: Int? = Date().era,
+                 year: Int? = Date().year,
+                 month: Int? = Date().month,
+                 day: Int? = Date().day,
+                 hour: Int? = Date().hour,
+                 minute: Int? = Date().minute,
+                 second: Int? = Date().second,
+                 nanosecond: Int? = Date().nanosecond) {
+        var comps = DateComponents()
+        comps.calendar = calendar
+        comps.timeZone = timeZone
+        comps.era = era
+        comps.year = year
+        comps.month = month
+        comps.day = day
+        comps.hour = hour
+        comps.minute = minute
+        comps.second = second
+        comps.nanosecond = nanosecond
+        
+        guard let date = calendar?.date(from: comps) else { return nil }
+        self = date
     }
 }
 

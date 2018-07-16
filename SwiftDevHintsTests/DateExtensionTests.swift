@@ -10,6 +10,104 @@ import XCTest
 @testable import SwiftDevHints
 
 class DateExtensionTests: XCTestCase {
+    func testNext() {
+        let date = Date(timeIntervalSince1970: 123456.789)  // 1970-01-02 17:47:36 +0000
+        XCTAssertEqual(date.next(of: .year)?.year, 1971)
+        XCTAssertEqual(date.next(of: .month)?.month, 2)
+        XCTAssertEqual(date.next(of: .weekOfYear)?.weekOfYear, 2)
+        XCTAssertEqual(date.next(of: .weekOfMonth)?.weekOfMonth, 2)
+        XCTAssertEqual(date.next(of: .day)?.day, 3)
+        XCTAssertEqual(date.next(of: .hour)?.hour, 18)
+        XCTAssertEqual(date.next(of: .minute)?.minute, 48)
+        XCTAssertEqual(date.next(of: .second)?.second, 37)
+    }
+    
+    func testPrevious() {
+        let date = Date(timeIntervalSince1970: 123456.789)  // 1970-01-02 17:47:36 +0000
+        XCTAssertEqual(date.previous(of: .year)?.year, 1969)
+        XCTAssertEqual(date.previous(of: .month)?.month, 12)
+        XCTAssertEqual(date.previous(of: .weekOfYear)?.weekOfYear, 52)
+        XCTAssertEqual(date.previous(of: .weekOfMonth)?.weekOfMonth, 4)
+        XCTAssertEqual(date.previous(of: .day)?.day, 1)
+        XCTAssertEqual(date.previous(of: .hour)?.hour, 16)
+        XCTAssertEqual(date.previous(of: .minute)?.minute, 46)
+        XCTAssertEqual(date.previous(of: .second)?.second, 35)
+    }
+    
+    func testBeginning() {
+        let now = Date()
+        
+        XCTAssertEqual(now.beginning(of: .second)?.nanosecond, 0)
+        
+        XCTAssertEqual(now.beginning(of: .minute)?.second, 0)
+        XCTAssertEqual(now.beginning(of: .minute)?.nanosecond, 0)
+        
+        XCTAssertEqual(now.beginning(of: .hour)?.minute, 0)
+        XCTAssertEqual(now.beginning(of: .hour)?.second, 0)
+        XCTAssertEqual(now.beginning(of: .hour)?.nanosecond, 0)
+        
+        XCTAssertEqual(now.beginning(of: .day)?.hour, 0)
+        XCTAssertEqual(now.beginning(of: .day)?.minute, 0)
+        XCTAssertEqual(now.beginning(of: .day)?.second, 0)
+        XCTAssertEqual(now.beginning(of: .day)?.nanosecond, 0)
+        XCTAssertEqual(now.beginning(of: .day)?.isToday, true)
+        
+        let calendar = Calendar.current
+        let comps = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: now)
+        let beginningOfWeek = calendar.date(from: comps)
+        XCTAssertEqual(now.beginning(of: .weekOfMonth)?.day, beginningOfWeek?.day)
+        XCTAssertEqual(now.beginning(of: .weekOfMonth)?.hour, 0)
+        XCTAssertEqual(now.beginning(of: .weekOfMonth)?.minute, 0)
+        XCTAssertEqual(now.beginning(of: .weekOfMonth)?.second, 0)
+        XCTAssertEqual(now.beginning(of: .weekOfMonth)?.nanosecond, 0)
+
+        XCTAssertEqual(now.beginning(of: .month)?.day, 1)
+        XCTAssertEqual(now.beginning(of: .month)?.hour, 0)
+        XCTAssertEqual(now.beginning(of: .month)?.minute, 0)
+        XCTAssertEqual(now.beginning(of: .month)?.second, 0)
+        XCTAssertEqual(now.beginning(of: .month)?.nanosecond, 0)
+        
+        XCTAssertEqual(now.beginning(of: .year)?.month, 1)
+        XCTAssertEqual(now.beginning(of: .year)?.day, 1)
+        XCTAssertEqual(now.beginning(of: .year)?.hour, 0)
+        XCTAssertEqual(now.beginning(of: .year)?.minute, 0)
+        XCTAssertEqual(now.beginning(of: .year)?.second, 0)
+        XCTAssertEqual(now.beginning(of: .year)?.nanosecond, 0)
+    }
+    
+    func testEnd() {
+        let now = Date()
+        let date = Date(year: 2018, month: 3, day: 4, hour: 5, minute: 6, second: 7)!
+
+        XCTAssertEqual(now.end(of: .minute)?.second, 59)
+        
+        XCTAssertEqual(now.end(of: .hour)?.minute, 59)
+        XCTAssertEqual(now.end(of: .hour)?.second, 59)
+        
+        XCTAssertEqual(now.end(of: .day)?.hour, 23)
+        XCTAssertEqual(now.end(of: .day)?.minute, 59)
+        XCTAssertEqual(now.end(of: .day)?.second, 59)
+        XCTAssertEqual(now.end(of: .day)?.isToday, true)
+        
+        XCTAssertEqual(date.end(of: .month)?.month, 3)
+        XCTAssertEqual(date.end(of: .month)?.day, 31)
+        XCTAssertEqual(date.end(of: .month)?.hour, 23)
+        XCTAssertEqual(date.end(of: .month)?.minute, 59)
+        XCTAssertEqual(date.end(of: .month)?.second, 59)
+        
+        XCTAssertEqual(now.end(of: .year)?.month, 12)
+        XCTAssertEqual(now.end(of: .year)?.day, 31)
+        XCTAssertEqual(now.end(of: .year)?.hour, 23)
+        XCTAssertEqual(now.end(of: .year)?.minute, 59)
+        XCTAssertEqual(now.end(of: .year)?.second, 59)
+        
+        let calendar = Calendar.current
+        let comps = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: now)
+        let endOfWeek = calendar.date(from: comps)?.adding(.day, value: 7).adding(.second, value: -1)
+        XCTAssertEqual(now.end(of: .weekOfYear), endOfWeek)
+        XCTAssertEqual(now.end(of: .weekOfMonth), endOfWeek)
+    }
+    
     lazy var formatter: DateFormatter = {
         let f = DateFormatter()
         f.dateFormat = "YYYY-MM-dd HH:mm:ss"
