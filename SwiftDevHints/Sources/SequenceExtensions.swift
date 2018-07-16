@@ -20,3 +20,19 @@ extension Sequence {
         return !contains { !predicate($0) }
     }
 }
+
+public protocol OptionalType {
+    associatedtype T
+    var asOptional: T? { get }
+}
+
+extension Optional: OptionalType {
+    public typealias T = Wrapped
+    public var asOptional: T? { return self }
+}
+
+extension Sequence where Element: OptionalType {
+    public var compacted: [Element.T] {
+        return self.compactMap { $0.asOptional }
+    }
+}
