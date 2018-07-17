@@ -75,9 +75,13 @@ public func equal<L>(_ keyPath: KeyPath<UIView, L>, to constant: CGFloat) -> Con
     }
 }
 
-public func equal<Axis, L>(_ keyPath: KeyPath<UIView, L>) -> Constraint where L: NSLayoutAnchor<Axis> {
+public func equal<Axis, L>(_ keyPath: KeyPath<UIView, L>, constant: CGFloat? = nil) -> Constraint where L: NSLayoutAnchor<Axis> {
     return { view, parent in
-        view[keyPath: keyPath].constraint(equalTo: parent[keyPath: keyPath])
+        if let constant = constant {
+            return view[keyPath: keyPath].constraint(equalTo: parent[keyPath: keyPath], constant: constant)
+        } else {
+            return view[keyPath: keyPath].constraint(equalTo: parent[keyPath: keyPath])
+        }
     }
 }
 
