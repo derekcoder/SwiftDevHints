@@ -9,6 +9,26 @@
 import UIKit
 
 extension UIColor {
+    public convenience init(constrastingBlackOrWhiteColorOn backgroundColor: UIColor) {
+        let rgba = backgroundColor.rgba
+        
+        if rgba.alpha == 0 {
+            self.init(white: 0, alpha: 1)
+            return
+        }
+        
+        let red = rgba.red * 0.2126
+        let green = rgba.green * 0.7152
+        let blue = rgba.blue * 0.0722
+        let luminance = red + green + blue
+        
+        if luminance > 0.6 {
+            self.init(red: 0, green: 0, blue: 0, alpha: 1)
+        } else {
+            self.init(red: 1, green: 1, blue: 1, alpha: 1)
+        }
+    }
+
     public convenience init(redIn255: Int, greenIn255: Int, blueIn255: Int, alphaIn100: Int = 100) {
         self.init(red: CGFloat(redIn255)/255.0, green: CGFloat(greenIn255)/255.0, blue: CGFloat(blueIn255)/255.0, alpha: CGFloat(alphaIn100)/100.0)
     }
