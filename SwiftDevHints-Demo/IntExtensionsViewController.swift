@@ -18,7 +18,7 @@ class IntExtensionsViewController: UIViewController {
     @IBAction func generateRandomInt() {
         for _ in 0 ..< 20 {
             let randomInt = (1...100).randomInt
-            debugPrintLog(randomInt)
+            Log.debug(randomInt)
         }
     }
     
@@ -26,8 +26,8 @@ class IntExtensionsViewController: UIViewController {
         let aInt = 8
         let formatedInt1 = aInt.format("03") // "008"
         let formatedInt2 = aInt.format("3") // "  8"
-        debugPrintLog(formatedInt1)
-        debugPrintLog(formatedInt2)
+        Log.debug(formatedInt1)
+        Log.debug(formatedInt2)
     }
 }
 

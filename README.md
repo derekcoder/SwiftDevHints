@@ -132,18 +132,18 @@ import SwiftDevHints
 
 // PrintHelperViewController.swift
 func testPrintLog() {
-    debugPrintLog("Hello, World!")
+    Log.debug("Hello, World!")
 }
 
-// 输出结果： PrintHelperViewController.swift:testPrintLog():20 -> Hello, World!
+// 输出结果： PrintHelperViewController.testPrintLog():20 DEBUG -> Hello, World!
 ```
 
 ```swift
 // PrintHelperViewController.swift
 func testPrintLog() {
-    debugPrintLog()
+    Log.debug()
 }
-// 输出结果： PrintHelperViewController.swift:testPrintLog():20
+// 输出结果： PrintHelperViewController.testPrintLog():20 DBEUG
 ```
 
 ### 改造UIColor

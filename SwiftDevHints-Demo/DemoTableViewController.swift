@@ -62,7 +62,7 @@ class DemoTableViewController: UITableViewController, CustomSegueProtocol {
             .image(#imageLiteral(resourceName: "objc-logo-white")),
             .label("To use the Swift Talk app please login as a subscriber"),
             .button("Login with GitHub", {
-                debugPrintLog("Tapped")
+                Log.debug("Tapped")
             }),
             .label("If you're not registered yet, please visit http://objc.io for more information")
         ]

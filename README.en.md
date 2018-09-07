@@ -116,24 +116,24 @@ let password = UserDefaults.standard.string(forName: .Password)
 ### Debug Print Log
 
 - Support display file name, function name and line number
-- `debugPrintLog` only valid for DEBUG mode
+- `Log.debug` only valid for DEBUG mode
 
 ```swift
 import SwiftDevHints
 
 // PrintHelperViewController.swift
 func testPrintLog() {
-    debugPrintLog("Hello, World!")
+    Log.debug("Hello, World!")
 }
 
-// 输出结果： PrintHelperViewController.swift:testPrintLog():20 -> Hello, World!
+// 输出结果： PrintHelperViewController.testPrintLog():20 DEBUG -> Hello, World!
 ```
 ```swift
 // PrintHelperViewController.swift
 func testPrintLog() {
-    debugPrintLog()
+    Log.debug()
 }
-// 输出结果： PrintHelperViewController.swift:testPrintLog():20
+// 输出结果： PrintHelperViewController.testPrintLog():20 DBEUG
 ```
 
 

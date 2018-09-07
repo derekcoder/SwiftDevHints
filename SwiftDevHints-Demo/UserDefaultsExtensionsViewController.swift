@@ -25,7 +25,7 @@ class UserDefaultsExtensionsViewController: UIViewController {
     }
     
     @IBAction func getData() {
-        debugPrintLog(UserDefaults.standard.string(forName: .Username))
-        debugPrintLog(UserDefaults.standard.string(forName: .Password))
+        Log.debug(UserDefaults.standard.string(forName: .Username))
+        Log.debug(UserDefaults.standard.string(forName: .Password))
     }
 }

@@ -18,17 +18,17 @@ class DoubleExtensionsViewController: UIViewController {
         let aString2 = positiveDouble.format(".3") // "3.142"
         let aString3 = negativeDouble.format(".2") // "-3.14"
         let aString4 = negativeDouble.format(".3") // "-3.142"
-        debugPrintLog(aString1)
-        debugPrintLog(aString2)
-        debugPrintLog(aString3)
-        debugPrintLog(aString4)
+        Log.debug(aString1)
+        Log.debug(aString2)
+        Log.debug(aString3)
+        Log.debug(aString4)
     }
     
     @IBAction func roundDouble() {
         let aDouble = 3.14159265
         let roundedDouble1 = aDouble.roundTo(places: 2) // 3.14
         let roundedDouble2 = aDouble.roundTo(places: 3) // 3.142
-		debugPrintLog(roundedDouble1)
-        debugPrintLog(roundedDouble2)
+		Log.debug(roundedDouble1)
+        Log.debug(roundedDouble2)
     }
 }

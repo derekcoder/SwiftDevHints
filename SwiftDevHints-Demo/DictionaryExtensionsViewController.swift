@@ -24,11 +24,11 @@ class DictionaryExtensionsViewController: UIViewController {
         let latitude = dictionary.doubleValue(forKey: "latitude")
         let longitude = dictionary.doubleValue(forKey: "longitude")
         
-        debugPrintLog("id = \(id)")
-        debugPrintLog("name = \(name)")
-        debugPrintLog("age = \(age)")
-        debugPrintLog("isOnline = \(isOnline)")
-        debugPrintLog("latitude = \(latitude)")
-        debugPrintLog("longitude = \(longitude)")        
+        Log.debug("id = \(id)")
+        Log.debug("name = \(name)")
+        Log.debug("age = \(age)")
+        Log.debug("isOnline = \(isOnline)")
+        Log.debug("latitude = \(latitude)")
+        Log.debug("longitude = \(longitude)")        
     }
 }
