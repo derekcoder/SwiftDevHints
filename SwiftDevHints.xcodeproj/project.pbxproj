@@ -24,7 +24,7 @@
 		65073C971FE8EB2300DD01B7 /* CircularImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C8E1FE8EB2200DD01B7 /* CircularImageView.swift */; };
 		65073C981FE8EB2300DD01B7 /* StackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C8F1FE8EB2200DD01B7 /* StackViewController.swift */; };
 		65073C991FE8EB2300DD01B7 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C901FE8EB2200DD01B7 /* UIImageExtensions.swift */; };
-		65073C9A1FE8EB2300DD01B7 /* UITableViewCellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C911FE8EB2200DD01B7 /* UITableViewCellExtensions.swift */; };
+		65073C9A1FE8EB2300DD01B7 /* UITableViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C911FE8EB2200DD01B7 /* UITableViewCell+Reusable.swift */; };
 		65073C9B1FE8EB2300DD01B7 /* GenericTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C921FE8EB2300DD01B7 /* GenericTableViewController.swift */; };
 		65073C9C1FE8EB2300DD01B7 /* CustomSegueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C931FE8EB2300DD01B7 /* CustomSegueProtocol.swift */; };
 		65073C9D1FE8EB2300DD01B7 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C941FE8EB2300DD01B7 /* UIViewControllerExtensions.swift */; };
@@ -48,6 +48,7 @@
 		659095CC1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */; };
 		65AE02BA20158B0A003D367B /* SortDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AE02B920158B0A003D367B /* SortDescriptor.swift */; };
 		65AE02BC20158C3C003D367B /* SortDescriptorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AE02BB20158C3C003D367B /* SortDescriptorTests.swift */; };
+		65C6FDDA214F55A3006E4FC1 /* UITableView+RegisterDequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C6FDD9214F55A3006E4FC1 /* UITableView+RegisterDequeue.swift */; };
 		65CB5DB52022B5950020C0B8 /* NotificationDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB5DB42022B5950020C0B8 /* NotificationDescriptor.swift */; };
 		65CB5DB72022BB3C0020C0B8 /* NotificationDescriptorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB5DB62022BB3C0020C0B8 /* NotificationDescriptorViewController.swift */; };
 		E342F67F1F724FA800E8ECCC /* README.en.md in Resources */ = {isa = PBXBuildFile; fileRef = E342F67E1F724FA800E8ECCC /* README.en.md */; };
@@ -124,7 +125,7 @@
 		65073C8E1FE8EB2200DD01B7 /* CircularImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularImageView.swift; sourceTree = "<group>"; };
 		65073C8F1FE8EB2200DD01B7 /* StackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackViewController.swift; sourceTree = "<group>"; };
 		65073C901FE8EB2200DD01B7 /* UIImageExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
-		65073C911FE8EB2200DD01B7 /* UITableViewCellExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensions.swift; sourceTree = "<group>"; };
+		65073C911FE8EB2200DD01B7 /* UITableViewCell+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reusable.swift"; sourceTree = "<group>"; };
 		65073C921FE8EB2300DD01B7 /* GenericTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericTableViewController.swift; sourceTree = "<group>"; };
 		65073C931FE8EB2300DD01B7 /* CustomSegueProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegueProtocol.swift; sourceTree = "<group>"; };
 		65073C941FE8EB2300DD01B7 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
@@ -153,6 +154,7 @@
 		659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableClosedRangeExtension.swift; sourceTree = "<group>"; };
 		65AE02B920158B0A003D367B /* SortDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDescriptor.swift; sourceTree = "<group>"; };
 		65AE02BB20158C3C003D367B /* SortDescriptorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortDescriptorTests.swift; sourceTree = "<group>"; };
+		65C6FDD9214F55A3006E4FC1 /* UITableView+RegisterDequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterDequeue.swift"; sourceTree = "<group>"; };
 		65CB5DB42022B5950020C0B8 /* NotificationDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDescriptor.swift; sourceTree = "<group>"; };
 		65CB5DB62022BB3C0020C0B8 /* NotificationDescriptorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDescriptorViewController.swift; sourceTree = "<group>"; };
 		E342F67E1F724FA800E8ECCC /* README.en.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.en.md; sourceTree = "<group>"; };
@@ -250,7 +252,8 @@
 				65073C8F1FE8EB2200DD01B7 /* StackViewController.swift */,
 				65073C8D1FE8EB2200DD01B7 /* UIColorExtensions.swift */,
 				65073C901FE8EB2200DD01B7 /* UIImageExtensions.swift */,
-				65073C911FE8EB2200DD01B7 /* UITableViewCellExtensions.swift */,
+				65073C911FE8EB2200DD01B7 /* UITableViewCell+Reusable.swift */,
+				65C6FDD9214F55A3006E4FC1 /* UITableView+RegisterDequeue.swift */,
 				65073C941FE8EB2300DD01B7 /* UIViewControllerExtensions.swift */,
 				65073C8C1FE8EB2200DD01B7 /* UIViewExtensions.swift */,
 			);
@@ -520,9 +523,10 @@
 				65073C861FE8EB1000DD01B7 /* SequenceExtensions.swift in Sources */,
 				65073C881FE8EB1000DD01B7 /* DoubleExtensions.swift in Sources */,
 				65AE02BA20158B0A003D367B /* SortDescriptor.swift in Sources */,
+				65C6FDDA214F55A3006E4FC1 /* UITableView+RegisterDequeue.swift in Sources */,
 				65073C981FE8EB2300DD01B7 /* StackViewController.swift in Sources */,
 				65073C8B1FE8EB1000DD01B7 /* CountableRangeExtension.swift in Sources */,
-				65073C9A1FE8EB2300DD01B7 /* UITableViewCellExtensions.swift in Sources */,
+				65073C9A1FE8EB2300DD01B7 /* UITableViewCell+Reusable.swift in Sources */,
 				65073C971FE8EB2300DD01B7 /* CircularImageView.swift in Sources */,
 				65073C9D1FE8EB2300DD01B7 /* UIViewControllerExtensions.swift in Sources */,
 				65073C831FE8EB1000DD01B7 /* DateExtensions.swift in Sources */,
