@@ -13,14 +13,14 @@ struct KeyboardWillShowNotification: NotificationDescriptor {
     let beginFrame: CGRect
     let endFrame: CGRect
     let animationDuration: Double
-    let animationCurve: UIViewAnimationCurve
+    let animationCurve: UIView.AnimationCurve
     
-    static let name = Notification.Name.UIKeyboardWillShow
+    static let name = UIWindow.keyboardWillShowNotification
     init(notification: Notification) {
-        beginFrame = notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! CGRect
-        endFrame = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! CGRect
-        animationDuration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
-        animationCurve = UIViewAnimationCurve(rawValue: notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! Int)!
+        beginFrame = notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as! CGRect
+        endFrame = notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+        animationDuration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
+        animationCurve = UIView.AnimationCurve(rawValue: notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! Int)!
     }
 }
 
@@ -28,14 +28,14 @@ struct KeyboardDidHideNotification: NotificationDescriptor {
     let beginFrame: CGRect
     let endFrame: CGRect
     let animationDuration: Double
-    let animationCurve: UIViewAnimationCurve
+    let animationCurve: UIView.AnimationCurve
     
-    static let name = Notification.Name.UIKeyboardDidHide
+    static let name = UIWindow.keyboardDidHideNotification
     init(notification: Notification) {
-        beginFrame = notification.userInfo![UIKeyboardFrameBeginUserInfoKey] as! CGRect
-        endFrame = notification.userInfo![UIKeyboardFrameEndUserInfoKey] as! CGRect
-        animationDuration = notification.userInfo![UIKeyboardAnimationDurationUserInfoKey] as! Double
-        animationCurve = UIViewAnimationCurve(rawValue: notification.userInfo![UIKeyboardAnimationCurveUserInfoKey] as! Int)!
+        beginFrame = notification.userInfo![UIResponder.keyboardFrameBeginUserInfoKey] as! CGRect
+        endFrame = notification.userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! CGRect
+        animationDuration = notification.userInfo![UIResponder.keyboardAnimationDurationUserInfoKey] as! Double
+        animationCurve = UIView.AnimationCurve(rawValue: notification.userInfo![UIResponder.keyboardAnimationCurveUserInfoKey] as! Int)!
     }
 }
 

@@ -10,12 +10,12 @@ import UIKit
 
 extension UIView {
     
-    public func constraint(equalTo to: Any?, toAttribute toAttr: NSLayoutAttribute,  attribute attr: NSLayoutAttribute, multiplier: CGFloat = 1, constant c: CGFloat = 0) {
+    public func constraint(equalTo to: Any?, toAttribute toAttr: NSLayoutConstraint.Attribute,  attribute attr: NSLayoutConstraint.Attribute, multiplier: CGFloat = 1, constant c: CGFloat = 0) {
         let constraint = NSLayoutConstraint(item: self, attribute: attr, relatedBy: .equal, toItem: to, attribute: toAttr, multiplier: multiplier, constant: c)
         NSLayoutConstraint.activate([constraint])
     }
 
-    public func constraint(equalTo to: Any?, attribute attr: NSLayoutAttribute, multiplier: CGFloat = 1, constant c: CGFloat = 0) {
+    public func constraint(equalTo to: Any?, attribute attr: NSLayoutConstraint.Attribute, multiplier: CGFloat = 1, constant c: CGFloat = 0) {
         constraint(equalTo: to, toAttribute: attr, attribute: attr, multiplier: multiplier, constant: c)
     }
     

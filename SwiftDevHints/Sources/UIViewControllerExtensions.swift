@@ -15,7 +15,7 @@ public enum AlertControllerStyle {
 }
 
 extension UIViewController {    
-    public func alertController(title: String? = nil, message: String? = nil, actions: [UIAlertAction], style: UIAlertControllerStyle) -> UIAlertController {
+    public func alertController(title: String? = nil, message: String? = nil, actions: [UIAlertAction], style: UIAlertController.Style) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
         actions.forEach { alert.addAction($0) }
         return alert

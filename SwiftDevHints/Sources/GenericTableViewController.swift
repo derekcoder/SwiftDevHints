@@ -22,7 +22,7 @@ public class GenericTableViewController<Item, Cell: UITableViewCell>: UITableVie
     private let cellIdentifier = "CellIdentifier"
     private var configure: (Cell, Item) -> ()
     
-    public init(style: UITableViewStyle = .plain, items: [Item], configure: @escaping (Cell, Item) -> ()) {
+    public init(style: UITableView.Style = .plain, items: [Item], configure: @escaping (Cell, Item) -> ()) {
         self.items = items
         self.configure = configure
         super.init(style: style)
