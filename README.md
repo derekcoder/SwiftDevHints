@@ -192,6 +192,6 @@ let formatedDouble = aDouble.format(".3") // "3.142"
 
 </details>
 
-## 版权
+## License
 
 SwiftDevHints is released under the MIT license. [See LICENSE](https://github.com/derekcoder/SwiftDevHints/blob/master/LICENSE) for details.
