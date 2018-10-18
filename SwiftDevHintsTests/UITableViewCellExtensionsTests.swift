@@ -12,6 +12,6 @@ import XCTest
 class UITableViewCellExtensionsTests: XCTestCase {
     
     func testCellIdentifier() {
-        XCTAssert(UITableViewCell.cellIdentifier == "UITableViewCell")
+        XCTAssert(UITableViewCell.reuseIdentifier == "UITableViewCell")
     }    
 }
