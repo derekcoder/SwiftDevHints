@@ -193,13 +193,6 @@ let formatedDouble = aDouble.format(".3") // "3.142"
 
 </details>
 
-## 联系方式
-
-- [微博](https://weibo.com/u/6155322764)
-- [Twitter](https://twitter.com/derekcoder_)
-- [博客](http://blog.derekcoder.com)
-- 邮件: derekcoder@gmail.com
-
-  ## 版权
+## 版权
 
 SwiftDevHints is released under the MIT license. [See LICENSE](https://github.com/derekcoder/SwiftDevHints/blob/master/LICENSE) for details.
