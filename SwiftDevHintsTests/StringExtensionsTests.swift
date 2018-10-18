@@ -44,4 +44,16 @@ class StringExtensionsTests: XCTestCase {
         
         XCTAssertEqual("hello".localized(comment: "This is greeting words."), "hello")
     }
+    
+    func testSafeSubscriptForCountableRange() {
+        let string = "Hello, Swift!"
+        XCTAssertEqual(string[safe: 0..<5], "Hello")
+        XCTAssertNil(string[safe: 0..<14])
+    }
+    
+    func testSafeSubscriptForClosedRange() {
+        let string = "Hello, Swift!"
+        XCTAssertEqual(string[safe: 0...4], "Hello")
+        XCTAssertNil(string[safe: 0...13])
+    }
 }

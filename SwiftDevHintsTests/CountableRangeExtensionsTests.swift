@@ -10,18 +10,4 @@ import XCTest
 @testable import SwiftDevHints
 
 class CountableRangeExtensionsTests: XCTestCase {
-        
-    func testRandomInt() {
-        for _ in 0...1000 {
-            let num = (0...10).randomInt
-            XCTAssert(num >= 0)
-            XCTAssert(num <= 10)
-        }
-        
-        for _ in 0...1000 {
-            let num = (0..<10).randomInt
-            XCTAssert(num >= 0)
-            XCTAssert(num < 10)
-        }
-    }
 }
