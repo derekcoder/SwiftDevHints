@@ -11,7 +11,6 @@ A very useful set of development tools.
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Usage](#usage)
-    + [Quickly generate a random number in the specified range](#quickly-generate-a-random-number-in-the-specified-range)
     + [Format Int and Double](#format-int-and-double)
     + [Round Double](#round-double)
     + [Safe way to access element using subscript in collection](#safe-way-to-access-element-using-subscript-in-collection)
@@ -49,13 +48,6 @@ pod 'SwiftDevHints', '~> 0.3.0'
 ```
 
 ## Usage
-
-### Quickly generate a random number in the specified range
-
-```swift
-let randomInt = (0...10).randomInt // randomInt is Int number between 0 ~ 10 (include 10)
-let randomInt = (0..<10).randomInt // randomInt is Int number between 0 ~ 10 (not include 10)
-```
 
 ### Format Int and Double
 

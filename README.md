@@ -12,7 +12,6 @@ Swift日常开发工具集
 - [环境要求](#requirements)
 - [安装](#installation)
 - [使用说明](#usage)
-  + [快速生成指定范围的随机数](#快速生成指定范围的随机数)
   + [格式化输出](#格式化输出)
   + [浮点型数据的四舍五入](#浮点型数据的四舍五入)
   + [安全地使用下标访问集合中指定位置的元素](#安全地使用下标访问集合中指定位置的元素)
@@ -47,15 +46,6 @@ pod 'SwiftDevHints'
 ```
 
 ## 使用说明
-
-### 快速生成指定范围的随机数
-
- 详细讲解：[Swift开发小技巧系列 - 随机数生成](http://blog.derekcoder.com/2017/09/13/swiftdevhints-random-int/)
-
-```swift
-let randomInt = (0...10).randomInt // 0 ~ 10 (包括10)之间的随机数
-let randomInt = (0..<10).randomInt // 0 ~ 10 (不包括10)之间的随机数
-```
 
 ### 格式化输出
 

@@ -14,6 +14,7 @@ extension CountableClosedRange where Bound == Int {
     ///     let randomInt = (0...10).randomInt
     ///     // randomInt is Int number between 0 ~ 10 (include 10)
     ///
+    @available(*, deprecated, message: "Apple has provided offical api about this.")
     public var randomInt: Int {
         let start = lowerBound
         let end = upperBound

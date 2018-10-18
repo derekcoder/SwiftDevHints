@@ -219,13 +219,13 @@
 		65073C711FE8EAC000DD01B7 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				65073C7F1FE8EB1000DD01B7 /* CountableRangeExtension.swift */,
+				659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */,
 				65073CA41FE8EB3900DD01B7 /* NSNumberExtensions.swift */,
 				65073CA51FE8EB3900DD01B7 /* OptionalExtensions.swift */,
 				65073CA61FE8EB3900DD01B7 /* UserDefaultsExtensions.swift */,
 				65073C7D1FE8EB1000DD01B7 /* ArrayExtensions.swift */,
 				65073C7E1FE8EB1000DD01B7 /* BundleExtensions.swift */,
-				65073C7F1FE8EB1000DD01B7 /* CountableRangeExtension.swift */,
-				659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */,
 				65073C771FE8EB1000DD01B7 /* DateExtensions.swift */,
 				65073C781FE8EB1000DD01B7 /* DictionaryExtensions.swift */,
 				65073C7C1FE8EB1000DD01B7 /* DoubleExtensions.swift */,
