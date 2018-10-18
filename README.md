@@ -6,25 +6,7 @@
 [![License](https://img.shields.io/cocoapods/l/SwiftDevHints.svg?style=flat)](http://cocoapods.org/pods/SwiftDevHints)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftDevHints.svg?style=flat)](http://cocoapods.org/pods/SwiftDevHints)
 
-Swift日常开发工具集
-
-- [功能](#features)
-- [环境要求](#requirements)
-- [安装](#installation)
-- [使用说明](#usage)
-- [联系方式](#contact)
-- [版权](#license)
-
-## 环境要求
-
-- iOS 9.0+
-- Swift 4 (SwiftDevHints 0.4.x), Swift 3 (SwiftDevHints 0.3.x)
-
 ## 安装
-
-### CocoaPods
-
-Swift4
 
 ```ruby
 pod 'SwiftDevHints'
@@ -81,12 +63,15 @@ let lion = animals[safe: 3] // nil
 ```
 </details>
 
-### 类型安全的使用UserDefaults
+<details>
+<summary>UserDefaults 扩展</summary>
+<br>
 
+* **类型安全的方式使用 UserDefaults**
 ```swift
 extension UserDefaults.Name {
-    static let username: UserDefaults.Name = "SwiftDevHints-Demo.Username"
-    static let password: UserDefaults.Name = "SwiftDevHints-Demo.Password"
+static let username: UserDefaults.Name = "SwiftDevHints-Demo.Username"
+static let password: UserDefaults.Name = "SwiftDevHints-Demo.Password"
 }
 
 // 注册初始值
@@ -100,6 +85,7 @@ UserDefaults.standard.set("12345", forName: .password)
 let username = UserDefaults.standard.string(forName: .username)
 let password = UserDefaults.standard.string(forName: .password)
 ```
+</details> 
 
 <details>
 <summary>UIColor 扩展</summary>
