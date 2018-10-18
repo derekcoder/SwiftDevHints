@@ -34,7 +34,6 @@
 		65248CBD1F1D02B200E00872 /* IntExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65248CBC1F1D02B200E00872 /* IntExtensionsTests.swift */; };
 		65248CBF1F1D031500E00872 /* UITableViewCellExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65248CBE1F1D031500E00872 /* UITableViewCellExtensionsTests.swift */; };
 		65248CC71F1D065700E00872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65248CC61F1D065700E00872 /* AppDelegate.swift */; };
-		65248CC91F1D065700E00872 /* IntExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65248CC81F1D065700E00872 /* IntExtensionsViewController.swift */; };
 		65248CCC1F1D065700E00872 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65248CCA1F1D065700E00872 /* Main.storyboard */; };
 		65248CCE1F1D065700E00872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65248CCD1F1D065700E00872 /* Assets.xcassets */; };
 		65248CD11F1D065700E00872 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65248CCF1F1D065700E00872 /* LaunchScreen.storyboard */; };
@@ -136,7 +135,6 @@
 		65248CBE1F1D031500E00872 /* UITableViewCellExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensionsTests.swift; sourceTree = "<group>"; };
 		65248CC41F1D065700E00872 /* SwiftDevHints-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftDevHints-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65248CC61F1D065700E00872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		65248CC81F1D065700E00872 /* IntExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntExtensionsViewController.swift; sourceTree = "<group>"; };
 		65248CCB1F1D065700E00872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		65248CCD1F1D065700E00872 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65248CD01F1D065700E00872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -265,7 +263,6 @@
 			children = (
 				65248CC61F1D065700E00872 /* AppDelegate.swift */,
 				E3E586F91F32CBDA003855EE /* DemoTableViewController.swift */,
-				65248CC81F1D065700E00872 /* IntExtensionsViewController.swift */,
 				E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */,
 				E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */,
 				E392194A1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift */,
@@ -497,7 +494,6 @@
 				65CB5DB72022BB3C0020C0B8 /* NotificationDescriptorViewController.swift in Sources */,
 				E3649B601F30367D00236794 /* DoubleExtensionsViewController.swift in Sources */,
 				E392194B1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift in Sources */,
-				65248CC91F1D065700E00872 /* IntExtensionsViewController.swift in Sources */,
 				65248CC71F1D065700E00872 /* AppDelegate.swift in Sources */,
 				E3D43E251F6BB4A200275992 /* UIImageFilterViewController.swift in Sources */,
 				E3E586FA1F32CBDA003855EE /* DemoTableViewController.swift in Sources */,
