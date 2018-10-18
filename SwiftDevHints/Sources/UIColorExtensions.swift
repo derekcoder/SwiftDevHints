@@ -75,7 +75,7 @@ extension UIColor {
         return (red, green, blue, alpha)
     }
     
-    public func rgbHexString(prefix: String = "") -> String {
+    public func hexRGB(prefix: String = "") -> String {
         let intRGBA = self.intRGBA
         return "\(prefix)\(intRGBA.red.hexString)\(intRGBA.green.hexString)\(intRGBA.blue.hexString)"
     }

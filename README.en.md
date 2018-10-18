@@ -321,19 +321,6 @@ let token = NotificationCenter.default.addObserver { (note: KeyboardWillShowNoti
 }
 ```
 
-### Auto Layout with Key Paths
-
-Idea and Implementation come from[Swift Talk: Auto Layout with Key Paths)](https://talk.objc.io/episodes/S01E75-auto-layout-with-key-paths)
-
-```swift
-parentView.addSubview(subview, constraints: [
-    equal(\.topAnchor),
-    equal(\.leadingAnchor),
-    equal(\.trailingAnchor),
-    equal(\.heightAnchor, to: 200),
-])
-```
-
 ## Contact
 
 - [Blog](http://blog.derekcoder.com)

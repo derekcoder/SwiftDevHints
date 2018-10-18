@@ -28,11 +28,7 @@ final class ProductCell: UITableViewCell {
     }
 }
 
-class DemoTableViewController: UITableViewController, CustomSegueProtocol {
-    enum CustomSegueIdentifier: String {
-        case showCustomSegue
-    }
-    
+class DemoTableViewController: UITableViewController {
     private func showItemsViewControllerDemo() {
         let categories = [Category(title: "Computers"), Category(title: "Electronics")]
         let products = [Product(title: "iMac", serialNumber: "P-0001"), Product(title: "iPad", serialNumber: "P-0002"), Product(title: "iPhone", serialNumber: "P-0003")]
@@ -75,8 +71,6 @@ class DemoTableViewController: UITableViewController, CustomSegueProtocol {
             showItemsViewControllerDemo()
         } else if indexPath.section == 2 && indexPath.row == 0 {
             showStackViewControllerDemo()
-        } else if indexPath.section == 3 && indexPath.row == 0 {
-            performCustomSegue(.showCustomSegue, sender: self)
         }
     }    
 }

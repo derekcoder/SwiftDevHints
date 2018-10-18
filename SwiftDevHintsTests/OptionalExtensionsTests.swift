@@ -22,5 +22,9 @@ class OptionalExtensionsTests: XCTestCase {
         
         string = " "
         XCTAssertNotNil(string.nilIfEmpty)
+        
+        let names = ["Derek", "", "John", "", "Tony", nil]
+        let validNames = names.compactMap { $0.nilIfEmpty }
+        XCTAssertEqual(validNames, ["Derek", "John", "Tony"])
     }
 }

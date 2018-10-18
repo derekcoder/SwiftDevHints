@@ -5,6 +5,7 @@
 //  Created by ZHOU DENGFENG on 10/8/17.
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
+// Referenced from https://github.com/onevcat/Kingfisher/blob/master/Sources/String%2BMD5.swift
 
 import Foundation
 
