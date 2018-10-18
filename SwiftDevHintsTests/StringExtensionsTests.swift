@@ -27,6 +27,7 @@ class StringExtensionsTests: XCTestCase {
         XCTAssertEqual("hello".md5.count, 32)
         
         XCTAssertEqual("hello".md5, "hello".md5)
+        print("hello".md5)
     }
     
     func testCapitalizingFirstLetter() {

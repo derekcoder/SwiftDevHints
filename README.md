@@ -29,7 +29,7 @@ string[safe: 0...13] // nil
 
 * **MD5**
 ```swift
-"hello".md5
+"hello".md5 // 5d41402abc4b2a76b9719d911017c592
 ```
 
 * **nilIfEmpty**
