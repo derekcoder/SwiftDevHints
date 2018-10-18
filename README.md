@@ -42,8 +42,10 @@ let zebra = animals[safe: 0] // "Zebra"
 let lion = animals[safe: 3] // nil
 ```
 
-### 一种安全方法来获取字符串切片
+<details>
+<summary>字符串扩展</summary>
 
+一种安全方法来获取字符串切片
 ```swift
 let string = "Hello, Swift!"
 string[safe: 0..<5] // "Hello"
@@ -52,6 +54,28 @@ string[safe: 0..<14] // nil
 string[safe: 0...4] // "Hello"
 string[safe: 0...13] // nil
 ```
+
+取字符串MD5
+```swift
+// 实现引用了 @onevcat 的 Kingfisher
+"hello".md5
+```
+
+nilIfEmpty
+```swift
+var string: String? = nil
+string.nilIfEmpty // nil
+string = ""
+string.nilIfEmpty // nil
+
+["Derek", "", "John", "", "Tony", nil].compactMap { $0.nilIfEmpty } // ["Derek", "John", "Tony"]
+
+guard let text = textField.text.nilIfEmpty else {
+    // handle for nil or empty
+    return
+}
+```
+</details>
 
 ### 类型安全的使用UserDefaults
 
@@ -98,22 +122,6 @@ let rgba = color.rgba // (red 1.0, green 0.125490196078431, blue 0.6705882352941
 let intRGBA = color.intRGBA // (red 255, green 32, blue 171, alpha 100)
 let hexRGB = hexRGB(prefix: "#") // "#FF20AB"
 // let hexRGB = hexRGB() // "FF20AB"
-```
-
-### 字符串的一些扩展
-
-```swift
-guard let text = textField.text.nilIfEmpty else {
-    // handle for nil or empty
-    return
-}
-```
-
-```swift
-let names = ["Derek", "", "John", "", "Tony", nil]  // [String?]
-let validNames = names.compactMap { $0.nilIfEmpty } // [String]: ["Derek", "John", "Tony"]
-
-"hello".md5
 ```
 
 ### 快速读取 Info.plist
