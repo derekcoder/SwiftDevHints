@@ -1,4 +1,3 @@
-# [English](README.en.md)
 
 # SwiftDevHints
 
@@ -15,10 +14,10 @@ pod 'SwiftDevHints'
 ## 使用说明
 
 <details>
-<summary>字符串扩展</summary>
+<summary>String Extensions</summary>
 <br>
     
-* **一种安全方法来获取字符串切片**
+* **The safe way to return string slice**
 ```swift
 let string = "Hello, Swift!"
 string[safe: 0..<5] // "Hello"
@@ -28,7 +27,7 @@ string[safe: 0...4] // "Hello"
 string[safe: 0...13] // nil
 ```
 
-* **取字符串MD5**
+* **MD5**
 ```swift
 "hello".md5
 ```
@@ -52,10 +51,10 @@ guard let text = textField.text.nilIfEmpty else {
 </details>
 
 <details>
-<summary>集合扩展</summary>
+<summary>Collection Extensions</summary>
 <br>
 
-* **安全地使用下标访问集合中指定位置的元素**
+* **The safe way to return element at specified index**
 ```swift
 let animals = ["Zebra", "Giraffe", "Tiger"]
 let zebra = animals[safe: 0] // "Zebra"
@@ -64,31 +63,31 @@ let lion = animals[safe: 3] // nil
 </details>
 
 <details>
-<summary>UserDefaults 扩展</summary>
+<summary>UserDefaults Extensions</summary>
 <br>
 
-* **类型安全的方式使用 UserDefaults**
+* **A safe way to use UserDefaults**
 ```swift
 extension UserDefaults.Name {
 static let username: UserDefaults.Name = "SwiftDevHints-Demo.Username"
 static let password: UserDefaults.Name = "SwiftDevHints-Demo.Password"
 }
 
-// 注册初始值
+// Register Initial Value
 UserDefaults.standard.register(defaults: [.username: "Unknown"])
 
-// 赋值
+// Set Value
 UserDefaults.standard.set("Derek", forName: .username)
 UserDefaults.standard.set("12345", forName: .password)
 
-// 取值
+// Get Value
 let username = UserDefaults.standard.string(forName: .username)
 let password = UserDefaults.standard.string(forName: .password)
 ```
 </details> 
 
 <details>
-<summary>UIColor 扩展</summary>
+<summary>UIColor Extensions</summary>
 <br>
 
 * **Initialize UIColor with RGB based 255**
@@ -114,10 +113,10 @@ let hexRGB = hexRGB(prefix: "#") // "#FF20AB"
 </details>
 
 <details>
-<summary>Bundle 扩展</summary>
+<summary>Bundle Extensions</summary>
 <br>
 
-* **快速读取 Info.plist**
+* **Convenient methods to access Info.plist**
 ```swift
 let bundle = Bundle.main
 
@@ -126,7 +125,7 @@ let identifier = bundle.identifier    // String?
 let version = bundle.version          // String?
 let build = bundle.build              // String?
 
-// 所有已经定义的可以快速访问的Key
+// All keys
 private enum InfoPlistKey: String {
 case name = "CFBundleName"
 case displayName = "CFBundleDisplayName"
@@ -141,10 +140,10 @@ case packageType = "CFBundlePackageType"
 </details>
 
 <details>
-<summary>Date 扩展</summary>
+<summary>Date Extensions</summary>
 <br>
 
-* **常用的一些便利方法**
+* **Some convenient methods**
 ```swift
 let today = Date()                   // December 17, 2017 at 5:54:46 PM GMT+8
 let startOfToday = today.startOfDay  // December 17, 2017 at 12:00:00 AM GMT+8
@@ -166,10 +165,10 @@ let next3Days = today.nextDays(withCount: 3, includingToday: true)
 </details>
 
 <details>
-<summary>其它一些扩展</summary>
+<summary>Other Extensions</summary>
 <br>
     
-* **自定义的 Log 函数**
+* **Customized Log function**
 
 ```swift
 // PrintHelperViewController.swift
@@ -180,7 +179,7 @@ func testPrintLog() {
 // 输出结果： PrintHelperViewController.testPrintLog():20 DEBUG -> Hello, World!
 ```
 
-* **格式化输出**
+* **Format Int and Double**
 ```swift
 let aInt = 8
 let formatedInt1 = aInt.format("03") // "008"

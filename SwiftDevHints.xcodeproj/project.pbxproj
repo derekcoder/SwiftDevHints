@@ -44,7 +44,6 @@
 		65C6FDDA214F55A3006E4FC1 /* UITableView+RegisterDequeue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C6FDD9214F55A3006E4FC1 /* UITableView+RegisterDequeue.swift */; };
 		65CB5DB52022B5950020C0B8 /* NotificationDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB5DB42022B5950020C0B8 /* NotificationDescriptor.swift */; };
 		65CB5DB72022BB3C0020C0B8 /* NotificationDescriptorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB5DB62022BB3C0020C0B8 /* NotificationDescriptorViewController.swift */; };
-		E342F67F1F724FA800E8ECCC /* README.en.md in Resources */ = {isa = PBXBuildFile; fileRef = E342F67E1F724FA800E8ECCC /* README.en.md */; };
 		E34DA5671F66A3F5009B30E0 /* OptionalExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */; };
 		E3649B5E1F3032DC00236794 /* DoubleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */; };
 		E3649B601F30367D00236794 /* DoubleExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */; };
@@ -143,7 +142,6 @@
 		65C6FDD9214F55A3006E4FC1 /* UITableView+RegisterDequeue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+RegisterDequeue.swift"; sourceTree = "<group>"; };
 		65CB5DB42022B5950020C0B8 /* NotificationDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDescriptor.swift; sourceTree = "<group>"; };
 		65CB5DB62022BB3C0020C0B8 /* NotificationDescriptorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDescriptorViewController.swift; sourceTree = "<group>"; };
-		E342F67E1F724FA800E8ECCC /* README.en.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.en.md; sourceTree = "<group>"; };
 		E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensionsTests.swift; sourceTree = "<group>"; };
 		E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsTests.swift; sourceTree = "<group>"; };
 		E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsViewController.swift; sourceTree = "<group>"; };
@@ -255,7 +253,6 @@
 		6549823D1F19D1FA008EE146 = {
 			isa = PBXGroup;
 			children = (
-				E342F67E1F724FA800E8ECCC /* README.en.md */,
 				E3A2C8601F2F3330007B73CE /* README.md */,
 				E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */,
 				654982491F19D1FA008EE146 /* SwiftDevHints */,
@@ -443,7 +440,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E342F67F1F724FA800E8ECCC /* README.en.md in Resources */,
 				E3A2C8631F2F36A8007B73CE /* SwiftDevHints.podspec in Resources */,
 				E3D43E271F6BB70200275992 /* Images.xcassets in Resources */,
 			);
