@@ -5,13 +5,13 @@
 [![License](https://img.shields.io/cocoapods/l/SwiftDevHints.svg?style=flat)](http://cocoapods.org/pods/SwiftDevHints)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftDevHints.svg?style=flat)](http://cocoapods.org/pods/SwiftDevHints)
 
-## 安装
+## Installation
 
 ```ruby
 pod 'SwiftDevHints'
 ```
 
-## 使用说明
+## Usage
 
 <details>
 <summary>String Extensions</summary>
