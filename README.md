@@ -192,6 +192,11 @@ let formatedDouble = aDouble.format(".3") // "3.142"
 
 </details>
 
+## References
+
+- https://github.com/Luur/SwiftTips#1-safe-way-to-return-element-at-specified-index
+- https://github.com/onevcat/Kingfisher/blob/master/Sources/String%2BMD5.swift
+
 ## License
 
 SwiftDevHints is released under the MIT license. [See LICENSE](https://github.com/derekcoder/SwiftDevHints/blob/master/LICENSE) for details.
