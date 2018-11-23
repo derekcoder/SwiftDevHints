@@ -55,4 +55,28 @@ class IntExtensionsTests: XCTestCase {
         XCTAssertEqual(aInt.format("003"), "-08")
         XCTAssertEqual(aInt.format("3"), " -8")
     }
+    
+    func testPrefixPlusPlus() {
+        var i = 0
+        XCTAssertEqual(++i, 1)
+        XCTAssertEqual(i, 1)
+    }
+    
+    func testPrefixMinusMinus() {
+        var i = 0
+        XCTAssertEqual(--i, -1)
+        XCTAssertEqual(i, -1)
+    }
+    
+    func testPostfixPlusPlus() {
+        var i = 0
+        XCTAssertEqual(i++, 0)
+        XCTAssertEqual(i, 1)
+    }
+    
+    func testPostfixMinusMinus() {
+        var i = 0
+        XCTAssertEqual(i--, 0)
+        XCTAssertEqual(i, -1)
+    }
 }

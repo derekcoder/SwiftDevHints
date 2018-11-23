@@ -174,5 +174,31 @@ extension Int {
     }
 }
 
+extension Int {
+    static public prefix func ++(i: inout Int) -> Int {
+        i += 1
+        return i
+    }
+    
+    static public prefix func --(i: inout Int) -> Int {
+        i -= 1
+        return i
+    }
+    
+    static public postfix func ++(i: inout Int) -> Int {
+        defer {
+            i += 1
+        }
+        return i
+    }
+    
+    static public postfix func --(i: inout Int) -> Int {
+        defer {
+            i -= 1
+        }
+        return i
+    }
+}
+
 
 
