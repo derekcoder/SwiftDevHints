@@ -35,45 +35,71 @@ extension String {
         return String(self[lowerIdx..<upperIdx])
     }
     
+    /// Generate MD5
+    ///
+    ///     let string = "Swift".md5  // ae832e9b5bda2699db45f3fa6aa8c556
+    ///
+    public var md5: String {
+        return StringProxy(proxy: self).md5
+    }
+    
+    /// Return a string with first letter capitalized
+    ///
+    ///     let string = "hello world".capitalizingFirstLetter()
+    ///     print(string)  // "Hello world"
+    ///
+    public func capitalizingFirstLetter() -> String {
+        guard !isEmpty else { return "" }
+        return prefix(1).uppercased() + dropFirst()
+    }
+    
+    /// Capitalize the first letter
+    ///
+    ///     var string = "hello world"
+    ///     string.capitalizeFirstLetter()
+    ///     print(string)  // "Hello world"
+    ///
+    public mutating func capitalizeFirstLetter() {
+        self = capitalizingFirstLetter()
+    }
+    
+    /// Convert hex string to int
+    ///
+    ///     print("FF".intBaseHex)  // 255
+    ///     print("Ff".intBaseHex)  // 255
+    ///     print("fF".intBaseHex)  // 255
+    ///     print("ff".intBaseHex)  // 255
+    ///     print("0xff".intBaseHex)  // 255
+    ///     print("fg".intBaseHex)  // nil
+    ///
+    public var intBaseHex: Int? {
+        guard contains("0x") else {
+            return Int(self, radix: 16)
+        }
+        return Int(dropFirst(2), radix: 16)
+    }
+
+    /// Return nil if string is empty
+    ///
+    ///     let string = "Swift".nilIfEmpty  // String?: "Swift"
+    ///     let string = "".nilIfEmpty  // String?: nil
+    ///
     public var nilIfEmpty: String? {
         guard !isEmpty else { return nil }
         return self
     }
 }
 
-public extension String {
-    public var md5: String {
-        return StringProxy(proxy: self).md5
-    }
-    
-    public func capitalizingFirstLetter() -> String {
-        guard !isEmpty else { return "" }
-        return prefix(1).uppercased() + dropFirst()
-    }
-    
-    public mutating func capitalizeFirstLetter() {
-        self = capitalizingFirstLetter()
-    }
-}
-
-extension String {
-    public func localized(comment: String = "") -> String {
-        return NSLocalizedString(self, comment: comment)
-    }
-}
-
-extension String {
-    public var hexInt: Int? {
-        let scanner = Scanner(string: self)
-        var value: UInt64 = 0
-        guard scanner.scanHexInt64(&value) else { return nil }
-        return Int(value)
-    }
-}
-
-extension Substring {
-    public var hexInt: Int? {
-        let str = String(self)
-        return str.hexInt
+extension Optional where Wrapped == String {
+    /// The property will return nil if string is empty.
+    ///
+    ///     let fruit: String? = "Apple"
+    ///     let empty: String? = ""
+    ///     let string = fruit.nilIfEmpty  // String?: "Apple"
+    ///     let string = empty.nilIfEmpty  // String?: nil
+    ///
+    public var nilIfEmpty: String? {
+        guard let value = self else { return nil }
+        return value.isEmpty ? nil : value
     }
 }

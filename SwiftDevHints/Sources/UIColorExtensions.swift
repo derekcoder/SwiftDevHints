@@ -49,13 +49,13 @@ extension UIColor {
         let indexOffsetBy2 = str.index(startIndex, offsetBy: 2)
         let indexOffsetBy4 = str.index(startIndex, offsetBy: 4)
         
-        let red = str[startIndex..<indexOffsetBy2]
-        let green = str[indexOffsetBy2..<indexOffsetBy4]
-        let blue = str[indexOffsetBy4..<endIndex]
+        let red = String(str[startIndex..<indexOffsetBy2])
+        let green = String(str[indexOffsetBy2..<indexOffsetBy4])
+        let blue = String(str[indexOffsetBy4..<endIndex])
         
-        guard let redIn255 = red.hexInt else { return nil }
-        guard let greenIn255 = green.hexInt else { return nil }
-        guard let blueIn255 = blue.hexInt else { return nil }
+        guard let redIn255 = red.intBaseHex else { return nil }
+        guard let greenIn255 = green.intBaseHex else { return nil }
+        guard let blueIn255 = blue.intBaseHex else { return nil }
         
         self.init(redIn255: redIn255, greenIn255: greenIn255, blueIn255: blueIn255)
     }

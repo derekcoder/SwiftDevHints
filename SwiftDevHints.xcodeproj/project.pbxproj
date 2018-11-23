@@ -25,7 +25,6 @@
 		65073C9A1FE8EB2300DD01B7 /* UITableViewCell+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C911FE8EB2200DD01B7 /* UITableViewCell+Reusable.swift */; };
 		65073C9D1FE8EB2300DD01B7 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C941FE8EB2300DD01B7 /* UIViewControllerExtensions.swift */; };
 		65073CA71FE8EB3900DD01B7 /* NSNumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073CA41FE8EB3900DD01B7 /* NSNumberExtensions.swift */; };
-		65073CA81FE8EB3900DD01B7 /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073CA51FE8EB3900DD01B7 /* OptionalExtensions.swift */; };
 		65073CA91FE8EB3900DD01B7 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073CA61FE8EB3900DD01B7 /* UserDefaultsExtensions.swift */; };
 		65248CBD1F1D02B200E00872 /* IntExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65248CBC1F1D02B200E00872 /* IntExtensionsTests.swift */; };
 		65248CBF1F1D031500E00872 /* UITableViewCellExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65248CBE1F1D031500E00872 /* UITableViewCellExtensionsTests.swift */; };
@@ -118,7 +117,6 @@
 		65073C911FE8EB2200DD01B7 /* UITableViewCell+Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+Reusable.swift"; sourceTree = "<group>"; };
 		65073C941FE8EB2300DD01B7 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		65073CA41FE8EB3900DD01B7 /* NSNumberExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberExtensions.swift; sourceTree = "<group>"; };
-		65073CA51FE8EB3900DD01B7 /* OptionalExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensions.swift; sourceTree = "<group>"; };
 		65073CA61FE8EB3900DD01B7 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		65248CBC1F1D02B200E00872 /* IntExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensionsTests.swift; sourceTree = "<group>"; };
 		65248CBE1F1D031500E00872 /* UITableViewCellExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensionsTests.swift; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 				65073CA61FE8EB3900DD01B7 /* UserDefaultsExtensions.swift */,
 				65073C8D1FE8EB2200DD01B7 /* UIColorExtensions.swift */,
 				65073C7B1FE8EB1000DD01B7 /* Log.swift */,
-				65073CA51FE8EB3900DD01B7 /* OptionalExtensions.swift */,
 				65073C7E1FE8EB1000DD01B7 /* BundleExtensions.swift */,
 				65073C771FE8EB1000DD01B7 /* DateExtensions.swift */,
 				65073C7C1FE8EB1000DD01B7 /* DoubleExtensions.swift */,
@@ -477,7 +474,6 @@
 				6574740C20DCCF9700007578 /* NSPredicateExtension.swift in Sources */,
 				65073C841FE8EB1000DD01B7 /* DictionaryExtensions.swift in Sources */,
 				65503A8F207C5FC900FF0955 /* CollectionExtensions.swift in Sources */,
-				65073CA81FE8EB3900DD01B7 /* OptionalExtensions.swift in Sources */,
 				65073C961FE8EB2300DD01B7 /* UIColorExtensions.swift in Sources */,
 				65073C891FE8EB1000DD01B7 /* ArrayExtensions.swift in Sources */,
 				65073C871FE8EB1000DD01B7 /* Log.swift in Sources */,

@@ -24,10 +24,9 @@ class StringExtensionsTests: XCTestCase {
     
     func testMd5() {
         // hello
-        XCTAssertEqual("hello".md5.count, 32)
-        
-        XCTAssertEqual("hello".md5, "hello".md5)
-        print("hello".md5)
+        XCTAssertEqual("Swift".md5.count, 32)
+        XCTAssertEqual("Swift".md5, "ae832e9b5bda2699db45f3fa6aa8c556")
+        XCTAssertEqual("Swift".md5, "Swift".md5)
     }
     
     func testCapitalizingFirstLetter() {
@@ -50,10 +49,20 @@ class StringExtensionsTests: XCTestCase {
         XCTAssertEqual(string, "Hello")
     }
     
-    func testLocalized() {
-        // hello
-        XCTAssertEqual("hello".localized(), "hello")
-        
-        XCTAssertEqual("hello".localized(comment: "This is greeting words."), "hello")
+    func testIntBaseHex() {
+        XCTAssertEqual("FF".intBaseHex, 255)
+        XCTAssertEqual("fe".intBaseHex, 254)
+        XCTAssertEqual("fD".intBaseHex, 253)
+        XCTAssertEqual("Fc".intBaseHex, 252)
+        XCTAssertEqual("0xFc".intBaseHex, 252)
+        XCTAssertNil("FG".intBaseHex)
+    }
+    
+    func testNilIfEmpty() {
+        XCTAssertEqual("Swift".nilIfEmpty, "Swift")
+        XCTAssertNil("".nilIfEmpty)
+
+        XCTAssertEqual(("Swift" as String?).nilIfEmpty, "Swift")
+        XCTAssertNil(("" as String?).nilIfEmpty)
     }
 }
