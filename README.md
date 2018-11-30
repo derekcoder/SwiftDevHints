@@ -32,6 +32,26 @@ string[safe: 0...13] // nil
 "hello".md5 // 5d41402abc4b2a76b9719d911017c592
 ```
 
+* **Capitalize first letter**
+```swift
+var string = "hello world"
+print(string.capitalizingFirstLetter())  // "Hello world"
+print(string)  // "hello world"
+
+string.capitalizeFirstLetter()
+print(string)  // "Hello world"
+```
+
+* **Get int value form hex string**
+```swift
+print("FF".intBaseHex)  // 255
+print("Ff".intBaseHex)  // 255
+print("fF".intBaseHex)  // 255
+print("ff".intBaseHex)  // 255
+print("0xff".intBaseHex)  // 255
+print("fg".intBaseHex)  // nil
+```
+
 * **nilIfEmpty**
 ```swift
 var string: String? = nil
