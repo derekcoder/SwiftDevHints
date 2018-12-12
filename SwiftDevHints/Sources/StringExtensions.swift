@@ -89,17 +89,3 @@ extension String {
         return self
     }
 }
-
-extension Optional where Wrapped == String {
-    /// The property will return nil if string is empty.
-    ///
-    ///     let fruit: String? = "Apple"
-    ///     let empty: String? = ""
-    ///     let string = fruit.nilIfEmpty  // String?: "Apple"
-    ///     let string = empty.nilIfEmpty  // String?: nil
-    ///
-    public var nilIfEmpty: String? {
-        guard let value = self else { return nil }
-        return value.isEmpty ? nil : value
-    }
-}

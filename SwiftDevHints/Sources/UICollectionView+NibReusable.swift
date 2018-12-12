@@ -5,8 +5,12 @@
 //  Created by Derek on 12/12/18.
 //  Copyright © 2018 ZHOU DENGFENG DEREK. All rights reserved.
 //
+//  Reference
+//  * [AliSoftware/Reusable](https://github.com/AliSoftware/Reusable)
+//  * [andyyhope/nemo](https://github.com/andyyhope/nemo)
 
 import UIKit
+
 
 public extension UICollectionView {
     final func register<T: UICollectionViewCell>(_ cellType: T.Type) where T: NibReusable {

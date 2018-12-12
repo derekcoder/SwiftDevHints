@@ -5,10 +5,11 @@
 //  Created by Derek on 12/12/18.
 //  Copyright © 2018 ZHOU DENGFENG DEREK. All rights reserved.
 //
+//  Reference
+//  * [AliSoftware/Reusable](https://github.com/AliSoftware/Reusable)
+//  * [andyyhope/nemo](https://github.com/andyyhope/nemo)
 
 import UIKit
-
-// Reference from https://github.com/andyyhope/nemo
 
 public protocol NibLoadable: class {
     static var nib: UINib { get }

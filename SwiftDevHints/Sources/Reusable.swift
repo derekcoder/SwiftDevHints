@@ -5,10 +5,11 @@
 //  Created by ZHOU DENGFENG on 15/7/17.
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
+//  Reference
+//  * [AliSoftware/Reusable](https://github.com/AliSoftware/Reusable)
+//  * [andyyhope/nemo](https://github.com/andyyhope/nemo)
 
 import UIKit
-
-// Reference from https://github.com/andyyhope/nemo
 
 public protocol Reusable: class {
     static var reuseIdentifier: String { get }

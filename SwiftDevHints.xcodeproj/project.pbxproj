@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6504FB2F21C0AE48006DDA2E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504FB2E21C0AE48006DDA2E /* NibLoadable.swift */; };
 		6504FB3121C0B06F006DDA2E /* UICollectionView+NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504FB3021C0B06F006DDA2E /* UICollectionView+NibReusable.swift */; };
+		6504FB3321C0BDED006DDA2E /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504FB3221C0BDED006DDA2E /* OptionalExtensions.swift */; };
 		65073C801FE8EB1000DD01B7 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C741FE8EB1000DD01B7 /* String+MD5.swift */; };
 		65073C811FE8EB1000DD01B7 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C751FE8EB1000DD01B7 /* StringExtensions.swift */; };
 		65073C821FE8EB1000DD01B7 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C761FE8EB1000DD01B7 /* FloatExtensions.swift */; };
@@ -103,6 +104,7 @@
 /* Begin PBXFileReference section */
 		6504FB2E21C0AE48006DDA2E /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		6504FB3021C0B06F006DDA2E /* UICollectionView+NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+NibReusable.swift"; sourceTree = "<group>"; };
+		6504FB3221C0BDED006DDA2E /* OptionalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtensions.swift; sourceTree = "<group>"; };
 		65073C741FE8EB1000DD01B7 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
 		65073C751FE8EB1000DD01B7 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		65073C761FE8EB1000DD01B7 /* FloatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatExtensions.swift; sourceTree = "<group>"; };
@@ -230,6 +232,7 @@
 				65073C8C1FE8EB2200DD01B7 /* UIViewExtensions.swift */,
 				65073C7F1FE8EB1000DD01B7 /* CountableRangeExtension.swift */,
 				659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */,
+				6504FB3221C0BDED006DDA2E /* OptionalExtensions.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				65073C881FE8EB1000DD01B7 /* DoubleExtensions.swift in Sources */,
 				65C6FDDA214F55A3006E4FC1 /* UITableView+NibReusable.swift in Sources */,
 				6504FB3121C0B06F006DDA2E /* UICollectionView+NibReusable.swift in Sources */,
+				6504FB3321C0BDED006DDA2E /* OptionalExtensions.swift in Sources */,
 				65073C8B1FE8EB1000DD01B7 /* CountableRangeExtension.swift in Sources */,
 				65073C9A1FE8EB2300DD01B7 /* Reusable.swift in Sources */,
 				65073C9D1FE8EB2300DD01B7 /* UIViewControllerExtensions.swift in Sources */,
