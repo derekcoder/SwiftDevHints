@@ -177,7 +177,7 @@ guard let text = textField.text.nilIfEmpty else {
 // Do something with text
 ```
 
-## UITableView
+## UITableView Extensions
 
 #### Register & Dequeue UITableViewCell
 ```swift
@@ -187,7 +187,7 @@ tableView.register(UserCell.self)
 let cell: UserCell = tableView.dequeueReusableCell(for: indexPath)
 ```
 
-## UICollectionView
+## UICollectionView Extensions
 
 #### Register & Dequeue UICollectionViewCell
 ```swift
