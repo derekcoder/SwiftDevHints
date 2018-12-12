@@ -32,6 +32,14 @@ pod 'SwiftDevHints'
 </details>
 
 <details>
+<summary>Optional Extensions</summary>
+    <ul>
+        <li><a href = "#isnone-issome"><code>isNone & isSome</code></a></li>
+        <li><a href = "#isnilorempty-nilifempty"><code>isNilOrEmpty & nilIfEmpty</code></a></li>
+    </url>
+</details>
+
+<details>
 <summary>UserDefaults Extensions</summary>
     <ul>
         <li><a href = "#a-safe-way-to-use-userdefaults"><code>A safe way to use UserDefaults</code></a></li>
@@ -130,6 +138,29 @@ guard let text = textField.text.nilIfEmpty else {
 let animals = ["Zebra", "Giraffe", "Tiger"]
 let zebra = animals[safe: 0] // "Zebra"
 let lion = animals[safe: 3] // nil
+```
+
+## Optional Extensions
+
+#### isNone & isSome
+```swift
+var name: String? = "derekcoder"
+name.isNone  // false
+name.isSome  // true
+
+name = nil
+name.isNone  // true
+name.isSome  // false
+```
+
+#### isNilOrEmpty & nilIfEmpty
+```swift
+let hasText = textField.text.isNilOrEmpty
+
+guard let text = textField.text.nilIfEmpty else {
+    return
+}
+// Do something with text
 ```
 
 ## UserDefaults Extensions
