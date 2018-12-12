@@ -15,59 +15,14 @@ pod 'SwiftDevHints'
 
 <details>
 <summary>String Extensions</summary>
+    <ul>
+        <li><a href = "#the-safe-way-to-return-string-slice"><code>The safe way to return string slice</code></a></li>
+        <li><a href = "#md5"><code>MD5</code></a></li>
+        <li><a href = "#capitalize-first-letter"><code>Capitalize first letter</code></a></li>
+        <li><a href = "#get-int-value-form-hex-string"><code>Get int value form hex string</code></a></li>
+        <li><a href = "#nilifempty"><code>nilIfEmpty</code></a></li>
+    </url>
 <br>
-    
-* **The safe way to return string slice**
-```swift
-let string = "Hello, Swift!"
-string[safe: 0..<5] // "Hello"
-string[safe: 0..<14] // nil
-
-string[safe: 0...4] // "Hello"
-string[safe: 0...13] // nil
-```
-
-* **MD5**
-```swift
-"hello".md5 // 5d41402abc4b2a76b9719d911017c592
-```
-
-* **Capitalize first letter**
-```swift
-var string = "hello world"
-print(string.capitalizingFirstLetter())  // "Hello world"
-print(string)  // "hello world"
-
-string.capitalizeFirstLetter()
-print(string)  // "Hello world"
-```
-
-* **Get int value form hex string**
-```swift
-print("FF".intBaseHex)  // 255
-print("Ff".intBaseHex)  // 255
-print("fF".intBaseHex)  // 255
-print("ff".intBaseHex)  // 255
-print("0xff".intBaseHex)  // 255
-print("fg".intBaseHex)  // nil
-```
-
-* **nilIfEmpty**
-```swift
-var string: String? = nil
-string.nilIfEmpty // nil
-string = ""
-string.nilIfEmpty // nil
-string = "hello"
-string.nifIfEmpty // "hello"
-
-["Derek", "", "John", "", "Tony", nil].compactMap { $0.nilIfEmpty } // ["Derek", "John", "Tony"]
-
-guard let text = textField.text.nilIfEmpty else {
-    // handle for nil or empty
-    return
-}
-```
 </details>
 
 <details>
@@ -211,6 +166,60 @@ let formatedDouble = aDouble.format(".3") // "3.142"
 ```
 
 </details>
+
+## String Extensions
+
+### The safe way to return string slice
+```swift
+let string = "Hello, Swift!"
+string[safe: 0..<5] // "Hello"
+string[safe: 0..<14] // nil
+
+string[safe: 0...4] // "Hello"
+string[safe: 0...13] // nil
+```
+
+### MD5
+```swift
+"hello".md5 // 5d41402abc4b2a76b9719d911017c592
+```
+
+### Capitalize first letter
+```swift
+var string = "hello world"
+print(string.capitalizingFirstLetter())  // "Hello world"
+print(string)  // "hello world"
+
+string.capitalizeFirstLetter()
+print(string)  // "Hello world"
+```
+
+### Get int value form hex string
+```swift
+print("FF".intBaseHex)  // 255
+print("Ff".intBaseHex)  // 255
+print("fF".intBaseHex)  // 255
+print("ff".intBaseHex)  // 255
+print("0xff".intBaseHex)  // 255
+print("fg".intBaseHex)  // nil
+```
+
+### nilIfEmpty
+```swift
+var string: String? = nil
+string.nilIfEmpty // nil
+string = ""
+string.nilIfEmpty // nil
+string = "hello"
+string.nifIfEmpty // "hello"
+
+["Derek", "", "John", "", "Tony", nil].compactMap { $0.nilIfEmpty } // ["Derek", "John", "Tony"]
+
+guard let text = textField.text.nilIfEmpty else {
+    // handle for nil or empty
+    return
+}
+```
 
 ## References
 
