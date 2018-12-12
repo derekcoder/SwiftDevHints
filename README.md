@@ -169,7 +169,7 @@ name.isSome  // false
 
 #### isNilOrEmpty & nilIfEmpty
 ```swift
-let hasText = textField.text.isNilOrEmpty
+let hasText = !textField.text.isNilOrEmpty
 
 guard let text = textField.text.nilIfEmpty else {
     return
@@ -295,7 +295,7 @@ func testPrintLog() {
     Log.debug("Hello, World!")
 }
 
-// 输出结果： PrintHelperViewController.testPrintLog():20 DEBUG -> Hello, World!
+// Console：PrintHelperViewController.testPrintLog():20 DEBUG -> Hello, World!
 ```
 
 #### Format Int and Double
@@ -313,6 +313,8 @@ let formatedDouble = aDouble.format(".3") // "3.142"
 
 - https://github.com/Luur/SwiftTips#1-safe-way-to-return-element-at-specified-index
 - https://github.com/onevcat/Kingfisher/blob/master/Sources/String%2BMD5.swift
+- https://github.com/AliSoftware/Reusable
+- https://github.com/andyyhope/nemo
 
 ## License
 
