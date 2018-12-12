@@ -71,7 +71,7 @@ pod 'SwiftDevHints'
 
 ## String Extensions
 
-### The safe way to return string slice
+#### The safe way to return string slice
 ```swift
 let string = "Hello, Swift!"
 string[safe: 0..<5] // "Hello"
@@ -81,12 +81,12 @@ string[safe: 0...4] // "Hello"
 string[safe: 0...13] // nil
 ```
 
-### MD5
+#### MD5
 ```swift
 "hello".md5 // 5d41402abc4b2a76b9719d911017c592
 ```
 
-### Capitalize first letter
+#### Capitalize first letter
 ```swift
 var string = "hello world"
 print(string.capitalizingFirstLetter())  // "Hello world"
@@ -96,7 +96,7 @@ string.capitalizeFirstLetter()
 print(string)  // "Hello world"
 ```
 
-### Get int value form hex string
+#### Get int value form hex string
 ```swift
 print("FF".intBaseHex)  // 255
 print("Ff".intBaseHex)  // 255
@@ -106,7 +106,7 @@ print("0xff".intBaseHex)  // 255
 print("fg".intBaseHex)  // nil
 ```
 
-### nilIfEmpty
+#### nilIfEmpty
 ```swift
 var string: String? = nil
 string.nilIfEmpty // nil
@@ -125,7 +125,7 @@ guard let text = textField.text.nilIfEmpty else {
 
 ## Collection Extensions
 
-### The safe way to return element at specified index
+#### The safe way to return element at specified index
 ```swift
 let animals = ["Zebra", "Giraffe", "Tiger"]
 let zebra = animals[safe: 0] // "Zebra"
@@ -155,12 +155,12 @@ let password = UserDefaults.standard.string(forName: .password)
 
 ## UIColor Extensions
 
-### Initialize UIColor with RGB based 255
+#### Initialize UIColor with RGB based 255
 ```swift
 let color = UIColor(redIn255: 255, greenIn255: 32, blueIn255: 171)
 ```
 
-### Initialize UIColor with RGB Hex String
+#### Initialize UIColor with RGB Hex String
 ```swift
 let color = UIColor(hex: "FF20AB") 
 // let color = UIColor(hex: "ff20ab") 
@@ -168,7 +168,7 @@ let color = UIColor(hex: "FF20AB")
 // let color = UIColor(hex: "#ff20ab")
 ```
 
-### Get RGB(A) from a color
+#### Get RGB(A) from a color
 ```swift
 let rgba = color.rgba // (red 1.0, green 0.125490196078431, blue 0.670588235294118, alpha 1.0)
 let intRGBA = color.intRGBA // (red 255, green 32, blue 171, alpha 100)
@@ -178,7 +178,7 @@ let hexRGB = hexRGB(prefix: "#") // "#FF20AB"
 
 ## Bundle Extensions
 
-### Convenient methods to access Info.plist
+#### Convenient methods to access Info.plist
 ```swift
 let bundle = Bundle.main
 
@@ -201,7 +201,7 @@ case packageType = "CFBundlePackageType"
 
 ## Date Extensions
 
-### Some convenient methods
+#### Some convenient methods
 ```swift
 let today = Date()                   // December 17, 2017 at 5:54:46 PM GMT+8
 let startOfToday = today.startOfDay  // December 17, 2017 at 12:00:00 AM GMT+8
@@ -222,7 +222,7 @@ let next3Days = today.nextDays(withCount: 3, includingToday: true)
 
 ## Others
 
-### Customized Log function
+#### Customized Log function
 
 ```swift
 // PrintHelperViewController.swift
@@ -233,7 +233,7 @@ func testPrintLog() {
 // 输出结果： PrintHelperViewController.testPrintLog():20 DEBUG -> Hello, World!
 ```
 
-### Format Int and Double
+#### Format Int and Double
 ```swift
 let aInt = 8
 let formatedInt1 = aInt.format("03") // "008"
