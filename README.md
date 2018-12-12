@@ -4,7 +4,15 @@
 [![License](https://img.shields.io/cocoapods/l/SwiftDevHints.svg?style=flat)](http://cocoapods.org/pods/SwiftDevHints)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftDevHints.svg?style=flat)](http://cocoapods.org/pods/SwiftDevHints)
 
+## Requirements
+
+- iOS 10.0+
+- Swift 4.2
+
 ## Installation
+
+Tapticc is available through [CocoaPods](https://cocoapods.org). To install
+it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'SwiftDevHints'
@@ -314,6 +322,17 @@ let formatedDouble = aDouble.format(".3") // "3.142"
 - https://github.com/onevcat/Kingfisher/blob/master/Sources/String%2BMD5.swift
 - https://github.com/AliSoftware/Reusable
 - https://github.com/andyyhope/nemo
+
+## Author
+
+- Twitter: [@derekcoder_](https://twitter.com/derekcoder_)
+- Weibo: [@derekcoder](https://weibo.com/u/6155322764)
+- Email: derekcoder@gmail.com
+
+## Donation
+If you like this project or has been helpful to you, you can buy me a cup of coffe ☕️. Very appreciate it!😉 
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](http://paypal.me/derekcoder)
 
 ## License
 
