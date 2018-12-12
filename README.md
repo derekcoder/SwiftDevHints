@@ -40,6 +40,20 @@ pod 'SwiftDevHints'
 </details>
 
 <details>
+<summary>UITableView Extensions</summary>
+    <ul>
+        <li><a href = "#register--dequeue-uitableviewcell"><code>Register & Dequeue UITableViewCell</code></a></li>
+    </url>
+</details>
+
+<details>
+<summary>UICollectionView Extensions</summary>
+    <ul>
+        <li><a href = "#register--dequeue-uicollectionview"><code>Register & Dequeue UICollectionViewCell</code></a></li>
+    </url>
+</details>
+
+<details>
 <summary>UserDefaults Extensions</summary>
     <ul>
         <li><a href = "#a-safe-way-to-use-userdefaults"><code>A safe way to use UserDefaults</code></a></li>
@@ -161,6 +175,26 @@ guard let text = textField.text.nilIfEmpty else {
     return
 }
 // Do something with text
+```
+
+## UITableView
+
+#### Register & Dequeue UITableViewCell
+```swift
+class UserCell: UITableViewCell, NibReusable { }
+
+tableView.register(UserCell.self)
+let cell: UserCell = tableView.dequeueReusableCell(for: indexPath)
+```
+
+## UICollectionView
+
+#### Register & Dequeue UICollectionViewCell
+```swift
+class PhotoCell: UICollectionViewCell, NibReusable { }
+
+collectionView.register(PhotoCell.self)
+let cell: PhotoCell = collectionView.dequeueReusableCell(for: indexPath)
 ```
 
 ## UserDefaults Extensions
