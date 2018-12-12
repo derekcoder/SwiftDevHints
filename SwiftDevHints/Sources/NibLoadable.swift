@@ -1,9 +1,9 @@
 //
-//  UITableViewCellExtensions.swift
+//  UITableViewCell+NibLoadable.swift
 //  SwiftDevHints
 //
-//  Created by ZHOU DENGFENG on 15/7/17.
-//  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
+//  Created by Derek on 12/12/18.
+//  Copyright © 2018 ZHOU DENGFENG DEREK. All rights reserved.
 //
 
 import UIKit
@@ -14,8 +14,8 @@ public protocol NibLoadable: class {
     static var nib: UINib { get }
 }
 
-extension NibLoadable {
-    public static var nib: UINib {
+public extension NibLoadable {
+    static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: Bundle(for: self))
     }
 }
@@ -29,15 +29,3 @@ extension NibLoadable where Self: UIView {
         }
     }
 }
-
-public protocol Reusable: class {
-    static var reuseIdentifier: String { get }
-}
-
-extension Reusable {
-    public static var reuseIdentifier: String {
-        return String(describing: self)
-    }
-}
-
-extension UITableViewCell: Reusable { }
