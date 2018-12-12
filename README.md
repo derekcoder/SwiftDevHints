@@ -50,7 +50,7 @@ pod 'SwiftDevHints'
 <details>
 <summary>Bundle Extensions</summary>
     <ul>
-        <li><a href = "#convenient-methods-to-access-info.plist"><code>Convenient methods to access Info.plist</code></a></li>
+        <li><a href = "#convenient-methods-to-access-infoplist"><code>Convenient methods to access Info.plist</code></a></li>
     </url>
 </details>
 
