@@ -43,7 +43,7 @@ pod 'SwiftDevHints'
     <ul>
         <li><a href = "#initialize-uicolor-with-rgb-based-255"><code>Initialize UIColor with RGB based 255</code></a></li>
         <li><a href = "#initialize-uicolor-with-rgb-hex-string"><code>Initialize UIColor with RGB Hex String</code></a></li>
-        <li><a href = "#get-rgb(a)-from-a-color"><code>Get RGB(A) from a color</code></a></li>
+        <li><a href = "#get-rgba-from-a-color"><code>Get RGB(A) from a color</code></a></li>
     </url>
 </details>
 
