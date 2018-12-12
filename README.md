@@ -1,3 +1,4 @@
+![](/SwiftDevHints/Assets/swiftdevhints.png)
 
 # SwiftDevHints
 
