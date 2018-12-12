@@ -34,8 +34,8 @@ pod 'SwiftDevHints'
 <details>
 <summary>Optional Extensions</summary>
     <ul>
-        <li><a href = "#isnone-issome"><code>isNone & isSome</code></a></li>
-        <li><a href = "#isnilorempty-nilifempty"><code>isNilOrEmpty & nilIfEmpty</code></a></li>
+        <li><a href = "#isnone--issome"><code>isNone & isSome</code></a></li>
+        <li><a href = "#isnilorempty--nilifempty"><code>isNilOrEmpty & nilIfEmpty</code></a></li>
     </url>
 </details>
 
