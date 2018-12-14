@@ -34,6 +34,7 @@ pod 'SwiftDevHints'
 <summary>Optional Extensions</summary>
     <ul>
         <li><a href = "#isnone--issome"><code>isNone & isSome</code></a></li>
+        <li><a href = "#noneDo--someDo"><code>noneDo & someDo</code></a></li>
         <li><a href = "#isnilorempty--nilifempty"><code>isNilOrEmpty & nilIfEmpty</code></a></li>
     </url>
 </details>
@@ -164,6 +165,23 @@ name.isSome  // true
 name = nil
 name.isNone  // true
 name.isSome  // false
+```
+
+#### noneDo & someDo
+```swift
+var name: String? = "derekcoder"
+
+name.noneDo {
+    print("name is nil")
+}
+
+name.someDo {
+    print("name is not nil")
+}
+
+name.someDo {
+    print("name has a value \($0)")
+}
 ```
 
 #### isNilOrEmpty & nilIfEmpty

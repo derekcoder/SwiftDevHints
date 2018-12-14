@@ -39,6 +39,24 @@ public extension Optional {
         return (first, second, third)
     }
     
+    func someDo(_ closure: () throws -> ()) rethrows {
+        if isSome {
+            try closure()
+        }
+    }
+    
+    func someDo(_ closure: (Wrapped) throws -> ()) rethrows {
+        if let value = self {
+            try closure(value)
+        }
+    }
+    
+    func noneDo(_ closure: () throws -> ()) rethrows {
+        if isNone {
+            try closure()
+        }
+    }
+    
     func orThrow(_ errorExpression: @autoclosure () -> Error) throws -> Wrapped {
         guard let value = self else {
             throw errorExpression()
