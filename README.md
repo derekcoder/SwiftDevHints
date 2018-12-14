@@ -337,7 +337,7 @@ let formatedDouble = aDouble.format(".3") // "3.142"
 ## References
 
 - https://github.com/Luur/SwiftTips#1-safe-way-to-return-element-at-specified-index
-- https://github.com/onevcat/Kingfisher/blob/master/Sources/String%2BMD5.swift
+- https://github.com/onevcat/Kingfisher
 - https://github.com/AliSoftware/Reusable
 - https://github.com/andyyhope/nemo
 
