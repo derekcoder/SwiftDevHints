@@ -39,6 +39,7 @@
 		654982581F19D1FB008EE146 /* SwiftDevHints.h in Headers */ = {isa = PBXBuildFile; fileRef = 6549824A1F19D1FA008EE146 /* SwiftDevHints.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65503A8F207C5FC900FF0955 /* CollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65503A8E207C5FC900FF0955 /* CollectionExtensions.swift */; };
 		65503A91207C629400FF0955 /* CollectionExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65503A90207C629400FF0955 /* CollectionExtensionsTests.swift */; };
+		65648FDF21FEDF7900BC53E1 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65648FDE21FEDF7900BC53E1 /* Sound.swift */; };
 		656D51052061FE6700EE0B73 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656D51042061FE6700EE0B73 /* DateExtensionTests.swift */; };
 		6574740C20DCCF9700007578 /* NSPredicateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6574740B20DCCF9700007578 /* NSPredicateExtension.swift */; };
 		6574741020DCD00400007578 /* NSPredicateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6574740F20DCD00400007578 /* NSPredicateExtensionTests.swift */; };
@@ -139,6 +140,7 @@
 		654982571F19D1FB008EE146 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65503A8E207C5FC900FF0955 /* CollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensions.swift; sourceTree = "<group>"; };
 		65503A90207C629400FF0955 /* CollectionExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionExtensionsTests.swift; sourceTree = "<group>"; };
+		65648FDE21FEDF7900BC53E1 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		656D51042061FE6700EE0B73 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 		6574740B20DCCF9700007578 /* NSPredicateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPredicateExtension.swift; sourceTree = "<group>"; };
 		6574740F20DCD00400007578 /* NSPredicateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPredicateExtensionTests.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 				65073C7F1FE8EB1000DD01B7 /* CountableRangeExtension.swift */,
 				659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */,
 				6504FB3221C0BDED006DDA2E /* OptionalExtensions.swift */,
+				65648FDE21FEDF7900BC53E1 /* Sound.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				6504FB2F21C0AE48006DDA2E /* NibLoadable.swift in Sources */,
 				65073C891FE8EB1000DD01B7 /* ArrayExtensions.swift in Sources */,
 				65073C871FE8EB1000DD01B7 /* Log.swift in Sources */,
+				65648FDF21FEDF7900BC53E1 /* Sound.swift in Sources */,
 				65073C951FE8EB2300DD01B7 /* UIViewExtensions.swift in Sources */,
 				65CB5DB52022B5950020C0B8 /* NotificationDescriptor.swift in Sources */,
 				65073CA71FE8EB3900DD01B7 /* NSNumberExtensions.swift in Sources */,
