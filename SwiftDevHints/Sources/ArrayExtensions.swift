@@ -8,12 +8,21 @@
 
 import Foundation
 
-extension Array {
-    public func accumulate<Result>(_ initialResult: Result, _ nextPartialResult: (Result, Element) throws -> Result) rethrows -> [Result] {
+public extension Array {
+    func accumulate<Result>(_ initialResult: Result, _ nextPartialResult: (Result, Element) throws -> Result) rethrows -> [Result] {
         var accumulator = initialResult
         return try map { next in
             accumulator = try nextPartialResult(accumulator, next)
             return accumulator
         }
+    }
+    
+    func index(of e: Element, condition: (Element, Element) throws -> (Bool)) rethrows -> Int? {
+        for (idx, item) in self.enumerated() {
+            if try condition(item, e) {
+                return idx
+            }
+        }
+        return nil
     }
 }
