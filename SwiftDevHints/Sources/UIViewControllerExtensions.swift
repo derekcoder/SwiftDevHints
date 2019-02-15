@@ -14,14 +14,14 @@ public enum AlertControllerStyle {
     case actionSheetFromBarButtonItem(UIBarButtonItem)
 }
 
-extension UIViewController {    
-    public func alertController(title: String? = nil, message: String? = nil, actions: [UIAlertAction], style: UIAlertController.Style) -> UIAlertController {
+public extension UIViewController {
+    func alertController(title: String? = nil, message: String? = nil, actions: [UIAlertAction], style: UIAlertController.Style) -> UIAlertController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: style)
         actions.forEach { alert.addAction($0) }
         return alert
     }
     
-    public func showAlert(title: String? = nil, message: String? = nil, actions: [UIAlertAction], style: AlertControllerStyle) {
+    func showAlert(title: String? = nil, message: String? = nil, actions: [UIAlertAction], style: AlertControllerStyle) {
         switch style {
         case .alert:
             let alert = alertController(title: title, message: message, actions: actions, style: .alert)
@@ -42,3 +42,27 @@ extension UIViewController {
         }
     }
 }
+
+public extension UIViewController {
+    func removeChildVC(_ child: UIViewController?) {
+        child?.willMove(toParent: nil)
+        child?.view.removeFromSuperview()
+        child?.removeFromParent()
+    }
+    
+    func addChildVC(_ child: UIViewController?, containerView: UIView) {
+        guard let child = child else { return }
+        addChild(child)
+        containerView.addSubview(child.view)
+        child.didMove(toParent: self)
+        
+        child.view.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            child.view.topAnchor.constraint(equalTo: containerView.topAnchor),
+            child.view.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
+            child.view.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
+            child.view.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+        ])
+    }
+}
+
