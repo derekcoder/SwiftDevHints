@@ -7,7 +7,7 @@
 ## Requirements
 
 - iOS 10.0+
-- Swift 4.2
+- Swift 4.2+
 
 ## Installation
 
@@ -20,113 +20,35 @@ pod 'SwiftDevHints'
 
 ## Usage
 
-<details>
-<summary>String Extensions</summary>
-    <ul>
-        <li><a href = "#the-safe-way-to-return-string-slice"><code>The safe way to return string slice</code></a></li>
-        <li><a href = "#md5"><code>MD5</code></a></li>
-        <li><a href = "#capitalize-first-letter"><code>Capitalize first letter</code></a></li>
-        <li><a href = "#get-int-value-form-hex-string"><code>Get int value form hex string</code></a></li>
-        <li><a href = "#nilifempty"><code>nilIfEmpty</code></a></li>
-    </url>
-</details>
+* String Extensions
+* Collection Optional Extensions
+* Optional Extensions
+* Collection Extensions
+* UITableView Extensions
+* UserDefaults Extensions
+* UIColor Extensions
+* Bundle Extensions
+* Date Extensions
+* Others
 
-<details>
-<summary>Collection Extensions</summary>
-    <ul>
-        <li><a href = "#the-safe-way-to-return-element-at-specified-index"><code>The safe way to return element at specified index</code></a></li>
-    </url>
-</details>
+### String Extensions
 
-<details>
-<summary>Optional Extensions</summary>
-    <ul>
-        <li><a href = "#isnone--issome"><code>isNone & isSome</code></a></li>
-        <li><a href = "#noneDo--someDo"><code>noneDo & someDo</code></a></li>
-        <li><a href = "#isnilorempty--nilifempty"><code>isNilOrEmpty & nilIfEmpty</code></a></li>
-    </url>
-</details>
-
-<details>
-<summary>UITableView Extensions</summary>
-    <ul>
-        <li><a href = "#register--dequeue-uitableviewcell"><code>Register & Dequeue UITableViewCell</code></a></li>
-    </url>
-</details>
-
-<details>
-<summary>UICollectionView Extensions</summary>
-    <ul>
-        <li><a href = "#register--dequeue-uicollectionview"><code>Register & Dequeue UICollectionViewCell</code></a></li>
-    </url>
-</details>
-
-<details>
-<summary>UserDefaults Extensions</summary>
-    <ul>
-        <li><a href = "#a-safe-way-to-use-userdefaults"><code>A safe way to use UserDefaults</code></a></li>
-    </url>
-</details> 
-
-<details>
-<summary>UIColor Extensions</summary>
-    <ul>
-        <li><a href = "#initialize-uicolor-with-rgb-based-255"><code>Initialize UIColor with RGB based 255</code></a></li>
-        <li><a href = "#initialize-uicolor-with-rgb-hex-string"><code>Initialize UIColor with RGB Hex String</code></a></li>
-        <li><a href = "#get-rgba-from-a-color"><code>Get RGB(A) from a color</code></a></li>
-    </url>
-</details>
-
-<details>
-<summary>Bundle Extensions</summary>
-    <ul>
-        <li><a href = "#convenient-methods-to-access-infoplist"><code>Convenient methods to access Info.plist</code></a></li>
-    </url>
-</details>
-
-<details>
-<summary>Date Extensions</summary>
-    <ul>
-        <li><a href = "#some-convenient-methods"><code>Some convenient methods</code></a></li>
-    </url>
-</details>
-
-<details>
-<summary>Others</summary>
-    <ul>
-        <li><a href = "#customized-log-function"><code>Customized Log function</code></a></li>
-        <li><a href = "#format-int-and-double"><code>Format Int and Double</code></a></li>
-    </url>
-</details>
-
-## String Extensions
-
-#### The safe way to return string slice
+The safe way to return string slice
 ```swift
 let string = "Hello, Swift!"
-string[safe: 0..<5] // "Hello"
+string[safe: 0..<5]  // "Hello"
+string[safe: 0...4]  // "Hello"
 string[safe: 0..<14] // nil
-
-string[safe: 0...4] // "Hello"
-string[safe: 0...13] // nil
 ```
 
-#### MD5
+`md5`
+Converted to MD5
 ```swift
 "hello".md5 // 5d41402abc4b2a76b9719d911017c592
 ```
 
-#### Capitalize first letter
-```swift
-var string = "hello world"
-print(string.capitalizingFirstLetter())  // "Hello world"
-print(string)  // "hello world"
-
-string.capitalizeFirstLetter()
-print(string)  // "Hello world"
-```
-
-#### Get int value form hex string
+`intBaseHex`
+Get int value form hex string
 ```swift
 print("FF".intBaseHex)  // 255
 print("Ff".intBaseHex)  // 255
@@ -136,16 +58,29 @@ print("0xff".intBaseHex)  // 255
 print("fg".intBaseHex)  // nil
 ```
 
-#### nilIfEmpty
+`trimmed()`
 ```swift
-var string: String? = nil
-string.nilIfEmpty // nil
-string = ""
-string.nilIfEmpty // nil
-string = "hello"
-string.nifIfEmpty // "hello"
+" hello world \n\t".trimmed()  // "hello world"
+```
 
-["Derek", "", "John", "", "Tony", nil].compactMap { $0.nilIfEmpty } // ["Derek", "John", "Tony"]
+`trimming()`
+```swift
+var string = " hello world \n\t"
+string.trimming()
+string  // "hello world"
+```
+
+`isBlank`
+```swift
+" \n\t ".isBlank  // true
+```
+
+`nilIfEmpty`
+```swift
+"".nilIfEmpty  // nil
+
+let result = ["Derek", "", "John", "", "Tony", nil].compactMap { $0.nilIfEmpty } 
+result  // ["Derek", "John", "Tony"]
 
 guard let text = textField.text.nilIfEmpty else {
     // handle for nil or empty
@@ -153,31 +88,29 @@ guard let text = textField.text.nilIfEmpty else {
 }
 ```
 
-## Collection Extensions
+### Collection Optional Extensions
 
-#### The safe way to return element at specified index
+`isNilOrEmpty`
 ```swift
-let animals = ["Zebra", "Giraffe", "Tiger"]
-let zebra = animals[safe: 0] // "Zebra"
-let lion = animals[safe: 3] // nil
+"".isNilOrEmpty  // true
+([] as? [String]).isNilOrEmpty  // true
 ```
 
-## Optional Extensions
+### Optional Extensions
 
-#### isNone & isSome
+`isNone` & `isSome`
 ```swift
-var name: String? = "derekcoder"
-name.isNone  // false
-name.isSome  // true
+"hello".isNone  // false
+"hello".isSome  // true
 
-name = nil
+var name: String? = nil
 name.isNone  // true
 name.isSome  // false
 ```
 
-#### noneDo & someDo
+`noneDo` & `someDo`
 ```swift
-var name: String? = "derekcoder"
+var name: String? = nil
 
 name.noneDo {
     print("name is nil")
@@ -192,19 +125,18 @@ name.someDo {
 }
 ```
 
-#### isNilOrEmpty & nilIfEmpty
-```swift
-let hasText = !textField.text.isNilOrEmpty
+### Collection Extensions
 
-guard let text = textField.text.nilIfEmpty else {
-    return
-}
-// Do something with text
+The safe way to return element at specified index
+```swift
+let animals = ["Zebra", "Giraffe", "Tiger"]
+let zebra = animals[safe: 0] // "Zebra"
+let lion = animals[safe: 3] // nil
 ```
 
-## UITableView Extensions
+### UITableView Extensions
 
-#### Register & Dequeue UITableViewCell
+Register & Dequeue UITableViewCell
 ```swift
 class UserCell: UITableViewCell, NibReusable { }
 
@@ -212,9 +144,9 @@ tableView.register(UserCell.self)
 let cell: UserCell = tableView.dequeueReusableCell(for: indexPath)
 ```
 
-## UICollectionView Extensions
+### UICollectionView Extensions
 
-#### Register & Dequeue UICollectionViewCell
+Register & Dequeue UICollectionViewCell
 ```swift
 class PhotoCell: UICollectionViewCell, NibReusable { }
 
@@ -222,9 +154,9 @@ collectionView.register(PhotoCell.self)
 let cell: PhotoCell = collectionView.dequeueReusableCell(for: indexPath)
 ```
 
-## UserDefaults Extensions
+### UserDefaults Extensions
 
-#### A safe way to use UserDefaults
+A safe way to use UserDefaults
 ```swift
 extension UserDefaults.Name {
 static let username: UserDefaults.Name = "SwiftDevHints-Demo.Username"
@@ -243,14 +175,14 @@ let username = UserDefaults.standard.string(forName: .username)
 let password = UserDefaults.standard.string(forName: .password)
 ```
 
-## UIColor Extensions
+### UIColor Extensions
 
-#### Initialize UIColor with RGB based 255
+Initialize UIColor with RGB based 255
 ```swift
 let color = UIColor(redIn255: 255, greenIn255: 32, blueIn255: 171)
 ```
 
-#### Initialize UIColor with RGB Hex String
+Initialize UIColor with RGB Hex String
 ```swift
 let color = UIColor(hex: "FF20AB") 
 // let color = UIColor(hex: "ff20ab") 
@@ -258,7 +190,7 @@ let color = UIColor(hex: "FF20AB")
 // let color = UIColor(hex: "#ff20ab")
 ```
 
-#### Get RGB(A) from a color
+Get RGB(A) from a color
 ```swift
 let rgba = color.rgba // (red 1.0, green 0.125490196078431, blue 0.670588235294118, alpha 1.0)
 let intRGBA = color.intRGBA // (red 255, green 32, blue 171, alpha 100)
@@ -266,9 +198,9 @@ let hexRGB = hexRGB(prefix: "#") // "#FF20AB"
 // let hexRGB = hexRGB() // "FF20AB"
 ```
 
-## Bundle Extensions
+### Bundle Extensions
 
-#### Convenient methods to access Info.plist
+Convenient methods to access Info.plist
 ```swift
 let bundle = Bundle.main
 
@@ -289,9 +221,9 @@ case packageType = "CFBundlePackageType"
 }
 ```
 
-## Date Extensions
+### Date Extensions
 
-#### Some convenient methods
+Some convenient methods
 ```swift
 let today = Date()                   // December 17, 2017 at 5:54:46 PM GMT+8
 let startOfToday = today.startOfDay  // December 17, 2017 at 12:00:00 AM GMT+8
@@ -310,9 +242,9 @@ let last3Days = today.lastDays(withCount: 3, includingToday: false)
 let next3Days = today.nextDays(withCount: 3, includingToday: true)
 ```
 
-## Others
+### Others
 
-#### Customized Log function
+Customized Log function
 
 ```swift
 // PrintHelperViewController.swift
@@ -323,7 +255,7 @@ func testPrintLog() {
 // Console：PrintHelperViewController.testPrintLog():20 DEBUG -> Hello, World!
 ```
 
-#### Format Int and Double
+Format Int and Double
 ```swift
 let aInt = 8
 let formatedInt1 = aInt.format("03") // "008"
