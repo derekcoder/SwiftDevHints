@@ -10,7 +10,6 @@
 		6504FB2F21C0AE48006DDA2E /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504FB2E21C0AE48006DDA2E /* NibLoadable.swift */; };
 		6504FB3121C0B06F006DDA2E /* UICollectionView+NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504FB3021C0B06F006DDA2E /* UICollectionView+NibReusable.swift */; };
 		6504FB3321C0BDED006DDA2E /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6504FB3221C0BDED006DDA2E /* OptionalExtensions.swift */; };
-		65073C801FE8EB1000DD01B7 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C741FE8EB1000DD01B7 /* String+MD5.swift */; };
 		65073C811FE8EB1000DD01B7 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C751FE8EB1000DD01B7 /* StringExtensions.swift */; };
 		65073C821FE8EB1000DD01B7 /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C761FE8EB1000DD01B7 /* FloatExtensions.swift */; };
 		65073C831FE8EB1000DD01B7 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073C771FE8EB1000DD01B7 /* DateExtensions.swift */; };
@@ -99,7 +98,6 @@
 		6504FB2E21C0AE48006DDA2E /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		6504FB3021C0B06F006DDA2E /* UICollectionView+NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+NibReusable.swift"; sourceTree = "<group>"; };
 		6504FB3221C0BDED006DDA2E /* OptionalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtensions.swift; sourceTree = "<group>"; };
-		65073C741FE8EB1000DD01B7 /* String+MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+MD5.swift"; sourceTree = "<group>"; };
 		65073C751FE8EB1000DD01B7 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
 		65073C761FE8EB1000DD01B7 /* FloatExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatExtensions.swift; sourceTree = "<group>"; };
 		65073C771FE8EB1000DD01B7 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
@@ -196,7 +194,6 @@
 			children = (
 				65503A8E207C5FC900FF0955 /* CollectionExtensions.swift */,
 				65073C751FE8EB1000DD01B7 /* StringExtensions.swift */,
-				65073C741FE8EB1000DD01B7 /* String+MD5.swift */,
 				65073CA61FE8EB3900DD01B7 /* UserDefaultsExtensions.swift */,
 				65073C8D1FE8EB2200DD01B7 /* UIColorExtensions.swift */,
 				65073C7B1FE8EB1000DD01B7 /* Log.swift */,
@@ -480,7 +477,6 @@
 				65073C831FE8EB1000DD01B7 /* DateExtensions.swift in Sources */,
 				65073CA91FE8EB3900DD01B7 /* UserDefaultsExtensions.swift in Sources */,
 				65073C851FE8EB1000DD01B7 /* IntExtensions.swift in Sources */,
-				65073C801FE8EB1000DD01B7 /* String+MD5.swift in Sources */,
 				659095CC1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift in Sources */,
 				65073C821FE8EB1000DD01B7 /* FloatExtensions.swift in Sources */,
 				65073C991FE8EB2300DD01B7 /* UIImageExtensions.swift in Sources */,
