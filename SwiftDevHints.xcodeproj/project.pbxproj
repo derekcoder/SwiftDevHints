@@ -30,7 +30,6 @@
 		65073CA71FE8EB3900DD01B7 /* NSNumberExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073CA41FE8EB3900DD01B7 /* NSNumberExtensions.swift */; };
 		65073CA91FE8EB3900DD01B7 /* UserDefaultsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65073CA61FE8EB3900DD01B7 /* UserDefaultsExtensions.swift */; };
 		65248CBD1F1D02B200E00872 /* IntExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65248CBC1F1D02B200E00872 /* IntExtensionsTests.swift */; };
-		65248CBF1F1D031500E00872 /* UITableViewCellExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65248CBE1F1D031500E00872 /* UITableViewCellExtensionsTests.swift */; };
 		65248CC71F1D065700E00872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65248CC61F1D065700E00872 /* AppDelegate.swift */; };
 		65248CCC1F1D065700E00872 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65248CCA1F1D065700E00872 /* Main.storyboard */; };
 		65248CCE1F1D065700E00872 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65248CCD1F1D065700E00872 /* Assets.xcassets */; };
@@ -47,28 +46,21 @@
 		659095CC1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */; };
 		65C6FDDA214F55A3006E4FC1 /* UITableView+NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C6FDD9214F55A3006E4FC1 /* UITableView+NibReusable.swift */; };
 		65CB5DB52022B5950020C0B8 /* NotificationDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB5DB42022B5950020C0B8 /* NotificationDescriptor.swift */; };
-		65CB5DB72022BB3C0020C0B8 /* NotificationDescriptorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB5DB62022BB3C0020C0B8 /* NotificationDescriptorViewController.swift */; };
 		E34DA5671F66A3F5009B30E0 /* OptionalExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */; };
 		E3649B5E1F3032DC00236794 /* DoubleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */; };
-		E3649B601F30367D00236794 /* DoubleExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */; };
 		E36536661F305E6400BF5021 /* NSNumberExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */; };
 		E36536681F30601900BF5021 /* DictionaryExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36536671F30601900BF5021 /* DictionaryExtensionsTests.swift */; };
 		E36A76E91F34216600812ED4 /* SwiftDevHints.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; };
 		E37808C61F95BB6C00E4DB1F /* ArrayExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37808C51F95BB6C00E4DB1F /* ArrayExtensionsTests.swift */; };
 		E37808CC1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37808CB1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift */; };
-		E38085F71F306C7C007D4004 /* DictionaryExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */; };
-		E392194B1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E392194A1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift */; };
 		E39BC4551F30909F006AB7D1 /* UserDefaultsExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E39BC4541F30909F006AB7D1 /* UserDefaultsExtensionsTests.swift */; };
 		E3A0BEEF1F469A4400BB8570 /* UIColorExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A0BEEE1F469A4400BB8570 /* UIColorExtensionsTests.swift */; };
-		E3A2C85F1F2F31A1007B73CE /* PrintHelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */; };
 		E3A2C8611F2F3331007B73CE /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E3A2C8601F2F3330007B73CE /* README.md */; };
 		E3A2C8631F2F36A8007B73CE /* SwiftDevHints.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */; };
 		E3D01ED91F459F6D0036FDCA /* StringExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D01ED81F459F6D0036FDCA /* StringExtensionsTests.swift */; };
 		E3D01EDD1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D01EDC1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift */; };
 		E3D43E1E1F6BA5F500275992 /* SwiftDevHints.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 654982471F19D1FA008EE146 /* SwiftDevHints.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E3D43E251F6BB4A200275992 /* UIImageFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D43E241F6BB4A200275992 /* UIImageFilterViewController.swift */; };
 		E3D43E271F6BB70200275992 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3D43E261F6BB70200275992 /* Images.xcassets */; };
-		E3E586FA1F32CBDA003855EE /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3E586F91F32CBDA003855EE /* DemoTableViewController.swift */; };
 		E3FAACC21F94BDD600507E53 /* BundleExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3FAACC11F94BDD600507E53 /* BundleExtensionsTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -127,7 +119,6 @@
 		65073CA41FE8EB3900DD01B7 /* NSNumberExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSNumberExtensions.swift; sourceTree = "<group>"; };
 		65073CA61FE8EB3900DD01B7 /* UserDefaultsExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensions.swift; sourceTree = "<group>"; };
 		65248CBC1F1D02B200E00872 /* IntExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensionsTests.swift; sourceTree = "<group>"; };
-		65248CBE1F1D031500E00872 /* UITableViewCellExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtensionsTests.swift; sourceTree = "<group>"; };
 		65248CC41F1D065700E00872 /* SwiftDevHints-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftDevHints-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		65248CC61F1D065700E00872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		65248CCB1F1D065700E00872 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -149,26 +140,19 @@
 		659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableClosedRangeExtension.swift; sourceTree = "<group>"; };
 		65C6FDD9214F55A3006E4FC1 /* UITableView+NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+NibReusable.swift"; sourceTree = "<group>"; };
 		65CB5DB42022B5950020C0B8 /* NotificationDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDescriptor.swift; sourceTree = "<group>"; };
-		65CB5DB62022BB3C0020C0B8 /* NotificationDescriptorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDescriptorViewController.swift; sourceTree = "<group>"; };
 		E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensionsTests.swift; sourceTree = "<group>"; };
 		E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsTests.swift; sourceTree = "<group>"; };
-		E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensionsViewController.swift; sourceTree = "<group>"; };
 		E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNumberExtensionsTests.swift; sourceTree = "<group>"; };
 		E36536671F30601900BF5021 /* DictionaryExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsTests.swift; sourceTree = "<group>"; };
 		E37808C51F95BB6C00E4DB1F /* ArrayExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtensionsTests.swift; sourceTree = "<group>"; };
 		E37808CB1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceExtensionsTests.swift; sourceTree = "<group>"; };
-		E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryExtensionsViewController.swift; sourceTree = "<group>"; };
-		E392194A1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensionsViewController.swift; sourceTree = "<group>"; };
 		E39BC4541F30909F006AB7D1 /* UserDefaultsExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtensionsTests.swift; sourceTree = "<group>"; };
 		E3A0BEEE1F469A4400BB8570 /* UIColorExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensionsTests.swift; sourceTree = "<group>"; };
-		E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrintHelperViewController.swift; sourceTree = "<group>"; };
 		E3A2C8601F2F3330007B73CE /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E3A2C8621F2F36A8007B73CE /* SwiftDevHints.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftDevHints.podspec; sourceTree = "<group>"; };
 		E3D01ED81F459F6D0036FDCA /* StringExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensionsTests.swift; sourceTree = "<group>"; };
 		E3D01EDC1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableRangeExtensionsTests.swift; sourceTree = "<group>"; };
-		E3D43E241F6BB4A200275992 /* UIImageFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageFilterViewController.swift; sourceTree = "<group>"; };
 		E3D43E261F6BB70200275992 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Sources/Images.xcassets; sourceTree = "<group>"; };
-		E3E586F91F32CBDA003855EE /* DemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
 		E3FAACC11F94BDD600507E53 /* BundleExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensionsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -247,13 +231,6 @@
 			isa = PBXGroup;
 			children = (
 				65248CC61F1D065700E00872 /* AppDelegate.swift */,
-				E3E586F91F32CBDA003855EE /* DemoTableViewController.swift */,
-				E3649B5F1F30367D00236794 /* DoubleExtensionsViewController.swift */,
-				E38085F61F306C7C007D4004 /* DictionaryExtensionsViewController.swift */,
-				E392194A1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift */,
-				E3A2C85E1F2F31A1007B73CE /* PrintHelperViewController.swift */,
-				E3D43E241F6BB4A200275992 /* UIImageFilterViewController.swift */,
-				65CB5DB62022BB3C0020C0B8 /* NotificationDescriptorViewController.swift */,
 				65248CCA1F1D065700E00872 /* Main.storyboard */,
 				65248CCD1F1D065700E00872 /* Assets.xcassets */,
 				65248CCF1F1D065700E00872 /* LaunchScreen.storyboard */,
@@ -309,7 +286,6 @@
 				E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */,
 				65248CBC1F1D02B200E00872 /* IntExtensionsTests.swift */,
 				E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */,
-				65248CBE1F1D031500E00872 /* UITableViewCellExtensionsTests.swift */,
 				E3FAACC11F94BDD600507E53 /* BundleExtensionsTests.swift */,
 				E37808C51F95BB6C00E4DB1F /* ArrayExtensionsTests.swift */,
 				E37808CB1F95D2FF00E4DB1F /* SequenceExtensionsTests.swift */,
@@ -418,7 +394,7 @@
 			};
 			buildConfigurationList = 654982411F19D1FA008EE146 /* Build configuration list for PBXProject "SwiftDevHints" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -471,14 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3A2C85F1F2F31A1007B73CE /* PrintHelperViewController.swift in Sources */,
-				E38085F71F306C7C007D4004 /* DictionaryExtensionsViewController.swift in Sources */,
-				65CB5DB72022BB3C0020C0B8 /* NotificationDescriptorViewController.swift in Sources */,
-				E3649B601F30367D00236794 /* DoubleExtensionsViewController.swift in Sources */,
-				E392194B1F31625300B6EE00 /* UserDefaultsExtensionsViewController.swift in Sources */,
 				65248CC71F1D065700E00872 /* AppDelegate.swift in Sources */,
-				E3D43E251F6BB4A200275992 /* UIImageFilterViewController.swift in Sources */,
-				E3E586FA1F32CBDA003855EE /* DemoTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -535,7 +504,6 @@
 				65503A91207C629400FF0955 /* CollectionExtensionsTests.swift in Sources */,
 				E3A0BEEF1F469A4400BB8570 /* UIColorExtensionsTests.swift in Sources */,
 				E36536681F30601900BF5021 /* DictionaryExtensionsTests.swift in Sources */,
-				65248CBF1F1D031500E00872 /* UITableViewCellExtensionsTests.swift in Sources */,
 				656D51052061FE6700EE0B73 /* DateExtensionTests.swift in Sources */,
 				E3649B5E1F3032DC00236794 /* DoubleExtensionsTests.swift in Sources */,
 			);
@@ -587,7 +555,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.derekcoder.SwiftDevHints-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -602,7 +570,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.derekcoder.SwiftDevHints-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -741,7 +709,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -762,7 +730,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.derekcoder.SwiftDevHints;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -775,7 +743,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.derekcoder.SwiftDevHintsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -788,7 +756,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.derekcoder.SwiftDevHintsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

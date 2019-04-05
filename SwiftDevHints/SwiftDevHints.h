@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import <CommonCrypto/CommonCrypto.h>
+
 //! Project version number for SwiftDevHints.
 FOUNDATION_EXPORT double SwiftDevHintsVersionNumber;
 

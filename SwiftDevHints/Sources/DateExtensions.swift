@@ -9,7 +9,7 @@
 import Foundation
 
 public extension Date {
-    public func next(of component: Calendar.Component) -> Date? {
+    func next(of component: Calendar.Component) -> Date? {
         let calendar = Calendar.current
         switch component {
         case .year, .month, .day, .hour, .minute, .second:
@@ -20,7 +20,7 @@ public extension Date {
         }
     }
     
-    public func previous(of component: Calendar.Component) -> Date? {
+    func previous(of component: Calendar.Component) -> Date? {
         let calendar = Calendar.current
         switch component {
         case .year, .month, .day, .hour, .minute, .second:
@@ -31,7 +31,7 @@ public extension Date {
         }
     }
 
-    public func beginning(of component: Calendar.Component) -> Date? {
+    func beginning(of component: Calendar.Component) -> Date? {
         let components: Set<Calendar.Component>
         switch component {
         case .year: components = [.year]
@@ -48,7 +48,7 @@ public extension Date {
         return Calendar.current.date(from: Calendar.current.dateComponents(components, from: self))
     }
     
-    public func end(of component: Calendar.Component) -> Date? {
+    func end(of component: Calendar.Component) -> Date? {
         switch component {
         case .year, .month, .day, .weekOfYear, .weekOfMonth, .hour, .minute, .second:
             let beginningOfNext = self.next(of: component)!.beginning(of: component)!
@@ -62,7 +62,7 @@ public extension Date {
     ///     let today = Date() // December 17, 2017 at 5:54:46 PM GMT+8
     ///     let startOfToday = today.startOfDay // December 17, 2017 at 12:00:00 AM GMT+8
     ///
-    public var startOfDay: Date {
+    var startOfDay: Date {
         return NSCalendar.current.startOfDay(for: self)
     }
     
@@ -71,7 +71,7 @@ public extension Date {
     ///     let today = Date() // December 17, 2017 at 5:54:46 PM GMT+8
     ///     let endOfToday = today.endOfDay // December 17, 2017 at 11:59:59 PM GMT+8
     ///
-    public var endOfDay: Date {
+    var endOfDay: Date {
         return self.nextDay.startOfDay.addingTimeInterval(-1)
     }
     
@@ -80,7 +80,7 @@ public extension Date {
     ///     let today = Date() // December 17, 2017 at 5:54:46 PM GMT+8
     ///     let startOfToday = today.startOfDay // December 18, 2017 at 5:54:46 PM GMT+8
     ///
-    public var nextDay: Date {
+    var nextDay: Date {
         return NSCalendar.current.date(byAdding: .day, value: 1, to: self)!
     }
     
@@ -89,7 +89,7 @@ public extension Date {
     ///     let today = Date() // December 17, 2017 at 5:54:46 PM GMT+8
     ///     let startOfToday = today.startOfDay // December 16, 2017 at 5:54:46 PM GMT+8
     ///
-    public var previousDay: Date {
+    var previousDay: Date {
         return NSCalendar.current.date(byAdding: .day, value: -1, to: self)!
     }
     
@@ -101,7 +101,7 @@ public extension Date {
     ///     // December 16, 2017 at 5:54:46 PM GMT+8
     ///     let last3Days = today.lastDays(withCount: 3, includingToday: false)
     ///
-    public func lastDays(withCount count: Int, includingToday: Bool = true) -> [Date] {
+    func lastDays(withCount count: Int, includingToday: Bool = true) -> [Date] {
         let calendar = NSCalendar.current
         
         var days = [Date]()
@@ -124,7 +124,7 @@ public extension Date {
     ///     // December 19, 2017 at 5:54:46 PM GMT+8
     ///     let next3Days = today.nextDays(withCount: 3, includingToday: true)
     ///
-    public func nextDays(withCount count: Int, includingToday: Bool = true) -> [Date] {
+    func nextDays(withCount count: Int, includingToday: Bool = true) -> [Date] {
         let calendar = NSCalendar.current
         
         var days = [Date]()
@@ -139,75 +139,75 @@ public extension Date {
         return days
     }
     
-    public func adding(_ comp: Calendar.Component, value: Int) -> Date {
+    func adding(_ comp: Calendar.Component, value: Int) -> Date {
         return Calendar.current.date(byAdding: comp, value: value, to: self)!
     }
     
-    public mutating func add(_ comp: Calendar.Component, value: Int) {
+    mutating func add(_ comp: Calendar.Component, value: Int) {
         self = adding(comp, value: value)
     }
     
-    public func isInSameYear(date: Date) -> Bool {
+    func isInSameYear(date: Date) -> Bool {
         return Calendar.current.isDate(self, equalTo: date, toGranularity: .year)
     }
     
-    public func isInSameMonth(date: Date) -> Bool {
+    func isInSameMonth(date: Date) -> Bool {
         return Calendar.current.isDate(self, equalTo: date, toGranularity: .month)
     }
     
-    public func isInSameWeek(date: Date) -> Bool {
+    func isInSameWeek(date: Date) -> Bool {
         return Calendar.current.isDate(self, equalTo: date, toGranularity: .weekOfYear)
     }
     
-    public func isInSameDay(date: Date) -> Bool {
+    func isInSameDay(date: Date) -> Bool {
         return Calendar.current.isDate(self, inSameDayAs: date)
     }
     
-    public var isToday: Bool {
+    var isToday: Bool {
         return Calendar.current.isDateInToday(self)
     }
     
-    public var isTomorrow: Bool {
+    var isTomorrow: Bool {
         return Calendar.current.isDateInTomorrow(self)
     }
     
-    public var isYesterday: Bool {
+    var isYesterday: Bool {
         return Calendar.current.isDateInYesterday(self)
     }
     
-    public var isWeekend: Bool {
+    var isWeekend: Bool {
         return Calendar.current.isDateInWeekend(self)
     }
     
-    public var isWorkday: Bool {
+    var isWorkday: Bool {
         return !self.isWeekend
     }
     
-    public var isThisWeek: Bool {
+    var isThisWeek: Bool {
         return self.isInSameWeek(date: Date())
     }
     
-    public var isThisMonth: Bool {
+    var isThisMonth: Bool {
         return self.isInSameMonth(date: Date())
     }
     
-    public var isThisYear: Bool {
+    var isThisYear: Bool {
         return self.isInSameYear(date: Date())
     }
     
-    public var isFuture: Bool {
+    var isFuture: Bool {
         return Date() < self
     }
     
-    public var isPast: Bool {
+    var isPast: Bool {
         return self < Date()
     }
     
-    public var era: Int {
+    var era: Int {
         return Calendar.current.component(.era, from: self)
     }
     
-    public var year: Int {
+    var year: Int {
         get { return Calendar.current.component(.year, from: self) }
         set {
             guard newValue > 0 else { return }
@@ -218,11 +218,11 @@ public extension Date {
         }
     }
     
-    public var weekOfYear: Int {
+    var weekOfYear: Int {
         return Calendar.current.component(.weekOfYear, from: self)
     }
     
-    public var month: Int {
+    var month: Int {
         get { return Calendar.current.component(.month, from: self) }
         set {
             let calendar = Calendar.current
@@ -235,15 +235,15 @@ public extension Date {
         }
     }
     
-    public var weekday: Int {
+    var weekday: Int {
         return Calendar.current.component(.weekday, from: self)
     }
 
-    public var weekOfMonth: Int {
+    var weekOfMonth: Int {
         return Calendar.current.component(.weekOfMonth, from: self)
     }
     
-    public var day: Int {
+    var day: Int {
         get { return Calendar.current.component(.day, from: self) }
         set {
             let calendar = Calendar.current
@@ -256,7 +256,7 @@ public extension Date {
         }
     }
     
-    public var hour: Int {
+    var hour: Int {
         get { return Calendar.current.component(.hour, from: self) }
         set {
             let calendar = Calendar.current
@@ -269,7 +269,7 @@ public extension Date {
         }
     }
     
-    public var minute: Int {
+    var minute: Int {
         get { return Calendar.current.component(.minute, from: self) }
         set {
             let calendar = Calendar.current
@@ -282,7 +282,7 @@ public extension Date {
         }
     }
     
-    public var second: Int {
+    var second: Int {
         get { return Calendar.current.component(.second, from: self) }
         set {
             let calendar = Calendar.current
@@ -295,7 +295,7 @@ public extension Date {
         }
     }
     
-    public var nanosecond: Int {
+    var nanosecond: Int {
         get { return Calendar.current.component(.nanosecond, from: self) }
         set {
             let calendar = Calendar.current
@@ -308,16 +308,16 @@ public extension Date {
         }
     }
     
-    public init?(calendar: Calendar? = Calendar.current,
-                 timeZone: TimeZone = TimeZone.current,
-                 era: Int? = Date().era,
-                 year: Int? = Date().year,
-                 month: Int? = Date().month,
-                 day: Int? = Date().day,
-                 hour: Int? = Date().hour,
-                 minute: Int? = Date().minute,
-                 second: Int? = Date().second,
-                 nanosecond: Int? = Date().nanosecond) {
+    init?(calendar: Calendar? = Calendar.current,
+          timeZone: TimeZone = TimeZone.current,
+          era: Int? = Date().era,
+          year: Int? = Date().year,
+          month: Int? = Date().month,
+          day: Int? = Date().day,
+          hour: Int? = Date().hour,
+          minute: Int? = Date().minute,
+          second: Int? = Date().second,
+          nanosecond: Int? = Date().nanosecond) {
         var comps = DateComponents()
         comps.calendar = calendar
         comps.timeZone = timeZone

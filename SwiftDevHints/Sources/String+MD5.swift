@@ -9,6 +9,7 @@
 
 import Foundation
 
+/*
 public struct StringProxy {
     fileprivate let base: String
     init(proxy: String) {
@@ -270,3 +271,4 @@ class MD5: HashProtocol {
         return result
     }
 }
+*/

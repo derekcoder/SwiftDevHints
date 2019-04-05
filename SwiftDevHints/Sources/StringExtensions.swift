@@ -40,7 +40,14 @@ extension String {
     ///     let string = "Swift".md5  // ae832e9b5bda2699db45f3fa6aa8c556
     ///
     public var md5: String {
-        return StringProxy(proxy: self).md5
+        let data = self.data(using:.utf8)!
+        var md5 = Data(count: Int(CC_MD5_DIGEST_LENGTH))
+        md5.withUnsafeMutableBytes { md5Buffer in
+            data.withUnsafeBytes { buffer in
+                let _ = CC_MD5(buffer.baseAddress!, CC_LONG(buffer.count), md5Buffer.bindMemory(to: UInt8.self).baseAddress)
+            }
+        }
+        return md5.map { String(format: "%02hhx", $0) }.joined()
     }
     
     /// Return a string with first letter capitalized
