@@ -65,4 +65,25 @@ class StringExtensionsTests: XCTestCase {
         XCTAssertEqual(("Swift" as String?).nilIfEmpty, "Swift")
         XCTAssertNil(("" as String?).nilIfEmpty)
     }
+    
+    func testIsBlank() {
+        XCTAssertTrue(" \n".isBlank)
+        XCTAssertTrue("\t  ".isBlank)
+        XCTAssertTrue(" \n\t ".isBlank)
+        XCTAssertFalse("1 \n\t".isBlank)
+    }
+    
+    func testTrimmed() {
+        XCTAssertEqual("  hello \n\t".trimmed(), "hello")
+        XCTAssertNotEqual("hello\n\t world".trimmed(), "hello world")
+    }
+    
+    func testTrimming() {
+        var string = "  hello \n\t"
+        string.trimming()
+        XCTAssertEqual(string, "hello")
+        
+        string = "hello\n\t world"
+        XCTAssertNotEqual(string, "hello world")
+    }
 }

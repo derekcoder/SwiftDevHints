@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension String {
+public extension String {
     /// The safe way to return string slice based on specified half-open range.
     ///
     ///     let string = "Hello, Swift!"
@@ -16,7 +16,7 @@ extension String {
     ///     string[safe: 0..<14] // nil
     ///
     /// - Parameter range: The half-open range.
-    public subscript(safe range: CountableRange<Int>) -> String? {
+    subscript(safe range: CountableRange<Int>) -> String? {
         guard let lowerIdx = index(startIndex, offsetBy: max(0, range.lowerBound), limitedBy: endIndex) else { return nil }
         guard let upperIdx = index(lowerIdx, offsetBy: range.upperBound - range.lowerBound, limitedBy: endIndex) else { return nil }
         return String(self[lowerIdx..<upperIdx])
@@ -29,7 +29,7 @@ extension String {
     ///     string[safe: 0...13] // nil
     ///
     /// - Parameter range: The closed range.
-    public subscript(safe range: ClosedRange<Int>) -> String? {
+    subscript(safe range: ClosedRange<Int>) -> String? {
         guard let lowerIdx = index(startIndex, offsetBy: max(0, range.lowerBound), limitedBy: endIndex) else { return nil }
         guard let upperIdx = index(lowerIdx, offsetBy: range.upperBound - range.lowerBound + 1, limitedBy: endIndex) else { return nil }
         return String(self[lowerIdx..<upperIdx])
@@ -39,7 +39,7 @@ extension String {
     ///
     ///     let string = "Swift".md5  // ae832e9b5bda2699db45f3fa6aa8c556
     ///
-    public var md5: String {
+    var md5: String {
         let data = self.data(using:.utf8)!
         var md5 = Data(count: Int(CC_MD5_DIGEST_LENGTH))
         md5.withUnsafeMutableBytes { md5Buffer in
@@ -55,7 +55,7 @@ extension String {
     ///     let string = "hello world".capitalizingFirstLetter()
     ///     print(string)  // "Hello world"
     ///
-    public func capitalizingFirstLetter() -> String {
+    func capitalizingFirstLetter() -> String {
         guard !isEmpty else { return "" }
         return prefix(1).uppercased() + dropFirst()
     }
@@ -66,7 +66,7 @@ extension String {
     ///     string.capitalizeFirstLetter()
     ///     print(string)  // "Hello world"
     ///
-    public mutating func capitalizeFirstLetter() {
+    mutating func capitalizeFirstLetter() {
         self = capitalizingFirstLetter()
     }
     
@@ -79,7 +79,7 @@ extension String {
     ///     print("0xff".intBaseHex)  // 255
     ///     print("fg".intBaseHex)  // nil
     ///
-    public var intBaseHex: Int? {
+    var intBaseHex: Int? {
         guard contains("0x") else {
             return Int(self, radix: 16)
         }
@@ -91,8 +91,20 @@ extension String {
     ///     let string = "Swift".nilIfEmpty  // String?: "Swift"
     ///     let string = "".nilIfEmpty  // String?: nil
     ///
-    public var nilIfEmpty: String? {
+    var nilIfEmpty: String? {
         guard !isEmpty else { return nil }
         return self
+    }
+    
+    var isBlank: Bool {
+        return trimmed().isEmpty
+    }
+    
+    func trimmed() -> String {
+        return trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+    
+    mutating func trimming() {
+        self = trimmed()
     }
 }
