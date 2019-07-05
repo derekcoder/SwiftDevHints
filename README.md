@@ -159,8 +159,8 @@ let cell: PhotoCell = collectionView.dequeueReusableCell(for: indexPath)
 A safe way to use UserDefaults
 ```swift
 extension UserDefaults.Name {
-static let username: UserDefaults.Name = "SwiftDevHints-Demo.Username"
-static let password: UserDefaults.Name = "SwiftDevHints-Demo.Password"
+    static let username: UserDefaults.Name = "SwiftDevHints-Demo.Username"
+    static let password: UserDefaults.Name = "SwiftDevHints-Demo.Password"
 }
 
 // Register Initial Value
