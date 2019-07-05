@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension Collection {
+public extension Collection {
     
     /// The safe way to return element at specified index.
     /// Referenced from https://github.com/Luur/SwiftTips#1-safe-way-to-return-element-at-specified-index
