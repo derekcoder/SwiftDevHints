@@ -123,7 +123,7 @@ extension UserDefaults {
     }
     
     public func register(defaults registrationDictionary: [UserDefaults.Name : Any]) {
-        let dict = registrationDictionary.map { $0.rawValue }
+        let dict = registrationDictionary.mapKeys { $0.rawValue }
         register(defaults: dict)
     }
 }

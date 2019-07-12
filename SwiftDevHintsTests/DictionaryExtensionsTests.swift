@@ -40,112 +40,139 @@ class DictionaryExtensionsTests: XCTestCase {
         XCTAssertTrue(Type.type(forValue: aCell) == .unknown)
     }
     
-    func testNumberValue() {
+    func testNumber() {
         let dictionary: [String: Any] = ["id": "1", "name": "Derek", "age": 29, "isOnline": true, "latitude": 1.290270, "longitude": 103.851959]
 
-        let id = dictionary.numberValue(forKey: "id")
-        XCTAssertTrue(id == 1)
+        XCTAssertEqual(dictionary.numberValue(forKey: "id"), 1)
+        XCTAssertEqual(dictionary.number(forKey: "id"), 1)
+        XCTAssertNil(dictionary.number(forKey: "id2"))
         
-        let age = dictionary.numberValue(forKey: "age")
-        XCTAssertTrue(age == 29)
+        XCTAssertEqual(dictionary.numberValue(forKey: "age"), 29)
+        XCTAssertEqual(dictionary.number(forKey: "age"), 29)
         
-        let isOnline = dictionary.numberValue(forKey: "isOnline")
-        XCTAssertTrue(isOnline.boolValue)
+        XCTAssertTrue(dictionary.numberValue(forKey: "isOnline").boolValue)
+        XCTAssertTrue(dictionary.number(forKey: "isOnline")!.boolValue)
         
-        let latitude = dictionary.numberValue(forKey: "latitude")
-        XCTAssertTrue(latitude == 1.290270)
+        XCTAssertEqual(dictionary.numberValue(forKey: "latitude"), 1.290270)
+        XCTAssertEqual(dictionary.number(forKey: "latitude"), 1.290270)
         
-        let longitude = dictionary.numberValue(forKey: "longitude")
-        XCTAssertTrue(longitude == 103.851959)
+        XCTAssertEqual(dictionary.numberValue(forKey: "longitude"), 103.851959)
+        XCTAssertEqual(dictionary.number(forKey: "longitude"), 103.851959)
         
-        let name = dictionary.numberValue(forKey: "name")
-        XCTAssertTrue(name == 0.0)
+        XCTAssertEqual(dictionary.numberValue(forKey: "name"), 0.0)
+        XCTAssertEqual(dictionary.number(forKey: "name"), 0.0)
     }
     
-    func testStringValue() {
+    func testString() {
         let dictionary: [String: Any] = ["key1": 1, "key2": true, "key3": "yes", "key4": 3.4, "key5": 0, "key6": 0.0, "key7": "derek"]
         
-        var value = dictionary.stringValue(forKey: "key1")
-        XCTAssertTrue(value == "1")
+        XCTAssertEqual(dictionary.stringValue(forKey: "key1"), "1")
+        XCTAssertEqual(dictionary.string(forKey: "key1"), "1")
+        XCTAssertNil(dictionary.string(forKey: "key11"))
         
-        value = dictionary.stringValue(forKey: "key2")
-        XCTAssertTrue(value == "1")
+        XCTAssertEqual(dictionary.stringValue(forKey: "key2"), "1")
+        XCTAssertEqual(dictionary.string(forKey: "key2"), "1")
         
-        value = dictionary.stringValue(forKey: "key3")
-        XCTAssertTrue(value == "yes")
+        XCTAssertEqual(dictionary.stringValue(forKey: "key3"), "yes")
+        XCTAssertEqual(dictionary.string(forKey: "key3"), "yes")
         
-        value = dictionary.stringValue(forKey: "key4")
-        XCTAssertTrue(value == "3.4")
+        XCTAssertEqual(dictionary.stringValue(forKey: "key4"), "3.4")
+        XCTAssertEqual(dictionary.string(forKey: "key4"), "3.4")
         
-        value = dictionary.stringValue(forKey: "key5")
-        XCTAssertTrue(value == "0")
+        XCTAssertEqual(dictionary.stringValue(forKey: "key5"), "0")
+        XCTAssertEqual(dictionary.string(forKey: "key5"), "0")
 
-        value = dictionary.stringValue(forKey: "key6")
-        XCTAssertTrue(value == "0")
+        XCTAssertEqual(dictionary.stringValue(forKey: "key6"), "0")
+        XCTAssertEqual(dictionary.string(forKey: "key6"), "0")
 
-        value = dictionary.stringValue(forKey: "key7")
-        XCTAssertTrue(value == "derek")
+        XCTAssertEqual(dictionary.stringValue(forKey: "key7"), "derek")
+        XCTAssertEqual(dictionary.string(forKey: "key7"), "derek")
     }
     
-    func testBoolValue() {
+    func testBool() {
         let dictionary: [String: Any] = ["key1": 1, "key2": true, "key3": "yes", "key4": "1", "key5": 3.4, "key6": 0, "key7": 0.0, "key8": "derek"]
 
-        var value = dictionary.boolValue(forKey: "key1")
-        XCTAssertTrue(value)
+        XCTAssertTrue(dictionary.boolValue(forKey: "key1"))
+        XCTAssertTrue(dictionary.bool(forKey: "key1")!)
+        XCTAssertNil(dictionary.bool(forKey: "key11"))
         
-     	value = dictionary.boolValue(forKey: "key2")
-        XCTAssertTrue(value)
+        XCTAssertTrue(dictionary.boolValue(forKey: "key2"))
+        XCTAssertTrue(dictionary.bool(forKey: "key2")!)
         
-        value = dictionary.boolValue(forKey: "key3")
-        XCTAssertTrue(value)
+        XCTAssertTrue(dictionary.boolValue(forKey: "key3"))
+        XCTAssertTrue(dictionary.bool(forKey: "key3")!)
 
-        value = dictionary.boolValue(forKey: "key4")
-        XCTAssertTrue(value)
+        XCTAssertTrue(dictionary.boolValue(forKey: "key4"))
+        XCTAssertTrue(dictionary.bool(forKey: "key4")!)
 
-        value = dictionary.boolValue(forKey: "key5")
-        XCTAssertTrue(value)
+        XCTAssertTrue(dictionary.boolValue(forKey: "key5"))
+        XCTAssertTrue(dictionary.bool(forKey: "key5")!)
 
-        value = dictionary.boolValue(forKey: "key6")
-        XCTAssertFalse(value)
+        XCTAssertFalse(dictionary.boolValue(forKey: "key6"))
+        XCTAssertFalse(dictionary.bool(forKey: "key6")!)
 
-        value = dictionary.boolValue(forKey: "key7")
-        XCTAssertFalse(value)
+        XCTAssertFalse(dictionary.boolValue(forKey: "key7"))
+        XCTAssertFalse(dictionary.bool(forKey: "key7")!)
         
-        value = dictionary.boolValue(forKey: "key8")
-        XCTAssertFalse(value)
+        XCTAssertFalse(dictionary.boolValue(forKey: "key8"))
+        XCTAssertFalse(dictionary.bool(forKey: "key8")!)
     }
     
-    func testValueOrAdd() {
-        var colors = ["red": UIColor.red]
-        let blue = colors["blue", orAdd: UIColor.blue]
-        XCTAssertEqual(blue, UIColor.blue)
-        XCTAssertTrue(colors.count == 2)
+    func testDict() {
+        let dictionary: [String: Any] = ["user": ["name": "a"]]
+        XCTAssertEqual(dictionary.dict(forKey: "user")?.string(forKey: "name"), "a")
+        XCTAssertNil(dictionary.dict(forKey: "user1"))
+    }
+    
+    func testDictArray() {
+        let dictionary: [String: Any] = ["users": [["name": "a"], ["name": "b"]]]
+        XCTAssertEqual(dictionary.dictArray(forKey: "users")?.first!.string(forKey: "name"), "a")
+        XCTAssertNil(dictionary.dictArray(forKey: "users1"))
     }
     
     func testJSONDictAndStringSubscript() {
         var dict: [String: Any] = [
-            "countries": [
-                "japan": [
-                    "capital": "tokyo"
+            "users": [
+                "user1": [
+                    "name": "a"
                 ]
             ]
         ]
         
-        dict[jsonDict: "countries"]?[jsonDict: "japan"]?["capital"] = "berlin"
-        XCTAssertEqual(dict[jsonDict: "countries"]?[jsonDict: "japan"]?["capital"] as? String, "berlin")
+        dict[jsonDict: "users"]?[jsonDict: "user1"]?["name"] = "b"
+        XCTAssertEqual(dict[jsonDict: "users"]?[jsonDict: "user1"]?.string(forKey: "name"), "b")
+        XCTAssertEqual(dict.dict(forKey: "users")?.dict(forKey: "user1")?.string(forKey: "name"), "b")
     }
     
     func testStringSubscript() {
         var dict: [String: Any] = [
-            "countries": [
-                "japan": [
-                    "capital": "tokyo"
+            "users": [
+                "user1": [
+                    "name": "a"
                 ]
             ]
         ]
 
-        dict[jsonDict: "countries"]?[jsonDict: "japan"]?[string: "capital"] = "berlin"
-        dict[jsonDict: "countries"]?[jsonDict: "japan"]?[string: "capital"]?.append("!")
-        XCTAssertEqual(dict[jsonDict: "countries"]?[jsonDict: "japan"]?[string: "capital"], "berlin!")
+        dict[jsonDict: "users"]?[jsonDict: "user1"]?[string: "name"] = "b"
+        dict[jsonDict: "users"]?[jsonDict: "user1"]?[string: "name"]?.append("!")
+        XCTAssertEqual(dict[jsonDict: "users"]?[jsonDict: "user1"]?[string: "name"], "b!")
+    }
+    
+    func testIntSubscript() {
+        var dict: [String: Any] = [
+            "users": [
+                "user1": [
+                    "name": "a",
+                    "age": 1
+                ]
+            ]
+        ]
+        dict[jsonDict: "users"]?[jsonDict: "user1"]?[int: "age"] = 2
+        XCTAssertEqual(dict[jsonDict: "users"]?[jsonDict: "user1"]?[int: "age"], 2)
+    }
+    
+    func testMapKeys() {
+        let dicts: [String: Int] = ["1": 1, "2": 2]
+        XCTAssertEqual(dicts.mapKeys { return Int($0)! }, [1: 1, 2: 2])
     }
 }

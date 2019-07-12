@@ -43,6 +43,7 @@
 		6574740C20DCCF9700007578 /* NSPredicateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6574740B20DCCF9700007578 /* NSPredicateExtension.swift */; };
 		6574741020DCD00400007578 /* NSPredicateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6574740F20DCD00400007578 /* NSPredicateExtensionTests.swift */; };
 		659095CC1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */; };
+		65992B9722D8642200E7A9A7 /* FloatExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65992B9622D8642200E7A9A7 /* FloatExtensionsTests.swift */; };
 		65C6FDDA214F55A3006E4FC1 /* UITableView+NibReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C6FDD9214F55A3006E4FC1 /* UITableView+NibReusable.swift */; };
 		65CB5DB52022B5950020C0B8 /* NotificationDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CB5DB42022B5950020C0B8 /* NotificationDescriptor.swift */; };
 		E34DA5671F66A3F5009B30E0 /* OptionalExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */; };
@@ -136,6 +137,7 @@
 		6574740B20DCCF9700007578 /* NSPredicateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPredicateExtension.swift; sourceTree = "<group>"; };
 		6574740F20DCD00400007578 /* NSPredicateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPredicateExtensionTests.swift; sourceTree = "<group>"; };
 		659095CB1FFB9084004CDEF9 /* CountableClosedRangeExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountableClosedRangeExtension.swift; sourceTree = "<group>"; };
+		65992B9622D8642200E7A9A7 /* FloatExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtensionsTests.swift; sourceTree = "<group>"; };
 		65C6FDD9214F55A3006E4FC1 /* UITableView+NibReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+NibReusable.swift"; sourceTree = "<group>"; };
 		65CB5DB42022B5950020C0B8 /* NotificationDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationDescriptor.swift; sourceTree = "<group>"; };
 		E34DA5661F66A3F5009B30E0 /* OptionalExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalExtensionsTests.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				E3D01EDC1F45A54C0036FDCA /* CountableRangeExtensionsTests.swift */,
 				E36536671F30601900BF5021 /* DictionaryExtensionsTests.swift */,
 				E3649B5D1F3032DC00236794 /* DoubleExtensionsTests.swift */,
+				65992B9622D8642200E7A9A7 /* FloatExtensionsTests.swift */,
 				65248CBC1F1D02B200E00872 /* IntExtensionsTests.swift */,
 				E36536651F305E6400BF5021 /* NSNumberExtensionsTests.swift */,
 				E3FAACC11F94BDD600507E53 /* BundleExtensionsTests.swift */,
@@ -501,6 +504,7 @@
 				E3A0BEEF1F469A4400BB8570 /* UIColorExtensionsTests.swift in Sources */,
 				E36536681F30601900BF5021 /* DictionaryExtensionsTests.swift in Sources */,
 				656D51052061FE6700EE0B73 /* DateExtensionTests.swift in Sources */,
+				65992B9722D8642200E7A9A7 /* FloatExtensionsTests.swift in Sources */,
 				E3649B5E1F3032DC00236794 /* DoubleExtensionsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

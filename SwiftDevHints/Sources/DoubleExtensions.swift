@@ -39,3 +39,25 @@ extension Double {
         return (self * divisor).rounded() / divisor
     }
 }
+
+public extension Double {
+    var int: Int {
+        return Int(self)
+    }
+    
+    var int32: Int32 {
+        return Int32(self)
+    }
+
+    var float: Float {
+        return Float(self)
+    }
+    
+    var cgFloat: CGFloat {
+        return CGFloat(self)
+    }
+    
+    var string: String {
+        return "\(self)"
+    }
+}

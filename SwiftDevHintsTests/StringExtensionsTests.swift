@@ -86,4 +86,34 @@ class StringExtensionsTests: XCTestCase {
         string = "hello\n\t world"
         XCTAssertNotEqual(string, "hello world")
     }
+    
+    func testInt() {
+        XCTAssertEqual("1".int, Int(1))
+        XCTAssertNil("1.2".int)
+        XCTAssertNil("a".int)
+    }
+    
+    func testInt32() {
+        XCTAssertEqual("1".int32, Int32(1))
+        XCTAssertNil("1.2".int32)
+        XCTAssertNil("a".int32)
+    }
+    
+    func testFloat() {
+        XCTAssertEqual("1.2".float, 1.2)
+        XCTAssertEqual("1".float, Float(1))
+        XCTAssertNil("a".float)
+    }
+    
+    func testDouble() {
+        XCTAssertEqual("1.2".double, 1.2)
+        XCTAssertEqual("1".double, Double(1))
+        XCTAssertNil("a".double)
+    }
+    
+    func testCGFloat() {
+        XCTAssertEqual("1.2".cgFloat, 1.2)
+        XCTAssertEqual("1".cgFloat, CGFloat(1))
+        XCTAssertNil("a".cgFloat)
+    }
 }

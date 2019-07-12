@@ -25,4 +25,25 @@ class DoubleExtensionsTests: XCTestCase {
         XCTAssertEqual(aDouble.roundTo(places: 2), 3.14)
         XCTAssertEqual(aDouble.roundTo(places: 3), 3.142)
     }
+    
+    func testInt() {
+        XCTAssertEqual(Double(1.2).int, Int(1))
+        XCTAssertEqual(Double(1).int, Int(1))
+    }
+    
+    func testInt32() {
+        XCTAssertEqual(Double(1.2).int32, Int32(1))
+    }
+
+    func testFloat() {
+        XCTAssertEqual(Double(1.2).float, Float(1.2))
+    }
+
+    func testCGFloat() {
+        XCTAssertEqual(Double(1.2).cgFloat, CGFloat(1.2))
+    }
+
+    func testString() {
+        XCTAssertEqual(Double(1.2).string, "1.2")
+    }
 }

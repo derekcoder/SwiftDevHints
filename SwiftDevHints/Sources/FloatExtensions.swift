@@ -22,3 +22,49 @@ extension Float {
         return (self * divisor).rounded() / divisor
     }
 }
+
+public extension Float {
+    var int: Int {
+        return Int(self)
+    }
+    
+    var int32: Int32 {
+        return Int32(self)
+    }
+    
+    var double: Double {
+        return Double(self)
+    }
+
+    var cgFloat: CGFloat {
+        return CGFloat(self)
+    }
+    
+    var string: String {
+        return "\(self)"
+    }
+}
+
+public extension CGFloat {
+    var int: Int {
+        return Int(self)
+    }
+    
+    var int32: Int32 {
+        return Int32(self)
+    }
+    
+    var double: Double {
+        return Double(self)
+    }
+    
+    var float: Float {
+        return Float(self)
+    }
+    
+    var string: String {
+        return "\(self)"
+    }
+}
+
+

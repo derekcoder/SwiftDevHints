@@ -174,25 +174,25 @@ extension Int {
     }
 }
 
-extension Int {
-    static public prefix func ++(i: inout Int) -> Int {
+public extension Int {
+    static prefix func ++(i: inout Int) -> Int {
         i += 1
         return i
     }
     
-    static public prefix func --(i: inout Int) -> Int {
+    static prefix func --(i: inout Int) -> Int {
         i -= 1
         return i
     }
     
-    static public postfix func ++(i: inout Int) -> Int {
+    static postfix func ++(i: inout Int) -> Int {
         defer {
             i += 1
         }
         return i
     }
     
-    static public postfix func --(i: inout Int) -> Int {
+    static postfix func --(i: inout Int) -> Int {
         defer {
             i -= 1
         }
@@ -200,5 +200,48 @@ extension Int {
     }
 }
 
+public extension Int {
+    var int32: Int32 {
+        return Int32(self)
+    }
+    
+    var float: Float {
+        return Float(self)
+    }
+    
+    var double: Double {
+        return Double(self)
+    }
+    
+    var cgFloat: CGFloat {
+        return CGFloat(self)
+    }
+    
+    var string: String {
+        return "\(self)"
+    }
+}
+
+public extension Int32 {
+    var int: Int {
+        return Int(self)
+    }
+    
+    var float: Float {
+        return Float(self)
+    }
+    
+    var double: Double {
+        return Double(self)
+    }
+    
+    var cgFloat: CGFloat {
+        return CGFloat(self)
+    }
+    
+    var string: String {
+        return "\(self)"
+    }
+}
 
 

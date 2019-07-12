@@ -34,13 +34,13 @@ public enum Type: Int {
     }
 }
 
-extension Dictionary where Key: CustomStringConvertible {
+public extension Dictionary where Key: CustomStringConvertible {
     
     /// Returns the NSNumber value for the given key.
 	///
     /// - Parameter key: The key to find in the dictionary
     /// - Returns: The NSNumber value for `key` if `key` in the dictionary, otherwise, `0`.
-    public func numberValue(forKey key: Key) -> NSNumber {
+    func numberValue(forKey key: Key) -> NSNumber {
         guard let value = self[key] else { return NSNumber(value: 0.0) }
         
         let type = Type.type(forValue: value)
@@ -58,11 +58,29 @@ extension Dictionary where Key: CustomStringConvertible {
         }
     }
 
+    func number(forKey key: Key) -> NSNumber? {
+        guard let value = self[key] else { return nil }
+        
+        let type = Type.type(forValue: value)
+        
+        switch type {
+        case .bool: return (value as! NSNumber)
+        case .number: return (value as! NSNumber)
+        case .string:
+            let decimal = NSDecimalNumber(string: value as? String)
+            if decimal == NSDecimalNumber.notANumber {
+                return NSDecimalNumber.zero
+            }
+            return decimal
+        default: return nil
+        }
+    }
+    
     /// Returns the String value for the given key.
     ///
     /// - Parameter key: The key to find in the dictionary.
     /// - Returns: The String value for key if key in the dictionary, otherwise, "".
-    public func stringValue(forKey key: Key) -> String {
+    func stringValue(forKey key: Key) -> String {
         guard let value = self[key] else { return "" }
         
         let type = Type.type(forValue: value)
@@ -75,13 +93,25 @@ extension Dictionary where Key: CustomStringConvertible {
         }
     }
     
+    func string(forKey key: Key) -> String? {
+        guard let value = self[key] else { return nil }
+        
+        let type = Type.type(forValue: value)
+        switch type {
+        case .string: return (value as! String)
+        case .bool: return numberValue(forKey: key).stringValue
+        case .number: return numberValue(forKey: key).stringValue
+        default: return nil
+        }
+    }
+    
     /// Returns the Bool value for the given key.
     ///
     /// If type of the object for the given key is String and its value is "true" or "yes" or "1", this method will return `true`.
     ///
     /// - Parameter key: The key to find in the dictionary.
     /// - Returns: The Bool value for `key` if `key` in the dictionary, otherwise, `false`.
-    public func boolValue(forKey key: Key) -> Bool {
+    func boolValue(forKey key: Key) -> Bool {
         guard let value = self[key] else { return false }
         
         let type = Type.type(forValue: value)
@@ -97,159 +127,200 @@ extension Dictionary where Key: CustomStringConvertible {
         }
     }
     
+    func bool(forKey key: Key) -> Bool? {
+        guard let value = self[key] else { return nil }
+        
+        let type = Type.type(forValue: value)
+        
+        switch type {
+        case .bool: return numberValue(forKey: key).boolValue
+        case .number: return numberValue(forKey: key).boolValue
+        case .string:
+            return ["true", "yes", "1"].contains() { string in
+                return (value as! String).caseInsensitiveCompare(string) == .orderedSame
+            }
+        default: return nil
+        }
+    }
+
     /// Return the Int value for the given key.
     ///
     /// - Parameter key: The key to find in the dictionary.
     /// - Returns: The Int value for `key`.
-    public func intValue(forKey key: Key) -> Int {
+    func intValue(forKey key: Key) -> Int {
 		return numberValue(forKey: key).intValue
+    }
+    
+    func int(forKey key: Key) -> Int? {
+        return number(forKey: key)?.intValue
     }
     
     /// Return the UInt value for the given key.
     ///
     /// - Parameter key: The key to find in the dictionary.
     /// - Returns: The UInt value for `key`.
-    public func uIntValue(forKey key: Key) -> UInt {
+    func uIntValue(forKey key: Key) -> UInt {
         return numberValue(forKey: key).uintValue
+    }
+    
+    func uInt(forKey key: Key) -> UInt? {
+        return number(forKey: key)?.uintValue
     }
     
     /// Return the Int8 value for the given key.
     ///
     /// - Parameter key: The key to find in the dictionary.
     /// - Returns: The Int8 value for `key`.
-    public func int8Value(forKey key: Key) -> Int8 {
+    func int8Value(forKey key: Key) -> Int8 {
         return numberValue(forKey: key).int8Value
+    }
+    
+    func int8(forKey key: Key) -> Int8? {
+        return number(forKey: key)?.int8Value
     }
 
     /// Return the UInt8 value for the given key.
     ///
     /// - Parameter key: The key to find in the dictionary.
     /// - Returns: The UInt8 value for `key`.
-    public func uInt8Value(forKey key: Key) -> UInt8 {
+    func uInt8Value(forKey key: Key) -> UInt8 {
         return numberValue(forKey: key).uint8Value
+    }
+    
+    func uInt8(forKey key: Key) -> UInt8? {
+        return number(forKey: key)?.uint8Value
     }
     
     /// Return the Int16 value for the given key.
     ///
     /// - Parameter key: The key to find in the dictionary.
     /// - Returns: The Int16 value for `key`.
-    public func int16Value(forKey key: Key) -> Int16 {
+    func int16Value(forKey key: Key) -> Int16 {
         return numberValue(forKey: key).int16Value
+    }
+    
+    func int16(forKey key: Key) -> Int16? {
+        return number(forKey: key)?.int16Value
     }
     
     /// Return the UInt16 value for the given key.
     ///
     /// - Parameter key: The key to find in the dictionary.
     /// - Returns: The UInt16 value for `key`.
-    public func uInt16Value(forKey key: Key) -> UInt16 {
+    func uInt16Value(forKey key: Key) -> UInt16 {
         return numberValue(forKey: key).uint16Value
+    }
+    
+    func uInt16(forKey key: Key) -> UInt16? {
+        return number(forKey: key)?.uint16Value
     }
     
     /// Return the Int32 value for the given key.
     ///
     /// - Parameter key: The key to find in the dictionary.
     /// - Returns: The Int32 value for `key`.
-    public func int32Value(forKey key: Key) -> Int32 {
+    func int32Value(forKey key: Key) -> Int32 {
         return numberValue(forKey: key).int32Value
+    }
+    
+    func int32(forKey key: Key) -> Int32? {
+        return number(forKey: key)?.int32Value
     }
     
     /// Return the UInt32 value for the given key.
     ///
     /// - Parameter key: The key to find in the dictionary.
     /// - Returns: The UInt32 value for `key`.
-    public func uInt32Value(forKey key: Key) -> UInt32 {
+    func uInt32Value(forKey key: Key) -> UInt32 {
         return numberValue(forKey: key).uint32Value
+    }
+    
+    func uInt32(forKey key: Key) -> UInt32? {
+        return number(forKey: key)?.uint32Value
     }
     
     /// Return the Int64 value for the given key.
     ///
     /// - Parameter key: The key to find in the dictionary.
     /// - Returns: The Int64 value for `key`.
-    public func int64Value(forKey key: Key) -> Int64 {
+    func int64Value(forKey key: Key) -> Int64 {
         return numberValue(forKey: key).int64Value
+    }
+    
+    func int64(forKey key: Key) -> Int64? {
+        return number(forKey: key)?.int64Value
     }
     
     /// Return the UInt64 value for the given key.
     ///
     /// - Parameter key: The key to find in the dictionary.
     /// - Returns: The UInt64 value for `key`.
-    public func uInt64Value(forKey key: Key) -> UInt64 {
+    func uInt64Value(forKey key: Key) -> UInt64 {
         return numberValue(forKey: key).uint64Value
+    }
+    
+    func uInt64(forKey key: Key) -> UInt64? {
+        return number(forKey: key)?.uint64Value
     }
     
     /// Return the Double value for the given key.
     ///
     /// - Parameter key: The key to find in the dictionary.
     /// - Returns: The Double value for `key`.
-    public func doubleValue(forKey key: Key) -> Double {
+    func doubleValue(forKey key: Key) -> Double {
         return numberValue(forKey: key).doubleValue
+    }
+    
+    func double(forKey key: Key) -> Double? {
+        return number(forKey: key)?.doubleValue
     }
     
     /// Return the Float value for the given key.
     ///
     /// - Parameter key: The key to find in the dictionary.
     /// - Returns: The Float value for `key`.
-    public func floatValue(forKey key: Key) -> Float {
+    func floatValue(forKey key: Key) -> Float {
         return numberValue(forKey: key).floatValue
+    }
+    
+    func float(forKey key: Key) -> Float? {
+        return number(forKey: key)?.floatValue
+    }
+    
+    func dict(forKey key: Key) -> Dictionary? {
+        return self[key] as? Dictionary
+    }
+    
+    func dictArray(forKey key: Key) -> [Dictionary]? {
+        return self[key] as? [Dictionary]
     }
 }
 
-////////////////////////////////////////////
-// Dictionary Map Function
-////////////////////////////////////////////
-extension Dictionary {
-    public func map<T>(_ transform: ((Key) throws -> T)) rethrows -> [T: Value] {
+public extension Dictionary {
+    subscript(jsonDict key: Key) -> [String: Any]? {
+        get { return self[key] as? [String: Any] }
+        set { self[key] = newValue as? Value }
+    }
+    
+    subscript(string key: Key) -> String? {
+        get { return self[key] as? String }
+        set { self[key] = newValue as? Value }
+    }
+    
+    subscript(int key: Key) -> Int? {
+        get { return self[key] as? Int }
+        set { self[key] = newValue as? Value }
+    }
+}
+
+public extension Dictionary {
+    func mapKeys<T>(_ transform: ((Key) throws -> T)) rethrows -> Dictionary<T, Value> {
         var newDict: [T: Value] = [:]
         for (key, value) in self {
             let newKey = try transform(key)
             newDict[newKey] = value
         }
         return newDict
-    }
-}
-
-extension Dictionary {
-    @available(*, deprecated, message: "Please use subscript(_:orAdd:) instead.")
-    public mutating func value(for key: Key, orAdd closure: @autoclosure () -> Value) -> Value {
-        if let value = self[key] {
-             return value
-        }
-
-        let value = closure()
-        self[key] = value
-        return value
-    }
-    
-    public subscript(key: Key, orAdd closure: @autoclosure () -> Value) -> Value {
-        mutating get {
-            if let value = self[key] {
-                return value
-            }
-            
-            let value = closure()
-            self[key] = value
-            return value
-        }
-    }
-}
-
-extension Dictionary {
-    public subscript(jsonDict key: Key) -> [String: Any]? {
-        get {
-            return self[key] as? [String: Any]
-        }
-        set {
-            self[key] = newValue as? Value
-        }
-    }
-    
-    public subscript(string key: Key) -> String? {
-        get {
-            return self[key] as? String
-        }
-        set {
-            self[key] = newValue as? Value
-        }
     }
 }
 

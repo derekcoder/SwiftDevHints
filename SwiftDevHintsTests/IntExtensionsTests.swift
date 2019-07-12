@@ -79,4 +79,29 @@ class IntExtensionsTests: XCTestCase {
         XCTAssertEqual(i--, 0)
         XCTAssertEqual(i, -1)
     }
+    
+    func testInt() {
+        XCTAssertEqual(Int(1).int32, Int32(1))
+        XCTAssertEqual(Int32(1).int, Int(1))
+    }
+    
+    func testFloat() {
+        XCTAssertEqual(Int(1).float, Float(1))
+        XCTAssertEqual(Int32(1).float, Float(1))
+    }
+    
+    func testDouble() {
+        XCTAssertEqual(Int(1).double, Double(1))
+        XCTAssertEqual(Int32(1).double, Double(1))
+    }
+    
+    func testCGFloat() {
+        XCTAssertEqual(Int(1).cgFloat, CGFloat(1))
+        XCTAssertEqual(Int32(1).cgFloat, CGFloat(1))
+    }
+    
+    func testString() {
+        XCTAssertEqual(Int(1).string, "1")
+        XCTAssertEqual(Int32(1).string, "1")
+    }
 }

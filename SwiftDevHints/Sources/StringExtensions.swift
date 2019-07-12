@@ -108,3 +108,25 @@ public extension String {
         self = trimmed()
     }
 }
+
+public extension String {
+    var int: Int? {
+        return Int(self)
+    }
+    
+    var int32: Int32? {
+        return Int32(self)
+    }
+    
+    var float: Float? {
+        return Float(self)
+    }
+    
+    var double: Double? {
+        return Double(self)
+    }
+    
+    var cgFloat: CGFloat? {
+        return double?.cgFloat
+    }
+}
