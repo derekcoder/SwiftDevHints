@@ -9,6 +9,8 @@
 import UIKit
 
 public extension UIColor {
+  
+  /// Return a random color
   static var random: UIColor {
     let red = (0...255).randomElement()!
     let green = (0...255).randomElement()!
@@ -17,6 +19,7 @@ public extension UIColor {
     return UIColor(red: red, green: green, blue: blue)
   }
   
+  /// Return components of hue, saturation, brightness, and alpha
   var hsbaComponents: (hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) {
     var h: CGFloat = 0.0
     var s: CGFloat = 0.0
@@ -26,6 +29,8 @@ public extension UIColor {
     return (hue: h, saturation: s, brightness: b, alpha: a)
   }
   
+  
+  /// Return RGBA components with CGFloat type (betweem 0.0 and 1.0)
   var rgbaComponents: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
     var r: CGFloat = 0
     var g: CGFloat = 0
@@ -35,11 +40,13 @@ public extension UIColor {
     return (red: r, green: g, blue: b, alpha: a)
   }
   
+  /// Return RGB components with Int type (bewteen 0 and 255)
   var rgbComponents: (red: Int, green: Int, blue: Int) {
     let comps = rgbaComponents
     return (red: Int(comps.red * 255.0), green: Int(comps.green * 255.0), blue: Int(comps.blue * 255.0))
   }
   
+  /// Return hexadecimal value string of this color (start with "#")
   var hexString: String {
     let components: [Int] = {
       let c = cgColor.components!
@@ -53,6 +60,12 @@ public extension UIColor {
 // MARK: - Initializers
 
 public extension UIColor {
+  /// Create an UIColor object with RGB components and transparency.
+  /// - Parameters:
+  ///   - red: red component (between 0 and 255)
+  ///   - green: green component (between 0 and 255)
+  ///   - blue: blue component (between 0 and 255)
+  ///   - transparency: opacity value of the color object (between 0.0 and 1.0)
   convenience init(red: Int, green: Int, blue: Int, transparency: CGFloat = 1) {
     assert(red >= 0 && red <= 255, "Invalid red")
     assert(green >= 0 && green <= 255, "Invalid green")
@@ -69,6 +82,10 @@ public extension UIColor {
     self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: alpha)
   }
   
+  /// Create an UIColor object with hexadecimal string.
+  /// - Parameters:
+  ///   - hexString: hexadecimal string ("#35AF46", "25B767")
+  ///   - alpha: opacity value of the color object
   convenience init(hexString: String, alpha: CGFloat = 1) {
     let string = hexString.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
     let scanner = Scanner(string: string)
@@ -95,6 +112,8 @@ public extension UIColor {
     self.init(red: red, green: green, blue: blue, alpha: alpha)
   }
   
+  /// Create a black or white UIColor object that constrasts to specified color.
+  /// - Parameter backgroundColor: specified color
   convenience init(constrastingBlackOrWhiteColorOn backgroundColor: UIColor) {
     let rgba = backgroundColor.rgbaComponents
     
