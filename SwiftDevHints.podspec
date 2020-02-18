@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/derekcoder/SwiftDevHints.git', :tag => s.version.to_s }
  
   s.ios.deployment_target = '10.0'
+  s.osx.deployment_target = '10.12'
   s.source_files = ['SwiftDevHints/Sources/*.swift', 'SwiftDevHints/SwiftDevHints.h']
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
   
