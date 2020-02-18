@@ -6,6 +6,7 @@
 //  Copyright © 2019 ZHOU DENGFENG DEREK. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 public extension UIApplication {
@@ -17,3 +18,4 @@ public extension UIApplication {
         return applicationState == .active
     }
 }
+#endif

@@ -6,6 +6,7 @@
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 public enum AlertControllerStyle {
@@ -65,4 +66,4 @@ public extension UIViewController {
         ])
     }
 }
-
+#endif

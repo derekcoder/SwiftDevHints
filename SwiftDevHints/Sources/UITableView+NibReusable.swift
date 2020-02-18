@@ -9,6 +9,7 @@
 //  * [AliSoftware/Reusable](https://github.com/AliSoftware/Reusable)
 //  * [andyyhope/nemo](https://github.com/andyyhope/nemo)
 
+#if os(iOS)
 import UIKit
 
 public extension UITableView {
@@ -44,3 +45,4 @@ public extension UITableView {
         return headerFooterView
     }
 }
+#endif

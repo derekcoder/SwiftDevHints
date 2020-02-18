@@ -6,6 +6,7 @@
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 extension UIView {
@@ -90,3 +91,4 @@ public func equal<Axis, L>(_ from: KeyPath<UIView, L>, _ to: KeyPath<UIView, L>)
         view[keyPath: from].constraint(equalTo: parent[keyPath: to])
     }
 }
+#endif

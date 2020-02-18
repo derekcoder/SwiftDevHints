@@ -6,6 +6,7 @@
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 
+#if os(iOS)
 import UIKit
 
 public extension UIColor {
@@ -134,3 +135,4 @@ public extension UIColor {
     }
   }
 }
+#endif

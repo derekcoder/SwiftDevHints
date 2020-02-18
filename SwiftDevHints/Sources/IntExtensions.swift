@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 extension Int {
     /// Return a formated string of the value.

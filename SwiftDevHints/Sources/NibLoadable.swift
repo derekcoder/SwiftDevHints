@@ -9,6 +9,7 @@
 //  * [AliSoftware/Reusable](https://github.com/AliSoftware/Reusable)
 //  * [andyyhope/nemo](https://github.com/andyyhope/nemo)
 
+#if os(iOS)
 import UIKit
 
 public protocol NibLoadable: class {
@@ -30,3 +31,4 @@ extension NibLoadable where Self: UIView {
         }
     }
 }
+#endif

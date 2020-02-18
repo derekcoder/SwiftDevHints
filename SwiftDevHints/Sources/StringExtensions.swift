@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import CommonCrypto
+import CoreGraphics
 
 public extension String {
     /// The safe way to return string slice based on specified half-open range.
@@ -39,16 +41,16 @@ public extension String {
     ///
     ///     let string = "Swift".md5  // ae832e9b5bda2699db45f3fa6aa8c556
     ///
-    var md5: String {
-        let data = self.data(using:.utf8)!
-        var md5 = Data(count: Int(CC_MD5_DIGEST_LENGTH))
-        md5.withUnsafeMutableBytes { md5Buffer in
-            data.withUnsafeBytes { buffer in
-                let _ = CC_MD5(buffer.baseAddress!, CC_LONG(buffer.count), md5Buffer.bindMemory(to: UInt8.self).baseAddress)
-            }
-        }
-        return md5.map { String(format: "%02hhx", $0) }.joined()
-    }
+//    var md5: String {
+//        let data = self.data(using:.utf8)!
+//        var md5 = Data(count: Int(CC_MD5_DIGEST_LENGTH))
+//        md5.withUnsafeMutableBytes { md5Buffer in
+//            data.withUnsafeBytes { buffer in
+//                let _ = CC_MD5(buffer.baseAddress!, CC_LONG(buffer.count), md5Buffer.bindMemory(to: UInt8.self).baseAddress)
+//            }
+//        }
+//        return md5.map { String(format: "%02hhx", $0) }.joined()
+//    }
     
     /// Return a string with first letter capitalized
     ///
@@ -127,6 +129,7 @@ public extension String {
     }
     
     var cgFloat: CGFloat? {
-        return double?.cgFloat
+      guard let double = double else { return nil }
+      return CGFloat(double)
     }
 }

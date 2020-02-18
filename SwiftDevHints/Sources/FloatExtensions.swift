@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreGraphics
 
 extension Float {
     /// Return a rounded Float value according to places.

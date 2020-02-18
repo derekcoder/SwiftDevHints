@@ -9,6 +9,7 @@
 //  * [AliSoftware/Reusable](https://github.com/AliSoftware/Reusable)
 //  * [andyyhope/nemo](https://github.com/andyyhope/nemo)
 
+#if os(iOS)
 import UIKit
 
 public protocol Reusable: class {
@@ -22,3 +23,4 @@ public extension Reusable {
 }
 
 public typealias NibReusable = NibLoadable & Reusable 
+#endif

@@ -6,7 +6,8 @@
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 
-import Foundation
+#if os(iOS)
+import UIKit
 
 extension UIImage {
     public enum FilterName: String {
@@ -44,3 +45,4 @@ extension UIImage {
         return filteredImage
     }
 }
+#endif

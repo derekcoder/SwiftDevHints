@@ -9,8 +9,9 @@
 //  * [AliSoftware/Reusable](https://github.com/AliSoftware/Reusable)
 //  * [andyyhope/nemo](https://github.com/andyyhope/nemo)
 
-import UIKit
 
+#if os(iOS)
+import UIKit
 
 public extension UICollectionView {
     final func register<T: UICollectionViewCell>(_ cellType: T.Type) where T: NibReusable {
@@ -28,3 +29,4 @@ public extension UICollectionView {
         return cell
     }
 }
+#endif
