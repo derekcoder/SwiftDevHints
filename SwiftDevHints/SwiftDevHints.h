@@ -6,7 +6,7 @@
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+@import Foundation;
 
 #import <CommonCrypto/CommonCrypto.h>
 
