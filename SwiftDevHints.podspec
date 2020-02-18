@@ -14,7 +14,8 @@ Pod::Spec.new do |s|
  
   s.ios.deployment_target = '10.0'
   s.osx.deployment_target = '10.12'
-  s.source_files = ['SwiftDevHints/Sources/*.swift', 'SwiftDevHints/SwiftDevHints.h']
+  s.source_files = ["SwiftDevHints/Classes/**/*", "SwiftDevHints/SwiftDevHints.h"]
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
+  s.swift_version = '5.0'
   
 end
