@@ -6,8 +6,8 @@
 
 ## Requirements
 
-- iOS 10.0+
-- Swift 4.2+
+- iOS 10.0+ / macOS 10.12+
+- Swift 5
 
 ## Installation
 
@@ -29,7 +29,6 @@ pod 'SwiftDevHints'
 * UIColor Extensions
 * Bundle Extensions
 * Date Extensions
-* Others
 
 ### String Extensions
 
@@ -41,21 +40,11 @@ string[safe: 0...4]  // "Hello"
 string[safe: 0..<14] // nil
 ```
 
-`md5`
-Converted to MD5
-```swift
-"hello".md5 // 5d41402abc4b2a76b9719d911017c592
-```
-
 `intBaseHex`
 Get int value form hex string
 ```swift
 print("FF".intBaseHex)  // 255
-print("Ff".intBaseHex)  // 255
-print("fF".intBaseHex)  // 255
-print("ff".intBaseHex)  // 255
-print("0xff".intBaseHex)  // 255
-print("fg".intBaseHex)  // nil
+print("0xFF".intBaseHex)  // 255
 ```
 
 `trimmed()`
@@ -78,14 +67,6 @@ string  // "hello world"
 `nilIfEmpty`
 ```swift
 "".nilIfEmpty  // nil
-
-let result = ["Derek", "", "John", "", "Tony", nil].compactMap { $0.nilIfEmpty } 
-result  // ["Derek", "John", "Tony"]
-
-guard let text = textField.text.nilIfEmpty else {
-    // handle for nil or empty
-    return
-}
 ```
 
 ### Collection Optional Extensions
@@ -114,10 +95,6 @@ var name: String? = nil
 
 name.noneDo {
     print("name is nil")
-}
-
-name.someDo {
-    print("name is not nil")
 }
 
 name.someDo {
@@ -179,23 +156,34 @@ let password = UserDefaults.standard.string(forName: .password)
 
 Initialize UIColor with RGB based 255
 ```swift
-let color = UIColor(redIn255: 255, greenIn255: 32, blueIn255: 171)
+let color = UIColor(red: 255, green: 32, blue: 171)
 ```
 
 Initialize UIColor with RGB Hex String
 ```swift
-let color = UIColor(hex: "FF20AB") 
-// let color = UIColor(hex: "ff20ab") 
-// let color = UIColor(hex: "#FF20AB") 
-// let color = UIColor(hex: "#ff20ab")
+let color = UIColor(hexString: "FF20AB") 
 ```
 
-Get RGB(A) from a color
+Create a black or white UIColor object that constrasts to specified color.
 ```swift
-let rgba = color.rgba // (red 1.0, green 0.125490196078431, blue 0.670588235294118, alpha 1.0)
-let intRGBA = color.intRGBA // (red 255, green 32, blue 171, alpha 100)
-let hexRGB = hexRGB(prefix: "#") // "#FF20AB"
-// let hexRGB = hexRGB() // "FF20AB"
+let color = UIColor(constrastingBlackOrWhiteColorOn: UIColor.green)
+```
+
+Get hexadecimal value string of this color (start with "#")
+```swift
+let hexString = UIColor.red.hexString // #FF0000
+```
+
+Get RGB or HSBA components
+```swift
+let rgb = UIColor.red.rgbComponents // (red: 255, green: 0, blue: 0)
+let rgba = UIColor.red.rgbaComponents // (red: 1.0, green: 0.0, blue: 0.0, alpha: 1.0)
+let hsba = UIColor.red.hsbaComponents // (hue: 0.0, saturation: 1.0, brightness: 1.0, alpha: 1.0)
+```
+
+Get random color
+```swift
+let randomColor = UIColor.random
 ```
 
 ### Bundle Extensions
@@ -204,10 +192,10 @@ Convenient methods to access Info.plist
 ```swift
 let bundle = Bundle.main
 
-let displayName = bundle.displayName  // String?
-let identifier = bundle.identifier    // String?
-let version = bundle.version          // String?
-let build = bundle.build              // String?
+let displayName = bundle.displayName
+let identifier = bundle.identifier
+let version = bundle.version
+let build = bundle.build
 
 // All keys
 private enum InfoPlistKey: String {
@@ -240,30 +228,6 @@ let last3Days = today.lastDays(withCount: 3, includingToday: false)
 // December 18, 2017 at 5:54:46 PM GMT+8
 // December 19, 2017 at 5:54:46 PM GMT+8
 let next3Days = today.nextDays(withCount: 3, includingToday: true)
-```
-
-### Others
-
-Customized Log function
-
-```swift
-// PrintHelperViewController.swift
-func testPrintLog() {
-    Log.debug("Hello, World!")
-}
-
-// Console：PrintHelperViewController.testPrintLog():20 DEBUG -> Hello, World!
-```
-
-Format Int and Double
-```swift
-let aInt = 8
-let formatedInt1 = aInt.format("03") // "008"
-let formatedInt2 = aInt.format("3") // "  8"
-
-let aDouble = 3.14159265
-let formatedDouble = aDouble.format(".2") // "3.14"
-let formatedDouble = aDouble.format(".3") // "3.142"
 ```
 
 ## References
