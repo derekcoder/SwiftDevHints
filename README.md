@@ -243,11 +243,6 @@ let next3Days = today.nextDays(withCount: 3, includingToday: true)
 - Weibo: [@derekcoder](https://weibo.com/u/6155322764)
 - Email: derekcoder@gmail.com
 
-## Donation
-If you like this project or has been helpful to you, you can buy me a cup of coffe ☕️. Very appreciate it!😉 
-
-[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](http://paypal.me/derekcoder)
-
 ## License
 
 SwiftDevHints is released under the MIT license. [See LICENSE](https://github.com/derekcoder/SwiftDevHints/blob/master/LICENSE) for details.
