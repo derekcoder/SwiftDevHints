@@ -131,7 +131,7 @@ public extension NSColor {
 
 }
 
-#elseif os(iOS)
+#else
 import UIKit
 
 public extension UIColor {
@@ -217,7 +217,11 @@ public extension UIColor {
     
     if string.hasPrefix("#") {
       if #available(iOS 13.0, *) {
-        scanner.currentIndex = string.index(after: string.startIndex)
+        if #available(watchOSApplicationExtension 6.0, *) {
+          scanner.currentIndex = string.index(after: string.startIndex)
+        } else {
+          scanner.scanLocation = 1
+        }
       } else {
         scanner.scanLocation = 1
       }

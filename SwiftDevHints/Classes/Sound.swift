@@ -6,6 +6,7 @@
 //  Copyright © 2019 ZHOU DENGFENG DEREK. All rights reserved.
 //
 
+#if !os(watchOS)
 import Foundation
 import AudioToolbox
 
@@ -33,3 +34,4 @@ public struct Sound {
         }
     }
 }
+#endif
