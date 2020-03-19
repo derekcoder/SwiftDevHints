@@ -6,7 +6,7 @@
 
 ## Requirements
 
-- iOS 10.0+ / macOS 10.12+
+- iOS 10.0+ / macOS 10.12+ / watchOS 4.0+
 - Swift 5
 
 ## Installation
